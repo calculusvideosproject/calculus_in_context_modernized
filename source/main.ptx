@@ -4,9 +4,9 @@
   <!-- we first include a file which contains the docinfo element: -->
   <xi:include href="./docinfo.ptx" />
 
-  <book xml:id="calculus-in-context-2026">
+  <book xml:id="calculus-in-context-modernized">
     <title>Calculus in Context</title>
-    <subtitle>The Five College Calculus Project</subtitle>
+    <subtitle>Modernized</subtitle>
 
     <!-- Include frontmatter -->
     <xi:include href="./frontmatter.ptx" />
