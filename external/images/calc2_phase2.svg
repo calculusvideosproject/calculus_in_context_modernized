@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   version="1.1"
+   id="svg1"
+   width="204"
+   height="110.66667"
+   viewBox="0 0 204 110.66667"
+   sodipodi:docname="calc2_phase2.pdf"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1">
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath1">
+      <path
+         d="M 0,-2.5e-5 H 23840.001 V 33700.001 H 0 Z"
+         id="path1" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath2">
+      <path
+         d="M -383.61001,16 H 2000.3901 V -3354.0001 H -383.61001 Z"
+         id="path2" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath3">
+      <path
+         d="M -6.6666667,116 H 210.66667 V -6.6666667 H -6.6666667 Z"
+         id="path3" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath4">
+      <path
+         d="M 0,110.66667 H 204 V 0 H 0 Z"
+         id="path4" />
+    </clipPath>
+  </defs>
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1">
+    <inkscape:page
+       x="0"
+       y="0"
+       inkscape:label="1"
+       id="page1"
+       width="204"
+       height="110.66667"
+       margin="0"
+       bleed="0" />
+  </sodipodi:namedview>
+  <g
+     id="g1"
+     inkscape:groupmode="layer"
+     inkscape:label="1">
+    <g
+       id="g20">
+      <g
+         clip-path="url(#clipPath4)"
+         id="g19">
+        <g
+           clip-path="url(#clipPath3)"
+           id="g18">
+          <path
+             d="m 2430,52.1602 v 0 l 10,-1.1993 10,10.7344 10,22.2383 10,32.8594 10,42.164 10,49.789 10,55.426 10,58.851 10,59.926 10,58.614 10,54.957 10,49.113 10,41.305 10,31.847 10,21.121 10,9.555 10,-2.398 10,-14.254 10,-25.539 10,-35.805 10,-44.645 10,-51.699 10,-56.695 10,-59.422 10,-59.785 10,-57.758 10,-53.422 10,-46.965 10,-38.625 10,-28.742 10,-17.7226 10,-5.9844 10,5.9844 10,17.7226 10,28.742 10,38.625 10,46.965 10,53.422 10,57.758 10,59.785 10,59.422 10,56.695 10,51.699 10,44.645 10,35.805 10,25.539 10,14.254 10,2.398 10,-9.555 10,-21.121 10,-31.847 10,-41.305 10,-49.113 10,-54.957 10,-58.614 10,-59.926 10,-58.851 10,-55.426 10,-49.789 10,-42.164 10,-32.8594 10,-22.2383 10,-10.7344 10,1.1993 10,13.0859 10,24.4492 10,34.8357 10,43.836 10,51.082 10,56.293 10,59.258 10,59.855 10,58.063 10,53.961 10,47.695 10,39.535 10,29.793 10,18.86 10,7.179 10,-4.793 10,-16.57 10,-27.687 10,-37.7 10,-46.207 10,-52.871 10,-57.425 10,-59.688 10,-59.57 10,-57.071 10,-52.296 10,-45.434 10,-36.7618 10,-26.6172 10,-15.4141 10,-3.5976 10,8.3672 10,19.9961 10,30.8284 10,40.425 10,48.415 10,54.468 10,58.352 10,59.902 10,59.067 10,55.871 10,50.445 10,43.008 10,33.855 10,23.348 10,11.914 h 10 l 10,-11.914 10,-23.348 10,-33.855 10,-43.008 10,-50.445 10,-55.871 10,-59.067 10,-59.902 10,-58.352 10,-54.468 10,-48.415 10,-40.425 10,-30.8284 10,-19.9961 10,-8.3633 10,3.5937 10,15.4141 10,26.6172 10,36.7618 10,45.434 10,52.296 10,57.071 10,59.57 10,59.688 10,57.421 10,52.875"
+             style="fill:none;stroke:#000000;stroke-width:8;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+             transform="matrix(0.13333333,0,0,-0.13333333,-312,109.33333)"
+             id="path5" />
+          <path
+             d="m 2350,250 h 1500 m -40,0 v 10 l 40,-10 -40,-10 v 10 h 40 M 2750,-50 v 850 m 0,-40 h -10 l 10,40 10,-40 h -10 v 40"
+             style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             transform="matrix(0.13333333,0,0,-0.13333333,-312,109.33333)"
+             clip-path="url(#clipPath1)"
+             id="path6" />
+          <path
+             d="m 2436,250 v -20 m 157,20 v -20 m 157,20 v -20 m 157,20 v -20 m 157,20 v -20 m 157,20 v -20 m 157,20 v -20 m 157,20 v -20 m 157,20 V 230 M 2730,50 h 20 m -20,600 h 20"
+             style="fill:none;stroke:#000000;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+             transform="matrix(0.13333333,0,0,-0.13333333,-312,109.33333)"
+             id="path7" />
+          <text
+             xml:space="preserve"
+             transform="matrix(1.3333333,0,0,1.3333333,199.48,88)"
+             clip-path="url(#clipPath2)"
+             id="text18"><tspan
+               style="font-style:italic;font-variant:normal;font-weight:normal;font-size:10px;font-family:Times;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+               x="0"
+               y="0"
+               id="tspan7">t</tspan><tspan
+               style="font-style:italic;font-variant:normal;font-weight:normal;font-size:10px;font-family:Times;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+               x="-116.05"
+               y="-61"
+               id="tspan8">y</tspan><tspan
+               style="font-style:italic;font-variant:normal;font-weight:normal;font-size:10px;font-family:Times;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+               x="-93.610199"
+               y="-57"
+               id="tspan9">y</tspan><tspan
+               style="font-variant:normal;font-weight:normal;font-size:10px;font-family:Times;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+               x="-89.170357"
+               y="-57"
+               id="tspan10"> = </tspan><tspan
+               style="font-style:italic;font-variant:normal;font-weight:normal;font-size:10px;font-family:Times;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+               x="-78.530563"
+               y="-57"
+               id="tspan11">A</tspan><tspan
+               style="font-variant:normal;font-weight:normal;font-size:10px;font-family:Times;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+               x="-72.420403"
+               y="-57"
+               id="tspan12">sin(</tspan><tspan
+               style="font-style:italic;font-variant:normal;font-weight:normal;font-size:10px;font-family:Times;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+               x="-57.420399"
+               y="-57"
+               id="tspan13">bt - </tspan><tspan
+               style="font-variant:normal;font-weight:normal;font-size:10px;font-family:Symbol;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+               x="-41.3102"
+               y="-57"
+               id="tspan14">ϕ) + </tspan><tspan
+               style="font-style:italic;font-variant:normal;font-weight:normal;font-size:10px;font-family:Times;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+               x="-21.460199"
+               y="-57"
+               id="tspan15">c</tspan><tspan
+               style="font-variant:normal;font-weight:normal;font-size:8px;font-family:Symbol;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+               x="-120.002"
+               y="17"
+               id="tspan16">−2</tspan><tspan
+               style="font-variant:normal;font-weight:normal;font-size:8px;font-family:Symbol;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+               x="-115.6102"
+               y="-47"
+               id="tspan17">5</tspan><tspan
+               style="font-variant:normal;font-weight:normal;font-size:8px;font-family:Symbol;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+               x="-145.002"
+               dx="0 0 58 27 27"
+               y="-11"
+               id="tspan18">−2246</tspan></text>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

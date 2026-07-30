@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   version="1.1"
+   id="svg1"
+   width="3178.6667"
+   height="4493.3335"
+   viewBox="0 0 3178.6667 4493.3335"
+   sodipodi:docname="ch9_933_wrap11.pdf"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1">
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath1">
+      <path
+         d="M -331.25001,-7.4999752 H 2052.75 V -3377.5001 H -331.25001 Z"
+         id="path1" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath2">
+      <path
+         d="M 0,4493.3333 H 3178.6667 V 0 H 0 Z"
+         id="path2" />
+    </clipPath>
+  </defs>
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1">
+    <inkscape:page
+       x="0"
+       y="0"
+       inkscape:label="1"
+       id="page1"
+       width="3178.6667"
+       height="4493.3335"
+       margin="0"
+       bleed="0" />
+  </sodipodi:namedview>
+  <g
+     id="g1"
+     inkscape:groupmode="layer"
+     inkscape:label="1">
+    <g
+       id="g9">
+      <g
+         clip-path="url(#clipPath2)"
+         id="g8">
+        <g
+           clip-path="url(#clipPath2)"
+           id="g7">
+          <text
+             xml:space="preserve"
+             transform="matrix(1.3333333,0,0,1.3333333,441.66667,4503.3333)"
+             clip-path="url(#clipPath1)"
+             id="text6"><tspan
+               style="font-variant:normal;font-weight:normal;font-size:10px;font-family:Times;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+               x="0"
+               y="0"
+               id="tspan2">the value of </tspan><tspan
+               style="font-style:italic;font-variant:normal;font-weight:normal;font-size:10px;font-family:Times;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+               x="49.710201"
+               y="0"
+               id="tspan3">z = f</tspan><tspan
+               style="font-variant:normal;font-weight:normal;font-size:10px;font-family:Times;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+               x="68.130096"
+               y="0"
+               id="tspan4">(</tspan><tspan
+               style="font-style:italic;font-variant:normal;font-weight:normal;font-size:10px;font-family:Times;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+               x="71.460182"
+               y="0"
+               id="tspan5">x, y</tspan><tspan
+               style="font-variant:normal;font-weight:normal;font-size:10px;font-family:Times;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+               x="85.340279"
+               y="0"
+               id="tspan6">)</tspan></text>
+          <g
+             clip-path="url(#clipPath2)"
+             id="g6" />
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

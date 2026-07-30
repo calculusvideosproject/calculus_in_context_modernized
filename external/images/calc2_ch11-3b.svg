@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   version="1.1"
+   id="svg1"
+   width="292"
+   height="132"
+   viewBox="0 0 292 132"
+   sodipodi:docname="calc2_ch11-3b.pdf"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1">
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath1">
+      <path
+         d="M -413.78001,93.000002 H 1970.22 V -3277.0001 H -413.78001 Z"
+         id="path1" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath2">
+      <path
+         d="m 2002.1201,598.75804 h 2116.44 v 831.12506 h -2116.44 z"
+         id="path2" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath3">
+      <path
+         d="M -266.66667,210.66667 H 2912 V -4282.6667 H -266.66667 Z"
+         id="path3" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath4">
+      <path
+         d="M -6.6666667,138.66667 H 298.66667 V -6.6666667 H -6.6666667 Z"
+         id="path4" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath5">
+      <path
+         d="M 0,132 H 292 V 0 H 0 Z"
+         id="path5" />
+    </clipPath>
+  </defs>
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1">
+    <inkscape:page
+       x="0"
+       y="0"
+       inkscape:label="1"
+       id="page1"
+       width="292"
+       height="132"
+       margin="0"
+       bleed="0" />
+  </sodipodi:namedview>
+  <g
+     id="g1"
+     inkscape:groupmode="layer"
+     inkscape:label="1">
+    <g
+       id="g20">
+      <g
+         clip-path="url(#clipPath5)"
+         id="g19">
+        <g
+           clip-path="url(#clipPath4)"
+           id="g18">
+          <path
+             d="m 3059.6,1420 v 138 m 0,-40 h -10 l 10,40 10,-40 h -10 v 40 M 4100,1014.4 h 72 m -40,0 v 10 l 40,-10 -40,-10 v 10 h 40"
+             style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             transform="matrix(0.13333333,0,0,-0.13333333,-266.66667,210.66667)"
+             id="path6" />
+          <text
+             xml:space="preserve"
+             transform="matrix(1.3333333,0,0,1.3333333,285.04,86.666667)"
+             clip-path="url(#clipPath1)"
+             id="text15"><tspan
+               style="font-style:italic;font-variant:normal;font-weight:normal;font-size:10px;font-family:Times;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+               x="0"
+               y="0"
+               id="tspan6">x</tspan><tspan
+               style="font-style:italic;font-variant:normal;font-weight:normal;font-size:10px;font-family:Times;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+               x="-115.02"
+               y="-59.799999"
+               id="tspan7">y</tspan><tspan
+               style="font-style:italic;font-variant:normal;font-weight:normal;font-size:10px;font-family:Times;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+               x="-69.780197"
+               y="-50.799999"
+               id="tspan8">y</tspan><tspan
+               style="font-variant:normal;font-weight:normal;font-size:10px;font-family:Times;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+               x="-65.340363"
+               y="-50.799999"
+               id="tspan9"> = arctan(</tspan><tspan
+               style="font-style:italic;font-variant:normal;font-weight:normal;font-size:10px;font-family:Times;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+               x="-26.940359"
+               y="-50.799999"
+               id="tspan10">x</tspan><tspan
+               style="font-variant:normal;font-weight:normal;font-size:10px;font-family:Times;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+               x="-22.500521"
+               y="-50.799999"
+               id="tspan11">)</tspan><tspan
+               style="font-variant:normal;font-weight:normal;font-size:10px;font-family:Symbol;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+               x="-127.33952"
+               y="33.200001"
+               id="tspan12">−π/</tspan><tspan
+               style="font-variant:normal;font-weight:normal;font-size:8px;font-family:Symbol;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+               x="-113.57932"
+               y="33.200001"
+               id="tspan13">2</tspan><tspan
+               style="font-variant:normal;font-weight:normal;font-size:10px;font-family:Symbol;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+               x="-121.84963"
+               y="-48.400002"
+               id="tspan14">π/</tspan><tspan
+               style="font-variant:normal;font-weight:normal;font-size:8px;font-family:Symbol;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+               x="-113.57971"
+               y="-48.400002"
+               id="tspan15">2</tspan></text>
+          <path
+             d="M 2002.12,1014.32 H 4118.55"
+             style="fill:none;stroke:#000000;stroke-width:2.11644;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+             transform="matrix(0.13333333,0,0,-0.13333333,-266.66667,210.66667)"
+             id="path15" />
+          <path
+             d="M 3060.34,598.758 V 1429.88"
+             style="fill:none;stroke:#000000;stroke-width:2.11644;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+             transform="matrix(0.13333333,0,0,-0.13333333,-266.66667,210.66667)"
+             id="path16" />
+          <g
+             clip-path="url(#clipPath3)"
+             id="g17">
+            <path
+               d="m 2052.51,618.547 83.98,6.351 83.98,7.532 84,9.039 83.98,11.047 83.98,13.757 83.98,17.543 84,22.922 83.98,30.774 83.99,42.351 83.98,58.922 84,79.492 83.98,96.043 83.98,96.04 84,79.48 83.98,58.94 83.98,42.35 83.98,30.77 84,22.92 83.98,17.53 83.98,13.78 83.98,11.05 84,9.03 83.98,7.54 83.98,6.34"
+               style="fill:none;stroke:#000000;stroke-width:10.5822;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+               transform="matrix(0.13333333,0,0,-0.13333333,-266.66667,210.66667)"
+               clip-path="url(#clipPath2)"
+               id="path17" />
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,1163 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Partial Derivatives</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+<link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
+<script type="module">import { startMathJax } from './_static/pretext/js/dist/mathjax_startup.js';
+startMathJax({
+hasWebworkReps: false,
+hasSage: false,
+isReact: false,
+htmlPresentation: false,
+});
+</script><script defer src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta name="twitter:title" content="Calculus in Context: The Five College Calculus Project">
+<meta property="og:title" content="Calculus in Context: The Five College Calculus Project">
+<meta property="book:title" content="Calculus in Context: The Five College Calculus Project">
+<meta name="twitter:description" content="A PreTeXt version of the Calculus in Context textbook.">
+<meta property="og:description" content="A PreTeXt version of the Calculus in Context textbook.">
+<meta name="twitter:card" content="summary">
+<script src="_static/pretext/js/jquery.min.js"></script><script src="_static/pretext/js/dist/pretext-core.js?v=2.45"></script><!--** eBookCongig is necessary to configure interactive       **-->
+<!--** Runestone components to run locally in reader's browser **-->
+<!--** No external communication:                              **-->
+<!--**     log level is 0, Runestone Services are disabled     **-->
+<script type="text/javascript">
+eBookConfig = {};
+eBookConfig.useRunestoneServices = false;
+eBookConfig.host = 'http://127.0.0.1:8000';
+eBookConfig.course = 'PTX_Course_Title_Here';
+eBookConfig.basecourse = 'PTX_Base_Course';
+eBookConfig.isLoggedIn = false;
+eBookConfig.email = '';
+eBookConfig.isInstructor = false;
+eBookConfig.logLevel = 0;
+eBookConfig.username = '';
+eBookConfig.readings = null;
+eBookConfig.activities = null;
+eBookConfig.downloadsEnabled = false;
+eBookConfig.allow_pairs = false;
+eBookConfig.enableScratchAC = false;
+eBookConfig.build_info = "";
+eBookConfig.python3 = null;
+eBookConfig.runestone_version = '8.1.16';
+eBookConfig.jobehost = '';
+eBookConfig.proxyuri_runs = '';
+eBookConfig.proxyuri_files = '';
+eBookConfig.enable_chatcodes =  false;
+</script>
+<!--*** Runestone Services ***-->
+<script src="_static/prefix-runtime.279b1f0077454c32.bundle.js"></script><script src="_static/prefix-926.5c7038c8ef173faf.bundle.js"></script><script src="_static/prefix-runestone.db8001875cb726c2.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-926.229729d09512acc9.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.66fa8a682a32c0ac.css">
+<script src="_static/pretext/js/dist/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/components/prism-core.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/autoloader/prism-autoloader.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/line-numbers/prism-line-numbers.min.js" integrity="sha512-dubtf8xMHSQlExGRQ5R7toxHLgSDZ0K7AunqPWHXmJQ8XyVIG19S1T95gBxlAeGOK02P4Da2RTnQz0Za0H0ebQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/line-highlight/prism-line-highlight.min.js" integrity="sha512-93uCmm0q+qO5Lb1huDqr7tywS8A2TFA+1/WHvyiWaK6/pvsFl6USnILagntBx8JnVbQH5s3n0vQZY6xNthNfKA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/dist/pretext_search.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script>
+</head>
+<body id="calculus-in-context" class="pretext book ignore-math">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead" role="banner"><div class="ptx-banner"><div class="title-container">
+<div class="heading ptx-banner-heading"><a href="calculus-in-context-2026.html"><span class="title">Calculus in Context</span> <span class="subtitle">The Five College Calculus Project</span></a></div>
+<p class="byline">Aaron Weinberg</p>
+</div></div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
+<button id="ptx-toc-toggle" type="button" aria-controls="ptx-sidebar" class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><div class="ptx-search-box">
+<div class="ptx-search-widget"><button id="ptx-search-button" type="button" class="ptx-search-button button" title="Search Book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
+<dialog id="ptx-search-dialog" class="ptx-dialog ptx-search-dialog"><div class="ptx-search-dialog-controls">
+<input aria-label="Search term" id="ptx-search-terms" class="ptx-search-terms" type="text" name="terms" placeholder="Search terms"><button aria-label="Close" id="ptx-search-close" class="ptx-search-close"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cd;</span></button>
+</div>
+<div id="ptx-search-status" class="ptx-search-status" aria-live="polite" aria-atomic="true"></div>
+<h2 class="heading ptx-search-results-heading">Search Results: </h2>
+<div id="ptx-search-empty" class="ptx-search-empty"><span>No results.</span></div>
+<ol id="ptx-search-results" class="ptx-search-results"></ol></dialog>
+</div>
+<span class="nav-other-controls"><button id="ptx-readability-options-button" class="ptx-readability-options-button button" title="Readability settings"><span class="icon material-symbols-outlined" aria-hidden="true">&#xf6f1;</span><span class="name">Readability settings</span></button><dialog class="ptx-dialog ptx-readability-options-popup" id="ptx-readability-options-popup"><div class="ptx-readability-options-popup-controls">
+<h2 class="heading">Readability settings</h2>
+<button class="ptx-readability-options-close-button button" id="ptx-readability-options-close-button" title="Close"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cd;</span></button>
+</div>
+<div class="ptx-readability-options-group">
+<label class="ptx-readability-slider-label" for="ptx-readability-line-height"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe240;</span><span>Line height</span><output id="ptx-readability-line-height-value" for="ptx-readability-line-height">1.35</output></label><input type="range" id="ptx-readability-line-height" min="1.10" max="3" step="0.05" value="1.35">
+</div>
+<div class="ptx-readability-options-group">
+<label class="ptx-readability-slider-label" for="ptx-readability-font-size"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe245;</span><span>Content font size</span><output id="ptx-readability-font-size-value" for="ptx-readability-font-size">100%</output></label><input type="range" id="ptx-readability-font-size" min="0.8" max="1.5" step="0.05" value="1">
+</div>
+<fieldset class="ptx-readability-options-group ptx-readability-options-group-theme">
+<legend>Theme</legend>
+<label for="ptx-readability-theme-system"><input type="radio" name="ptx-readability-theme" id="ptx-readability-theme-system" value="system"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe1ab;</span><span>System</span></label><label for="ptx-readability-theme-light"><input type="radio" name="ptx-readability-theme" id="ptx-readability-theme-light" value="light"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe518;</span><span>Light</span></label><label for="ptx-readability-theme-dark"><input type="radio" name="ptx-readability-theme" id="ptx-readability-theme-dark" value="dark"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span>Dark</span></label>
+</fieldset>
+<fieldset class="ptx-readability-options-group">
+<legend>Assistive technologies</legend>
+<label for="ptx-readability-accessible-permalinks"><input type="checkbox" id="ptx-readability-accessible-permalinks"><span>🔗</span><span>Expose permalinks</span></label>
+</fieldset>
+<div class="ptx-readability-options-group"><button type="button" class="ptx-readability-reset-button button" id="ptx-readability-reset-button"><span class="icon material-symbols-outlined" aria-hidden="true">&#xf053;</span><span class="name">Reset All</span></button></div></dialog></span><span class="treebuttons"><a class="previous-button button" href="ch3-sec-the-chain-rule.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="ch3-chap-the-derivative.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="ch3-sec-chapter-summary.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
+</div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N} \newcommand{\Z}{\mathbb Z} \newcommand{\Q}{\mathbb Q} \newcommand{\R}{\mathbb R}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="ptx-page">
+<div id="ptx-sidebar" role="complementary" class="ptx-sidebar"><nav id="ptx-toc" tabindex="-1" aria-label="Contents" class="ptx-toc depth2 focused" data-preexpanded-levels="0" data-max-levels="2"><ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-frontmatter">
+<div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div>
+<ul id="ptx-toc-group-frontmatter" class="structural toc-item-list">
+<li class="toc-item toc-acknowledgement"><div class="toc-title-box"><a href="acknowledgements.html" class="internal"><span class="title">Acknowledgements</span></a></div></li>
+<li class="toc-item toc-colophon"><div class="toc-title-box"><a href="front-colophon.html" class="internal"><span class="title">Colophon</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch1-chap-a-context-for-calculus.html" class="internal"><span class="codenumber">1</span> <span class="title">A Context for Calculus</span></a></div>
+<ul id="ptx-toc-group-ch1-chap-a-context-for-calculus" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="ch1-chap-a-context-for-calculus-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="ch1-sec-the-spread-of-disease.html" class="internal"><span class="codenumber">1.1</span> <span class="title">The Spread of Disease</span></a></div>
+<ul id="ptx-toc-group-ch1-sec-the-spread-of-disease" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch1-sec-the-spread-of-disease.html#ch1-subsec-making-a-model" class="internal"><span class="codenumber">1.1.1</span> <span class="title">Making a Model</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch1-sec-the-spread-of-disease.html#ch1-subsec-a-simple-model-for-predicting-change" class="internal"><span class="codenumber">1.1.2</span> <span class="title">A Simple Model for Predicting Change</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch1-sec-the-spread-of-disease.html#ch1-subsec-the-rate-of-recovery" class="internal"><span class="codenumber">1.1.3</span> <span class="title">The Rate of Recovery</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch1-sec-the-spread-of-disease.html#ch1-subsec-the-rate-of-transmission" class="internal"><span class="codenumber">1.1.4</span> <span class="title">The Rate of Transmission</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch1-sec-the-spread-of-disease.html#ch1-subsec-completing-the-model" class="internal"><span class="codenumber">1.1.5</span> <span class="title">Completing the Model</span></a></div></li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="ch1-sec-the-spread-of-disease.html#ch1-subsec-analyzing-the-model" class="internal"><span class="codenumber">1.1.6</span> <span class="title">Analyzing the Model</span></a></div>
+<ul id="ptx-toc-group-ch1-subsec-analyzing-the-model" class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="ch1-sec-the-spread-of-disease.html#ch1-the-problem" class="internal"><span class="codenumber">1.1.6.1</span> <span class="title">The Problem.</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="ch1-sec-the-spread-of-disease.html#ch1-tomorrow" class="internal"><span class="codenumber">1.1.6.2</span> <span class="title">Tomorrow</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="ch1-sec-the-spread-of-disease.html#ch1-several-days-hence" class="internal"><span class="codenumber">1.1.6.3</span> <span class="title">Several days hence</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="ch1-sec-the-spread-of-disease.html#ch1-yesterday" class="internal"><span class="codenumber">1.1.6.4</span> <span class="title">Yesterday</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="ch1-sec-the-spread-of-disease.html#ch1-there-and-back-again" class="internal"><span class="codenumber">1.1.6.5</span> <span class="title">There and back again</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="ch1-sec-the-spread-of-disease.html#ch1-delta-notation" class="internal"><span class="codenumber">1.1.6.6</span> <span class="title">Delta notation</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="ch1-sec-the-spread-of-disease.html#ch1-using-the-computer-as-a-tool" class="internal"><span class="codenumber">1.1.6.7</span> <span class="title">Using the computer as a tool.</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="ch1-sec-the-spread-of-disease.html#ch1-the-flow-chart" class="internal"><span class="codenumber">1.1.6.8</span> <span class="title">The flow chart</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="ch1-sec-the-spread-of-disease.html#ch1-analysis-without-a-computer" class="internal"><span class="codenumber">1.1.6.9</span> <span class="title">Analysis without a computer</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch1-sec-the-spread-of-disease.html#ch1-subsec-exercises-1-1" class="internal"><span class="codenumber">1.1.7</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="ch1-sec-the-mathematical-ideas.html" class="internal"><span class="codenumber">1.2</span> <span class="title">The Mathematical Ideas</span></a></div>
+<ul id="ptx-toc-group-ch1-sec-the-mathematical-ideas" class="structural toc-item-list">
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="ch1-sec-the-mathematical-ideas.html#ch1-subsec-functions" class="internal"><span class="codenumber">1.2.1</span> <span class="title">Functions</span></a></div>
+<ul id="ptx-toc-group-ch1-subsec-functions" class="structural toc-item-list"><li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="ch1-sec-the-mathematical-ideas.html#ch1-some-technical-details" class="internal"><span class="codenumber">1.2.1.1</span> <span class="title">Some technical details.</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch1-sec-the-mathematical-ideas.html#ch1-subsec-graphs" class="internal"><span class="codenumber">1.2.2</span> <span class="title">Graphs</span></a></div></li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="ch1-sec-the-mathematical-ideas.html#ch1-subsec-linear-functions" class="internal"><span class="codenumber">1.2.3</span> <span class="title">Linear Functions</span></a></div>
+<ul id="ptx-toc-group-ch1-subsec-linear-functions" class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="ch1-sec-the-mathematical-ideas.html#ch1-changes-in-input-and-output" class="internal"><span class="codenumber">1.2.3.1</span> <span class="title">Changes in input and output</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="ch1-sec-the-mathematical-ideas.html#ch1-the-graph-of-a-linear-function" class="internal"><span class="codenumber">1.2.3.2</span> <span class="title">The graph of a linear function</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="ch1-sec-the-mathematical-ideas.html#ch1-rates-slopes-and-multipliers" class="internal"><span class="codenumber">1.2.3.3</span> <span class="title">Rates, slopes, and multipliers</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="ch1-sec-the-mathematical-ideas.html#ch1-units" class="internal"><span class="codenumber">1.2.3.4</span> <span class="title">Units</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="ch1-sec-the-mathematical-ideas.html#ch1-formulas-for-linear-functions" class="internal"><span class="codenumber">1.2.3.5</span> <span class="title">Formulas for linear functions</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="ch1-sec-the-mathematical-ideas.html#ch1-subsec-functions-of-several-variables" class="internal"><span class="codenumber">1.2.4</span> <span class="title">Functions of Several Variables</span></a></div>
+<ul id="ptx-toc-group-ch1-subsec-functions-of-several-variables" class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="ch1-sec-the-mathematical-ideas.html#ch1-language-and-notation" class="internal"><span class="codenumber">1.2.4.1</span> <span class="title">Language and notation.</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="ch1-sec-the-mathematical-ideas.html#ch1-parameters" class="internal"><span class="codenumber">1.2.4.2</span> <span class="title">Parameters</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="ch1-sec-the-mathematical-ideas.html#ch1-further-possibilities" class="internal"><span class="codenumber">1.2.4.3</span> <span class="title">Further possibilities.</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch1-sec-the-mathematical-ideas.html#ch1-subsec-the-beginnings-of-calculus" class="internal"><span class="codenumber">1.2.5</span> <span class="title">The Beginnings of Calculus</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch1-sec-the-mathematical-ideas.html#ch1-subsec-exercises-1-2" class="internal"><span class="codenumber">1.2.6</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="ch1-sec-using-a-program.html" class="internal"><span class="codenumber">1.3</span> <span class="title">Using a Program</span></a></div>
+<ul id="ptx-toc-group-ch1-sec-using-a-program" class="structural toc-item-list">
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="ch1-sec-using-a-program.html#ch1-subsec-computers" class="internal"><span class="codenumber">1.3.1</span> <span class="title">Computers</span></a></div>
+<ul id="ptx-toc-group-ch1-subsec-computers" class="structural toc-item-list"><li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="ch1-sec-using-a-program.html#ch1-subsubsec-the-program-sir-1" class="internal"><span class="codenumber">1.3.1.1</span> <span class="title">The Program SIR</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch1-sec-using-a-program.html#ch1-subsec-exercises-1-3" class="internal"><span class="codenumber">1.3.2</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="ch1-sec-chapter-summary.html" class="internal"><span class="codenumber">1.4</span> <span class="title">Chapter Summary</span></a></div>
+<ul id="ptx-toc-group-ch1-sec-chapter-summary" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch1-sec-chapter-summary.html#ch1-subsec-the-main-ideas" class="internal"><span class="codenumber">1.4.1</span> <span class="title">The Main Ideas</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch1-sec-chapter-summary.html#ch1-subsec-expectations" class="internal"><span class="codenumber">1.4.2</span> <span class="title">Expectations</span></a></div></li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="ch1-sec-chapter-summary.html#ch1-subsec-chapter-exercises" class="internal"><span class="codenumber">1.4.3</span> <span class="title">Chapter Exercises</span></a></div>
+<ul id="ptx-toc-group-ch1-subsec-chapter-exercises" class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch1-sec-chapter-summary.html#ch1-subsec-exercises-1-4" class="internal"><span class="codenumber">1.4.3</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch2-chap-successive-approximations.html" class="internal"><span class="codenumber">2</span> <span class="title">Successive Approximations</span></a></div>
+<ul id="ptx-toc-group-ch2-chap-successive-approximations" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="ch2-chap-successive-approximations-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="ch2-sec-making-approximations.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Making Approximations</span></a></div>
+<ul id="ptx-toc-group-ch2-sec-making-approximations" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch2-sec-making-approximations.html#ch2-subsec-the-longest-march-begins-with-a-single-step" class="internal"><span class="codenumber">2.1.1</span> <span class="title">The Longest March Begins with a Single Step</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch2-sec-making-approximations.html#ch2-subsec-one-picture-is-worth-a-hundred-tables" class="internal"><span class="codenumber">2.1.2</span> <span class="title">One Picture Is Worth a Hundred Tables</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch2-sec-making-approximations.html#ch2-subsec-piecewise-linear-functions" class="internal"><span class="codenumber">2.1.3</span> <span class="title">Piecewise Linear Functions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch2-sec-making-approximations.html#ch2-subsec-approximate-versus-exact" class="internal"><span class="codenumber">2.1.4</span> <span class="title">Approximate versus Exact</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch2-sec-making-approximations.html#ch2-subsec-exercises" class="internal"><span class="codenumber">2.1.5</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="ch2-sec-the-mathematical-implications-eulers-method.html" class="internal"><span class="codenumber">2.2</span> <span class="title">The Mathematical Implications—Euler’s Method</span></a></div>
+<ul id="ptx-toc-group-ch2-sec-the-mathematical-implications-eulers-method" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch2-sec-the-mathematical-implications-eulers-method.html#ch2-subsec-approximate-solutions" class="internal"><span class="codenumber">2.2.1</span> <span class="title">Approximate Solutions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch2-sec-the-mathematical-implications-eulers-method.html#ch2-subsec-exact-solutions" class="internal"><span class="codenumber">2.2.2</span> <span class="title">Exact Solutions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch2-sec-the-mathematical-implications-eulers-method.html#ch2-subsec-a-caution" class="internal"><span class="codenumber">2.2.3</span> <span class="title">A Caution</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch2-sec-the-mathematical-implications-eulers-method.html#ch2-subsec-exercises-2" class="internal"><span class="codenumber">2.2.4</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="ch2-sec-approximate-solutions.html" class="internal"><span class="codenumber">2.3</span> <span class="title">Approximate Solutions</span></a></div>
+<ul id="ptx-toc-group-ch2-sec-approximate-solutions" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch2-sec-approximate-solutions.html#ch2-subsec-calculating-pi-the-length-of-a-curve" class="internal"><span class="codenumber">2.3.1</span> <span class="title">Calculating <span class="process-math">\(\pi\)</span>—The Length of a Curve</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch2-sec-approximate-solutions.html#ch2-subsec-finding-roots-with-a-computer" class="internal"><span class="codenumber">2.3.2</span> <span class="title">Finding Roots with a Computer</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch2-sec-approximate-solutions.html#ch2-subsec-exercises-3" class="internal"><span class="codenumber">2.3.3</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="ch2-sec-chapter-summary.html" class="internal"><span class="codenumber">2.4</span> <span class="title">Chapter Summary</span></a></div>
+<ul id="ptx-toc-group-ch2-sec-chapter-summary" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch2-sec-chapter-summary.html#ch2-subsec-the-main-ideas" class="internal"><span class="codenumber">2.4.1</span> <span class="title">The Main Ideas</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch2-sec-chapter-summary.html#ch2-subsec-expectations" class="internal"><span class="codenumber">2.4.2</span> <span class="title">Expectations</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch2-sec-chapter-summary.html#ch2-subsec-chapter-exercises" class="internal"><span class="codenumber">2.4.3</span> <span class="title">Chapter Exercises</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter contains-active">
+<div class="toc-title-box"><a href="ch3-chap-the-derivative.html" class="internal"><span class="codenumber">3</span> <span class="title">The Derivative</span></a></div>
+<ul class="structural toc-item-list contains-active" id="ptx-toc-group-ch3-chap-the-derivative">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="ch3-chap-the-derivative-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="ch3-sec-rates-of-change.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Rates of Change</span></a></div>
+<ul id="ptx-toc-group-ch3-sec-rates-of-change" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch3-sec-rates-of-change.html#ch3-subsec-the-changing-time-of-sunrise" class="internal"><span class="codenumber">3.1.1</span> <span class="title">The Changing Time of Sunrise</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch3-sec-rates-of-change.html#ch3-subsec-changing-rates" class="internal"><span class="codenumber">3.1.2</span> <span class="title">Changing Rates</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch3-sec-rates-of-change.html#ch3-subsec-other-rates-other-units" class="internal"><span class="codenumber">3.1.3</span> <span class="title">Other Rates, Other Units</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch3-sec-rates-of-change.html#ch3-subsec-exercises" class="internal"><span class="codenumber">3.1.4</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="ch3-sec-microscopes-and-local-linearity.html" class="internal"><span class="codenumber">3.2</span> <span class="title">Microscopes and Local Linearity</span></a></div>
+<ul id="ptx-toc-group-ch3-sec-microscopes-and-local-linearity" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch3-sec-microscopes-and-local-linearity.html#ch3-subsec-the-graph-of-data" class="internal"><span class="codenumber">3.2.1</span> <span class="title">The Graph of Data</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch3-sec-microscopes-and-local-linearity.html#ch3-subsec-the-graph-of-a-formula" class="internal"><span class="codenumber">3.2.2</span> <span class="title">The Graph of a Formula</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch3-sec-microscopes-and-local-linearity.html#ch3-subsec-local-linearity" class="internal"><span class="codenumber">3.2.3</span> <span class="title">Local Linearity</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch3-sec-microscopes-and-local-linearity.html#ch3-subsec-exercises-2" class="internal"><span class="codenumber">3.2.4</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="ch3-sec-the-derivative.html" class="internal"><span class="codenumber">3.3</span> <span class="title">The Derivative</span></a></div>
+<ul id="ptx-toc-group-ch3-sec-the-derivative" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch3-sec-the-derivative.html#ch3-subsec-definition" class="internal"><span class="codenumber">3.3.1</span> <span class="title">Definition</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch3-sec-the-derivative.html#ch3-subsec-language-and-notation" class="internal"><span class="codenumber">3.3.2</span> <span class="title">Language and Notation</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch3-sec-the-derivative.html#ch3-subsec-the-microscope-equation" class="internal"><span class="codenumber">3.3.3</span> <span class="title">The Microscope Equation</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch3-sec-the-derivative.html#ch3-subsec-exercises-3" class="internal"><span class="codenumber">3.3.4</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="ch3-sec-estimation-and-error-analysis.html" class="internal"><span class="codenumber">3.4</span> <span class="title">Estimation and Error Analysis</span></a></div>
+<ul id="ptx-toc-group-ch3-sec-estimation-and-error-analysis" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch3-sec-estimation-and-error-analysis.html#ch3-subsec-making-estimates" class="internal"><span class="codenumber">3.4.1</span> <span class="title">Making Estimates</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch3-sec-estimation-and-error-analysis.html#ch3-subsec-propagation-of-error" class="internal"><span class="codenumber">3.4.2</span> <span class="title">Propagation of Error</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch3-sec-estimation-and-error-analysis.html#ch3-subsec-exercises-4" class="internal"><span class="codenumber">3.4.3</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="ch3-sec-a-global-view.html" class="internal"><span class="codenumber">3.5</span> <span class="title">A Global View</span></a></div>
+<ul id="ptx-toc-group-ch3-sec-a-global-view" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch3-sec-a-global-view.html#ch3-subsec-derivative-as-function" class="internal"><span class="codenumber">3.5.1</span> <span class="title">Derivative as Function</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch3-sec-a-global-view.html#ch3-subsec-formulas-for-derivatives" class="internal"><span class="codenumber">3.5.2</span> <span class="title">Formulas for Derivatives</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch3-sec-a-global-view.html#ch3-subsec-exercises-5" class="internal"><span class="codenumber">3.5.3</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="ch3-sec-the-chain-rule.html" class="internal"><span class="codenumber">3.6</span> <span class="title">The Chain Rule</span></a></div>
+<ul id="ptx-toc-group-ch3-sec-the-chain-rule" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch3-sec-the-chain-rule.html#ch3-subsec-combining-rates-of-change" class="internal"><span class="codenumber">3.6.1</span> <span class="title">Combining Rates of Change</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch3-sec-the-chain-rule.html#ch3-subsec-chains-and-the-chain-rule" class="internal"><span class="codenumber">3.6.2</span> <span class="title">Chains and the Chain Rule</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch3-sec-the-chain-rule.html#ch3-subsec-using-the-chain-rule" class="internal"><span class="codenumber">3.6.3</span> <span class="title">Using the Chain Rule</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch3-sec-the-chain-rule.html#ch3-subsec-exercises-6" class="internal"><span class="codenumber">3.6.4</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section contains-active">
+<div class="toc-title-box"><a href="ch3-sec-partial-derivatives.html" class="internal"><span class="codenumber">3.7</span> <span class="title">Partial Derivatives</span></a></div>
+<ul class="structural toc-item-list active" id="ptx-toc-group-ch3-sec-partial-derivatives">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch3-sec-partial-derivatives.html#ch3-subsec-partial-derivatives-as-multipliers" class="internal"><span class="codenumber">3.7.1</span> <span class="title">Partial Derivatives as Multipliers</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch3-sec-partial-derivatives.html#ch3-subsec-formulas-for-partial-derivatives" class="internal"><span class="codenumber">3.7.2</span> <span class="title">Formulas for Partial Derivatives</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch3-sec-partial-derivatives.html#ch3-subsec-exercises-7" class="internal"><span class="codenumber">3.7.3</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="ch3-sec-chapter-summary.html" class="internal"><span class="codenumber">3.8</span> <span class="title">Chapter Summary</span></a></div>
+<ul id="ptx-toc-group-ch3-sec-chapter-summary" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch3-sec-chapter-summary.html#ch3-subsec-the-main-ideas" class="internal"><span class="codenumber">3.8.1</span> <span class="title">The Main Ideas</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch3-sec-chapter-summary.html#ch3-subsec-expectations" class="internal"><span class="codenumber">3.8.2</span> <span class="title">Expectations</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch4-chap-differential-equations.html" class="internal"><span class="codenumber">4</span> <span class="title">Differential Equations</span></a></div>
+<ul id="ptx-toc-group-ch4-chap-differential-equations" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="ch4-chap-differential-equations-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="ch4-sec-modelling-with-differential-equations.html" class="internal"><span class="codenumber">4.1</span> <span class="title">Modelling with Differential Equations</span></a></div>
+<ul id="ptx-toc-group-ch4-sec-modelling-with-differential-equations" class="structural toc-item-list">
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="ch4-sec-modelling-with-differential-equations.html#ch4-subsec-single-species-models-rabbits" class="internal"><span class="codenumber">4.1.1</span> <span class="title">Single-species Models: Rabbits</span></a></div>
+<ul id="ptx-toc-group-ch4-subsec-single-species-models-rabbits" class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="ch4-sec-modelling-with-differential-equations.html#ch4-rabbit-model-1" class="internal"><span class="codenumber">4.1.1.1</span> <span class="title">The first model</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="ch4-sec-modelling-with-differential-equations.html#ch4-rabbit-model-2" class="internal"><span class="codenumber">4.1.1.2</span> <span class="title">The second model</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-sec-modelling-with-differential-equations.html#ch4-subsec-two-species-models-rabbits-and-foxes" class="internal"><span class="codenumber">4.1.2</span> <span class="title">Two-species Models: Rabbits and Foxes</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch4-sec-modelling-with-differential-equations.html#ch4-subsec-exercises" class="internal"><span class="codenumber">4.1.3</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="ch4-sec-solutions-of-differential-equations.html" class="internal"><span class="codenumber">4.2</span> <span class="title">Solutions of Differential Equations</span></a></div>
+<ul id="ptx-toc-group-ch4-sec-solutions-of-differential-equations" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-sec-solutions-of-differential-equations.html#ch4-subsec-differential-equations-are-equations" class="internal"><span class="codenumber">4.2.1</span> <span class="title">Differential Equations are Equations</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-sec-solutions-of-differential-equations.html#ch4-subsec-world-population-growth" class="internal"><span class="codenumber">4.2.2</span> <span class="title">World Population Growth</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-sec-solutions-of-differential-equations.html#ch4-subsec-differential-equations-involving-parameters" class="internal"><span class="codenumber">4.2.3</span> <span class="title">Differential Equations Involving Parameters</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch4-sec-solutions-of-differential-equations.html#ch4-subsec-exercises-2" class="internal"><span class="codenumber">4.2.4</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="ch4-sec-the-exponential-function.html" class="internal"><span class="codenumber">4.3</span> <span class="title">The Exponential Function</span></a></div>
+<ul id="ptx-toc-group-ch4-sec-the-exponential-function" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-sec-the-exponential-function.html#ch4-subsec-the-equation-y-ky" class="internal"><span class="codenumber">4.3.1</span> <span class="title">The Equation <span class="process-math">\(y'= ky\)</span></span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-sec-the-exponential-function.html#ch4-subsec-the-number-e" class="internal"><span class="codenumber">4.3.2</span> <span class="title">The Number <span class="process-math">\(e\)</span></span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-sec-the-exponential-function.html#ch4-subsec-differential-equations-define-functions" class="internal"><span class="codenumber">4.3.3</span> <span class="title">Differential Equations Define Functions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-sec-the-exponential-function.html#ch4-subsec-exponential-growth" class="internal"><span class="codenumber">4.3.4</span> <span class="title">Exponential Growth</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch4-sec-the-exponential-function.html#ch4-subsec-exercises-3" class="internal"><span class="codenumber">4.3.5</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="ch4-sec-the-logarithm-function.html" class="internal"><span class="codenumber">4.4</span> <span class="title">The Logarithm Function</span></a></div>
+<ul id="ptx-toc-group-ch4-sec-the-logarithm-function" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-sec-the-logarithm-function.html#ch4-subsec-properties-of-the-logarithm-function" class="internal"><span class="codenumber">4.4.1</span> <span class="title">Properties of the Logarithm Function</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-sec-the-logarithm-function.html#ch4-subsec-the-derivative-of-the-logarithm-function" class="internal"><span class="codenumber">4.4.2</span> <span class="title">The Derivative of the Logarithm Function</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-sec-the-logarithm-function.html#ch4-subsec-exponential-growth-2" class="internal"><span class="codenumber">4.4.3</span> <span class="title">Exponential Growth</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-sec-the-logarithm-function.html#ch4-subsec-the-exponential-functions-bdisplaystyle-x" class="internal"><span class="codenumber">4.4.4</span> <span class="title">The Exponential Functions <span class="process-math">\(b^{\displaystyle x}\)</span></span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-sec-the-logarithm-function.html#ch4-subsec-inverse-functions" class="internal"><span class="codenumber">4.4.5</span> <span class="title">Inverse Functions</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch4-sec-the-logarithm-function.html#ch4-subsec-exercises-4" class="internal"><span class="codenumber">4.4.6</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="ch4-sec-the-equation-y-ft.html" class="internal"><span class="codenumber">4.5</span> <span class="title">The Equation <span class="process-math">\(y' = f(t)\)</span></span></a></div>
+<ul id="ptx-toc-group-ch4-sec-the-equation-y-ft" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-sec-the-equation-y-ft.html#ch4-subsec-antiderivatives" class="internal"><span class="codenumber">4.5.1</span> <span class="title">Antiderivatives</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-sec-the-equation-y-ft.html#ch4-subsec-eulers-method-revisited" class="internal"><span class="codenumber">4.5.2</span> <span class="title">Euler’s Method Revisited</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch4-sec-the-equation-y-ft.html#ch4-subsec-exercises-5" class="internal"><span class="codenumber">4.5.3</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="ch4-sec-chapter-summary.html" class="internal"><span class="codenumber">4.6</span> <span class="title">Chapter Summary</span></a></div>
+<ul id="ptx-toc-group-ch4-sec-chapter-summary" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-sec-chapter-summary.html#ch4-subsec-the-main-ideas" class="internal"><span class="codenumber">4.6.1</span> <span class="title">The Main Ideas</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-sec-chapter-summary.html#ch4-subsec-expectations" class="internal"><span class="codenumber">4.6.2</span> <span class="title">Expectations</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch5-chap-techniques-of-differentiation.html" class="internal"><span class="codenumber">5</span> <span class="title">Techniques of Differentiation</span></a></div>
+<ul id="ptx-toc-group-ch5-chap-techniques-of-differentiation" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="ch5-chap-techniques-of-differentiation-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="ch5-sec-the-differentiation-rules.html" class="internal"><span class="codenumber">5.1</span> <span class="title">The Differentiation Rules</span></a></div>
+<ul id="ptx-toc-group-ch5-sec-the-differentiation-rules" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch5-sec-the-differentiation-rules.html#ch5-subsec-derivatives-of-basic-functions" class="internal"><span class="codenumber">5.1.1</span> <span class="title">Derivatives of Basic Functions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch5-sec-the-differentiation-rules.html#ch5-subsec-combining-functions" class="internal"><span class="codenumber">5.1.2</span> <span class="title">Combining Functions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch5-sec-the-differentiation-rules.html#ch5-subsec-informal-arguments" class="internal"><span class="codenumber">5.1.3</span> <span class="title">Informal Arguments</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch5-sec-the-differentiation-rules.html#ch5-subsec-a-formal-proof-the-product-rule" class="internal"><span class="codenumber">5.1.4</span> <span class="title">A Formal Proof: The Product Rule</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch5-sec-the-differentiation-rules.html#ch5-subsec-exercises" class="internal"><span class="codenumber">5.1.5</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="ch5-sec-finding-partial-derivatives.html" class="internal"><span class="codenumber">5.2</span> <span class="title">Finding Partial Derivatives</span></a></div>
+<ul id="ptx-toc-group-ch5-sec-finding-partial-derivatives" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch5-sec-finding-partial-derivatives.html#ch5-subsec-some-examples" class="internal"><span class="codenumber">5.2.1</span> <span class="title">Some Examples</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch5-sec-finding-partial-derivatives.html#ch5-subsec-eradication-of-disease" class="internal"><span class="codenumber">5.2.2</span> <span class="title">Eradication of Disease</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch5-sec-finding-partial-derivatives.html#ch5-subsec-exercises-2" class="internal"><span class="codenumber">5.2.3</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="ch5-sec-the-shape-of-the-graph-of-a-mboxfunction.html" class="internal"><span class="codenumber">5.3</span> <span class="title">The Shape of the Graph of a Function</span></a></div>
+<ul id="ptx-toc-group-ch5-sec-the-shape-of-the-graph-of-a-mboxfunction" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch5-sec-the-shape-of-the-graph-of-a-mboxfunction.html#ch5-subsec-language" class="internal"><span class="codenumber">5.3.1</span> <span class="title">Language</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch5-sec-the-shape-of-the-graph-of-a-mboxfunction.html#ch5-subsec-the-existence-of-extremes" class="internal"><span class="codenumber">5.3.2</span> <span class="title">The Existence of Extremes</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch5-sec-the-shape-of-the-graph-of-a-mboxfunction.html#ch5-subsec-finding-extremes" class="internal"><span class="codenumber">5.3.3</span> <span class="title">Finding Extremes</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch5-sec-the-shape-of-the-graph-of-a-mboxfunction.html#ch5-subsec-exercises-3" class="internal"><span class="codenumber">5.3.4</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="ch5-sec-optimal-shapes.html" class="internal"><span class="codenumber">5.4</span> <span class="title">Optimal Shapes</span></a></div>
+<ul id="ptx-toc-group-ch5-sec-optimal-shapes" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch5-sec-optimal-shapes.html#ch5-subsec-the-problem-of-the-optimal-tin-can" class="internal"><span class="codenumber">5.4.1</span> <span class="title">The Problem of the Optimal Tin Can</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch5-sec-optimal-shapes.html#ch5-subsec-the-solution" class="internal"><span class="codenumber">5.4.2</span> <span class="title">The Solution</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch5-sec-optimal-shapes.html#ch5-subsec-the-mathematical-context-optimal-shapes" class="internal"><span class="codenumber">5.4.3</span> <span class="title">The Mathematical Context: Optimal Shapes</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch5-sec-optimal-shapes.html#ch5-subsec-exercises-4" class="internal"><span class="codenumber">5.4.4</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="ch5-sec-newtons-method.html" class="internal"><span class="codenumber">5.5</span> <span class="title">Newton’s Method</span></a></div>
+<ul id="ptx-toc-group-ch5-sec-newtons-method" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch5-sec-newtons-method.html#ch5-subsec-finding-critical-points" class="internal"><span class="codenumber">5.5.1</span> <span class="title">Finding Critical Points</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch5-sec-newtons-method.html#ch5-subsec-local-linearity-and-the-tangent-line" class="internal"><span class="codenumber">5.5.2</span> <span class="title">Local Linearity and the Tangent Line</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch5-sec-newtons-method.html#ch5-subsec-the-algorithm" class="internal"><span class="codenumber">5.5.3</span> <span class="title">The Algorithm</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch5-sec-newtons-method.html#ch5-subsec-examples" class="internal"><span class="codenumber">5.5.4</span> <span class="title">Examples</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch5-sec-newtons-method.html#ch5-subsec-exercises-5" class="internal"><span class="codenumber">5.5.5</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="ch5-sec-chapter-summary.html" class="internal"><span class="codenumber">5.6</span> <span class="title">Chapter Summary</span></a></div>
+<ul id="ptx-toc-group-ch5-sec-chapter-summary" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch5-sec-chapter-summary.html#ch5-subsec-the-main-ideas" class="internal"><span class="codenumber">5.6.1</span> <span class="title">The Main Ideas</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch5-sec-chapter-summary.html#ch5-subsec-expectations" class="internal"><span class="codenumber">5.6.2</span> <span class="title">Expectations</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch5-sec-chapter-summary.html#ch5-subsec-chapter-exercises" class="internal"><span class="codenumber">5.6.3</span> <span class="title">Chapter Exercises</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch6-chap-the-integral.html" class="internal"><span class="codenumber">6</span> <span class="title">The Integral</span></a></div>
+<ul id="ptx-toc-group-ch6-chap-the-integral" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="ch6-chap-the-integral-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="ch6-sec-measuring-work.html" class="internal"><span class="codenumber">6.1</span> <span class="title">Measuring Work</span></a></div>
+<ul id="ptx-toc-group-ch6-sec-measuring-work" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch6-sec-measuring-work.html#ch6-subsec-human-work" class="internal"><span class="codenumber">6.1.1</span> <span class="title">Human Work</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch6-sec-measuring-work.html#ch6-subsec-electrical-energy" class="internal"><span class="codenumber">6.1.2</span> <span class="title">Electrical Energy</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch6-sec-measuring-work.html#ch6-subsec-exercises" class="internal"><span class="codenumber">6.1.3</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="ch6-sec-riemann-sums.html" class="internal"><span class="codenumber">6.2</span> <span class="title">Riemann Sums</span></a></div>
+<ul id="ptx-toc-group-ch6-sec-riemann-sums" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch6-sec-riemann-sums.html#ch6-subsec-calculating-distance-travelled" class="internal"><span class="codenumber">6.2.1</span> <span class="title">Calculating Distance Travelled</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch6-sec-riemann-sums.html#ch6-subsec-calculating-areas" class="internal"><span class="codenumber">6.2.2</span> <span class="title">Calculating Areas</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch6-sec-riemann-sums.html#ch6-subsec-calculating-lengths" class="internal"><span class="codenumber">6.2.3</span> <span class="title">Calculating Lengths</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch6-sec-riemann-sums.html#ch6-subsec-definition" class="internal"><span class="codenumber">6.2.4</span> <span class="title">Definition</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch6-sec-riemann-sums.html#ch6-subsec-summation-notation" class="internal"><span class="codenumber">6.2.5</span> <span class="title">Summation Notation</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch6-sec-riemann-sums.html#ch6-subsec-exercises-2" class="internal"><span class="codenumber">6.2.6</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="ch6-sec-the-integral.html" class="internal"><span class="codenumber">6.3</span> <span class="title">The Integral</span></a></div>
+<ul id="ptx-toc-group-ch6-sec-the-integral" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch6-sec-the-integral.html#ch6-subsec-refining-riemann-sums" class="internal"><span class="codenumber">6.3.1</span> <span class="title">Refining Riemann Sums</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch6-sec-the-integral.html#ch6-subsec-definition-2" class="internal"><span class="codenumber">6.3.2</span> <span class="title">Definition</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch6-sec-the-integral.html#ch6-subsec-visualizing-the-integral" class="internal"><span class="codenumber">6.3.3</span> <span class="title">Visualizing the Integral</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch6-sec-the-integral.html#ch6-subsec-error-bounds" class="internal"><span class="codenumber">6.3.4</span> <span class="title">Error Bounds</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch6-sec-the-integral.html#ch6-subsec-integration-rules" class="internal"><span class="codenumber">6.3.5</span> <span class="title">Integration Rules</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch6-sec-the-integral.html#ch6-subsec-exercises-3" class="internal"><span class="codenumber">6.3.6</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="ch6-sec-the-fundamental-theorem-of-calculus.html" class="internal"><span class="codenumber">6.4</span> <span class="title">The Fundamental Theorem of Calculus</span></a></div>
+<ul id="ptx-toc-group-ch6-sec-the-fundamental-theorem-of-calculus" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch6-sec-the-fundamental-theorem-of-calculus.html#ch6-subsec-two-views-of-power-and-energy" class="internal"><span class="codenumber">6.4.1</span> <span class="title">Two Views of Power and Energy</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch6-sec-the-fundamental-theorem-of-calculus.html#ch6-subsec-integrals-and-differential-equations" class="internal"><span class="codenumber">6.4.2</span> <span class="title">Integrals and Differential Equations</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch6-sec-the-fundamental-theorem-of-calculus.html#ch6-subsec-antiderivatives" class="internal"><span class="codenumber">6.4.3</span> <span class="title">Antiderivatives</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch6-sec-the-fundamental-theorem-of-calculus.html#ch6-subsec-exercises-4" class="internal"><span class="codenumber">6.4.4</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="ch6-sec-chapter-summary.html" class="internal"><span class="codenumber">6.5</span> <span class="title">Chapter Summary</span></a></div>
+<ul id="ptx-toc-group-ch6-sec-chapter-summary" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch6-sec-chapter-summary.html#ch6-subsec-the-main-ideas" class="internal"><span class="codenumber">6.5.1</span> <span class="title">The Main Ideas</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch6-sec-chapter-summary.html#ch6-subsec-expectations" class="internal"><span class="codenumber">6.5.2</span> <span class="title">Expectations</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-backmatter"><div class="toc-title-box"><a href="backmatter.html" class="internal"><span class="title">Backmatter</span></a></div></li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content">
+<section class="section" id="ch3-sec-partial-derivatives">
+<h1 class="heading hide-type">
+<span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.7</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Partial Derivatives</span>
+</h1>
+<section class="introduction" id="ch3-sec-partial-derivatives-2">
+<div class="para" id="ch3-sec-partial-derivatives-2-1">Let’s return to the sunrise function once again. The time of sunrise depends not only on the date, but on our latitude. In fact, if we are far enough north or south, there are days when the sun never rises at all. We give in the table below the time of sunrise at eight different latitudes on March 15, 1990.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch3-sec-partial-derivatives-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="table table-like" id="ch3-sec-partial-derivatives-2-2"><figcaption><span class="type">Table</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.7.1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><div class="autopermalink" aria-hidden="true" data-description="Table 3.7.1: "><a tabindex="-1" href="#ch3-sec-partial-derivatives-2-2" title="Copy heading and permalink for Table 3.7.1: " aria-label="Copy heading and permalink for Table 3.7.1: ">🔗</a></div></figcaption><div class="tabular-box natural-width"><table class="tabular">
+<tr class="header-horizontal">
+<th scope="col" class="l m b0 r0 l0 t0 lines">Latitude</th>
+<th scope="col" class="c m b0 r0 l0 t0 lines"><span class="process-math">\(36^\circ \text{N}\)</span></th>
+<th scope="col" class="c m b0 r0 l0 t0 lines"><span class="process-math">\(38^\circ \text{N}\)</span></th>
+<th scope="col" class="c m b0 r0 l0 t0 lines"><span class="process-math">\(40^\circ \text{N}\)</span></th>
+<th scope="col" class="c m b0 r0 l0 t0 lines"><span class="process-math">\(42^\circ \text{N}\)</span></th>
+<th scope="col" class="c m b0 r0 l0 t0 lines"><span class="process-math">\(44^\circ \text{N}\)</span></th>
+<th scope="col" class="c m b0 r0 l0 t0 lines"><span class="process-math">\(46^\circ \text{N}\)</span></th>
+<th scope="col" class="c m b0 r0 l0 t0 lines"><span class="process-math">\(48^\circ \text{N}\)</span></th>
+<th scope="col" class="c m b0 r0 l0 t0 lines"><span class="process-math">\(50^\circ \text{N}\)</span></th>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">Mar 15</td>
+<td class="c m b0 r0 l0 t0 lines">6:10</td>
+<td class="c m b0 r0 l0 t0 lines">6:11</td>
+<td class="c m b0 r0 l0 t0 lines">6:12</td>
+<td class="c m b0 r0 l0 t0 lines">6:13</td>
+<td class="c m b0 r0 l0 t0 lines">6:13</td>
+<td class="c m b0 r0 l0 t0 lines">6:13</td>
+<td class="c m b0 r0 l0 t0 lines">6:14</td>
+<td class="c m b0 r0 l0 t0 lines">6:14</td>
+</tr>
+</table></div>
+</figure>
+<div class="para" id="ch3-sec-partial-derivatives-2-3">Thus on March 15, the time of sunrise increases as latitude increases.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch3-sec-partial-derivatives-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="ch3-sec-partial-derivatives-2-4">Clearly what this shows 
+<details id="ch3-sec-partial-derivatives-2-4-1" class="aside aside-like born-hidden-knowl"><summary class="knowl__link"><h2 class="heading"><span class="type">Aside</span></h2></summary>
+<aside class="aside aside-like knowl__content">
+<div class="para" id="ch3-sec-partial-derivatives-2-4-1-1">The time of sunrise depends on latitude as well as on the date<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch3-sec-partial-derivatives-2-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</aside></details> is that the time of sunrise is actually a function of two independent inputs: the date and the latitude. If <span class="process-math">\(T\)</span> denotes the time of sunrise, then we will write <span class="process-math">\(T = T(d, \lambda)\)</span> to make explicit the dependence of <span class="process-math">\(T\)</span> on both the date <span class="process-math">\(d\)</span> and the latitude <span class="process-math">\(\lambda\text{.}\)</span> To capture this double dependence, we need information like the following table:<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch3-sec-partial-derivatives-2-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="table table-like" id="ch3-two-way-table"><figcaption><span class="type">Table</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.7.2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><div class="autopermalink" aria-hidden="true" data-description="Table 3.7.2: "><a tabindex="-1" href="#ch3-two-way-table" title="Copy heading and permalink for Table 3.7.2: " aria-label="Copy heading and permalink for Table 3.7.2: ">🔗</a></div></figcaption><div class="tabular-box natural-width"><table class="tabular">
+<tr class="header-horizontal">
+<th scope="col" class="r m b0 r0 l0 t0 lines">Latitude</th>
+<th scope="col" class="c m b0 r0 l0 t0 lines"><span class="process-math">\(36^\circ \text{N}\)</span></th>
+<th scope="col" class="c m b0 r0 l0 t0 lines"><span class="process-math">\(38^\circ \text{N}\)</span></th>
+<th scope="col" class="c m b0 r0 l0 t0 lines"><span class="process-math">\(40^\circ \text{N}\)</span></th>
+<th scope="col" class="c m b0 r0 l0 t0 lines"><dfn class="terminology"><span class="process-math">\(42^\circ \text{N}\)</span></dfn></th>
+<th scope="col" class="c m b0 r0 l0 t0 lines"><span class="process-math">\(44^\circ \text{N}\)</span></th>
+<th scope="col" class="c m b0 r0 l0 t0 lines"><span class="process-math">\(46^\circ \text{N}\)</span></th>
+<th scope="col" class="c m b0 r0 l0 t0 lines"><span class="process-math">\(48^\circ \text{N}\)</span></th>
+<th scope="col" class="c m b0 r0 l0 t0 lines"><span class="process-math">\(50^\circ \text{N}\)</span></th>
+</tr>
+<tr>
+<td class="r m b0 r0 l0 t0 lines">Mar 3</td>
+<td class="c m b0 r0 l0 t0 lines">6:24</td>
+<td class="c m b0 r0 l0 t0 lines">6:27</td>
+<td class="c m b0 r0 l0 t0 lines">6:31</td>
+<td class="c m b0 r0 l0 t0 lines"><dfn class="terminology">6:33</dfn></td>
+<td class="c m b0 r0 l0 t0 lines">6:34</td>
+<td class="c m b0 r0 l0 t0 lines">6:36</td>
+<td class="c m b0 r0 l0 t0 lines">6:38</td>
+<td class="c m b0 r0 l0 t0 lines">6:40</td>
+</tr>
+<tr>
+<td class="r m b0 r0 l0 t0 lines">7</td>
+<td class="c m b0 r0 l0 t0 lines">6:20</td>
+<td class="c m b0 r0 l0 t0 lines">6:22</td>
+<td class="c m b0 r0 l0 t0 lines">6:25</td>
+<td class="c m b0 r0 l0 t0 lines"><dfn class="terminology">6:26</dfn></td>
+<td class="c m b0 r0 l0 t0 lines">6:27</td>
+<td class="c m b0 r0 l0 t0 lines">6:29</td>
+<td class="c m b0 r0 l0 t0 lines">6:30</td>
+<td class="c m b0 r0 l0 t0 lines">6:32</td>
+</tr>
+<tr>
+<td class="r m b0 r0 l0 t0 lines">11</td>
+<td class="c m b0 r0 l0 t0 lines">6:15</td>
+<td class="c m b0 r0 l0 t0 lines">6:17</td>
+<td class="c m b0 r0 l0 t0 lines">6:19</td>
+<td class="c m b0 r0 l0 t0 lines"><dfn class="terminology">6:19</dfn></td>
+<td class="c m b0 r0 l0 t0 lines">6:20</td>
+<td class="c m b0 r0 l0 t0 lines">6:21</td>
+<td class="c m b0 r0 l0 t0 lines">6:22</td>
+<td class="c m b0 r0 l0 t0 lines">6:23</td>
+</tr>
+<tr>
+<td class="r m b0 r0 l0 t0 lines"><dfn class="terminology">15</dfn></td>
+<td class="c m b0 r0 l0 t0 lines"><dfn class="terminology">6:10</dfn></td>
+<td class="c m b0 r0 l0 t0 lines"><dfn class="terminology">6:11</dfn></td>
+<td class="c m b0 r0 l0 t0 lines"><dfn class="terminology">6:12</dfn></td>
+<td class="c m b0 r0 l0 t0 lines"><dfn class="terminology">6:13</dfn></td>
+<td class="c m b0 r0 l0 t0 lines"><dfn class="terminology">6:13</dfn></td>
+<td class="c m b0 r0 l0 t0 lines"><dfn class="terminology">6:13</dfn></td>
+<td class="c m b0 r0 l0 t0 lines"><dfn class="terminology">6:14</dfn></td>
+<td class="c m b0 r0 l0 t0 lines"><dfn class="terminology">6:14</dfn></td>
+</tr>
+<tr>
+<td class="r m b0 r0 l0 t0 lines">19</td>
+<td class="c m b0 r0 l0 t0 lines">6:06</td>
+<td class="c m b0 r0 l0 t0 lines">6:06</td>
+<td class="c m b0 r0 l0 t0 lines">6:06</td>
+<td class="c m b0 r0 l0 t0 lines"><dfn class="terminology">6:06</dfn></td>
+<td class="c m b0 r0 l0 t0 lines">6:06</td>
+<td class="c m b0 r0 l0 t0 lines">6:06</td>
+<td class="c m b0 r0 l0 t0 lines">6:06</td>
+<td class="c m b0 r0 l0 t0 lines">6:06</td>
+</tr>
+<tr>
+<td class="r m b0 r0 l0 t0 lines">23</td>
+<td class="c m b0 r0 l0 t0 lines">6:01</td>
+<td class="c m b0 r0 l0 t0 lines">6:00</td>
+<td class="c m b0 r0 l0 t0 lines">5:59</td>
+<td class="c m b0 r0 l0 t0 lines"><dfn class="terminology">5:59</dfn></td>
+<td class="c m b0 r0 l0 t0 lines">5:58</td>
+<td class="c m b0 r0 l0 t0 lines">5:58</td>
+<td class="c m b0 r0 l0 t0 lines">5:58</td>
+<td class="c m b0 r0 l0 t0 lines">5:57</td>
+</tr>
+<tr>
+<td class="r m b0 r0 l0 t0 lines">27</td>
+<td class="c m b0 r0 l0 t0 lines">5:56</td>
+<td class="c m b0 r0 l0 t0 lines">5:54</td>
+<td class="c m b0 r0 l0 t0 lines">5:53</td>
+<td class="c m b0 r0 l0 t0 lines"><dfn class="terminology">5:52</dfn></td>
+<td class="c m b0 r0 l0 t0 lines">5:51</td>
+<td class="c m b0 r0 l0 t0 lines">5:50</td>
+<td class="c m b0 r0 l0 t0 lines">5:49</td>
+<td class="c m b0 r0 l0 t0 lines">5:48</td>
+</tr>
+</table></div>
+</figure>
+<div class="para" id="ch3-sec-partial-derivatives-2-6">Thus we can say <span class="process-math">\(T(74, 42^\circ\mbox{N})\)</span> = 6:13 (March 15 is the 74-th day of the year). Note, though, that at this date and place the time of sunrise is changing in two very different senses:<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch3-sec-partial-derivatives-2-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="ch3-sec-partial-derivatives-2-7">Two quite different rates are at work here, one with respect to time, the other with respect to latitude.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch3-sec-partial-derivatives-2-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="ch3-sec-partial-derivatives-2-8">
+<div class="para">We need a notation which allows us to talk about the different rates at which a function can change, 
+<details id="ch3-sec-partial-derivatives-2-8-1" class="aside aside-like born-hidden-knowl"><summary class="knowl__link"><h2 class="heading"><span class="type">Aside</span></h2></summary>
+<aside class="aside aside-like knowl__content">
+<div class="para" id="ch3-sec-partial-derivatives-2-8-1-1">A function of several variables has several rates of change<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch3-sec-partial-derivatives-2-8-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</aside></details> when that function depends on more than one variable. A rate of change is, of course, a derivative. But since a change in one input produces only part of the change that a function of several variables can experience, we call the rate of change with respect to any one of the inputs a <dfn class="terminology">partial derivative</dfn>. If the value of <span class="process-math">\(z\)</span> depends on the variables <span class="process-math">\(x\)</span> and <span class="process-math">\(y\)</span> according to the rule <span class="process-math">\(z = F(x,y)\text{,}\)</span> then we denote the rate at which <span class="process-math">\(z\)</span> is changing with respect to <span class="process-math">\(x\)</span> when <span class="process-math">\(x = a\)</span> and <span class="process-math">\(y = b\)</span> by</div>
+<div class="displaymath process-math" id="ch3-sec-partial-derivatives-2-8-11">
+\begin{equation*}
+F_x(a,b) \qquad \mbox{or by} \qquad
+\frac{\partial z}{\partial x}(a,b).
+\end{equation*}
+</div>
+<div class="para">We call this rate the 
+<details id="ch3-sec-partial-derivatives-2-8-12" class="aside aside-like born-hidden-knowl"><summary class="knowl__link"><h2 class="heading"><span class="type">Aside</span></h2></summary>
+<aside class="aside aside-like knowl__content">
+<div class="para" id="ch3-sec-partial-derivatives-2-8-12-1">Partial derivatives<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch3-sec-partial-derivatives-2-8-12-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</aside></details>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch3-sec-partial-derivatives-2-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="ch3-sec-partial-derivatives-2-9">
+<div class="para">
+<dfn class="terminology">partial derivative of <span class="process-math">\(F\)</span> with respect to <span class="process-math">\(x\)</span></dfn>. Similarly, we define the partial derivative of <span class="process-math">\(F\)</span> with respect to <span class="process-math">\(y\)</span> to be the rate at which <span class="process-math">\(z\)</span> is changing when <span class="process-math">\(y\)</span> is varied. It is denoted</div>
+<div class="displaymath process-math" id="ch3-sec-partial-derivatives-2-9-6">
+\begin{equation*}
+F_y(a,b) \qquad \mbox{or} \qquad
+\frac{\partial z}{\partial y}(a,b).
+\end{equation*}
+</div>
+<div class="para">There is nothing conceptually new involved here; to calculate either of these partial derivatives you simply hold one variable constant and go through the same limiting process as before for the input variable of interest. Note that, to call attention to the fact that there is more than one input variable present, we write</div>
+<div class="displaymath process-math" id="ch3-sec-partial-derivatives-2-9-7">
+\begin{equation*}
+\frac{\partial z}{\partial x} \qquad \mbox{rather than} 
+\qquad \frac{dz}{dx},
+\end{equation*}
+</div>
+<div class="para">as we did when <span class="process-math">\(x\)</span> was the only input variable.</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch3-sec-partial-derivatives-2-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="ch3-sec-partial-derivatives-2-10">
+<div class="para">To calculate the partial derivative of <span class="process-math">\(F\)</span> with respect to <span class="process-math">\(x\)</span> at the point <span class="process-math">\((a,b)\text{,}\)</span> we can use</div>
+<div class="displaymath process-math" id="ch3-sec-partial-derivatives-2-10-4">
+\begin{equation*}
+F_x(a,b) = \frac{\partial z}{\partial x}(a,b) =
+\lim_{\Delta x \rightarrow 0} 
+\frac{F(a + \Delta x,b) - F(a,b)}{\Delta x}.
+\end{equation*}
+</div>
+<div class="para">Similarly,</div>
+<div class="displaymath process-math" id="ch3-sec-partial-derivatives-2-10-5">
+\begin{equation*}
+F_y(a,b) = \frac{\partial z}{\partial y}(a,b) =
+\lim_{\Delta y \rightarrow 0} 
+\frac{F(a,b+\Delta y) - F(a,b)}{\Delta y}.
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch3-sec-partial-derivatives-2-10" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="ch3-sec-partial-derivatives-2-11">
+<div class="para">By using this notation for partial derivatives, we can cast some of our earlier statements about the sunrise function <span class="process-math">\(T = T(d, \lambda)\)</span> in the following form:</div>
+<div class="displaymath process-math" id="ch3-sec-partial-derivatives-2-11-2">
+\begin{align*}
+T_d(74, 42^\circ\mbox{N}) \amp\approx -1.63 \ \mbox{minutes per day};\\
+T_\lambda(74,42^\circ\mbox{N}) \amp\approx +.25 \ \mbox{minutes per degree}.
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch3-sec-partial-derivatives-2-11" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></section><dl class="description-list"></dl>
+<section class="subsection" id="ch3-subsec-partial-derivatives-as-multipliers">
+<h2 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.7.1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Partial Derivatives as Multipliers</span>
+</h2>
+<div class="para" id="ch3-subsec-partial-derivatives-as-multipliers-2">For any given date <span class="process-math">\(d\)</span> and latitude <span class="process-math">\(\lambda\)</span> we can write down two microscope equations for the sunrise function <span class="process-math">\(T(d, \lambda)\text{.}\)</span> One describes how the time of sunrise responds to changes in the date, the other to changes in the latitude. Let’s consider variations in the time of sunrise in the vicinity of March 15 and <span class="process-math">\(42^\circ\)</span>N.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch3-subsec-partial-derivatives-as-multipliers-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="ch3-subsec-partial-derivatives-as-multipliers-3">
+<div class="para">The partial derivative <span class="process-math">\(T_d(74,42^\circ\mbox{N})\)</span> of <span class="process-math">\(T\)</span> with respect to <span class="process-math">\(d\)</span> is the multiplier in the first of these microscope equations: 
+<details id="ch3-subsec-partial-derivatives-as-multipliers-3-4" class="aside aside-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Aside</span></h3></summary>
+<aside class="aside aside-like knowl__content">
+<div class="para" id="ch3-subsec-partial-derivatives-as-multipliers-3-4-1">The microscope equation for dates<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch3-subsec-partial-derivatives-as-multipliers-3-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</aside></details>
+</div>
+<div class="displaymath process-math" id="ch3-subsec-partial-derivatives-as-multipliers-3-5">
+\begin{equation*}
+\Delta T \approx T_d(74,42^\circ\mbox{N}) \cdot \Delta d.
+\end{equation*}
+</div>
+<div class="para">For example, from March 15 to March 17 (<span class="process-math">\(\Delta d\)</span> = 2 days), we would expect the time of sunrise to change by</div>
+<div class="displaymath process-math" id="ch3-subsec-partial-derivatives-as-multipliers-3-7">
+\begin{equation*}
+\Delta T \approx -1.63 \ \frac{\mbox{min}}{\mbox{day}}      \times 2 \ \mbox{days} = 
+- 3.3 \ \mbox{minutes}.
+\end{equation*}
+</div>
+<div class="para">Thus, we would expect the time of sunrise on March 17 at <span class="process-math">\(42^\circ\)</span>N to be approximately</div>
+<div class="displaymath process-math" id="ch3-subsec-partial-derivatives-as-multipliers-3-9">
+\begin{equation*}
+T(76,42^\circ\mbox{N}) \approx \mbox{6:09.7} .
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch3-subsec-partial-derivatives-as-multipliers-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="ch3-subsec-partial-derivatives-as-multipliers-4">
+<div class="para">The partial derivative <span class="process-math">\(T_{\lambda}(74,42^\circ\mbox{N})\)</span> of <span class="process-math">\(T\)</span> with respect to <span class="process-math">\(\lambda\)</span> is the multiplier in the second microscope equation: 
+<details id="ch3-subsec-partial-derivatives-as-multipliers-4-4" class="aside aside-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Aside</span></h3></summary>
+<aside class="aside aside-like knowl__content">
+<div class="para" id="ch3-subsec-partial-derivatives-as-multipliers-4-4-1">The microscope equation for latitudes<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch3-subsec-partial-derivatives-as-multipliers-4-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</aside></details>
+</div>
+<div class="displaymath process-math" id="ch3-subsec-partial-derivatives-as-multipliers-4-5">
+\begin{equation*}
+\Delta T \approx T_\lambda(74,42^\circ\mbox{N}) \cdot 
+\Delta \lambda.
+\end{equation*}
+</div>
+<div class="para">If, say, we moved <span class="process-math">\(1^\circ\)</span> north, to <span class="process-math">\(43^\circ\)</span>N, we would expect the time of sunrise on March 7 to change by</div>
+<div class="displaymath process-math" id="ch3-subsec-partial-derivatives-as-multipliers-4-8">
+\begin{equation*}
+\Delta T \approx 0.25 \ \frac{\mbox{min}}{\mbox{deg}}
+\times 1 \ \mbox{degree} 
+= 0.25 \ \mbox{minute}.
+\end{equation*}
+</div>
+<div class="para">The time of sunrise on March 15 at <span class="process-math">\(43^\circ\)</span>N would therefore be</div>
+<div class="displaymath process-math" id="ch3-subsec-partial-derivatives-as-multipliers-4-10">
+\begin{equation*}
+T(74,43^\circ\mbox{N}) \approx \mbox{6:13.25}.
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch3-subsec-partial-derivatives-as-multipliers-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="ch3-subsec-partial-derivatives-as-multipliers-5">We have seen what happens to the time of sunrise from March 15 to March 17 if we stay at <span class="process-math">\(42^\circ\)</span>N, and we have seen what happens to the time on March 15 if we move from <span class="process-math">\(42^\circ\)</span>N to <span class="process-math">\(43^\circ\)</span>N. Can we put these two pieces of information together? That is, can we determine the time of sunrise on March 17 at <span class="process-math">\(43^\circ\)</span>N? This involves changing <em class="emphasis">both</em> the date and the latitude.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch3-subsec-partial-derivatives-as-multipliers-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="ch3-subsec-partial-derivatives-as-multipliers-6">
+<div class="para">To determine the total change we shall just 
+<details id="ch3-subsec-partial-derivatives-as-multipliers-6-1" class="aside aside-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Aside</span></h3></summary>
+<aside class="aside aside-like knowl__content">
+<div class="para" id="ch3-subsec-partial-derivatives-as-multipliers-6-1-1">The total change<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch3-subsec-partial-derivatives-as-multipliers-6-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</aside></details> combine the two changes <span class="process-math">\(\Delta T\)</span> we have already calculated. Making the date two days later moves the time of sunrise 3.3 minutes <em class="emphasis">earlier</em>, and travelling one degree north makes the time of sunrise 0.25 minutes <em class="emphasis">later</em>, so the net effect would be to change the time of sunrise by</div>
+<div class="displaymath process-math" id="ch3-subsec-partial-derivatives-as-multipliers-6-5">
+\begin{equation*}
+\Delta T \approx - 3.3 \ \mbox{min} + 0.25 \ \mbox{min}  
+\approx  - 3 \ \mbox{minutes}.
+\end{equation*}
+</div>
+<div class="para">This puts the time of sunrise at <span class="process-math">\(T(76,43^\circ\mbox{N}) \approx\)</span> 6:10.</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch3-subsec-partial-derivatives-as-multipliers-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="ch3-subsec-partial-derivatives-as-multipliers-7">We can formulate this idea more generally in the following way: partial derivatives are not only multipliers for gauging the separate effects that changes in each input have on the output, but they also serve as multipliers for gauging the <em class="emphasis">cumulative</em> effect that changes in all inputs have on the output. In general, if <span class="process-math">\(z=F(x,y)\)</span> is a function of two variables, then near the point <span class="process-math">\((a,b)\text{,}\)</span> the combined change in <span class="process-math">\(z\)</span> caused by small changes in <span class="process-math">\(x\)</span> and <span class="process-math">\(y\)</span> can be stated by the <em class="emphasis">full</em> microscope equation:<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch3-subsec-partial-derivatives-as-multipliers-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="observation remark-like" id="ch3-subsec-partial-derivatives-as-multipliers-8"><h3 class="heading">
+<span class="type">Observation</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.7.3</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">The full microscope equation:.</span>
+</h3>
+<div class="displaymath process-math" id="ch3-subsec-partial-derivatives-as-multipliers-8-2">
+\begin{equation*}
+\Delta z \approx F_x(a,b) \cdot \Delta x +
+F_y(a,b) \cdot \Delta y
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Observation 3.7.3: The full microscope equation:"><a tabindex="-1" href="#ch3-subsec-partial-derivatives-as-multipliers-8" title="Copy heading and permalink for Observation 3.7.3: The full microscope equation:" aria-label="Copy heading and permalink for Observation 3.7.3: The full microscope equation:">🔗</a></div>
+</article>
+<div class="para" id="ch3-subsec-partial-derivatives-as-multipliers-9">As was the case for the functions of one variable, there is an important class of functions for which we may write “=” instead of “<span class="process-math">\(\approx\)</span>” in this relation, the linear functions. The most general form of a <dfn class="terminology">linear function of two variables</dfn> is <span class="process-math">\(z=F(x,y)= mx + ny + c\text{,}\)</span> for constants <span class="process-math">\(m\text{,}\)</span> <span class="process-math">\(n\text{,}\)</span> and <span class="process-math">\(c\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch3-subsec-partial-derivatives-as-multipliers-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="ch3-subsec-partial-derivatives-as-multipliers-10">In the exercises you will have an opportunity to verify that for a linear function <span class="process-math">\(z = F(x,y) = mx + ny + c\)</span> and for all <span class="process-math">\((a,b)\text{,}\)</span> we know that <span class="process-math">\(F_x(a,b) = m\)</span> and <span class="process-math">\(F_y(a,b) = n\text{,}\)</span> and the full microscope equation <span class="process-math">\(\Delta z = F_x(a,b) \cdot \Delta x + F_y(a,b) \cdot \Delta
+y\)</span> is true for all values of <span class="process-math">\(\Delta x\)</span> and <span class="process-math">\(\Delta y\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch3-subsec-partial-derivatives-as-multipliers-10" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Subsection 3.7.1: Partial Derivatives as Multipliers"><a tabindex="-1" href="#ch3-subsec-partial-derivatives-as-multipliers" title="Copy heading and permalink for Subsection 3.7.1: Partial Derivatives as Multipliers" aria-label="Copy heading and permalink for Subsection 3.7.1: Partial Derivatives as Multipliers">🔗</a></div>
+</section>
+<section class="subsection" id="ch3-subsec-formulas-for-partial-derivatives">
+<h2 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.7.2</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Formulas for Partial Derivatives</span>
+</h2>
+<div class="para" id="ch3-subsec-formulas-for-partial-derivatives-2">No new rules are needed to find the formulas for the partial derivatives of a function of two variables that is given by a formula. 
+<details id="ch3-subsec-formulas-for-partial-derivatives-2-1" class="aside aside-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Aside</span></h3></summary>
+<aside class="aside aside-like knowl__content">
+<div class="para" id="ch3-subsec-formulas-for-partial-derivatives-2-1-1">To find a partial derivative, treat the other variable as a constant<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch3-subsec-formulas-for-partial-derivatives-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</aside></details> To find the partial derivative with respect to one of the variables, just treat the other variable as a constant and follow the rules for functions of a single variable. (The basic rules are described in section 5 and the chain rule in section 6.) We give two examples to illustrate the method.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch3-subsec-formulas-for-partial-derivatives-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="ch3-ex1-1" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.7.4</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Example 1.</span>
+</h3></summary>
+<article class="example example-like knowl__content">
+<div class="para logical" id="ch3-ex1-1-2">
+<div class="para">For <span class="process-math">\(z = F(x,y) = 3x^2y + 5y^2 \sqrt{x}\text{,}\)</span> we have</div>
+<div class="displaymath process-math" id="ch3-ex1-1-2-2">
+\begin{align*}
+F_x(x,y) \amp=  3y (2x) + 5y^2 \frac{1}{2 \sqrt{x}} 
+= 6xy + \frac{5y^2}{2 \sqrt{x}}\\
+F_y(x,y) \amp=  3x^2 + 10y \sqrt{x}
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch3-ex1-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Example 3.7.4: Example 1"><a tabindex="-1" href="#ch3-ex1-1" title="Copy heading and permalink for Example 3.7.4: Example 1" aria-label="Copy heading and permalink for Example 3.7.4: Example 1">🔗</a></div>
+</article></details>
+<details id="ch3-ex2" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.7.5</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Example 2.</span>
+</h3></summary>
+<article class="example example-like knowl__content">
+<div class="para logical" id="ch3-ex2-2">
+<div class="para">For <span class="process-math">\(w = G(u,v) = 3 u^5 \sin{v}  - \cos{v} + u\text{,}\)</span> we have</div>
+<div class="displaymath process-math" id="ch3-ex2-2-2">
+\begin{align*}
+\dfrac{\partial w}{\partial u} \amp=   15 u^4 \sin{v} + 1\\
+\dfrac{\partial w}{\partial v} \amp= 3u^5 \cos{v} + \sin{v}
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch3-ex2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="ch3-ex2-3">
+<div class="para">The formulas for derivatives and the combined multiplier effect of partial derivatives allow us to determine the effect of changes in length and in width on the area of a rectangle. The area <span class="process-math">\(A\)</span> of the rectangle is a simple function of its dimensions <span class="process-math">\(l\)</span> and <span class="process-math">\(w\text{,}\)</span> <span class="process-math">\(A =
+F(l,w) = lw\text{.}\)</span> The partial derivatives of the area are then</div>
+<div class="displaymath process-math" id="ch3-ex2-3-5">
+\begin{equation*}
+F_l(l,w) = w \hspace{0.25in} \mbox{and} \hspace{0.25in} F_w(l,w) = l.
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch3-ex2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like" id="ch3-pic016"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="external/images/ch3_pic016.svg" role="img" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.7.6<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><div class="autopermalink" aria-hidden="true" data-description="Figure 3.7.6"><a tabindex="-1" href="#ch3-pic016" title="Copy heading and permalink for Figure 3.7.6" aria-label="Copy heading and permalink for Figure 3.7.6">🔗</a></div></figcaption>
+</figure>
+<div class="para logical" id="ch3-ex2-5">
+<div class="para">Changes <span class="process-math">\(\Delta l\)</span> and <span class="process-math">\(\Delta w\)</span> in the dimensions produce a change 
+<details id="ch3-ex2-5-3" class="aside aside-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Aside</span></h4></summary>
+<aside class="aside aside-like knowl__content">
+<div class="para" id="ch3-ex2-5-3-1">The full microscope equation for rectangular area<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch3-ex2-5-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</aside></details>
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/ch5-chap-techniques-of-differentiation.html" id="ch3-ex2-5-4">
+\begin{equation*}
+\Delta A \approx w \cdot \Delta l + l \cdot \Delta w
+\end{equation*}
+</div>
+<div class="para">in the area. The picture below shows that the <em class="emphasis">exact</em> value of <span class="process-math">\(\Delta A\)</span> includes an additional term—namely <span class="process-math">\(\Delta l \cdot \Delta w\)</span>—that is not in the approximation <span class="process-math">\(w \cdot \Delta l + l \cdot \Delta w\text{.}\)</span> The difference, <span class="process-math">\(\Delta l \cdot \Delta w\text{,}\)</span> is <em class="emphasis">very</em> small when the changes <span class="process-math">\(\Delta l\)</span> and <span class="process-math">\(\Delta w\)</span> are small. In <a href="ch5-chap-techniques-of-differentiation.html" class="internal" title="Chapter 5: Techniques of Differentiation">Chapter 5</a> we will have a further look at the nature of this approximation.</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch3-ex2-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Example 3.7.5: Example 2"><a tabindex="-1" href="#ch3-ex2" title="Copy heading and permalink for Example 3.7.5: Example 2" aria-label="Copy heading and permalink for Example 3.7.5: Example 2">🔗</a></div>
+</article></details><div class="autopermalink" aria-hidden="true" data-description="Subsection 3.7.2: Formulas for Partial Derivatives"><a tabindex="-1" href="#ch3-subsec-formulas-for-partial-derivatives" title="Copy heading and permalink for Subsection 3.7.2: Formulas for Partial Derivatives" aria-label="Copy heading and permalink for Subsection 3.7.2: Formulas for Partial Derivatives">🔗</a></div>
+</section>
+<section class="exercises" id="ch3-subsec-exercises-7">
+<h2 class="heading hide-type">
+<span class="type">Exercises</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.7.3</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Exercises</span>
+</h2>
+<article class="exercise exercise-like" id="ch3-subsec-exercises-7-2"><h3 class="heading"><span class="codenumber">1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
+<div class="introduction" id="ch3-subsec-exercises-7-2-1">
+<div class="para" id="ch3-subsec-exercises-7-2-1-1">Use differentiation formulas to find the partial derivatives of the following functions.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch3-subsec-exercises-7-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div>
+<article class="task exercise-like" id="ch3-subsec-exercises-7-2-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<div class="para" id="ch3-subsec-exercises-7-2-2-1">
+<span class="process-math">\(x^2 y\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch3-subsec-exercises-7-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 3.7.3.1.a"><a tabindex="-1" href="#ch3-subsec-exercises-7-2-2" title="Copy heading and permalink for Task 3.7.3.1.a" aria-label="Copy heading and permalink for Task 3.7.3.1.a">🔗</a></div>
+</article>
+<article class="task exercise-like" id="ch3-subsec-exercises-7-2-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="ch3-subsec-exercises-7-2-3-1">
+<span class="process-math">\(\sqrt{x + y}\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch3-subsec-exercises-7-2-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 3.7.3.1.b"><a tabindex="-1" href="#ch3-subsec-exercises-7-2-3" title="Copy heading and permalink for Task 3.7.3.1.b" aria-label="Copy heading and permalink for Task 3.7.3.1.b">🔗</a></div>
+</article>
+<article class="task exercise-like" id="ch3-subsec-exercises-7-2-4"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<div class="para" id="ch3-subsec-exercises-7-2-4-1">
+<span class="process-math">\(x^2y + 5x^3 - \sqrt{x + y}\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch3-subsec-exercises-7-2-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 3.7.3.1.c"><a tabindex="-1" href="#ch3-subsec-exercises-7-2-4" title="Copy heading and permalink for Task 3.7.3.1.c" aria-label="Copy heading and permalink for Task 3.7.3.1.c">🔗</a></div>
+</article>
+<article class="task exercise-like" id="ch3-subsec-exercises-7-2-5"><h4 class="heading"><span class="codenumber">(d)</span></h4>
+<div class="para" id="ch3-subsec-exercises-7-2-5-1">
+<span class="process-math">\(10^{xy}\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch3-subsec-exercises-7-2-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 3.7.3.1.d"><a tabindex="-1" href="#ch3-subsec-exercises-7-2-5" title="Copy heading and permalink for Task 3.7.3.1.d" aria-label="Copy heading and permalink for Task 3.7.3.1.d">🔗</a></div>
+</article>
+<article class="task exercise-like" id="ch3-subsec-exercises-7-2-6"><h4 class="heading"><span class="codenumber">(e)</span></h4>
+<div class="para" id="ch3-subsec-exercises-7-2-6-1">
+<span class="process-math">\(\dfrac{y}{x}\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch3-subsec-exercises-7-2-6-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 3.7.3.1.e"><a tabindex="-1" href="#ch3-subsec-exercises-7-2-6" title="Copy heading and permalink for Task 3.7.3.1.e" aria-label="Copy heading and permalink for Task 3.7.3.1.e">🔗</a></div>
+</article>
+<article class="task exercise-like" id="ch3-subsec-exercises-7-2-7"><h4 class="heading"><span class="codenumber">(f)</span></h4>
+<div class="para" id="ch3-subsec-exercises-7-2-7-1">
+<span class="process-math">\(\sin{\dfrac{y}{x}}\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch3-subsec-exercises-7-2-7-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 3.7.3.1.f"><a tabindex="-1" href="#ch3-subsec-exercises-7-2-7" title="Copy heading and permalink for Task 3.7.3.1.f" aria-label="Copy heading and permalink for Task 3.7.3.1.f">🔗</a></div>
+</article>
+<article class="task exercise-like" id="ch3-subsec-exercises-7-2-8"><h4 class="heading"><span class="codenumber">(g)</span></h4>
+<div class="para" id="ch3-subsec-exercises-7-2-8-1">
+<span class="process-math">\(17 \dfrac{x^2}{y^3} - x^2 \sin{y} + \pi\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch3-subsec-exercises-7-2-8-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 3.7.3.1.g"><a tabindex="-1" href="#ch3-subsec-exercises-7-2-8" title="Copy heading and permalink for Task 3.7.3.1.g" aria-label="Copy heading and permalink for Task 3.7.3.1.g">🔗</a></div>
+</article>
+<article class="task exercise-like" id="ch3-subsec-exercises-7-2-9"><h4 class="heading"><span class="codenumber">(h)</span></h4>
+<div class="para" id="ch3-subsec-exercises-7-2-9-1">
+<span class="process-math">\(\dfrac{uv}{5} + \dfrac{5}{uv}\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch3-subsec-exercises-7-2-9-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 3.7.3.1.h"><a tabindex="-1" href="#ch3-subsec-exercises-7-2-9" title="Copy heading and permalink for Task 3.7.3.1.h" aria-label="Copy heading and permalink for Task 3.7.3.1.h">🔗</a></div>
+</article>
+<article class="task exercise-like" id="ch3-subsec-exercises-7-2-10"><h4 class="heading"><span class="codenumber">(i)</span></h4>
+<div class="para" id="ch3-subsec-exercises-7-2-10-1">
+<span class="process-math">\(2 \sqrt{x} \, \sqrt[3]{y} - 7 \cos{x}\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch3-subsec-exercises-7-2-10-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 3.7.3.1.i"><a tabindex="-1" href="#ch3-subsec-exercises-7-2-10" title="Copy heading and permalink for Task 3.7.3.1.i" aria-label="Copy heading and permalink for Task 3.7.3.1.i">🔗</a></div>
+</article>
+<article class="task exercise-like" id="ch3-subsec-exercises-7-2-11"><h4 class="heading"><span class="codenumber">(j)</span></h4>
+<div class="para" id="ch3-subsec-exercises-7-2-11-1">
+<span class="process-math">\(x\tan{y}\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch3-subsec-exercises-7-2-11-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 3.7.3.1.j"><a tabindex="-1" href="#ch3-subsec-exercises-7-2-11" title="Copy heading and permalink for Task 3.7.3.1.j" aria-label="Copy heading and permalink for Task 3.7.3.1.j">🔗</a></div>
+</article><div class="autopermalink" aria-hidden="true" data-description="Exercise 3.7.3.1"><a tabindex="-1" href="#ch3-subsec-exercises-7-2" title="Copy heading and permalink for Exercise 3.7.3.1" aria-label="Copy heading and permalink for Exercise 3.7.3.1">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="ch3-subsec-exercises-7-3"><h3 class="heading"><span class="codenumber">2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
+<div class="para" id="ch3-subsec-exercises-7-3-1-1">On March 7 in the Northern Hemisphere, the farther south you are the earlier the sun rises. The sun rises at 6:25 on this date at <span class="process-math">\(40^\circ\)</span>N. If we had been far enough south, we could have experienced a 6:25 sunrise on March 5. Near what latitude did this happen?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch3-subsec-exercises-7-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Exercise 3.7.3.2"><a tabindex="-1" href="#ch3-subsec-exercises-7-3" title="Copy heading and permalink for Exercise 3.7.3.2" aria-label="Copy heading and permalink for Exercise 3.7.3.2">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="ch3-subsec-exercises-7-4"><h3 class="heading"><span class="codenumber">3<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
+<div class="introduction" id="ch3-subsec-exercises-7-4-1">
+<div class="para logical" id="ch3-subsec-exercises-7-4-1-1">
+<div class="para">The volume <span class="process-math">\(V\)</span> of a given quantity of gas is a function of the temperature <span class="process-math">\(T\)</span> (in degrees Kelvin) and the pressure <span class="process-math">\(P\text{.}\)</span> In a so-called ideal gas the functional relationship between volume and pressure is given by a particularly simple rule called the <dfn class="terminology">ideal gas law</dfn>:</div>
+<div class="displaymath process-math" id="ch3-subsec-exercises-7-4-1-1-5">
+\begin{equation*}
+V(T,P) = R \, \frac{T}{P},
+\end{equation*}
+</div>
+<div class="para">where <span class="process-math">\(R\)</span> is a constant.</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch3-subsec-exercises-7-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div>
+<article class="task exercise-like" id="ch3-subsec-exercises-7-4-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<div class="para" id="ch3-subsec-exercises-7-4-2-1">Find formulas for the partial derivatives <span class="process-math">\(V_T(T,P)\)</span> and <span class="process-math">\(V_P(T,P)\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch3-subsec-exercises-7-4-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 3.7.3.3.a"><a tabindex="-1" href="#ch3-subsec-exercises-7-4-2" title="Copy heading and permalink for Task 3.7.3.3.a" aria-label="Copy heading and permalink for Task 3.7.3.3.a">🔗</a></div>
+</article>
+<article class="task exercise-like" id="ch3-subsec-exercises-7-4-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="ch3-subsec-exercises-7-4-3-1">For a particular quantity of an ideal gas called a <em class="emphasis">mole</em>, the value of <span class="process-math">\(R\)</span> can be expressed as <span class="process-math">\(8.3 \times 10^3\)</span> newton-meters per degree Kelvin. (The <em class="emphasis">newton</em> is the unit of force in the meter-kilogram-second (or MKS) system of units. Check that the units in the ideal gas law are consistent if <span class="process-math">\(V\)</span> is measured in cubic meters, <span class="process-math">\(T\)</span> in degrees Kelvin, and <span class="process-math">\(P\)</span> in newtons per square meter.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch3-subsec-exercises-7-4-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 3.7.3.3.b"><a tabindex="-1" href="#ch3-subsec-exercises-7-4-3" title="Copy heading and permalink for Task 3.7.3.3.b" aria-label="Copy heading and permalink for Task 3.7.3.3.b">🔗</a></div>
+</article>
+<article class="task exercise-like" id="ch3-subsec-exercises-7-4-4"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<div class="para" id="ch3-subsec-exercises-7-4-4-1">Suppose a mole of gas at 350 degrees Kelvin is under a pressure of 20 newtons per square meter. If the temperature of the gas increases by 10 degrees Kelvin and the volume increases by 1 cubic meter, will the pressure increase or decrease? By about how much?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch3-subsec-exercises-7-4-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 3.7.3.3.c"><a tabindex="-1" href="#ch3-subsec-exercises-7-4-4" title="Copy heading and permalink for Task 3.7.3.3.c" aria-label="Copy heading and permalink for Task 3.7.3.3.c">🔗</a></div>
+</article><div class="autopermalink" aria-hidden="true" data-description="Exercise 3.7.3.3"><a tabindex="-1" href="#ch3-subsec-exercises-7-4" title="Copy heading and permalink for Exercise 3.7.3.3" aria-label="Copy heading and permalink for Exercise 3.7.3.3">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="ch3-subsec-exercises-7-5"><h3 class="heading"><span class="codenumber">4<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
+<div class="para logical" id="ch3-subsec-exercises-7-5-1-1">
+<div class="para">Write the formula for a linear function <span class="process-math">\(F(x, y)\)</span> with the following properties:</div>
+<div class="displaymath process-math" id="ch3-subsec-exercises-7-5-1-1-2">
+\begin{align*}
+F_x(x, y) \amp= \hphantom{2}.15 \qquad 
+\mbox{for all $x$ and $y$}\\
+F_y(x, y) \amp= 2.31 \qquad 
+\mbox{for all $x$ and $y$}\\
+F(4, 1)   \amp= 8
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch3-subsec-exercises-7-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Exercise 3.7.3.4"><a tabindex="-1" href="#ch3-subsec-exercises-7-5" title="Copy heading and permalink for Exercise 3.7.3.4" aria-label="Copy heading and permalink for Exercise 3.7.3.4">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="ch3-subsec-exercises-7-6"><h3 class="heading"><span class="codenumber">5<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
+<div class="introduction" id="ch3-subsec-exercises-7-6-1">
+<div class="para" id="ch3-subsec-exercises-7-6-1-1">The purpose of this exercise is to verify the claims made in the text for the linear function <span class="process-math">\(z=F(x,y) = mx + ny + c\/\text{,}\)</span> where <span class="process-math">\(m\text{,}\)</span> <span class="process-math">\(n\)</span> and <span class="process-math">\(c\)</span> are constants.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch3-subsec-exercises-7-6-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div>
+<article class="task exercise-like" id="ch3-subsec-exercises-7-6-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<div class="para" id="ch3-subsec-exercises-7-6-2-1">Use the differentiation rules to find the partial derivatives of <span class="process-math">\(F\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch3-subsec-exercises-7-6-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 3.7.3.5.a"><a tabindex="-1" href="#ch3-subsec-exercises-7-6-2" title="Copy heading and permalink for Task 3.7.3.5.a" aria-label="Copy heading and permalink for Task 3.7.3.5.a">🔗</a></div>
+</article>
+<article class="task exercise-like" id="ch3-subsec-exercises-7-6-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para logical" id="ch3-subsec-exercises-7-6-3-1">
+<div class="para">Use the <em class="emphasis">definition</em> of the partial derivative <span class="process-math">\(F_x(a,b)\)</span> to show that <span class="process-math">\(F_x(a,b)= m\)</span> for any input <span class="process-math">\((a,b)\text{.}\)</span> That is, show that the value of</div>
+<div class="displaymath process-math" id="ch3-subsec-exercises-7-6-3-1-5">
+\begin{equation*}
+\frac{F(a+\Delta x, b) - F(a,b)}{\Delta x}
+\end{equation*}
+</div>
+<div class="para">exactly equals <span class="process-math">\(m\text{,}\)</span> no matter what <span class="process-math">\(a\)</span> and <span class="process-math">\(b\)</span> are.</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch3-subsec-exercises-7-6-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 3.7.3.5.b"><a tabindex="-1" href="#ch3-subsec-exercises-7-6-3" title="Copy heading and permalink for Task 3.7.3.5.b" aria-label="Copy heading and permalink for Task 3.7.3.5.b">🔗</a></div>
+</article>
+<article class="task exercise-like" id="ch3-subsec-exercises-7-6-4"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<div class="para logical" id="ch3-subsec-exercises-7-6-4-1">
+<div class="para">Compute the exact value of the change</div>
+<div class="displaymath process-math" id="ch3-subsec-exercises-7-6-4-1-1">
+\begin{equation*}
+\Delta z = F(a+\Delta x,b+\Delta y) - F(a,b)
+\end{equation*}
+</div>
+<div class="para">corresponding to changing <span class="process-math">\(a\)</span> by <span class="process-math">\(\Delta x\)</span> and <span class="process-math">\(b\)</span> by <span class="process-math">\(\Delta y\text{.}\)</span>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch3-subsec-exercises-7-6-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 3.7.3.5.c"><a tabindex="-1" href="#ch3-subsec-exercises-7-6-4" title="Copy heading and permalink for Task 3.7.3.5.c" aria-label="Copy heading and permalink for Task 3.7.3.5.c">🔗</a></div>
+</article><div class="autopermalink" aria-hidden="true" data-description="Exercise 3.7.3.5"><a tabindex="-1" href="#ch3-subsec-exercises-7-6" title="Copy heading and permalink for Exercise 3.7.3.5" aria-label="Copy heading and permalink for Exercise 3.7.3.5">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="ch3-subsec-exercises-7-7"><h3 class="heading"><span class="codenumber">6<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
+<div class="introduction" id="ch3-subsec-exercises-7-7-1">
+<div class="para" id="ch3-subsec-exercises-7-7-1-1">Suppose <span class="process-math">\(w=G(u,v) = {\displaystyle \frac{uv}{3+v}}\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch3-subsec-exercises-7-7-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div>
+<article class="task exercise-like" id="ch3-subsec-exercises-7-7-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<div class="para" id="ch3-subsec-exercises-7-7-2-1">Approximate the value of the partial derivative <span class="process-math">\(G_u(1,2)\)</span> by computing <span class="process-math">\(\Delta w/\Delta u\)</span> for <span class="process-math">\(\Delta u = \pm 0.1\text{,}\)</span> <span class="process-math">\(\pm 0.01\text{,}\)</span> …, <span class="process-math">\(\pm 0.00001\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch3-subsec-exercises-7-7-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 3.7.3.6.a"><a tabindex="-1" href="#ch3-subsec-exercises-7-7-2" title="Copy heading and permalink for Task 3.7.3.6.a" aria-label="Copy heading and permalink for Task 3.7.3.6.a">🔗</a></div>
+</article>
+<article class="task exercise-like" id="ch3-subsec-exercises-7-7-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="ch3-subsec-exercises-7-7-3-1">Approximate the value of <span class="process-math">\(G_v(1,2)\)</span> by computing <span class="process-math">\(\Delta w/\Delta
+v\)</span> for <span class="process-math">\(\Delta v = \pm 0.1\text{,}\)</span> <span class="process-math">\(\pm 0.01\text{,}\)</span> …, <span class="process-math">\(\pm 0.00001\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch3-subsec-exercises-7-7-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 3.7.3.6.b"><a tabindex="-1" href="#ch3-subsec-exercises-7-7-3" title="Copy heading and permalink for Task 3.7.3.6.b" aria-label="Copy heading and permalink for Task 3.7.3.6.b">🔗</a></div>
+</article>
+<article class="task exercise-like" id="ch3-subsec-exercises-7-7-4"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<div class="para" id="ch3-subsec-exercises-7-7-4-1">Write the full microscope equation for <span class="process-math">\(G(u, v)\)</span> at <span class="process-math">\((u, v) = (1,
+2)\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch3-subsec-exercises-7-7-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 3.7.3.6.c"><a tabindex="-1" href="#ch3-subsec-exercises-7-7-4" title="Copy heading and permalink for Task 3.7.3.6.c" aria-label="Copy heading and permalink for Task 3.7.3.6.c">🔗</a></div>
+</article>
+<article class="task exercise-like" id="ch3-subsec-exercises-7-7-5"><h4 class="heading"><span class="codenumber">(d)</span></h4>
+<div class="para" id="ch3-subsec-exercises-7-7-5-1">Use the full microscope equation to approximate <span class="process-math">\(G(.8,2.1)\text{.}\)</span> How close is your approximation to the true value of <span class="process-math">\(G(.8,2.1)\text{?}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch3-subsec-exercises-7-7-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 3.7.3.6.d"><a tabindex="-1" href="#ch3-subsec-exercises-7-7-5" title="Copy heading and permalink for Task 3.7.3.6.d" aria-label="Copy heading and permalink for Task 3.7.3.6.d">🔗</a></div>
+</article><div class="autopermalink" aria-hidden="true" data-description="Exercise 3.7.3.6"><a tabindex="-1" href="#ch3-subsec-exercises-7-7" title="Copy heading and permalink for Exercise 3.7.3.6" aria-label="Copy heading and permalink for Exercise 3.7.3.6">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="ch3-subsec-exercises-7-8"><h3 class="heading"><span class="codenumber">7<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
+<div class="introduction" id="ch3-subsec-exercises-7-8-1">
+<div class="para" id="ch3-subsec-exercises-7-8-1-1">A rectangular piece of land has been measured to be 51 feet by 2034 feet. What is its area?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch3-subsec-exercises-7-8-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div>
+<article class="task exercise-like" id="ch3-subsec-exercises-7-8-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<div class="para" id="ch3-subsec-exercises-7-8-2-1">The narrow dimension has been measured with an accuracy of 4 inches, but the long dimension is accurate only to 10 feet. What is the error, or uncertainty, in the calculated area? What is the percentage error?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch3-subsec-exercises-7-8-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 3.7.3.7.a"><a tabindex="-1" href="#ch3-subsec-exercises-7-8-2" title="Copy heading and permalink for Task 3.7.3.7.a" aria-label="Copy heading and permalink for Task 3.7.3.7.a">🔗</a></div>
+</article><div class="autopermalink" aria-hidden="true" data-description="Exercise 3.7.3.7"><a tabindex="-1" href="#ch3-subsec-exercises-7-8" title="Copy heading and permalink for Exercise 3.7.3.7" aria-label="Copy heading and permalink for Exercise 3.7.3.7">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="ch3-subsec-exercises-7-9"><h3 class="heading"><span class="codenumber">8<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
+<div class="introduction" id="ch3-subsec-exercises-7-9-1">
+<div class="para logical" id="ch3-subsec-exercises-7-9-1-1">
+<div class="para">Suppose <span class="process-math">\(z = f(x, y)\)</span> and</div>
+<div class="displaymath process-math" id="ch3-subsec-exercises-7-9-1-1-2">
+\begin{equation*}
+f(3, 12) = 240, \qquad f_x(3, 12) = 7, \qquad 
+f_y(3, 12) = 4.
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch3-subsec-exercises-7-9-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div>
+<article class="task exercise-like" id="ch3-subsec-exercises-7-9-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<div class="para" id="ch3-subsec-exercises-7-9-2-1">Estimate <span class="process-math">\(f(4, 12)\text{,}\)</span> <span class="process-math">\(f(3, 13)\text{,}\)</span> <span class="process-math">\(f(4, 13)\text{,}\)</span> <span class="process-math">\(f(4, 10)\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch3-subsec-exercises-7-9-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 3.7.3.8.a"><a tabindex="-1" href="#ch3-subsec-exercises-7-9-2" title="Copy heading and permalink for Task 3.7.3.8.a" aria-label="Copy heading and permalink for Task 3.7.3.8.a">🔗</a></div>
+</article>
+<article class="task exercise-like" id="ch3-subsec-exercises-7-9-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="ch3-subsec-exercises-7-9-3-1">When <span class="process-math">\(x = 3\)</span> and <span class="process-math">\(y = 12\text{,}\)</span> how much does a 1% increase in <span class="process-math">\(x\)</span> cause <span class="process-math">\(z\)</span> to change? How much does a 1% increase in <span class="process-math">\(y\)</span> cause <span class="process-math">\(z\)</span> to change? Which has the larger effect: a 1% increase in <span class="process-math">\(x\)</span> or a 1% increase in <span class="process-math">\(y\text{?}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch3-subsec-exercises-7-9-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 3.7.3.8.b"><a tabindex="-1" href="#ch3-subsec-exercises-7-9-3" title="Copy heading and permalink for Task 3.7.3.8.b" aria-label="Copy heading and permalink for Task 3.7.3.8.b">🔗</a></div>
+</article><div class="autopermalink" aria-hidden="true" data-description="Exercise 3.7.3.8"><a tabindex="-1" href="#ch3-subsec-exercises-7-9" title="Copy heading and permalink for Exercise 3.7.3.8" aria-label="Copy heading and permalink for Exercise 3.7.3.8">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="ch3-subsec-exercises-7-10"><h3 class="heading"><span class="codenumber">9<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
+<div class="introduction" id="ch3-subsec-exercises-7-10-1">
+<div class="para logical" id="ch3-subsec-exercises-7-10-1-1">
+<div class="para">Let <span class="process-math">\(P(K, L)\)</span> represent the monthly profit, in thousands of dollars, of a company that produces a product using capital whose monthly cost is <span class="process-math">\(K\)</span> thousand dollars and labor whose monthly cost is <span class="process-math">\(L\)</span> thousand dollars. The current levels of expense for capital and labor are <span class="process-math">\(K = 23.5\)</span> and <span class="process-math">\(L = 39.0\text{.}\)</span> Suppose now that company managers have determined</div>
+<div class="displaymath process-math" id="ch3-subsec-exercises-7-10-1-1-6">
+\begin{equation*}
+\dfrac{\partial P}{\partial K}(23.5, 39.0) = -0.12,
+\qquad
+\dfrac{\partial P}{\partial L}(23.5, 39.0) = -0.20.
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch3-subsec-exercises-7-10-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div>
+<article class="task exercise-like" id="ch3-subsec-exercises-7-10-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<div class="para" id="ch3-subsec-exercises-7-10-2-1">Estimate what happens to the monthly profit if monthly capital expenses increase to $24,000.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch3-subsec-exercises-7-10-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 3.7.3.9.a"><a tabindex="-1" href="#ch3-subsec-exercises-7-10-2" title="Copy heading and permalink for Task 3.7.3.9.a" aria-label="Copy heading and permalink for Task 3.7.3.9.a">🔗</a></div>
+</article>
+<article class="task exercise-like" id="ch3-subsec-exercises-7-10-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="ch3-subsec-exercises-7-10-3-1">Each typical person added to the work force increases the monthly labor expense by $1,500. Estimate what happens to the monthly profit if one more person is added to the work force. What, therefore, is the rate of change of profit, in thousands of dollars per person? Is the rate positive or negative?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch3-subsec-exercises-7-10-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 3.7.3.9.b"><a tabindex="-1" href="#ch3-subsec-exercises-7-10-3" title="Copy heading and permalink for Task 3.7.3.9.b" aria-label="Copy heading and permalink for Task 3.7.3.9.b">🔗</a></div>
+</article>
+<article class="task exercise-like" id="ch3-subsec-exercises-7-10-4"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<div class="para" id="ch3-subsec-exercises-7-10-4-1">Suppose managers respond to increased demand for the product by adding three workers to the labor force. What does that do to monthly profit? If the managers want to keep the profit level unchanged, they could try to alter capital expenses. What change in <span class="process-math">\(K\)</span> would leave profit unchanged after the three workers are added? (This is called a <dfn class="terminology">trade-off</dfn>.)<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch3-subsec-exercises-7-10-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 3.7.3.9.c"><a tabindex="-1" href="#ch3-subsec-exercises-7-10-4" title="Copy heading and permalink for Task 3.7.3.9.c" aria-label="Copy heading and permalink for Task 3.7.3.9.c">🔗</a></div>
+</article><div class="autopermalink" aria-hidden="true" data-description="Exercise 3.7.3.9"><a tabindex="-1" href="#ch3-subsec-exercises-7-10" title="Copy heading and permalink for Exercise 3.7.3.9" aria-label="Copy heading and permalink for Exercise 3.7.3.9">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="ch3-subsec-exercises-7-11"><h3 class="heading"><span class="codenumber">10<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
+<div class="introduction" id="ch3-subsec-exercises-7-11-1">
+<div class="para" id="ch3-subsec-exercises-7-11-1-1">A forester who wants to know the height of a tree walks 100 feet from its base, sights to the top of the tree, and finds the resulting angle to be 57 degrees.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch3-subsec-exercises-7-11-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div>
+<article class="task exercise-like" id="ch3-subsec-exercises-7-11-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<div class="para" id="ch3-subsec-exercises-7-11-2-1">What height does this give for the tree?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch3-subsec-exercises-7-11-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 3.7.3.10.a"><a tabindex="-1" href="#ch3-subsec-exercises-7-11-2" title="Copy heading and permalink for Task 3.7.3.10.a" aria-label="Copy heading and permalink for Task 3.7.3.10.a">🔗</a></div>
+</article>
+<article class="task exercise-like" id="ch3-subsec-exercises-7-11-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="ch3-subsec-exercises-7-11-3-1">If the 100-foot measurement is certain only to 1 foot and the angle measurement is certain only to 5 degrees, what can you say about the uncertainty of the height measured in part (a)? (Note: you need to express angles in <em class="emphasis">radians</em> to use calculus: <span class="process-math">\(\pi\)</span> radians = 180 degrees.)<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch3-subsec-exercises-7-11-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 3.7.3.10.b"><a tabindex="-1" href="#ch3-subsec-exercises-7-11-3" title="Copy heading and permalink for Task 3.7.3.10.b" aria-label="Copy heading and permalink for Task 3.7.3.10.b">🔗</a></div>
+</article>
+<article class="task exercise-like" id="ch3-subsec-exercises-7-11-4"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<div class="para" id="ch3-subsec-exercises-7-11-4-1">Which would be more effective: improving the accuracy of the angle measurement, or improving the accuracy of the distance measurement? Explain.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch3-subsec-exercises-7-11-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 3.7.3.10.c"><a tabindex="-1" href="#ch3-subsec-exercises-7-11-4" title="Copy heading and permalink for Task 3.7.3.10.c" aria-label="Copy heading and permalink for Task 3.7.3.10.c">🔗</a></div>
+</article><div class="autopermalink" aria-hidden="true" data-description="Exercise 3.7.3.10"><a tabindex="-1" href="#ch3-subsec-exercises-7-11" title="Copy heading and permalink for Exercise 3.7.3.10" aria-label="Copy heading and permalink for Exercise 3.7.3.10">🔗</a></div>
+</article><div class="autopermalink" aria-hidden="true" data-description="Exercises 3.7.3: Exercises"><a tabindex="-1" href="#ch3-subsec-exercises-7" title="Copy heading and permalink for Exercises 3.7.3: Exercises" aria-label="Copy heading and permalink for Exercises 3.7.3: Exercises">🔗</a></div>
+</section><div class="autopermalink" aria-hidden="true" data-description="Section 3.7: Partial Derivatives"><a tabindex="-1" href="#ch3-sec-partial-derivatives" title="Copy heading and permalink for Section 3.7: Partial Derivatives" aria-label="Copy heading and permalink for Section 3.7: Partial Derivatives">🔗</a></div>
+</section>
+</div>
+<div id="ptx-content-footer" class="ptx-content-footer">
+<a class="previous-button button" href="ch3-sec-the-chain-rule.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="ch3-sec-chapter-summary.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+</div></main>
+</div>
+<div id="ptx-page-footer" class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="338 3000 8772 6866" role="img"><title>PreTeXt logo</title><g style="stroke-width:.025in; stroke:currentColor; fill:none"><polyline points="472,3590 472,9732 " style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png" alt="Runstone Academy logo"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png" alt="MathJax logo"></a>
+</div>
+</body>
+</html>

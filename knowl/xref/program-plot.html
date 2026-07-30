@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<figure class="listing figure-like"><figcaption><span class="type">Listing</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.5.4<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>PLOT<div class="autopermalink" aria-hidden="true" data-description="Listing 4.5.4: PLOT"><a tabindex="-1" href="#program-plot" title="Copy heading and permalink for Listing 4.5.4: PLOT" aria-label="Copy heading and permalink for Listing 4.5.4: PLOT">🔗</a></div></figcaption><div class="listing__contents"><div class="code-box"><pre class="program clipboardable"><code class="language-none">' Set up Graphics
+DEF fnf(t) = COS(t^2)
+
+tinitial = 0
+tfinal = 4
+numberofsteps = 400
+
+deltat = (tfinal - tinitial)/numberofsteps
+
+t = tinitial
+accumulation = 0
+
+FOR k = 1 TO numberofsteps
+    deltay = fnf(t)*deltat
+    ' Plot the line from
+    ' (t,accumulation) to
+    ' (t+deltat, accumulation+deltay)
+    accumulation = accumulation + deltay
+    t = t + deltat
+NEXT k
+</code></pre></div></div>
+</figure><span class="incontext"><a class="internal" href="ch4-sec-the-equation-y-ft.html#program-plot">In Context</a></span>
+</body>
+</html>
