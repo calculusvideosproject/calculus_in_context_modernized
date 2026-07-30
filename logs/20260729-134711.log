@@ -1,0 +1,13 @@
+INFO    : Building target web
+INFO    : XSL conversion of /Volumes/Sonnet_SSD/DocumentsS/GitHub/calculus_in_context/source/main.ptx by /Users/aaronweinberg/.ptx/2.45.0/core/xsl/utilities/pretext-enhanced-source.xsl
+ERROR   : Error loading /Volumes/Sonnet_SSD/DocumentsS/GitHub/calculus_in_context/source/ch6.ptx: Opening and ending tag mismatch: xref line 2070 and p, line 2071, column 9 (ch6.ptx, line 2071)
+ERROR   : Error assembling source file: Opening and ending tag mismatch: xref line 2070 and p, line 2071, column 9 (ch6.ptx, line 2071)
+FATAL   : XML syntax for source file is invalid
+INFO    : ------------------------
+FATAL   : Failed to build without errors.  Exiting...
+INFO    : 
+----------------------------------------------------
+INFO    : While running pretext, the following errors occurred:
+
+INFO    : (see log messages above or in the 'logs' folder for more information)
+INFO    : ----------------------------------------------------

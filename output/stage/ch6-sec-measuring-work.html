@@ -1,0 +1,1459 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Measuring Work</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+<link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
+<script type="module">import { startMathJax } from './_static/pretext/js/dist/mathjax_startup.js';
+startMathJax({
+hasWebworkReps: false,
+hasSage: false,
+isReact: false,
+htmlPresentation: false,
+});
+</script><script defer src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta name="twitter:title" content="Calculus in Context: The Five College Calculus Project">
+<meta property="og:title" content="Calculus in Context: The Five College Calculus Project">
+<meta property="book:title" content="Calculus in Context: The Five College Calculus Project">
+<meta name="twitter:description" content="A PreTeXt version of the Calculus in Context textbook.">
+<meta property="og:description" content="A PreTeXt version of the Calculus in Context textbook.">
+<meta name="twitter:card" content="summary">
+<script src="_static/pretext/js/jquery.min.js"></script><script src="_static/pretext/js/dist/pretext-core.js?v=2.45"></script><!--** eBookCongig is necessary to configure interactive       **-->
+<!--** Runestone components to run locally in reader's browser **-->
+<!--** No external communication:                              **-->
+<!--**     log level is 0, Runestone Services are disabled     **-->
+<script type="text/javascript">
+eBookConfig = {};
+eBookConfig.useRunestoneServices = false;
+eBookConfig.host = 'http://127.0.0.1:8000';
+eBookConfig.course = 'PTX_Course_Title_Here';
+eBookConfig.basecourse = 'PTX_Base_Course';
+eBookConfig.isLoggedIn = false;
+eBookConfig.email = '';
+eBookConfig.isInstructor = false;
+eBookConfig.logLevel = 0;
+eBookConfig.username = '';
+eBookConfig.readings = null;
+eBookConfig.activities = null;
+eBookConfig.downloadsEnabled = false;
+eBookConfig.allow_pairs = false;
+eBookConfig.enableScratchAC = false;
+eBookConfig.build_info = "";
+eBookConfig.python3 = null;
+eBookConfig.runestone_version = '8.1.16';
+eBookConfig.jobehost = '';
+eBookConfig.proxyuri_runs = '';
+eBookConfig.proxyuri_files = '';
+eBookConfig.enable_chatcodes =  false;
+</script>
+<!--*** Runestone Services ***-->
+<script src="_static/prefix-runtime.279b1f0077454c32.bundle.js"></script><script src="_static/prefix-926.5c7038c8ef173faf.bundle.js"></script><script src="_static/prefix-runestone.db8001875cb726c2.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-926.229729d09512acc9.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.66fa8a682a32c0ac.css">
+<script src="_static/pretext/js/dist/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/components/prism-core.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/autoloader/prism-autoloader.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/line-numbers/prism-line-numbers.min.js" integrity="sha512-dubtf8xMHSQlExGRQ5R7toxHLgSDZ0K7AunqPWHXmJQ8XyVIG19S1T95gBxlAeGOK02P4Da2RTnQz0Za0H0ebQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/line-highlight/prism-line-highlight.min.js" integrity="sha512-93uCmm0q+qO5Lb1huDqr7tywS8A2TFA+1/WHvyiWaK6/pvsFl6USnILagntBx8JnVbQH5s3n0vQZY6xNthNfKA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/dist/pretext_search.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script>
+</head>
+<body id="calculus-in-context" class="pretext book ignore-math">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead" role="banner"><div class="ptx-banner"><div class="title-container">
+<div class="heading ptx-banner-heading"><a href="calculus-in-context-2026.html"><span class="title">Calculus in Context</span> <span class="subtitle">The Five College Calculus Project</span></a></div>
+<p class="byline">James Callahan, Kenneth Hoffman, David Cox, Donal O’Shea, Harriet Pollastek, Lester Senechal</p>
+</div></div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
+<button id="ptx-toc-toggle" type="button" aria-controls="ptx-sidebar" class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><div class="ptx-search-box">
+<div class="ptx-search-widget"><button id="ptx-search-button" type="button" class="ptx-search-button button" title="Search Book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
+<dialog id="ptx-search-dialog" class="ptx-dialog ptx-search-dialog"><div class="ptx-search-dialog-controls">
+<input aria-label="Search term" id="ptx-search-terms" class="ptx-search-terms" type="text" name="terms" placeholder="Search terms"><button aria-label="Close" id="ptx-search-close" class="ptx-search-close"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cd;</span></button>
+</div>
+<div id="ptx-search-status" class="ptx-search-status" aria-live="polite" aria-atomic="true"></div>
+<h2 class="heading ptx-search-results-heading">Search Results: </h2>
+<div id="ptx-search-empty" class="ptx-search-empty"><span>No results.</span></div>
+<ol id="ptx-search-results" class="ptx-search-results"></ol></dialog>
+</div>
+<span class="nav-other-controls"><button id="ptx-readability-options-button" class="ptx-readability-options-button button" title="Readability settings"><span class="icon material-symbols-outlined" aria-hidden="true">&#xf6f1;</span><span class="name">Readability settings</span></button><dialog class="ptx-dialog ptx-readability-options-popup" id="ptx-readability-options-popup"><div class="ptx-readability-options-popup-controls">
+<h2 class="heading">Readability settings</h2>
+<button class="ptx-readability-options-close-button button" id="ptx-readability-options-close-button" title="Close"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cd;</span></button>
+</div>
+<div class="ptx-readability-options-group">
+<label class="ptx-readability-slider-label" for="ptx-readability-line-height"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe240;</span><span>Line height</span><output id="ptx-readability-line-height-value" for="ptx-readability-line-height">1.35</output></label><input type="range" id="ptx-readability-line-height" min="1.10" max="3" step="0.05" value="1.35">
+</div>
+<div class="ptx-readability-options-group">
+<label class="ptx-readability-slider-label" for="ptx-readability-font-size"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe245;</span><span>Content font size</span><output id="ptx-readability-font-size-value" for="ptx-readability-font-size">100%</output></label><input type="range" id="ptx-readability-font-size" min="0.8" max="1.5" step="0.05" value="1">
+</div>
+<fieldset class="ptx-readability-options-group ptx-readability-options-group-theme">
+<legend>Theme</legend>
+<label for="ptx-readability-theme-system"><input type="radio" name="ptx-readability-theme" id="ptx-readability-theme-system" value="system"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe1ab;</span><span>System</span></label><label for="ptx-readability-theme-light"><input type="radio" name="ptx-readability-theme" id="ptx-readability-theme-light" value="light"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe518;</span><span>Light</span></label><label for="ptx-readability-theme-dark"><input type="radio" name="ptx-readability-theme" id="ptx-readability-theme-dark" value="dark"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span>Dark</span></label>
+</fieldset>
+<fieldset class="ptx-readability-options-group">
+<legend>Assistive technologies</legend>
+<label for="ptx-readability-accessible-permalinks"><input type="checkbox" id="ptx-readability-accessible-permalinks"><span>🔗</span><span>Expose permalinks</span></label>
+</fieldset>
+<div class="ptx-readability-options-group"><button type="button" class="ptx-readability-reset-button button" id="ptx-readability-reset-button"><span class="icon material-symbols-outlined" aria-hidden="true">&#xf053;</span><span class="name">Reset All</span></button></div></dialog></span><span class="treebuttons"><a class="previous-button button" href="ch6-chap-the-integral-2.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="ch6-chap-the-integral.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="ch6-sec-riemann-sums.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
+</div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N} \newcommand{\Z}{\mathbb Z} \newcommand{\Q}{\mathbb Q} \newcommand{\R}{\mathbb R}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="ptx-page">
+<div id="ptx-sidebar" role="complementary" class="ptx-sidebar"><nav id="ptx-toc" tabindex="-1" aria-label="Contents" class="ptx-toc depth2 focused" data-preexpanded-levels="0" data-max-levels="2"><ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-frontmatter">
+<div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div>
+<ul id="ptx-toc-group-frontmatter" class="structural toc-item-list">
+<li class="toc-item toc-preface"><div class="toc-title-box"><a href="conversion-note.html" class="internal"><span class="title">Note on the PreTeXt Edition</span></a></div></li>
+<li class="toc-item toc-preface"><div class="toc-title-box"><a href="advisory-board.html" class="internal"><span class="title">Advisory Committee</span></a></div></li>
+<li class="toc-item toc-preface"><div class="toc-title-box"><a href="preface-2026.html" class="internal"><span class="title">Preface to the 2026 Edition</span></a></div></li>
+<li class="toc-item toc-preface"><div class="toc-title-box"><a href="preface-2008.html" class="internal"><span class="title">Preface to the 2008 Edition</span></a></div></li>
+<li class="toc-item toc-preface"><div class="toc-title-box"><a href="preface-1994.html" class="internal"><span class="title">Preface to the 1994 Edition</span></a></div></li>
+<li class="toc-item toc-preface"><div class="toc-title-box"><a href="to-the-students.html" class="internal"><span class="title">To the Students</span></a></div></li>
+<li class="toc-item toc-acknowledgement"><div class="toc-title-box"><a href="acknowledgements.html" class="internal"><span class="title">Acknowledgements</span></a></div></li>
+<li class="toc-item toc-colophon"><div class="toc-title-box"><a href="front-colophon.html" class="internal"><span class="title">Colophon</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch1-chap-a-context-for-calculus.html" class="internal"><span class="codenumber">1</span> <span class="title">A Context for Calculus</span></a></div>
+<ul id="ptx-toc-group-ch1-chap-a-context-for-calculus" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="ch1-chap-a-context-for-calculus-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="ch1-sec-the-spread-of-disease.html" class="internal"><span class="codenumber">1.1</span> <span class="title">The Spread of Disease</span></a></div>
+<ul id="ptx-toc-group-ch1-sec-the-spread-of-disease" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch1-sec-the-spread-of-disease.html#ch1-subsec-making-a-model" class="internal"><span class="codenumber">1.1.1</span> <span class="title">Making a Model</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch1-sec-the-spread-of-disease.html#ch1-subsec-a-simple-model-for-predicting-change" class="internal"><span class="codenumber">1.1.2</span> <span class="title">A Simple Model for Predicting Change</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch1-sec-the-spread-of-disease.html#ch1-subsec-the-rate-of-recovery" class="internal"><span class="codenumber">1.1.3</span> <span class="title">The Rate of Recovery</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch1-sec-the-spread-of-disease.html#ch1-subsec-the-rate-of-transmission" class="internal"><span class="codenumber">1.1.4</span> <span class="title">The Rate of Transmission</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch1-sec-the-spread-of-disease.html#ch1-subsec-completing-the-model" class="internal"><span class="codenumber">1.1.5</span> <span class="title">Completing the Model</span></a></div></li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="ch1-sec-the-spread-of-disease.html#ch1-subsec-analyzing-the-model" class="internal"><span class="codenumber">1.1.6</span> <span class="title">Analyzing the Model</span></a></div>
+<ul id="ptx-toc-group-ch1-subsec-analyzing-the-model" class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="ch1-sec-the-spread-of-disease.html#ch1-the-problem" class="internal"><span class="codenumber">1.1.6.1</span> <span class="title">The Problem.</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="ch1-sec-the-spread-of-disease.html#ch1-tomorrow" class="internal"><span class="codenumber">1.1.6.2</span> <span class="title">Tomorrow</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="ch1-sec-the-spread-of-disease.html#ch1-several-days-hence" class="internal"><span class="codenumber">1.1.6.3</span> <span class="title">Several days hence</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="ch1-sec-the-spread-of-disease.html#ch1-yesterday" class="internal"><span class="codenumber">1.1.6.4</span> <span class="title">Yesterday</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="ch1-sec-the-spread-of-disease.html#ch1-there-and-back-again" class="internal"><span class="codenumber">1.1.6.5</span> <span class="title">There and back again</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="ch1-sec-the-spread-of-disease.html#ch1-delta-notation" class="internal"><span class="codenumber">1.1.6.6</span> <span class="title">Delta notation</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="ch1-sec-the-spread-of-disease.html#ch1-using-the-computer-as-a-tool" class="internal"><span class="codenumber">1.1.6.7</span> <span class="title">Using the computer as a tool.</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="ch1-sec-the-spread-of-disease.html#ch1-the-flow-chart" class="internal"><span class="codenumber">1.1.6.8</span> <span class="title">The flow chart</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="ch1-sec-the-spread-of-disease.html#ch1-analysis-without-a-computer" class="internal"><span class="codenumber">1.1.6.9</span> <span class="title">Analysis without a computer</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch1-sec-the-spread-of-disease.html#ch1-subsec-exercises-1-1" class="internal"><span class="codenumber">1.1.7</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="ch1-sec-the-mathematical-ideas.html" class="internal"><span class="codenumber">1.2</span> <span class="title">The Mathematical Ideas</span></a></div>
+<ul id="ptx-toc-group-ch1-sec-the-mathematical-ideas" class="structural toc-item-list">
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="ch1-sec-the-mathematical-ideas.html#ch1-subsec-functions" class="internal"><span class="codenumber">1.2.1</span> <span class="title">Functions</span></a></div>
+<ul id="ptx-toc-group-ch1-subsec-functions" class="structural toc-item-list"><li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="ch1-sec-the-mathematical-ideas.html#ch1-some-technical-details" class="internal"><span class="codenumber">1.2.1.1</span> <span class="title">Some technical details.</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch1-sec-the-mathematical-ideas.html#ch1-subsec-graphs" class="internal"><span class="codenumber">1.2.2</span> <span class="title">Graphs</span></a></div></li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="ch1-sec-the-mathematical-ideas.html#ch1-subsec-linear-functions" class="internal"><span class="codenumber">1.2.3</span> <span class="title">Linear Functions</span></a></div>
+<ul id="ptx-toc-group-ch1-subsec-linear-functions" class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="ch1-sec-the-mathematical-ideas.html#ch1-changes-in-input-and-output" class="internal"><span class="codenumber">1.2.3.1</span> <span class="title">Changes in input and output</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="ch1-sec-the-mathematical-ideas.html#ch1-the-graph-of-a-linear-function" class="internal"><span class="codenumber">1.2.3.2</span> <span class="title">The graph of a linear function</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="ch1-sec-the-mathematical-ideas.html#ch1-rates-slopes-and-multipliers" class="internal"><span class="codenumber">1.2.3.3</span> <span class="title">Rates, slopes, and multipliers</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="ch1-sec-the-mathematical-ideas.html#ch1-units" class="internal"><span class="codenumber">1.2.3.4</span> <span class="title">Units</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="ch1-sec-the-mathematical-ideas.html#ch1-formulas-for-linear-functions" class="internal"><span class="codenumber">1.2.3.5</span> <span class="title">Formulas for linear functions</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="ch1-sec-the-mathematical-ideas.html#ch1-subsec-functions-of-several-variables" class="internal"><span class="codenumber">1.2.4</span> <span class="title">Functions of Several Variables</span></a></div>
+<ul id="ptx-toc-group-ch1-subsec-functions-of-several-variables" class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="ch1-sec-the-mathematical-ideas.html#ch1-language-and-notation" class="internal"><span class="codenumber">1.2.4.1</span> <span class="title">Language and notation.</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="ch1-sec-the-mathematical-ideas.html#ch1-parameters" class="internal"><span class="codenumber">1.2.4.2</span> <span class="title">Parameters</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="ch1-sec-the-mathematical-ideas.html#ch1-further-possibilities" class="internal"><span class="codenumber">1.2.4.3</span> <span class="title">Further possibilities.</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch1-sec-the-mathematical-ideas.html#ch1-subsec-the-beginnings-of-calculus" class="internal"><span class="codenumber">1.2.5</span> <span class="title">The Beginnings of Calculus</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch1-sec-the-mathematical-ideas.html#ch1-subsec-exercises-1-2" class="internal"><span class="codenumber">1.2.6</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="ch1-sec-using-a-program.html" class="internal"><span class="codenumber">1.3</span> <span class="title">Using a Program</span></a></div>
+<ul id="ptx-toc-group-ch1-sec-using-a-program" class="structural toc-item-list">
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="ch1-sec-using-a-program.html#ch1-subsec-computers" class="internal"><span class="codenumber">1.3.1</span> <span class="title">Computers</span></a></div>
+<ul id="ptx-toc-group-ch1-subsec-computers" class="structural toc-item-list"><li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="ch1-sec-using-a-program.html#ch1-subsubsec-the-program-sir-1" class="internal"><span class="codenumber">1.3.1.1</span> <span class="title">The Program SIR</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch1-sec-using-a-program.html#ch1-subsec-exercises-1-3" class="internal"><span class="codenumber">1.3.2</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="ch1-sec-chapter-summary.html" class="internal"><span class="codenumber">1.4</span> <span class="title">Chapter Summary</span></a></div>
+<ul id="ptx-toc-group-ch1-sec-chapter-summary" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch1-sec-chapter-summary.html#ch1-subsec-the-main-ideas" class="internal"><span class="codenumber">1.4.1</span> <span class="title">The Main Ideas</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch1-sec-chapter-summary.html#ch1-subsec-expectations" class="internal"><span class="codenumber">1.4.2</span> <span class="title">Expectations</span></a></div></li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="ch1-sec-chapter-summary.html#ch1-subsec-chapter-exercises" class="internal"><span class="codenumber">1.4.3</span> <span class="title">Chapter Exercises</span></a></div>
+<ul id="ptx-toc-group-ch1-subsec-chapter-exercises" class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch1-sec-chapter-summary.html#ch1-subsec-exercises-1-4" class="internal"><span class="codenumber">1.4.3</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch2-chap-successive-approximations.html" class="internal"><span class="codenumber">2</span> <span class="title">Successive Approximations</span></a></div>
+<ul id="ptx-toc-group-ch2-chap-successive-approximations" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="ch2-chap-successive-approximations-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="ch2-sec-making-approximations.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Making Approximations</span></a></div>
+<ul id="ptx-toc-group-ch2-sec-making-approximations" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch2-sec-making-approximations.html#ch2-subsec-the-longest-march-begins-with-a-single-step" class="internal"><span class="codenumber">2.1.1</span> <span class="title">The Longest March Begins with a Single Step</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch2-sec-making-approximations.html#ch2-subsec-one-picture-is-worth-a-hundred-tables" class="internal"><span class="codenumber">2.1.2</span> <span class="title">One Picture Is Worth a Hundred Tables</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch2-sec-making-approximations.html#ch2-subsec-piecewise-linear-functions" class="internal"><span class="codenumber">2.1.3</span> <span class="title">Piecewise Linear Functions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch2-sec-making-approximations.html#ch2-subsec-approximate-versus-exact" class="internal"><span class="codenumber">2.1.4</span> <span class="title">Approximate versus Exact</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch2-sec-making-approximations.html#ch2-subsec-exercises" class="internal"><span class="codenumber">2.1.5</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="ch2-sec-the-mathematical-implications-eulers-method.html" class="internal"><span class="codenumber">2.2</span> <span class="title">The Mathematical Implications—Euler’s Method</span></a></div>
+<ul id="ptx-toc-group-ch2-sec-the-mathematical-implications-eulers-method" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch2-sec-the-mathematical-implications-eulers-method.html#ch2-subsec-approximate-solutions" class="internal"><span class="codenumber">2.2.1</span> <span class="title">Approximate Solutions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch2-sec-the-mathematical-implications-eulers-method.html#ch2-subsec-exact-solutions" class="internal"><span class="codenumber">2.2.2</span> <span class="title">Exact Solutions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch2-sec-the-mathematical-implications-eulers-method.html#ch2-subsec-a-caution" class="internal"><span class="codenumber">2.2.3</span> <span class="title">A Caution</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch2-sec-the-mathematical-implications-eulers-method.html#ch2-subsec-exercises-2" class="internal"><span class="codenumber">2.2.4</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="ch2-sec-approximate-solutions.html" class="internal"><span class="codenumber">2.3</span> <span class="title">Approximate Solutions</span></a></div>
+<ul id="ptx-toc-group-ch2-sec-approximate-solutions" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch2-sec-approximate-solutions.html#ch2-subsec-calculating-pi-the-length-of-a-curve" class="internal"><span class="codenumber">2.3.1</span> <span class="title">Calculating <span class="process-math">\(\pi\)</span>—The Length of a Curve</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch2-sec-approximate-solutions.html#ch2-subsec-finding-roots-with-a-computer" class="internal"><span class="codenumber">2.3.2</span> <span class="title">Finding Roots with a Computer</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch2-sec-approximate-solutions.html#ch2-subsec-exercises-3" class="internal"><span class="codenumber">2.3.3</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="ch2-sec-chapter-summary.html" class="internal"><span class="codenumber">2.4</span> <span class="title">Chapter Summary</span></a></div>
+<ul id="ptx-toc-group-ch2-sec-chapter-summary" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch2-sec-chapter-summary.html#ch2-subsec-the-main-ideas" class="internal"><span class="codenumber">2.4.1</span> <span class="title">The Main Ideas</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch2-sec-chapter-summary.html#ch2-subsec-expectations" class="internal"><span class="codenumber">2.4.2</span> <span class="title">Expectations</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch2-sec-chapter-summary.html#ch2-subsec-chapter-exercises" class="internal"><span class="codenumber">2.4.3</span> <span class="title">Chapter Exercises</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch3-chap-the-derivative.html" class="internal"><span class="codenumber">3</span> <span class="title">The Derivative</span></a></div>
+<ul id="ptx-toc-group-ch3-chap-the-derivative" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="ch3-chap-the-derivative-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="ch3-sec-rates-of-change.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Rates of Change</span></a></div>
+<ul id="ptx-toc-group-ch3-sec-rates-of-change" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch3-sec-rates-of-change.html#ch3-subsec-the-changing-time-of-sunrise" class="internal"><span class="codenumber">3.1.1</span> <span class="title">The Changing Time of Sunrise</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch3-sec-rates-of-change.html#ch3-subsec-changing-rates" class="internal"><span class="codenumber">3.1.2</span> <span class="title">Changing Rates</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch3-sec-rates-of-change.html#ch3-subsec-other-rates-other-units" class="internal"><span class="codenumber">3.1.3</span> <span class="title">Other Rates, Other Units</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch3-sec-rates-of-change.html#ch3-subsec-exercises" class="internal"><span class="codenumber">3.1.4</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="ch3-sec-microscopes-and-local-linearity.html" class="internal"><span class="codenumber">3.2</span> <span class="title">Microscopes and Local Linearity</span></a></div>
+<ul id="ptx-toc-group-ch3-sec-microscopes-and-local-linearity" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch3-sec-microscopes-and-local-linearity.html#ch3-subsec-the-graph-of-data" class="internal"><span class="codenumber">3.2.1</span> <span class="title">The Graph of Data</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch3-sec-microscopes-and-local-linearity.html#ch3-subsec-the-graph-of-a-formula" class="internal"><span class="codenumber">3.2.2</span> <span class="title">The Graph of a Formula</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch3-sec-microscopes-and-local-linearity.html#ch3-subsec-local-linearity" class="internal"><span class="codenumber">3.2.3</span> <span class="title">Local Linearity</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch3-sec-microscopes-and-local-linearity.html#ch3-subsec-exercises-2" class="internal"><span class="codenumber">3.2.4</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="ch3-sec-the-derivative.html" class="internal"><span class="codenumber">3.3</span> <span class="title">The Derivative</span></a></div>
+<ul id="ptx-toc-group-ch3-sec-the-derivative" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch3-sec-the-derivative.html#ch3-subsec-definition" class="internal"><span class="codenumber">3.3.1</span> <span class="title">Definition</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch3-sec-the-derivative.html#ch3-subsec-language-and-notation" class="internal"><span class="codenumber">3.3.2</span> <span class="title">Language and Notation</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch3-sec-the-derivative.html#ch3-subsec-the-microscope-equation" class="internal"><span class="codenumber">3.3.3</span> <span class="title">The Microscope Equation</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch3-sec-the-derivative.html#ch3-subsec-exercises-3" class="internal"><span class="codenumber">3.3.4</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="ch3-sec-estimation-and-error-analysis.html" class="internal"><span class="codenumber">3.4</span> <span class="title">Estimation and Error Analysis</span></a></div>
+<ul id="ptx-toc-group-ch3-sec-estimation-and-error-analysis" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch3-sec-estimation-and-error-analysis.html#ch3-subsec-making-estimates" class="internal"><span class="codenumber">3.4.1</span> <span class="title">Making Estimates</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch3-sec-estimation-and-error-analysis.html#ch3-subsec-propagation-of-error" class="internal"><span class="codenumber">3.4.2</span> <span class="title">Propagation of Error</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch3-sec-estimation-and-error-analysis.html#ch3-subsec-exercises-4" class="internal"><span class="codenumber">3.4.3</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="ch3-sec-a-global-view.html" class="internal"><span class="codenumber">3.5</span> <span class="title">A Global View</span></a></div>
+<ul id="ptx-toc-group-ch3-sec-a-global-view" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch3-sec-a-global-view.html#ch3-subsec-derivative-as-function" class="internal"><span class="codenumber">3.5.1</span> <span class="title">Derivative as Function</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch3-sec-a-global-view.html#ch3-subsec-formulas-for-derivatives" class="internal"><span class="codenumber">3.5.2</span> <span class="title">Formulas for Derivatives</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch3-sec-a-global-view.html#ch3-subsec-exercises-5" class="internal"><span class="codenumber">3.5.3</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="ch3-sec-the-chain-rule.html" class="internal"><span class="codenumber">3.6</span> <span class="title">The Chain Rule</span></a></div>
+<ul id="ptx-toc-group-ch3-sec-the-chain-rule" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch3-sec-the-chain-rule.html#ch3-subsec-combining-rates-of-change" class="internal"><span class="codenumber">3.6.1</span> <span class="title">Combining Rates of Change</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch3-sec-the-chain-rule.html#ch3-subsec-chains-and-the-chain-rule" class="internal"><span class="codenumber">3.6.2</span> <span class="title">Chains and the Chain Rule</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch3-sec-the-chain-rule.html#ch3-subsec-using-the-chain-rule" class="internal"><span class="codenumber">3.6.3</span> <span class="title">Using the Chain Rule</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch3-sec-the-chain-rule.html#ch3-subsec-exercises-6" class="internal"><span class="codenumber">3.6.4</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="ch3-sec-partial-derivatives.html" class="internal"><span class="codenumber">3.7</span> <span class="title">Partial Derivatives</span></a></div>
+<ul id="ptx-toc-group-ch3-sec-partial-derivatives" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch3-sec-partial-derivatives.html#ch3-subsec-partial-derivatives-as-multipliers" class="internal"><span class="codenumber">3.7.1</span> <span class="title">Partial Derivatives as Multipliers</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch3-sec-partial-derivatives.html#ch3-subsec-formulas-for-partial-derivatives" class="internal"><span class="codenumber">3.7.2</span> <span class="title">Formulas for Partial Derivatives</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch3-sec-partial-derivatives.html#ch3-subsec-exercises-7" class="internal"><span class="codenumber">3.7.3</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="ch3-sec-chapter-summary.html" class="internal"><span class="codenumber">3.8</span> <span class="title">Chapter Summary</span></a></div>
+<ul id="ptx-toc-group-ch3-sec-chapter-summary" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch3-sec-chapter-summary.html#ch3-subsec-the-main-ideas" class="internal"><span class="codenumber">3.8.1</span> <span class="title">The Main Ideas</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch3-sec-chapter-summary.html#ch3-subsec-expectations" class="internal"><span class="codenumber">3.8.2</span> <span class="title">Expectations</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch4-chap-differential-equations.html" class="internal"><span class="codenumber">4</span> <span class="title">Differential Equations</span></a></div>
+<ul id="ptx-toc-group-ch4-chap-differential-equations" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="ch4-chap-differential-equations-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="ch4-sec-modelling-with-differential-equations.html" class="internal"><span class="codenumber">4.1</span> <span class="title">Modelling with Differential Equations</span></a></div>
+<ul id="ptx-toc-group-ch4-sec-modelling-with-differential-equations" class="structural toc-item-list">
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="ch4-sec-modelling-with-differential-equations.html#ch4-subsec-single-species-models-rabbits" class="internal"><span class="codenumber">4.1.1</span> <span class="title">Single-species Models: Rabbits</span></a></div>
+<ul id="ptx-toc-group-ch4-subsec-single-species-models-rabbits" class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="ch4-sec-modelling-with-differential-equations.html#ch4-rabbit-model-1" class="internal"><span class="codenumber">4.1.1.1</span> <span class="title">The first model</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="ch4-sec-modelling-with-differential-equations.html#ch4-rabbit-model-2" class="internal"><span class="codenumber">4.1.1.2</span> <span class="title">The second model</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-sec-modelling-with-differential-equations.html#ch4-subsec-two-species-models-rabbits-and-foxes" class="internal"><span class="codenumber">4.1.2</span> <span class="title">Two-species Models: Rabbits and Foxes</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch4-sec-modelling-with-differential-equations.html#ch4-subsec-exercises" class="internal"><span class="codenumber">4.1.3</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="ch4-sec-solutions-of-differential-equations.html" class="internal"><span class="codenumber">4.2</span> <span class="title">Solutions of Differential Equations</span></a></div>
+<ul id="ptx-toc-group-ch4-sec-solutions-of-differential-equations" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-sec-solutions-of-differential-equations.html#ch4-subsec-differential-equations-are-equations" class="internal"><span class="codenumber">4.2.1</span> <span class="title">Differential Equations are Equations</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-sec-solutions-of-differential-equations.html#ch4-subsec-world-population-growth" class="internal"><span class="codenumber">4.2.2</span> <span class="title">World Population Growth</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-sec-solutions-of-differential-equations.html#ch4-subsec-differential-equations-involving-parameters" class="internal"><span class="codenumber">4.2.3</span> <span class="title">Differential Equations Involving Parameters</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch4-sec-solutions-of-differential-equations.html#ch4-subsec-exercises-2" class="internal"><span class="codenumber">4.2.4</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="ch4-sec-the-exponential-function.html" class="internal"><span class="codenumber">4.3</span> <span class="title">The Exponential Function</span></a></div>
+<ul id="ptx-toc-group-ch4-sec-the-exponential-function" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-sec-the-exponential-function.html#ch4-subsec-the-equation-y-ky" class="internal"><span class="codenumber">4.3.1</span> <span class="title">The Equation <span class="process-math">\(y'= ky\)</span></span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-sec-the-exponential-function.html#ch4-subsec-the-number-e" class="internal"><span class="codenumber">4.3.2</span> <span class="title">The Number <span class="process-math">\(e\)</span></span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-sec-the-exponential-function.html#ch4-subsec-differential-equations-define-functions" class="internal"><span class="codenumber">4.3.3</span> <span class="title">Differential Equations Define Functions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-sec-the-exponential-function.html#ch4-subsec-exponential-growth" class="internal"><span class="codenumber">4.3.4</span> <span class="title">Exponential Growth</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch4-sec-the-exponential-function.html#ch4-subsec-exercises-3" class="internal"><span class="codenumber">4.3.5</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="ch4-sec-the-logarithm-function.html" class="internal"><span class="codenumber">4.4</span> <span class="title">The Logarithm Function</span></a></div>
+<ul id="ptx-toc-group-ch4-sec-the-logarithm-function" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-sec-the-logarithm-function.html#ch4-subsec-properties-of-the-logarithm-function" class="internal"><span class="codenumber">4.4.1</span> <span class="title">Properties of the Logarithm Function</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-sec-the-logarithm-function.html#ch4-subsec-the-derivative-of-the-logarithm-function" class="internal"><span class="codenumber">4.4.2</span> <span class="title">The Derivative of the Logarithm Function</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-sec-the-logarithm-function.html#ch4-subsec-exponential-growth-2" class="internal"><span class="codenumber">4.4.3</span> <span class="title">Exponential Growth</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-sec-the-logarithm-function.html#ch4-subsec-the-exponential-functions-bdisplaystyle-x" class="internal"><span class="codenumber">4.4.4</span> <span class="title">The Exponential Functions <span class="process-math">\(b^{\displaystyle x}\)</span></span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-sec-the-logarithm-function.html#ch4-subsec-inverse-functions" class="internal"><span class="codenumber">4.4.5</span> <span class="title">Inverse Functions</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch4-sec-the-logarithm-function.html#ch4-subsec-exercises-4" class="internal"><span class="codenumber">4.4.6</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="ch4-sec-the-equation-y-ft.html" class="internal"><span class="codenumber">4.5</span> <span class="title">The Equation <span class="process-math">\(y' = f(t)\)</span></span></a></div>
+<ul id="ptx-toc-group-ch4-sec-the-equation-y-ft" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-sec-the-equation-y-ft.html#ch4-subsec-antiderivatives" class="internal"><span class="codenumber">4.5.1</span> <span class="title">Antiderivatives</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-sec-the-equation-y-ft.html#ch4-subsec-eulers-method-revisited" class="internal"><span class="codenumber">4.5.2</span> <span class="title">Euler’s Method Revisited</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch4-sec-the-equation-y-ft.html#ch4-subsec-exercises-5" class="internal"><span class="codenumber">4.5.3</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="ch4-sec-chapter-summary.html" class="internal"><span class="codenumber">4.6</span> <span class="title">Chapter Summary</span></a></div>
+<ul id="ptx-toc-group-ch4-sec-chapter-summary" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-sec-chapter-summary.html#ch4-subsec-the-main-ideas" class="internal"><span class="codenumber">4.6.1</span> <span class="title">The Main Ideas</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-sec-chapter-summary.html#ch4-subsec-expectations" class="internal"><span class="codenumber">4.6.2</span> <span class="title">Expectations</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch5-chap-techniques-of-differentiation.html" class="internal"><span class="codenumber">5</span> <span class="title">Techniques of Differentiation</span></a></div>
+<ul id="ptx-toc-group-ch5-chap-techniques-of-differentiation" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="ch5-chap-techniques-of-differentiation-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="ch5-sec-the-differentiation-rules.html" class="internal"><span class="codenumber">5.1</span> <span class="title">The Differentiation Rules</span></a></div>
+<ul id="ptx-toc-group-ch5-sec-the-differentiation-rules" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch5-sec-the-differentiation-rules.html#ch5-subsec-derivatives-of-basic-functions" class="internal"><span class="codenumber">5.1.1</span> <span class="title">Derivatives of Basic Functions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch5-sec-the-differentiation-rules.html#ch5-subsec-combining-functions" class="internal"><span class="codenumber">5.1.2</span> <span class="title">Combining Functions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch5-sec-the-differentiation-rules.html#ch5-subsec-informal-arguments" class="internal"><span class="codenumber">5.1.3</span> <span class="title">Informal Arguments</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch5-sec-the-differentiation-rules.html#ch5-subsec-a-formal-proof-the-product-rule" class="internal"><span class="codenumber">5.1.4</span> <span class="title">A Formal Proof: The Product Rule</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch5-sec-the-differentiation-rules.html#ch5-subsec-exercises" class="internal"><span class="codenumber">5.1.5</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="ch5-sec-finding-partial-derivatives.html" class="internal"><span class="codenumber">5.2</span> <span class="title">Finding Partial Derivatives</span></a></div>
+<ul id="ptx-toc-group-ch5-sec-finding-partial-derivatives" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch5-sec-finding-partial-derivatives.html#ch5-subsec-some-examples" class="internal"><span class="codenumber">5.2.1</span> <span class="title">Some Examples</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch5-sec-finding-partial-derivatives.html#ch5-subsec-eradication-of-disease" class="internal"><span class="codenumber">5.2.2</span> <span class="title">Eradication of Disease</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch5-sec-finding-partial-derivatives.html#ch5-subsec-exercises-2" class="internal"><span class="codenumber">5.2.3</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="ch5-sec-the-shape-of-the-graph-of-a-mboxfunction.html" class="internal"><span class="codenumber">5.3</span> <span class="title">The Shape of the Graph of a Function</span></a></div>
+<ul id="ptx-toc-group-ch5-sec-the-shape-of-the-graph-of-a-mboxfunction" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch5-sec-the-shape-of-the-graph-of-a-mboxfunction.html#ch5-subsec-language" class="internal"><span class="codenumber">5.3.1</span> <span class="title">Language</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch5-sec-the-shape-of-the-graph-of-a-mboxfunction.html#ch5-subsec-the-existence-of-extremes" class="internal"><span class="codenumber">5.3.2</span> <span class="title">The Existence of Extremes</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch5-sec-the-shape-of-the-graph-of-a-mboxfunction.html#ch5-subsec-finding-extremes" class="internal"><span class="codenumber">5.3.3</span> <span class="title">Finding Extremes</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch5-sec-the-shape-of-the-graph-of-a-mboxfunction.html#ch5-subsec-exercises-3" class="internal"><span class="codenumber">5.3.4</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="ch5-sec-optimal-shapes.html" class="internal"><span class="codenumber">5.4</span> <span class="title">Optimal Shapes</span></a></div>
+<ul id="ptx-toc-group-ch5-sec-optimal-shapes" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch5-sec-optimal-shapes.html#ch5-subsec-the-problem-of-the-optimal-tin-can" class="internal"><span class="codenumber">5.4.1</span> <span class="title">The Problem of the Optimal Tin Can</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch5-sec-optimal-shapes.html#ch5-subsec-the-solution" class="internal"><span class="codenumber">5.4.2</span> <span class="title">The Solution</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch5-sec-optimal-shapes.html#ch5-subsec-the-mathematical-context-optimal-shapes" class="internal"><span class="codenumber">5.4.3</span> <span class="title">The Mathematical Context: Optimal Shapes</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch5-sec-optimal-shapes.html#ch5-subsec-exercises-4" class="internal"><span class="codenumber">5.4.4</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="ch5-sec-newtons-method.html" class="internal"><span class="codenumber">5.5</span> <span class="title">Newton’s Method</span></a></div>
+<ul id="ptx-toc-group-ch5-sec-newtons-method" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch5-sec-newtons-method.html#ch5-subsec-finding-critical-points" class="internal"><span class="codenumber">5.5.1</span> <span class="title">Finding Critical Points</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch5-sec-newtons-method.html#ch5-subsec-local-linearity-and-the-tangent-line" class="internal"><span class="codenumber">5.5.2</span> <span class="title">Local Linearity and the Tangent Line</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch5-sec-newtons-method.html#ch5-subsec-the-algorithm" class="internal"><span class="codenumber">5.5.3</span> <span class="title">The Algorithm</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch5-sec-newtons-method.html#ch5-subsec-examples" class="internal"><span class="codenumber">5.5.4</span> <span class="title">Examples</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch5-sec-newtons-method.html#ch5-subsec-exercises-5" class="internal"><span class="codenumber">5.5.5</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="ch5-sec-chapter-summary.html" class="internal"><span class="codenumber">5.6</span> <span class="title">Chapter Summary</span></a></div>
+<ul id="ptx-toc-group-ch5-sec-chapter-summary" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch5-sec-chapter-summary.html#ch5-subsec-the-main-ideas" class="internal"><span class="codenumber">5.6.1</span> <span class="title">The Main Ideas</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch5-sec-chapter-summary.html#ch5-subsec-expectations" class="internal"><span class="codenumber">5.6.2</span> <span class="title">Expectations</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch5-sec-chapter-summary.html#ch5-subsec-chapter-exercises" class="internal"><span class="codenumber">5.6.3</span> <span class="title">Chapter Exercises</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter contains-active">
+<div class="toc-title-box"><a href="ch6-chap-the-integral.html" class="internal"><span class="codenumber">6</span> <span class="title">The Integral</span></a></div>
+<ul class="structural toc-item-list contains-active" id="ptx-toc-group-ch6-chap-the-integral">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="ch6-chap-the-integral-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
+<li class="toc-item toc-section contains-active">
+<div class="toc-title-box"><a href="ch6-sec-measuring-work.html" class="internal"><span class="codenumber">6.1</span> <span class="title">Measuring Work</span></a></div>
+<ul class="structural toc-item-list active" id="ptx-toc-group-ch6-sec-measuring-work">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch6-sec-measuring-work.html#ch6-subsec-human-work" class="internal"><span class="codenumber">6.1.1</span> <span class="title">Human Work</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch6-sec-measuring-work.html#ch6-subsec-electrical-energy" class="internal"><span class="codenumber">6.1.2</span> <span class="title">Electrical Energy</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch6-sec-measuring-work.html#ch6-subsec-exercises" class="internal"><span class="codenumber">6.1.3</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="ch6-sec-riemann-sums.html" class="internal"><span class="codenumber">6.2</span> <span class="title">Riemann Sums</span></a></div>
+<ul id="ptx-toc-group-ch6-sec-riemann-sums" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch6-sec-riemann-sums.html#ch6-subsec-calculating-distance-travelled" class="internal"><span class="codenumber">6.2.1</span> <span class="title">Calculating Distance Travelled</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch6-sec-riemann-sums.html#ch6-subsec-calculating-areas" class="internal"><span class="codenumber">6.2.2</span> <span class="title">Calculating Areas</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch6-sec-riemann-sums.html#ch6-subsec-calculating-lengths" class="internal"><span class="codenumber">6.2.3</span> <span class="title">Calculating Lengths</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch6-sec-riemann-sums.html#ch6-subsec-definition" class="internal"><span class="codenumber">6.2.4</span> <span class="title">Definition</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch6-sec-riemann-sums.html#ch6-subsec-summation-notation" class="internal"><span class="codenumber">6.2.5</span> <span class="title">Summation Notation</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch6-sec-riemann-sums.html#ch6-subsec-exercises-2" class="internal"><span class="codenumber">6.2.6</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="ch6-sec-the-integral.html" class="internal"><span class="codenumber">6.3</span> <span class="title">The Integral</span></a></div>
+<ul id="ptx-toc-group-ch6-sec-the-integral" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch6-sec-the-integral.html#ch6-subsec-refining-riemann-sums" class="internal"><span class="codenumber">6.3.1</span> <span class="title">Refining Riemann Sums</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch6-sec-the-integral.html#ch6-subsec-definition-2" class="internal"><span class="codenumber">6.3.2</span> <span class="title">Definition</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch6-sec-the-integral.html#ch6-subsec-visualizing-the-integral" class="internal"><span class="codenumber">6.3.3</span> <span class="title">Visualizing the Integral</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch6-sec-the-integral.html#ch6-subsec-error-bounds" class="internal"><span class="codenumber">6.3.4</span> <span class="title">Error Bounds</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch6-sec-the-integral.html#ch6-subsec-integration-rules" class="internal"><span class="codenumber">6.3.5</span> <span class="title">Integration Rules</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch6-sec-the-integral.html#ch6-subsec-exercises-3" class="internal"><span class="codenumber">6.3.6</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="ch6-sec-the-fundamental-theorem-of-calculus.html" class="internal"><span class="codenumber">6.4</span> <span class="title">The Fundamental Theorem of Calculus</span></a></div>
+<ul id="ptx-toc-group-ch6-sec-the-fundamental-theorem-of-calculus" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch6-sec-the-fundamental-theorem-of-calculus.html#ch6-subsec-two-views-of-power-and-energy" class="internal"><span class="codenumber">6.4.1</span> <span class="title">Two Views of Power and Energy</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch6-sec-the-fundamental-theorem-of-calculus.html#ch6-subsec-integrals-and-differential-equations" class="internal"><span class="codenumber">6.4.2</span> <span class="title">Integrals and Differential Equations</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch6-sec-the-fundamental-theorem-of-calculus.html#ch6-subsec-antiderivatives" class="internal"><span class="codenumber">6.4.3</span> <span class="title">Antiderivatives</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch6-sec-the-fundamental-theorem-of-calculus.html#ch6-subsec-exercises-4" class="internal"><span class="codenumber">6.4.4</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="ch6-sec-chapter-summary.html" class="internal"><span class="codenumber">6.5</span> <span class="title">Chapter Summary</span></a></div>
+<ul id="ptx-toc-group-ch6-sec-chapter-summary" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch6-sec-chapter-summary.html#ch6-subsec-the-main-ideas" class="internal"><span class="codenumber">6.5.1</span> <span class="title">The Main Ideas</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch6-sec-chapter-summary.html#ch6-subsec-expectations" class="internal"><span class="codenumber">6.5.2</span> <span class="title">Expectations</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch7-chap-periodicity.html" class="internal"><span class="codenumber">7</span> <span class="title">Periodicity</span></a></div>
+<ul id="ptx-toc-group-ch7-chap-periodicity" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="ch7-chap-periodicity-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch7-sec-periodic-behavior.html" class="internal"><span class="codenumber">7.1</span> <span class="title">Periodic Behavior</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="ch7-sec-period-frequency-and-the-circular-functions.html" class="internal"><span class="codenumber">7.2</span> <span class="title">Period, Frequency, andthe Circular Functions</span></a></div>
+<ul id="ptx-toc-group-ch7-sec-period-frequency-and-the-circular-functions" class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch7-sec-period-frequency-and-the-circular-functions.html#ch7-subsec-exercises" class="internal"><span class="codenumber">7.2</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="ch7-sec-differential-equations-with-periodic-mboxsolutions.html" class="internal"><span class="codenumber">7.3</span> <span class="title">Differential Equations with Periodic Solutions</span></a></div>
+<ul id="ptx-toc-group-ch7-sec-differential-equations-with-periodic-mboxsolutions" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch7-sec-differential-equations-with-periodic-mboxsolutions.html#ch7-oscillating-springs" class="internal"><span class="codenumber">7.3.1</span> <span class="title">Oscillating Springs</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch7-sec-differential-equations-with-periodic-mboxsolutions.html#ch7-the-sine-and-cosine-revisited" class="internal"><span class="codenumber">7.3.2</span> <span class="title">The Sine and Cosine Revisited</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch7-sec-differential-equations-with-periodic-mboxsolutions.html#ch7-the-pendulum" class="internal"><span class="codenumber">7.3.3</span> <span class="title">The Pendulum</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch7-sec-differential-equations-with-periodic-mboxsolutions.html#ch7-predatorprey-ecology" class="internal"><span class="codenumber">7.3.4</span> <span class="title">Predator–Prey Ecology</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch7-sec-differential-equations-with-periodic-mboxsolutions.html#ch7-subsec-proving-a-solution-is-periodic" class="internal"><span class="codenumber">7.3.5</span> <span class="title">Proving a Solution Is Periodic</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch7-sec-differential-equations-with-periodic-mboxsolutions.html#ch7-subsec-exercises-2" class="internal"><span class="codenumber">7.3.6</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="ch7-sec-chapter-summary.html" class="internal"><span class="codenumber">7.4</span> <span class="title">Chapter Summary</span></a></div>
+<ul id="ptx-toc-group-ch7-sec-chapter-summary" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch7-sec-chapter-summary.html#ch7-subsec-the-main-ideas" class="internal"><span class="codenumber">7.4.1</span> <span class="title">The Main Ideas</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch7-sec-chapter-summary.html#ch7-subsec-expectations" class="internal"><span class="codenumber">7.4.2</span> <span class="title">Expectations</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch8-chap-dynamical-systems.html" class="internal"><span class="codenumber">8</span> <span class="title">Dynamical Systems</span></a></div>
+<ul id="ptx-toc-group-ch8-chap-dynamical-systems" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="ch8-chap-dynamical-systems-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="ch8-sec-state-spaces-and-vector-fields.html" class="internal"><span class="codenumber">8.1</span> <span class="title">State Spaces and Vector Fields</span></a></div>
+<ul id="ptx-toc-group-ch8-sec-state-spaces-and-vector-fields" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch8-sec-state-spaces-and-vector-fields.html#ch8-predatorprey-models" class="internal"><span class="codenumber">8.1.1</span> <span class="title">Predator–Prey Models</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch8-sec-state-spaces-and-vector-fields.html#ch8-the-pendulum-revisited" class="internal"><span class="codenumber">8.1.2</span> <span class="title">The Pendulum Revisited</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch8-sec-state-spaces-and-vector-fields.html#ch8-a-model-for-the-acquisition-of-immunity" class="internal"><span class="codenumber">8.1.3</span> <span class="title">A Model for the Acquisition of Immunity</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch8-sec-state-spaces-and-vector-fields.html#ch8-subsec-exercises" class="internal"><span class="codenumber">8.1.4</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="ch8-sec-local-behavior-of-dynamical-systems.html" class="internal"><span class="codenumber">8.2</span> <span class="title">Local Behavior of Dynamical Systems</span></a></div>
+<ul id="ptx-toc-group-ch8-sec-local-behavior-of-dynamical-systems" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch8-sec-local-behavior-of-dynamical-systems.html#ch8-subsec-a-microscopic-view" class="internal"><span class="codenumber">8.2.1</span> <span class="title">A Microscopic View</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch8-sec-local-behavior-of-dynamical-systems.html#ch8-subsec-exercises-2" class="internal"><span class="codenumber">8.2.2</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="ch8-sec-a-taxonomy-of-equilibrium-points.html" class="internal"><span class="codenumber">8.3</span> <span class="title">A Taxonomy of Equilibrium Points</span></a></div>
+<ul id="ptx-toc-group-ch8-sec-a-taxonomy-of-equilibrium-points" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch8-sec-a-taxonomy-of-equilibrium-points.html#ch8-subsec-straight-line-trajectories" class="internal"><span class="codenumber">8.3.1</span> <span class="title">Straight-Line Trajectories</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch8-sec-a-taxonomy-of-equilibrium-points.html#ch8-subsec-exercises-3" class="internal"><span class="codenumber">8.3.2</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="ch8-sec-limit-cycles.html" class="internal"><span class="codenumber">8.4</span> <span class="title">Limit Cycles</span></a></div>
+<ul id="ptx-toc-group-ch8-sec-limit-cycles" class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch8-sec-limit-cycles.html#ch8-subsec-exercises-4" class="internal"><span class="codenumber">8.4</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="ch8-sec-beyond-the-plane-three-dimensional-systems.html" class="internal"><span class="codenumber">8.5</span> <span class="title">Beyond the Plane:Three-Dimensional Systems</span></a></div>
+<ul id="ptx-toc-group-ch8-sec-beyond-the-plane-three-dimensional-systems" class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch8-sec-beyond-the-plane-three-dimensional-systems.html#ch8-subsec-exercises-5" class="internal"><span class="codenumber">8.5</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="ch8-sec-chapter-summary.html" class="internal"><span class="codenumber">8.6</span> <span class="title">Chapter Summary</span></a></div>
+<ul id="ptx-toc-group-ch8-sec-chapter-summary" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch8-sec-chapter-summary.html#ch8-subsec-the-main-ideas" class="internal"><span class="codenumber">8.6.1</span> <span class="title">The Main Ideas</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch8-sec-chapter-summary.html#ch8-subsec-expectations" class="internal"><span class="codenumber">8.6.2</span> <span class="title">Expectations</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch9-chap-functions-of-several-variables.html" class="internal"><span class="codenumber">9</span> <span class="title">Functions of Several Variables</span></a></div>
+<ul id="ptx-toc-group-ch9-chap-functions-of-several-variables" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="ch9-chap-functions-of-several-variables-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="ch9-sec-graphs-and-level-sets.html" class="internal"><span class="codenumber">9.1</span> <span class="title">Graphs and Level Sets</span></a></div>
+<ul id="ptx-toc-group-ch9-sec-graphs-and-level-sets" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch9-sec-graphs-and-level-sets.html#ch9-subsec-examples-of-graphs" class="internal"><span class="codenumber">9.1.1</span> <span class="title">Examples of Graphs</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch9-sec-graphs-and-level-sets.html#ch9-subsec-from-graphs-to-levels" class="internal"><span class="codenumber">9.1.2</span> <span class="title">From Graphs to Levels</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch9-sec-graphs-and-level-sets.html#ch9-subsec-contours-of-a-function-of-three-variables" class="internal"><span class="codenumber">9.1.3</span> <span class="title">Contours of a Function of Three Variables</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch9-sec-graphs-and-level-sets.html#ch9-subsec-exercises" class="internal"><span class="codenumber">9.1.4</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="ch9-sec-local-linearity.html" class="internal"><span class="codenumber">9.2</span> <span class="title">Local Linearity</span></a></div>
+<ul id="ptx-toc-group-ch9-sec-local-linearity" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch9-sec-local-linearity.html#ch9-subsec-microscopic-views" class="internal"><span class="codenumber">9.2.1</span> <span class="title">Microscopic Views</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch9-sec-local-linearity.html#ch9-subsec-linear-functions" class="internal"><span class="codenumber">9.2.2</span> <span class="title">Linear Functions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch9-sec-local-linearity.html#ch9-subsec-the-gradient-of-a-linear-function" class="internal"><span class="codenumber">9.2.3</span> <span class="title">The Gradient of a Linear Function</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch9-sec-local-linearity.html#ch9-subsec-the-microscope-equation" class="internal"><span class="codenumber">9.2.4</span> <span class="title">The Microscope Equation</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch9-sec-local-linearity.html#ch9-subsec-linear-approximation" class="internal"><span class="codenumber">9.2.5</span> <span class="title">Linear Approximation</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch9-sec-local-linearity.html#ch9-subsec-the-gradient" class="internal"><span class="codenumber">9.2.6</span> <span class="title">The Gradient</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch9-sec-local-linearity.html#ch9-subsec-the-gradient-of-a-function-of-three-variables" class="internal"><span class="codenumber">9.2.7</span> <span class="title">The Gradient of a Function of Three Variables</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch9-sec-local-linearity.html#ch9-subsec-exercises-2" class="internal"><span class="codenumber">9.2.8</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="ch9-sec-optimization.html" class="internal"><span class="codenumber">9.3</span> <span class="title">Optimization</span></a></div>
+<ul id="ptx-toc-group-ch9-sec-optimization" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch9-sec-optimization.html#ch9-subsec-visual-inspection" class="internal"><span class="codenumber">9.3.1</span> <span class="title">Visual Inspection</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch9-sec-optimization.html#ch9-subsec-dimension-reducing-constraints" class="internal"><span class="codenumber">9.3.2</span> <span class="title">Dimension-reducing Constraints</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch9-sec-optimization.html#ch9-subsec-extremes-and-critical-points" class="internal"><span class="codenumber">9.3.3</span> <span class="title">Extremes and Critical Points</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch9-sec-optimization.html#ch9-subsec-the-method-of-steepest-ascent" class="internal"><span class="codenumber">9.3.4</span> <span class="title">The Method of Steepest Ascent</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch9-sec-optimization.html#ch9-subsec-lagrange-multipliers" class="internal"><span class="codenumber">9.3.5</span> <span class="title">Lagrange Multipliers</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch9-sec-optimization.html#ch9-subsec-exercises-3" class="internal"><span class="codenumber">9.3.6</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="ch9-sec-chapter-summary.html" class="internal"><span class="codenumber">9.4</span> <span class="title">Chapter Summary</span></a></div>
+<ul id="ptx-toc-group-ch9-sec-chapter-summary" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch9-sec-chapter-summary.html#ch9-subsec-the-main-ideas" class="internal"><span class="codenumber">9.4.1</span> <span class="title">The Main Ideas</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch9-sec-chapter-summary.html#ch9-subsec-expectations" class="internal"><span class="codenumber">9.4.2</span> <span class="title">Expectations</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch10-chap-series-and-approximations.html" class="internal"><span class="codenumber">10</span> <span class="title">Series and Approximations</span></a></div>
+<ul id="ptx-toc-group-ch10-chap-series-and-approximations" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="ch10-chap-series-and-approximations-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch10-sec-approximation-near-a-point-or-over-an-interval.html" class="internal"><span class="codenumber">10.1</span> <span class="title">Approximation Near a Point orOver an Interval</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="ch10-sec-taylor-polynomials.html" class="internal"><span class="codenumber">10.2</span> <span class="title">Taylor Polynomials</span></a></div>
+<ul id="ptx-toc-group-ch10-sec-taylor-polynomials" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch10-sec-taylor-polynomials.html#ch10-subsec-new-taylor-polynomials-from-old" class="internal"><span class="codenumber">10.2.1</span> <span class="title">New Taylor Polynomials from Old</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch10-sec-taylor-polynomials.html#ch10-subsec-goodness-of-fit" class="internal"><span class="codenumber">10.2.2</span> <span class="title">Goodness of fit</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch10-sec-taylor-polynomials.html#ch10-subsec-taylors-theorem" class="internal"><span class="codenumber">10.2.3</span> <span class="title">Taylor’s theorem</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch10-sec-taylor-polynomials.html#ch10-subsec-applications" class="internal"><span class="codenumber">10.2.4</span> <span class="title">Applications</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch10-sec-taylor-polynomials.html#ch10-subsec-exercises" class="internal"><span class="codenumber">10.2.5</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="ch10-sec-taylor-series.html" class="internal"><span class="codenumber">10.3</span> <span class="title">Taylor Series</span></a></div>
+<ul id="ptx-toc-group-ch10-sec-taylor-series" class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch10-sec-taylor-series.html#ch10-subsec-exercises-2" class="internal"><span class="codenumber">10.3</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="ch10-sec-power-series-and-differential-equations.html" class="internal"><span class="codenumber">10.4</span> <span class="title">Power Series and Differential Equations</span></a></div>
+<ul id="ptx-toc-group-ch10-sec-power-series-and-differential-equations" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch10-sec-power-series-and-differential-equations.html#ch10-bessels-equation" class="internal"><span class="codenumber">10.4.1</span> <span class="title">Bessel’s Equation</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch10-sec-power-series-and-differential-equations.html#ch10-subsec-the-s-i-r-model-one-more-time" class="internal"><span class="codenumber">10.4.2</span> <span class="title">The <span class="process-math">\(S\)</span>-<span class="process-math">\(I\)</span>-<span class="process-math">\(R\)</span> Model One More Time</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch10-sec-power-series-and-differential-equations.html#ch10-subsec-exercises-3" class="internal"><span class="codenumber">10.4.3</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="ch10-sec-convergence.html" class="internal"><span class="codenumber">10.5</span> <span class="title">Convergence</span></a></div>
+<ul id="ptx-toc-group-ch10-sec-convergence" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch10-sec-convergence.html#ch10-subsec-divergent-series" class="internal"><span class="codenumber">10.5.1</span> <span class="title">Divergent Series</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch10-sec-convergence.html#ch10-subsec-the-geometric-series" class="internal"><span class="codenumber">10.5.2</span> <span class="title">The Geometric Series</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch10-sec-convergence.html#ch10-subsec-alternating-series" class="internal"><span class="codenumber">10.5.3</span> <span class="title">Alternating Series</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch10-sec-convergence.html#ch10-subsec-the-radius-of-convergence" class="internal"><span class="codenumber">10.5.4</span> <span class="title">The Radius of Convergence</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch10-sec-convergence.html#ch10-subsec-the-ratio-test" class="internal"><span class="codenumber">10.5.5</span> <span class="title">The Ratio Test</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch10-sec-convergence.html#ch10-subsec-exercises-4" class="internal"><span class="codenumber">10.5.6</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="ch10-sec-approximation-over-intervals.html" class="internal"><span class="codenumber">10.6</span> <span class="title">Approximation Over Intervals</span></a></div>
+<ul id="ptx-toc-group-ch10-sec-approximation-over-intervals" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch10-sec-approximation-over-intervals.html#ch10-subsec-approximation-by-polynomials" class="internal"><span class="codenumber">10.6.1</span> <span class="title">Approximation by polynomials</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch10-sec-approximation-over-intervals.html#ch10-subsec-exercises-5" class="internal"><span class="codenumber">10.6.2</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="ch10-sec-chapter-summary.html" class="internal"><span class="codenumber">10.7</span> <span class="title">Chapter Summary</span></a></div>
+<ul id="ptx-toc-group-ch10-sec-chapter-summary" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch10-sec-chapter-summary.html#ch10-subsec-the-main-ideas" class="internal"><span class="codenumber">10.7.1</span> <span class="title">The Main Ideas</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch10-sec-chapter-summary.html#ch10-subsec-expectations" class="internal"><span class="codenumber">10.7.2</span> <span class="title">Expectations</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch11-chap-techniques-of-integration.html" class="internal"><span class="codenumber">11</span> <span class="title">Techniques of Integration</span></a></div>
+<ul id="ptx-toc-group-ch11-chap-techniques-of-integration" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="ch11-chap-techniques-of-integration-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="ch11-sec-antiderivatives.html" class="internal"><span class="codenumber">11.1</span> <span class="title">Antiderivatives</span></a></div>
+<ul id="ptx-toc-group-ch11-sec-antiderivatives" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch11-sec-antiderivatives.html#ch11-subsec-definition" class="internal"><span class="codenumber">11.1.1</span> <span class="title">Definition</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch11-sec-antiderivatives.html#ch11-subsec-inverse-functions" class="internal"><span class="codenumber">11.1.2</span> <span class="title">Inverse Functions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch11-sec-antiderivatives.html#ch11-subsec-notation" class="internal"><span class="codenumber">11.1.3</span> <span class="title">Notation</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch11-sec-antiderivatives.html#ch11-subsec-using-antiderivatives" class="internal"><span class="codenumber">11.1.4</span> <span class="title">Using Antiderivatives</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch11-sec-antiderivatives.html#ch11-subsec-finding-antiderivatives" class="internal"><span class="codenumber">11.1.5</span> <span class="title">Finding Antiderivatives</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch11-sec-antiderivatives.html#ch11-subsec-exercises" class="internal"><span class="codenumber">11.1.6</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="ch11-sec-integration-by-substitution.html" class="internal"><span class="codenumber">11.2</span> <span class="title">Integration by Substitution</span></a></div>
+<ul id="ptx-toc-group-ch11-sec-integration-by-substitution" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch11-sec-integration-by-substitution.html#ch11-subsec-substitution-in-definite-integrals" class="internal"><span class="codenumber">11.2.1</span> <span class="title">Substitution in Definite Integrals</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch11-sec-integration-by-substitution.html#ch11-subsec-exercises-2" class="internal"><span class="codenumber">11.2.2</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="ch11-integration-by-parts.html" class="internal"><span class="codenumber">11.3</span> <span class="title">Integration by Parts</span></a></div>
+<ul id="ptx-toc-group-ch11-integration-by-parts" class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch11-integration-by-parts.html#ch11-subsec-exercises-3" class="internal"><span class="codenumber">11.3</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="ch11-sec-separation-of-variables-and-partial-fractions.html" class="internal"><span class="codenumber">11.4</span> <span class="title">Separation of Variables andPartial Fractions</span></a></div>
+<ul id="ptx-toc-group-ch11-sec-separation-of-variables-and-partial-fractions" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch11-sec-separation-of-variables-and-partial-fractions.html#ch11-subsec-the-differential-equation-y-y" class="internal"><span class="codenumber">11.4.1</span> <span class="title">The Differential Equation <span class="process-math">\(y' = y\)</span></span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch11-sec-separation-of-variables-and-partial-fractions.html#ch11-subsec-separation-of-variables" class="internal"><span class="codenumber">11.4.2</span> <span class="title">Separation of Variables</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch11-sec-separation-of-variables-and-partial-fractions.html#ch11-subsec-partial-fractions" class="internal"><span class="codenumber">11.4.3</span> <span class="title">Partial Fractions</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch11-sec-separation-of-variables-and-partial-fractions.html#ch11-subsec-exercises-4" class="internal"><span class="codenumber">11.4.4</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="ch11-sec-trigonometric-integrals.html" class="internal"><span class="codenumber">11.5</span> <span class="title">Trigonometric Integrals</span></a></div>
+<ul id="ptx-toc-group-ch11-sec-trigonometric-integrals" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch11-sec-trigonometric-integrals.html#ch11-inverse-substitution" class="internal"><span class="codenumber">11.5.1</span> <span class="title">Inverse Substitution</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch11-sec-trigonometric-integrals.html#ch11-subsec-inverse-substitution-and-definite-integrals" class="internal"><span class="codenumber">11.5.2</span> <span class="title">Inverse Substitution and Definite Integrals</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch11-sec-trigonometric-integrals.html#ch11-subsec-completing-the-square" class="internal"><span class="codenumber">11.5.3</span> <span class="title">Completing The Square</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch11-sec-trigonometric-integrals.html#ch11-subsec-trigonometric-polynomials" class="internal"><span class="codenumber">11.5.4</span> <span class="title">Trigonometric Polynomials</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch11-sec-trigonometric-integrals.html#ch11-subsec-exercises-5" class="internal"><span class="codenumber">11.5.5</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="ch11-sec-simpsons-rule.html" class="internal"><span class="codenumber">11.6</span> <span class="title">Simpson’s Rule</span></a></div>
+<ul id="ptx-toc-group-ch11-sec-simpsons-rule" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch11-sec-simpsons-rule.html#ch11-subsec-the-trapezoid-rule" class="internal"><span class="codenumber">11.6.1</span> <span class="title">The Trapezoid Rule</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch11-sec-simpsons-rule.html#ch11-subsec-simpsons-rule" class="internal"><span class="codenumber">11.6.2</span> <span class="title">Simpson’s Rule</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch11-sec-simpsons-rule.html#ch11-subsec-exercises-6" class="internal"><span class="codenumber">11.6.3</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="ch11-improper-integrals.html" class="internal"><span class="codenumber">11.7</span> <span class="title">Improper Integrals</span></a></div>
+<ul id="ptx-toc-group-ch11-improper-integrals" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch11-improper-integrals.html#ch11-the-lifetime-of-light-bulbs" class="internal"><span class="codenumber">11.7.1</span> <span class="title">The Lifetime of Light Bulbs</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch11-improper-integrals.html#ch11-evaluating-improper-integrals" class="internal"><span class="codenumber">11.7.2</span> <span class="title">Evaluating Improper Integrals</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch11-improper-integrals.html#ch11-subsec-exercises-7" class="internal"><span class="codenumber">11.7.3</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="ch11-sec-chapter-summary.html" class="internal"><span class="codenumber">11.8</span> <span class="title">Chapter Summary</span></a></div>
+<ul id="ptx-toc-group-ch11-sec-chapter-summary" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch11-sec-chapter-summary.html#ch11-subsec-the-main-ideas" class="internal"><span class="codenumber">11.8.1</span> <span class="title">The Main Ideas</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch11-sec-chapter-summary.html#ch11-subsec-expectations" class="internal"><span class="codenumber">11.8.2</span> <span class="title">Expectations</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch12-chap-case-studies.html" class="internal"><span class="codenumber">12</span> <span class="title">Case Studies</span></a></div>
+<ul id="ptx-toc-group-ch12-chap-case-studies" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="ch12-chap-case-studies-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="ch12-sec-stirlings-formula.html" class="internal"><span class="codenumber">12.1</span> <span class="title">Stirling’s Formula</span></a></div>
+<ul id="ptx-toc-group-ch12-sec-stirlings-formula" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch12-sec-stirlings-formula.html#ch12-subsec-stage-one-deriving-the-general-form" class="internal"><span class="codenumber">12.1.1</span> <span class="title">Stage One: Deriving the General Form</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch12-sec-stirlings-formula.html#ch12-subsec-stage-two-evaluating-c" class="internal"><span class="codenumber">12.1.2</span> <span class="title">Stage Two: Evaluating <span class="process-math">\(c\)</span></span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch12-sec-stirlings-formula.html#ch12-the-binomial-distribution" class="internal"><span class="codenumber">12.1.3</span> <span class="title">The Binomial Distribution</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch12-sec-stirlings-formula.html#ch12-subsec-exercises" class="internal"><span class="codenumber">12.1.4</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="ch12-sec-the-poisson-distribution.html" class="internal"><span class="codenumber">12.2</span> <span class="title">The Poisson Distribution</span></a></div>
+<ul id="ptx-toc-group-ch12-sec-the-poisson-distribution" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch12-sec-the-poisson-distribution.html#ch12-subsec-a-linear-model-for-alpha-ray-emission" class="internal"><span class="codenumber">12.2.1</span> <span class="title">A Linear Model for <span class="process-math">\(\alpha\)</span>-Ray Emission</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch12-sec-the-poisson-distribution.html#ch12-subsec-probability-models" class="internal"><span class="codenumber">12.2.2</span> <span class="title">Probability Models</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch12-sec-the-poisson-distribution.html#ch12-subsec-the-poisson-probability-distribution" class="internal"><span class="codenumber">12.2.3</span> <span class="title">The Poisson Probability Distribution</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch12-sec-the-poisson-distribution.html#ch12-subsec-exercises-2" class="internal"><span class="codenumber">12.2.4</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="ch12-sec-the-power-spectrum.html" class="internal"><span class="codenumber">12.3</span> <span class="title">The Power Spectrum</span></a></div>
+<ul id="ptx-toc-group-ch12-sec-the-power-spectrum" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch12-sec-the-power-spectrum.html#ch12-subsec-signal-noise" class="internal"><span class="codenumber">12.3.1</span> <span class="title">Signal + Noise</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch12-sec-the-power-spectrum.html#ch12-detecting-the-frequency-of-a-signal" class="internal"><span class="codenumber">12.3.2</span> <span class="title">Detecting the Frequency of a Signal</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch12-sec-the-power-spectrum.html#ch12-the-problem-of-phase" class="internal"><span class="codenumber">12.3.3</span> <span class="title">The Problem of Phase</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch12-sec-the-power-spectrum.html#ch12-subsec-the-power-spectrum" class="internal"><span class="codenumber">12.3.4</span> <span class="title">The Power Spectrum</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch12-sec-the-power-spectrum.html#ch12-subsec-exercises-3" class="internal"><span class="codenumber">12.3.5</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="ch12-sec-fourier-series.html" class="internal"><span class="codenumber">12.4</span> <span class="title">Fourier Series</span></a></div>
+<ul id="ptx-toc-group-ch12-sec-fourier-series" class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch12-sec-fourier-series.html#ch12-subsec-exercises-4" class="internal"><span class="codenumber">12.4</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-backmatter"><div class="toc-title-box"><a href="backmatter.html" class="internal"><span class="title">Backmatter</span></a></div></li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content">
+<section class="section" id="ch6-sec-measuring-work">
+<h1 class="heading hide-type">
+<span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Measuring Work</span>
+</h1>
+<section class="subsection" id="ch6-subsec-human-work">
+<h2 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.1.1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Human Work</span>
+</h2>
+<div class="para logical" id="ch6-subsec-human-work-2">
+<div class="para">Let’s measure the work done by the staff of an 
+<details id="ch6-subsec-human-work-2-1" class="aside aside-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Aside</span></h3></summary>
+<aside class="aside aside-like knowl__content">
+<div class="para" id="ch6-subsec-human-work-2-1-1">Processing catalog orders<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-subsec-human-work-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</aside></details> office that processes catalog orders. Suppose a typical worker in the office can process 10 orders an hour. Then we would expect 6 people to process 60 orders an hour; in two hours, they could process 120 orders.</div>
+<div class="displaymath process-math" id="ch6-subsec-human-work-2-2">
+\begin{equation*}
+10 \ \dfrac{\mbox{orders per hour}}{\mbox{person}}  
+\times 
+6 \ \mbox{persons} \times 2 \ \mbox{hours} =
+120 \ \mbox{orders}.
+\end{equation*}
+</div>
+<div class="para">Notice that a staff of 4 people working 3 hours could process the same number of orders:</div>
+<div class="displaymath process-math" id="ch6-subsec-human-work-2-3">
+\begin{equation*}
+10 \ \dfrac{\mbox{orders per hour}}{\mbox{person}}  
+\times 
+4 \ \mbox{persons} \times 3 \ \mbox{hours} =
+120 \ \mbox{orders}.
+\end{equation*}
+</div>
+<div class="para">It is natural to say that 6 persons working two hours do the same amount of work as 4 persons working three hours. This suggests that we 
+<details id="ch6-subsec-human-work-2-4" class="aside aside-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Aside</span></h3></summary>
+<aside class="aside aside-like knowl__content">
+<div class="para" id="ch6-subsec-human-work-2-4-1">Human work is measured as a product<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-subsec-human-work-2-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</aside></details> use the product</div>
+<div class="displaymath process-math" id="ch6-subsec-human-work-2-5">
+\begin{equation*}
+\mbox{number of workers} \times \mbox{elapsed time}
+\end{equation*}
+</div>
+<div class="para">to measure <dfn class="terminology">human work</dfn>. In these terms, it takes 12 “person-hours” of human work to process 120 orders.</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-subsec-human-work-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="ch6-subsec-human-work-3">Another name that has been used in the past for this unit of work is the “man-hour.” If the task is large, work can even be measured in “man-months” or “man-years.” The term we will use most of the time is “staff-hour.”<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-subsec-human-work-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="ch6-subsec-human-work-4">
+<div class="para">Measuring the work in terms of person-hours or staff-hours may seem a little strange at first – after all, a typical manager of our catalog order office would be most interested in the number of orders processed; that is, the <dfn class="terminology">production</dfn> of the office. Notice, however, that we can re-phrase the rate at which orders are processed as 10 orders per staff-hour. 
+<details id="ch6-subsec-human-work-4-2" class="aside aside-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Aside</span></h3></summary>
+<aside class="aside aside-like knowl__content">
+<div class="para" id="ch6-subsec-human-work-4-2-1">Productivity rate<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-subsec-human-work-4-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</aside></details> This is sometimes called the <dfn class="terminology">productivity rate</dfn>. The productivity rate allows us to translate human work into production:</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/ch1-rates-slopes-and-multipliers.html" id="ch6-subsec-human-work-4-4">
+\begin{align*}
+\mbox{production} \amp= \mbox{productivity rate} \times
+\mbox{human work}\\
+120 \ \mbox{orders} \amp=
+10 \ \dfrac{\mbox{orders}}{\mbox{staff-hour}}
+\times 12 \ \mbox{staff-hours}.
+\end{align*}
+</div>
+<div class="para">As this equation shows, production varies linearly with work and the productivity rate serves as multiplier (see our discussion of the multiplier in <a href="ch1-sec-the-mathematical-ideas.html#ch1-rates-slopes-and-multipliers" class="internal" title="Subsubsection 1.2.3.3: Rates, slopes, and multipliers">Subsubsection 1.2.3.3</a>).</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-subsec-human-work-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="ch6-subsec-human-work-5">
+<div class="para">If we modify the productivity ratein a suitable way, we can use this equation for other kinds of jobs. 
+<details id="ch6-subsec-human-work-5-1" class="aside aside-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Aside</span></h3></summary>
+<aside class="aside aside-like knowl__content">
+<div class="para" id="ch6-subsec-human-work-5-1-1">Mowing lawns<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-subsec-human-work-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</aside></details> For example, we can use it to predict how much mowing a lawn mowing crew will do. Suppose the productivity rate is 0.7 acres per staff-hour. Then we expect that a staff of <span class="process-math">\(S\)</span> working for <span class="process-math">\(H\)</span> hours can mow</div>
+<div class="displaymath process-math" id="ch6-subsec-human-work-5-4">
+\begin{equation*}
+0.7 \ \dfrac{\mbox{acres}}{\mbox{staff-hour}} \times
+SH \ \mbox{staff-hours} = 0.7\,SH \ \mbox{acres}
+\end{equation*}
+</div>
+<div class="para">of lawn altogether.</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-subsec-human-work-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="ch6-subsec-human-work-6">Production is measured differently 
+<details id="ch6-subsec-human-work-6-1" class="aside aside-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Aside</span></h3></summary>
+<aside class="aside aside-like knowl__content">
+<div class="para" id="ch6-subsec-human-work-6-1-1">
+<em class="emphasis">Staff-hours</em> provides a common measure of work in different jobs<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-subsec-human-work-6-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</aside></details> in different jobs—as orders processed, or acres mowed, or houses painted. However, in all these jobs human work is measured in the <em class="emphasis">same</em> way, as <em class="emphasis">staff-hours</em>, which gives us a common unit that can be translated from one job to another.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-subsec-human-work-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="ch6-subsec-human-work-7">A staff of <span class="process-math">\(S\)</span> working steadily for <span class="process-math">\(H\)</span> hours does <span class="process-math">\(SH\)</span> staff-hours of work. 
+<details id="ch6-subsec-human-work-7-4" class="aside aside-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Aside</span></h3></summary>
+<aside class="aside aside-like knowl__content">
+<div class="para" id="ch6-subsec-human-work-7-4-1">Non-constant staffing<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-subsec-human-work-7-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</aside></details> Suppose, though, the staffing level <span class="process-math">\(S\)</span> is not constant, as in the graph below. Can we still find the total amount of work done?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-subsec-human-work-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like" id="ch6-pic001"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="external/images/ch6_pic001.svg" role="img" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.1.1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><div class="autopermalink" aria-hidden="true" data-description="Figure 6.1.1"><a tabindex="-1" href="#ch6-pic001" title="Copy heading and permalink for Figure 6.1.1" aria-label="Copy heading and permalink for Figure 6.1.1">🔗</a></div></figcaption>
+</figure>
+<div class="para logical" id="ch6-subsec-human-work-9">
+<div class="para">The basic formula works only when the staffing level is constant. But staffing <em class="emphasis">is</em> constant over certain time intervals. Thus, to find the total amount of work done, we should simply use the basic formula on each of those intervals, 
+<details id="ch6-subsec-human-work-9-2" class="aside aside-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Aside</span></h3></summary>
+<aside class="aside aside-like knowl__content">
+<div class="para" id="ch6-subsec-human-work-9-2-1">The work done is a <em class="emphasis">sum</em> of products<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-subsec-human-work-9-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</aside></details> and then add up the individual contributions. These calculations are done in the following table. The total work is 42.5 staff-hours. So if the productivity rate is 10 orders per staff-hour, 425 orders can be processed.</div>
+<div class="displaymath process-math" id="ch6-subsec-human-work-9-3">
+\begin{align*}
+2\amp \text{ staff } \amp\times  1.5\amp \text{ hours } \amp=  
+\hphantom{0}3.0 \amp\text{ staff-hours}\\
+5\amp            \amp\times  5.5\amp\amp= 27.5 \amp\\
+3\amp                \amp\times  4.0\amp\amp= 12.0 \amp\\
+\amp\amp\amp \text{total } \amp= 42.5 
+\amp\text{ staff-hours}
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-subsec-human-work-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<section class="paragraphs" id="ch6-accumulated-work"><h3 class="heading"><span class="title">Accumulated work.</span></h3>
+<div class="para" id="ch6-accumulated-work-2"><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-accumulated-work-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="para" id="ch6-accumulated-work-3">The last calculation tells us how much work got done over an entire day. What can we tell an office manager who wants to know how work is progressing <em class="emphasis">during</em> the day?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-accumulated-work-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="ch6-accumulated-work-4">
+<div class="para">At the beginning of the day, only two people are working, so after the first <span class="process-math">\(T\)</span> hours (where <span class="process-math">\(0 \leq T \leq 1.5\)</span>)</div>
+<div class="displaymath process-math" id="ch6-accumulated-work-4-3">
+\begin{equation*}
+\mbox{work done up to time $T$} = 
+2 \ \mbox{staff} \times T \ \mbox{hours} = 
+2\, T \ \mbox{staff-hours}.
+\end{equation*}
+</div>
+<div class="para">Even before we consider what happens after 1.5 hours, this expression calls our attention to the fact that <em class="emphasis">accumulated work is a function</em>—let’s denote it <span class="process-math">\(W(T)\text{.}\)</span> According to the formula, for the first 1.5 hours <span class="process-math">\(W(T)\)</span> is a linear function whose multiplier is</div>
+<div class="displaymath process-math" id="ch6-accumulated-work-4-7">
+\begin{equation*}
+W' = 2 \ \dfrac{\mbox{staff-hours}}{\mbox{hour}}.
+\end{equation*}
+</div>
+<div class="para">This multiplier is the 
+<details id="ch6-accumulated-work-4-8" class="aside aside-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Aside</span></h4></summary>
+<aside class="aside aside-like knowl__content">
+<div class="para" id="ch6-accumulated-work-4-8-1">Work <em class="emphasis">accumulates</em> at a rate equal to the number of staff<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-accumulated-work-4-8-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</aside></details> <dfn class="terminology">rate</dfn> at which work is being accumulated. It is also the <dfn class="terminology">slope</dfn> of the graph of <span class="process-math">\(W(T)\)</span> over the interval <span class="process-math">\(0 \leq T \leq 1.5\text{.}\)</span> With this insight, we can determine the rest of the graph of <span class="process-math">\(W(T)\text{.}\)</span>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-accumulated-work-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="ch6-accumulated-work-5">What must <span class="process-math">\(W(T)\)</span> look like on the next time interval <span class="process-math">\(1.5 \leq T \leq
+7\text{?}\)</span> Here 5 members of staff are working, so work is accumulating at the rate of 5 staff-hours per hour. Therefore, on this interval the graph of <span class="process-math">\(W\)</span> is a straight line segment whose slope is 5 staff-hours per hour. On the third interval, the graph is another straight line segment whose slope is 3 staff-hours per hour. The complete graph of <span class="process-math">\(W(T)\)</span> is shown below.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-accumulated-work-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="ch6-accumulated-work-6">
+<div class="para">As the graphs show, the <em class="emphasis">slope</em> of the 
+<details id="ch6-accumulated-work-6-2" class="aside aside-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Aside</span></h4></summary>
+<aside class="aside aside-like knowl__content">
+<div class="para" id="ch6-accumulated-work-6-2-1">
+<span class="process-math">\(S\)</span> is the derivative of <span class="process-math">\(W\text{,}\)</span> so …<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-accumulated-work-6-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</aside></details> accumulated work function <span class="process-math">\(W(T)\)</span> is the <em class="emphasis">height</em> of the staffing function <span class="process-math">\(S(T)\text{.}\)</span>  In other words, <span class="process-math">\(S\)</span> is the  <em class="emphasis">derivative</em> of <span class="process-math">\(W\text{:}\)</span>
+</div>
+<div class="displaymath process-math" id="ch6-accumulated-work-6-9">
+\begin{equation*}
+W'(T) = S(T).
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-accumulated-work-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like" id="ch6-pic002"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="external/images/ch6_pic002.svg" role="img" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.1.2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>The accumulated work function <span class="process-math">\(W(T)\)</span><div class="autopermalink" aria-hidden="true" data-description="Figure 6.1.2"><a tabindex="-1" href="#ch6-pic002" title="Copy heading and permalink for Figure 6.1.2" aria-label="Copy heading and permalink for Figure 6.1.2">🔗</a></div></figcaption>
+</figure>
+<div class="para" id="ch6-accumulated-work-8">Notice that the units for <span class="process-math">\(W'\)</span> and for <span class="process-math">\(S\)</span> are compatible: the units for <span class="process-math">\(W'\)</span> are “staff-hours per hour”, which we can think of as “staff”, the units for <span class="process-math">\(S\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-accumulated-work-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="ch6-accumulated-work-9">
+<div class="para">We can describe the relation between <span class="process-math">\(S\)</span> and <span class="process-math">\(W\)</span> another way. At the moment, we have explained <span class="process-math">\(S\)</span> in terms of <span class="process-math">\(W\text{.}\)</span> However, since we started with <span class="process-math">\(S\text{,}\)</span> it is really more appropriate to reverse the roles, and explain <span class="process-math">\(W\)</span> in terms of <span class="process-math">\(S\text{.}\)</span> 
+<details id="ch6-accumulated-work-9-8" class="aside aside-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Aside</span></h4></summary>
+<aside class="aside aside-like knowl__content">
+<div class="para" id="ch6-accumulated-work-9-8-1">…<span class="process-math">\(W\)</span> is an antiderivative of <span class="process-math">\(S\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-accumulated-work-9-8-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</aside></details> <a href="ch4-sec-the-equation-y-ft.html" class="internal" title="Section 4.5: The Equation y' = f(t)">Section 4.5</a> gives us the language to do this: <span class="process-math">\(W\)</span> is an  <dfn class="terminology">antiderivative</dfn> of <span class="process-math">\(S\text{.}\)</span> In other words, <span class="process-math">\(y = W(T)\)</span> is a solution to the differential equation</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/ch4-sec-the-equation-y-ft.html" id="ch6-accumulated-work-9-14">
+\begin{equation*}
+\dfrac{dy}{dT} = S(T).
+\end{equation*}
+</div>
+<div class="para">As we find accumulation functions in other contexts, this relation will give us crucial information.</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-accumulated-work-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="ch6-accumulated-work-10">Before leaving this example we note some special features of <span class="process-math">\(S\)</span> and <span class="process-math">\(W\text{.}\)</span> 
+<details id="ch6-accumulated-work-10-3" class="aside aside-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Aside</span></h4></summary>
+<aside class="aside aside-like knowl__content">
+<div class="para" id="ch6-accumulated-work-10-3-1">The derivative of a piecewise linear function<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-accumulated-work-10-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</aside></details> The staffing function <span class="process-math">\(S\)</span> is said to be <dfn class="terminology">piecewise constant</dfn>, or a <dfn class="terminology">step function</dfn>. The graphs illustrate the general fact that the derivative of a piecewise <em class="emphasis">linear</em> function (<span class="process-math">\(W\text{,}\)</span> in this case) is piecewise <em class="emphasis">constant</em>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-accumulated-work-10" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraphs: Accumulated work"><a tabindex="-1" href="#ch6-accumulated-work" title="Copy heading and permalink for Paragraphs: Accumulated work" aria-label="Copy heading and permalink for Paragraphs: Accumulated work">🔗</a></div>
+</section>
+<section class="paragraphs" id="ch6-subsubsec-summary"><h3 class="heading"><span class="title">Summary.</span></h3>
+<div class="para" id="ch6-subsubsec-summary-2">The example of human work illustrates the key ideas we will meet, again and again, in different contexts in this chapter. Essentially, we have two functions <span class="process-math">\(W(t)\)</span> and <span class="process-math">\(S(t)\)</span> and two different ways of expressing the relation between them: On the one hand,<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-subsubsec-summary-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="sidebyside">
+<div class="sbsrow" style="margin-left:0%;margin-right:0%;grid-template-columns:100%;column-gap:0%;">
+<div class="sbspanel sbspanel--top top" style="">
+<div class="para" id="ch6-subsubsec-summary-3-1">
+<span class="process-math">\(W(t)\)</span> is an accumulation function for <span class="process-math">\(S(t)\text{,}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-subsubsec-summary-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div>
+</div>
+</div>
+<div class="para" id="ch6-subsubsec-summary-4">while on the other hand,<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-subsubsec-summary-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="sidebyside">
+<div class="sbsrow" style="margin-left:0%;margin-right:0%;grid-template-columns:100%;column-gap:0%;">
+<div class="sbspanel sbspanel--top top" style="">
+<div class="para" id="ch6-subsubsec-summary-5-1">
+<span class="process-math">\(S(t)\)</span> is the derivative of <span class="process-math">\(W(t)\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-subsubsec-summary-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div>
+</div>
+</div>
+<div class="para" id="ch6-subsubsec-summary-6">Exploring the far-reaching implications of functions connected by such a two-fold relationship will occupy the rest of this chapter.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-subsubsec-summary-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraphs: Summary"><a tabindex="-1" href="#ch6-subsubsec-summary" title="Copy heading and permalink for Paragraphs: Summary" aria-label="Copy heading and permalink for Paragraphs: Summary">🔗</a></div>
+</section><div class="autopermalink" aria-hidden="true" data-description="Subsection 6.1.1: Human Work"><a tabindex="-1" href="#ch6-subsec-human-work" title="Copy heading and permalink for Subsection 6.1.1: Human Work" aria-label="Copy heading and permalink for Subsection 6.1.1: Human Work">🔗</a></div>
+</section>
+<section class="subsection" id="ch6-subsec-electrical-energy">
+<h2 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.1.2</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Electrical Energy</span>
+</h2>
+<div class="para" id="ch6-subsec-electrical-energy-2">Just as humans do work, so does electricity. A power company charges customers for the work done by the electricity it supplies, and it measures that work in a way that is strictly analogous to the way we measure human work. The work done by electricity is usually referred to as <dfn class="terminology">(electrical) energy</dfn>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-subsec-electrical-energy-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="ch6-subsec-electrical-energy-3">
+<div class="para">For example, suppose we illuminate two light bulbs—one rated at 100 watts, the other at 60 watts. It will take the same amount of electrical energy to burn the 100-watt bulb for 3 hours as it will to burn the 60-watt bulb for 5 hours. Both will use 300 watt-hours of electricity. 
+<details id="ch6-subsec-electrical-energy-3-1" class="aside aside-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Aside</span></h3></summary>
+<aside class="aside aside-like knowl__content">
+<div class="para" id="ch6-subsec-electrical-energy-3-1-1">The analogy between electrical energy and human work<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-subsec-electrical-energy-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</aside></details> The power of the light bulb—measured in watts—is analogous to the number of staff working (and, in fact, workers have sometimes been called man<em class="emphasis">power</em>). The time the bulb burns is analogous to the time the staff work. Finally, the product</div>
+<div class="displaymath process-math" id="ch6-subsec-electrical-energy-3-3">
+\begin{equation*}
+\mbox{energy} = \mbox{power} \times 
+\mbox{elapsed time}
+\end{equation*}
+</div>
+<div class="para">for electricity is analogous to the product</div>
+<div class="displaymath process-math" id="ch6-subsec-electrical-energy-3-4">
+\begin{equation*}
+\mbox{work} = \mbox{number of staff}
+\times \mbox{elapsed time}
+\end{equation*}
+</div>
+<div class="para">for human effort.</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-subsec-electrical-energy-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="ch6-subsec-electrical-energy-4">Electric <em class="emphasis">power</em> is measured in watts, in kilowatts (= 1,000 watts), and in megawatts (= 1,000,000 watts). Electric <em class="emphasis">energy</em> is measured in watt-hours, in kilowatt-hours (abbreviated ‘kwh’) and in megawatt-hours (abbreviated ‘mwh’). Since an individual electrical appliance has a power demand of about one kilowatt, kwh are suitable units to use for describing the energy consumption of a house, while mwh are more natural for a whole town.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-subsec-electrical-energy-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="ch6-subsec-electrical-energy-5">Suppose the power demand of a town over a 24 hour period is described by the following graph:<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-subsec-electrical-energy-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like" id="fig_calc1_power1"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="external/images/calc1_power1.svg" role="img" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.1.3<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>image<div class="autopermalink" aria-hidden="true" data-description="Figure 6.1.3"><a tabindex="-1" href="#fig_calc1_power1" title="Copy heading and permalink for Figure 6.1.3" aria-label="Copy heading and permalink for Figure 6.1.3">🔗</a></div></figcaption>
+</figure>
+<div class="para logical" id="ch6-subsec-electrical-energy-7">
+<div class="para">Since this graph decribes <em class="emphasis">power</em>, 
+<details id="ch6-subsec-electrical-energy-7-2" class="aside aside-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Aside</span></h3></summary>
+<aside class="aside aside-like knowl__content">
+<div class="para" id="ch6-subsec-electrical-energy-7-2-1">Power is analogous to staffing level<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-subsec-electrical-energy-7-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</aside></details> its vertical height over any point <span class="process-math">\(t\)</span> on the time axis tells us the total wattage of the light bulbs, dishwashers, computers, etc. that are turned on in the town at that instant. This demand fluctuates between 30 and 90 megawatts, roughly. The problem is to determine the total amount of <em class="emphasis">energy</em> used in a day—how many megawatt-hours are there in this graph? Although the equation</div>
+<div class="displaymath process-math" id="ch6-subsec-electrical-energy-7-5">
+\begin{equation*}
+\mbox{energy} = \mbox{power} \times 
+\mbox{elapsed time},
+\end{equation*}
+</div>
+<div class="para">gives the basic relation between energy and power, we can’t use it directly because the power demand isn’t constant.</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-subsec-electrical-energy-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="ch6-subsec-electrical-energy-8">The staffing function <span class="process-math">\(S(t)\)</span> we considered earlier wasn’t constant, either, but we were still able to compute staff-hours because <span class="process-math">\(S(t)\)</span> was <em class="emphasis">piecewise</em> constant. 
+<details id="ch6-subsec-electrical-energy-8-4" class="aside aside-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Aside</span></h3></summary>
+<aside class="aside aside-like knowl__content">
+<div class="para" id="ch6-subsec-electrical-energy-8-4-1">A piecewise constant approximation<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-subsec-electrical-energy-8-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</aside></details> This suggests that we should replace the power graph by a piecewise constant graph that <dfn class="terminology">approximates</dfn> it. Here is one such approximation:<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-subsec-electrical-energy-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like" id="fig_calc1_power2"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="external/images/calc1_power2.svg" role="img" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.1.4<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>image<div class="autopermalink" aria-hidden="true" data-description="Figure 6.1.4"><a tabindex="-1" href="#fig_calc1_power2" title="Copy heading and permalink for Figure 6.1.4" aria-label="Copy heading and permalink for Figure 6.1.4">🔗</a></div></figcaption>
+</figure>
+<div class="para logical" id="ch6-subsec-electrical-energy-10">
+<div class="para">As you can see, the step function has five steps, so our approximation to the total energy consumption of the town will be a sum of five individual products:</div>
+<div class="displaymath process-math" id="ch6-subsec-electrical-energy-10-1">
+\begin{equation*}
+\hbox{energy} \approx 
+28.5 \times 6 + 47 \times 3.5 + \cdots + 
+57 \times 3 = 1447 \ \hbox{mwh}.
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-subsec-electrical-energy-10" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="ch6-subsec-electrical-energy-11">This value is only an <em class="emphasis">estimate</em>, though. How can we get a better estimate? The answer is clear: start with a step function that approximates the power graph <em class="emphasis">more closely</em>. 
+<details id="ch6-subsec-electrical-energy-11-3" class="aside aside-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Aside</span></h3></summary>
+<aside class="aside aside-like knowl__content">
+<div class="para" id="ch6-subsec-electrical-energy-11-3-1">Better estimates<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-subsec-electrical-energy-11-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</aside></details> In principle, we can get as good an approximation as we might desire this way. We are limited only by the precision of the power graph itself. As our approximation to the power graph improves, so does the accuracy of the calculation that estimates energy consumption.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-subsec-electrical-energy-11" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="ch6-subsec-electrical-energy-12">In summary, we determine the energy consumption of the town by a sequence of successive approximations. The steps in the sequence are:<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-subsec-electrical-energy-12" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="observation remark-like" id="ch6-subsec-electrical-energy-13"><h3 class="heading">
+<span class="type">Observation</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.1.5</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3>
+<div class="para logical" id="ch6-subsec-electrical-energy-13-1">
+<ol class="decimal" id="ch6-subsec-electrical-energy-13-1-1">
+<li id="ch6-subsec-electrical-energy-13-1-1-1">
+<div class="para" id="p-derived-ch6-subsec-electrical-energy-13-1-1-1">Approximate the power demand by a step function</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 1"><a tabindex="-1" href="#ch6-subsec-electrical-energy-13-1-1-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+</li>
+<li id="ch6-subsec-electrical-energy-13-1-1-2">
+<div class="para" id="p-derived-ch6-subsec-electrical-energy-13-1-1-2">Estimate energy consumption from this approximation</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 2"><a tabindex="-1" href="#ch6-subsec-electrical-energy-13-1-1-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+</li>
+<li id="ch6-subsec-electrical-energy-13-1-1-3">
+<div class="para" id="p-derived-ch6-subsec-electrical-energy-13-1-1-3">Improve the energy estimate by choosing a new step function that follows power demand more closely</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 3"><a tabindex="-1" href="#ch6-subsec-electrical-energy-13-1-1-3" title="Copy heading and permalink for Item 3" aria-label="Copy heading and permalink for Item 3">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-subsec-electrical-energy-13-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Observation 6.1.5"><a tabindex="-1" href="#ch6-subsec-electrical-energy-13" title="Copy heading and permalink for Observation 6.1.5" aria-label="Copy heading and permalink for Observation 6.1.5">🔗</a></div>
+</article>
+<section class="paragraphs" id="ch6-subsubsec-accumulated-energy-consumption"><h3 class="heading"><span class="title">Accumulated energy consumption.</span></h3>
+<div class="para" id="ch6-subsubsec-accumulated-energy-consumption-2">Energy is being consumed steadily over the entire day; can we determine how much energy has been used through the first <span class="process-math">\(T\)</span> hours of the day? 
+<details id="ch6-subsubsec-accumulated-energy-consumption-2-2" class="aside aside-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Aside</span></h4></summary>
+<aside class="aside aside-like knowl__content">
+<div class="para" id="ch6-subsubsec-accumulated-energy-consumption-2-2-1">Energy accumulation<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-subsubsec-accumulated-energy-consumption-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</aside></details> We’ll denote this quantity <span class="process-math">\(E(T)\)</span> and call it the <dfn class="terminology">energy accumulation function</dfn>. For example, we already have the estimate <span class="process-math">\(E(24) = 1447\)</span> mwh; can we estimate <span class="process-math">\(E(3)\)</span> or <span class="process-math">\(E(17.6)\text{?}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-subsubsec-accumulated-energy-consumption-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="ch6-subsubsec-accumulated-energy-consumption-3">
+<div class="para">Once again, the earlier example of human effort can guide us. We saw that work accumulates at a rate equal to the number of staff present:</div>
+<div class="displaymath process-math" id="ch6-subsubsec-accumulated-energy-consumption-3-1">
+\begin{equation*}
+W'(T) = S(T).
+\end{equation*}
+</div>
+<div class="para">Since <span class="process-math">\(S(T)\)</span> was piecewise constant, this rate equation allowed us to determine <span class="process-math">\(W(T)\)</span> as a piecewise linear function.</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-subsubsec-accumulated-energy-consumption-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="ch6-subsubsec-accumulated-energy-consumption-4">
+<div class="para">We claim that there is an analogous relation between accumulated energy consumption and power demand—namely</div>
+<div class="displaymath process-math" id="ch6-subsubsec-accumulated-energy-consumption-4-1">
+\begin{equation*}
+E'(T) = p(T).
+\end{equation*}
+</div>
+<div class="para">Unlike <span class="process-math">\(S(T)\text{,}\)</span> the function <span class="process-math">\(p(T)\)</span> is not piecewise constant. Therefore, the argument we used to show that <span class="process-math">\(W'(T) = S(T)\)</span> will not work here. We need another argument.</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-subsubsec-accumulated-energy-consumption-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="ch6-subsubsec-accumulated-energy-consumption-5">
+<div class="para">To explain why the differential equation <span class="process-math">\(E'(T) = p(T)\)</span> should be true, we will start by analyzing 
+<details id="ch6-subsubsec-accumulated-energy-consumption-5-2" class="aside aside-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Aside</span></h4></summary>
+<aside class="aside aside-like knowl__content">
+<div class="para" id="ch6-subsubsec-accumulated-energy-consumption-5-2-1">Estimating <span class="process-math">\(E'(T)\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-subsubsec-accumulated-energy-consumption-5-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</aside></details>
+</div>
+<div class="displaymath process-math" id="ch6-subsubsec-accumulated-energy-consumption-5-3">
+\begin{equation*}
+E'(T) \approx \dfrac{\Delta E}{\Delta T} = 
+\dfrac{E(T + \Delta T) - E(T)}{\Delta T}.
+\end{equation*}
+</div>
+<div class="para">Assume we have made <span class="process-math">\(\Delta T\)</span> so small that, to the level of precision we require, the approximation <span class="process-math">\(\Delta E/\Delta T\)</span> agrees with <span class="process-math">\(E'(T)\text{.}\)</span> The numerator <span class="process-math">\(\Delta E\)</span> is, by definition, the total energy used up to time <span class="process-math">\(T + \Delta T\text{,}\)</span> minus the total energy used up to time <span class="process-math">\(T\text{.}\)</span> This is just the energy used during the time interval <span class="process-math">\(\Delta T\)</span> that runs from time <span class="process-math">\(T\)</span> to time <span class="process-math">\(T + \Delta T\text{:}\)</span>
+</div>
+<div class="displaymath process-math" id="ch6-subsubsec-accumulated-energy-consumption-5-13">
+\begin{equation*}
+\Delta E = \mbox{energy used between times $T$ and 
+$T + \Delta T$}.
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-subsubsec-accumulated-energy-consumption-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="ch6-subsubsec-accumulated-energy-consumption-6">
+<div class="para">Since the elapsed time <span class="process-math">\(\Delta T\)</span> is small, the power demand should be nearly constant, so we can get a good estimate for energy consumption from the basic equation</div>
+<div class="displaymath process-math" id="ch6-subsubsec-accumulated-energy-consumption-6-2">
+\begin{equation*}
+\mbox{energy used} = \mbox{power} \times 
+\mbox{elapsed time}.
+\end{equation*}
+</div>
+<div class="para">In particular, if we represent the power by <span class="process-math">\(p(T)\text{,}\)</span> which is the power demand at the beginning of the time period from <span class="process-math">\(T\)</span> to <span class="process-math">\(T + \Delta T\text{,}\)</span> then we have</div>
+<div class="displaymath process-math" id="ch6-subsubsec-accumulated-energy-consumption-6-6">
+\begin{equation*}
+\Delta E \approx p(T) \cdot \Delta T.
+\end{equation*}
+</div>
+<div class="para">Using this value in our approximation for the derivative <span class="process-math">\(E'(T)\text{,}\)</span> we get</div>
+<div class="displaymath process-math" id="ch6-subsubsec-accumulated-energy-consumption-6-8">
+\begin{equation*}
+E'(T) \approx \dfrac{\Delta E}{\Delta T} \approx
+\dfrac{p(T) \cdot \Delta T}{\Delta T} = p(T).
+\end{equation*}
+</div>
+<div class="para">That is, <span class="process-math">\(E'(T) \approx p(T)\text{,}\)</span> and the approximation becomes more and more exact as the time interval <span class="process-math">\(\Delta T\)</span> shrinks to 0. Thus,</div>
+<div class="displaymath process-math" id="ch6-subsubsec-accumulated-energy-consumption-6-11">
+\begin{equation*}
+E'(T) = \lim_{\Delta T \to 0} \dfrac{\Delta E}{\Delta T}
+= p(T).
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-subsubsec-accumulated-energy-consumption-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="ch6-subsubsec-accumulated-energy-consumption-7">
+<div class="para">Here is another way to arrive at the same conclusion. 
+<details id="ch6-subsubsec-accumulated-energy-consumption-7-1" class="aside aside-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Aside</span></h4></summary>
+<aside class="aside aside-like knowl__content">
+<div class="para" id="ch6-subsubsec-accumulated-energy-consumption-7-1-1">A second way to see that <span class="process-math">\(E' = p\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-subsubsec-accumulated-energy-consumption-7-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</aside></details> Our starting point is the basic formula</div>
+<div class="displaymath process-math" id="ch6-subsubsec-accumulated-energy-consumption-7-2">
+\begin{equation*}
+\Delta E \approx p(T) \cdot \Delta T,
+\end{equation*}
+</div>
+<div class="para">which holds over a small time interval <span class="process-math">\(\Delta T\text{.}\)</span> This formula tells us how <span class="process-math">\(E\)</span> responds to small changes in <span class="process-math">\(T\text{.}\)</span> But that is exactly what the <dfn class="terminology">microscope equation</dfn> tells us:</div>
+<div class="displaymath process-math" id="ch6-subsubsec-accumulated-energy-consumption-7-7">
+\begin{equation*}
+\Delta E \approx E'(T) \cdot \Delta T.
+\end{equation*}
+</div>
+<div class="para">Since these equations give the same information, their multipliers must be the same:</div>
+<div class="displaymath process-math" id="ch6-subsubsec-accumulated-energy-consumption-7-8">
+\begin{equation*}
+p(T) = E'(T).
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-subsubsec-accumulated-energy-consumption-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="ch6-subsubsec-accumulated-energy-consumption-8">In words, the differential equation <span class="process-math">\(E' = p\)</span> says that <em class="emphasis">power is the rate at which energy is consumed</em>. In purely mathematical terms:<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-subsubsec-accumulated-energy-consumption-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="ch6-subsubsec-accumulated-energy-consumption-9">The energy accumulation function <span class="process-math">\(y = E(t)\)</span> is a solution to the differential equation <span class="process-math">\(dy/dt = p(t)\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-subsubsec-accumulated-energy-consumption-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="ch6-subsubsec-accumulated-energy-consumption-10">
+<div class="para">In fact, <span class="process-math">\(y = E(t)\)</span> is <em class="emphasis">the</em> solution to the <dfn class="terminology">initial value problem</dfn>
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/ch4-sec-the-equation-y-ft.html" id="ch6-subsubsec-accumulated-energy-consumption-10-4">
+\begin{equation*}
+\dfrac{dy}{dt} = p(t) \qquad y(0) = 0.
+\end{equation*}
+</div>
+<div class="para">We can use all the methods described in <a href="ch4-sec-the-equation-y-ft.html" class="internal" title="Section 4.5: The Equation y' = f(t)">Section 4.5</a> to solve this problem.</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-subsubsec-accumulated-energy-consumption-10" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="ch6-subsubsec-accumulated-energy-consumption-11">The relation we have explored between power and energy can be found in an analogous form in many other contexts, as we will see in the next two sections. In section 4 we will turn back to accumulation functions and investigate them as solutions to differential equations. Then, in <a href="ch11-chap-techniques-of-integration.html" class="internal" title="Chapter 11: Techniques of Integration">Chapter 11</a>, we will look at some special methods for solving the particular differential equations that arise in accumulation problems.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-subsubsec-accumulated-energy-consumption-11" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraphs: Accumulated energy consumption"><a tabindex="-1" href="#ch6-subsubsec-accumulated-energy-consumption" title="Copy heading and permalink for Paragraphs: Accumulated energy consumption" aria-label="Copy heading and permalink for Paragraphs: Accumulated energy consumption">🔗</a></div>
+</section><div class="autopermalink" aria-hidden="true" data-description="Subsection 6.1.2: Electrical Energy"><a tabindex="-1" href="#ch6-subsec-electrical-energy" title="Copy heading and permalink for Subsection 6.1.2: Electrical Energy" aria-label="Copy heading and permalink for Subsection 6.1.2: Electrical Energy">🔗</a></div>
+</section>
+<section class="exercises" id="ch6-subsec-exercises">
+<h2 class="heading hide-type">
+<span class="type">Exercises</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.1.3</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Exercises</span>
+</h2>
+<div class="exercisegroup" id="ch6-subsubsec-human-work">
+<h3 class="heading"><span class="title">Human work.</span></h3>
+<div class="exercisegroup-exercises">
+<article class="exercise exercise-like" id="ch6-subsubsec-human-work-2"><h4 class="heading"><span class="codenumber">1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<div class="introduction" id="ch6-subsubsec-human-work-2-1">
+<div class="para logical" id="ch6-subsubsec-human-work-2-1-1">
+<div class="para">House-painting is a job that can be done by several people working simultaneously, so we can measure the amount of work done in “staff-hours.” Consider a house-painting business run by some students. Because of class schedules, different numbers of students will be painting at different times of the day. Let <span class="process-math">\(S(T)\)</span> be the number of staff present at time <span class="process-math">\(T\text{,}\)</span> measured in hours from 8 am, and suppose that during an 8-hour work day, we have</div>
+<div class="displaymath process-math" id="ch6-subsubsec-human-work-2-1-1-4">
+\begin{equation*}
+S(T) = \begin{cases} 
+3, &amp; 0 \le T &lt; 2, \\ 
+2, &amp; 2 \le T &lt; 4.5, \\
+4, &amp; 4.5 \le T \le 8.
+\end{cases}
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-subsubsec-human-work-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div>
+<article class="task exercise-like" id="ch6-subsubsec-human-work-2-2"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<div class="para" id="ch6-subsubsec-human-work-2-2-1">Draw the graph of the step function defined here, and compute the total number of staff hours.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-subsubsec-human-work-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 6.1.3.1.a"><a tabindex="-1" href="#ch6-subsubsec-human-work-2-2" title="Copy heading and permalink for Task 6.1.3.1.a" aria-label="Copy heading and permalink for Task 6.1.3.1.a">🔗</a></div>
+</article>
+<article class="task exercise-like" id="ch6-subsubsec-human-work-2-3"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<div class="para" id="ch6-subsubsec-human-work-2-3-1">Draw the graph that shows how staff-hours <em class="emphasis">accumulate</em> on this job. This is the graph of the <dfn class="terminology">accumulated work</dfn> function <span class="process-math">\(W(T)\text{.}\)</span> (Compare the graphs of staff and staff-hours in <a href="ch6-sec-measuring-work.html#ch6-pic002" class="xref" data-knowl="./knowl/xref/ch6-pic002.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 6.1.2">Figure 6.1.2</a>.)<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-subsubsec-human-work-2-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 6.1.3.1.b"><a tabindex="-1" href="#ch6-subsubsec-human-work-2-3" title="Copy heading and permalink for Task 6.1.3.1.b" aria-label="Copy heading and permalink for Task 6.1.3.1.b">🔗</a></div>
+</article>
+<article class="task exercise-like" id="ch6-subsubsec-human-work-2-4"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<div class="para" id="ch6-subsubsec-human-work-2-4-1">Determine the derivative <span class="process-math">\(W'(T)\text{.}\)</span> Is <span class="process-math">\(W'(T) = S(T)\text{?}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-subsubsec-human-work-2-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 6.1.3.1.c"><a tabindex="-1" href="#ch6-subsubsec-human-work-2-4" title="Copy heading and permalink for Task 6.1.3.1.c" aria-label="Copy heading and permalink for Task 6.1.3.1.c">🔗</a></div>
+</article><div class="autopermalink" aria-hidden="true" data-description="Exercise 6.1.3.1"><a tabindex="-1" href="#ch6-subsubsec-human-work-2" title="Copy heading and permalink for Exercise 6.1.3.1" aria-label="Copy heading and permalink for Exercise 6.1.3.1">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="ch6-subsubsec-human-work-3"><h4 class="heading"><span class="codenumber">2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<div class="introduction" id="ch6-subsubsec-human-work-3-1">
+<div class="para" id="ch6-subsubsec-human-work-3-1-1">Suppose that there is a house-painting job to be done, and by past experience the students know that four of them could finish it in 6 hours. But for the first 3.5 hours, only two students can show up, and after that, five will be available.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-subsubsec-human-work-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div>
+<article class="task exercise-like" id="ch6-subsubsec-human-work-3-2"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<div class="para" id="ch6-subsubsec-human-work-3-2-1">How long will the whole job take? [Answer: 6.9 hours.]<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-subsubsec-human-work-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 6.1.3.2.a"><a tabindex="-1" href="#ch6-subsubsec-human-work-3-2" title="Copy heading and permalink for Task 6.1.3.2.a" aria-label="Copy heading and permalink for Task 6.1.3.2.a">🔗</a></div>
+</article>
+<article class="task exercise-like" id="ch6-subsubsec-human-work-3-3"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<div class="para" id="ch6-subsubsec-human-work-3-3-1">Draw a graph of the staffing function for this problem. Mark on the graph the time that the job is finished.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-subsubsec-human-work-3-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 6.1.3.2.b"><a tabindex="-1" href="#ch6-subsubsec-human-work-3-3" title="Copy heading and permalink for Task 6.1.3.2.b" aria-label="Copy heading and permalink for Task 6.1.3.2.b">🔗</a></div>
+</article>
+<article class="task exercise-like" id="ch6-subsubsec-human-work-3-4"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<div class="para" id="ch6-subsubsec-human-work-3-4-1">Draw the graph of the accumulated work function <span class="process-math">\(W(T)\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-subsubsec-human-work-3-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 6.1.3.2.c"><a tabindex="-1" href="#ch6-subsubsec-human-work-3-4" title="Copy heading and permalink for Task 6.1.3.2.c" aria-label="Copy heading and permalink for Task 6.1.3.2.c">🔗</a></div>
+</article>
+<article class="task exercise-like" id="ch6-subsubsec-human-work-3-5"><h5 class="heading"><span class="codenumber">(d)</span></h5>
+<div class="para" id="ch6-subsubsec-human-work-3-5-1">Determine the derivative <span class="process-math">\(W'(T)\text{.}\)</span> Is <span class="process-math">\(W'(T) = S(T)\text{?}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-subsubsec-human-work-3-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 6.1.3.2.d"><a tabindex="-1" href="#ch6-subsubsec-human-work-3-5" title="Copy heading and permalink for Task 6.1.3.2.d" aria-label="Copy heading and permalink for Task 6.1.3.2.d">🔗</a></div>
+</article><div class="autopermalink" aria-hidden="true" data-description="Exercise 6.1.3.2"><a tabindex="-1" href="#ch6-subsubsec-human-work-3" title="Copy heading and permalink for Exercise 6.1.3.2" aria-label="Copy heading and permalink for Exercise 6.1.3.2">🔗</a></div>
+</article>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Exercise Group 6.1.3.1–2: Human work"><a tabindex="-1" href="#ch6-subsubsec-human-work" title="Copy heading and permalink for Exercise Group 6.1.3.1–2: Human work" aria-label="Copy heading and permalink for Exercise Group 6.1.3.1–2: Human work">🔗</a></div>
+</div>
+<div class="exercisegroup" id="ch6-average-staffing">
+<h3 class="heading"><span class="title">Average staffing.</span></h3>
+<div class="introduction" id="ch6-average-staffing-2">
+<div class="para logical" id="ch6-average-staffing-2-1">
+<div class="para">Suppose a job can be done in three hours when 6 people work the first hour and 9 work during the last two hours. Then the job takes 24 staff-hours of work, and the <dfn class="terminology">average staffing</dfn> is</div>
+<div class="displaymath process-math" id="ch6-average-staffing-2-1-2">
+\begin{equation*}
+\text{average staffing} = \dfrac{24 \text{ staff-hours}}{3 \text{ hours}} 
+= 8 \text{ staff}.
+\end{equation*}
+</div>
+<div class="para">This means that a <em class="emphasis">constant</em> staffing level of 8 persons can accomplish the job in the same time that the given variable staffing level did. Note that the average staffing level (8 persons) is <em class="emphasis">not</em> the average of the two numbers 9 and 6!</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-average-staffing-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div>
+<div class="exercisegroup-exercises">
+<article class="exercise exercise-like" id="ch6-average-staffing-3"><h4 class="heading"><span class="codenumber">3<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<div class="para" id="ch6-average-staffing-3-1-1">What is the average staffing of the jobs considered in exercises 1 and 2, above?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-average-staffing-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Exercise 6.1.3.3"><a tabindex="-1" href="#ch6-average-staffing-3" title="Copy heading and permalink for Exercise 6.1.3.3" aria-label="Copy heading and permalink for Exercise 6.1.3.3">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="ch6-average-staffing-4"><h4 class="heading"><span class="codenumber">4<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<div class="introduction" id="ch6-average-staffing-4-1">
+<div class="para" id="ch6-average-staffing-4-1-1">Draw the graph that shows how work would accumulate in the job described in exercise 1 if the work-force was kept at the <em class="emphasis">average</em> staffing level instead of the varying level described in the exercise. Compare this graph to the graph you drew in exercise 1 b.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-average-staffing-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div>
+<article class="task exercise-like" id="ch6-average-staffing-4-2"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<div class="para" id="ch6-average-staffing-4-2-1">What is the derivative <span class="process-math">\(W'(T)\)</span> of the work accumulation function whose graph you drew in part (a)?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-average-staffing-4-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 6.1.3.4.a"><a tabindex="-1" href="#ch6-average-staffing-4-2" title="Copy heading and permalink for Task 6.1.3.4.a" aria-label="Copy heading and permalink for Task 6.1.3.4.a">🔗</a></div>
+</article><div class="autopermalink" aria-hidden="true" data-description="Exercise 6.1.3.4"><a tabindex="-1" href="#ch6-average-staffing-4" title="Copy heading and permalink for Exercise 6.1.3.4" aria-label="Copy heading and permalink for Exercise 6.1.3.4">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="ch6-average-staffing-5"><h4 class="heading"><span class="codenumber">5<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<div class="para" id="ch6-average-staffing-5-1-1">What is the average staffing for the job described by <a href="ch6-sec-measuring-work.html#ch6-pic001" class="xref" data-knowl="./knowl/xref/ch6-pic001.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 6.1.1">Figure 6.1.1</a>?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-average-staffing-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Exercise 6.1.3.5"><a tabindex="-1" href="#ch6-average-staffing-5" title="Copy heading and permalink for Exercise 6.1.3.5" aria-label="Copy heading and permalink for Exercise 6.1.3.5">🔗</a></div>
+</article>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Exercise Group 6.1.3.3–5: Average staffing"><a tabindex="-1" href="#ch6-average-staffing" title="Copy heading and permalink for Exercise Group 6.1.3.3–5: Average staffing" aria-label="Copy heading and permalink for Exercise Group 6.1.3.3–5: Average staffing">🔗</a></div>
+</div>
+<div class="exercisegroup" id="ch6-subsubsec-electrical-energy">
+<h3 class="heading"><span class="title">Electrical energy.</span></h3>
+<div class="exercisegroup-exercises">
+<article class="exercise exercise-like" id="ch6-subsubsec-electrical-energy-2"><h4 class="heading"><span class="codenumber">6<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<div class="para" id="ch6-subsubsec-electrical-energy-2-1-1">On Monday evening, a 1500 watt space heater is left on from 7 until 11 pm. How many kilowatt-hours of electricity does it consume?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-subsubsec-electrical-energy-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Exercise 6.1.3.6"><a tabindex="-1" href="#ch6-subsubsec-electrical-energy-2" title="Copy heading and permalink for Exercise 6.1.3.6" aria-label="Copy heading and permalink for Exercise 6.1.3.6">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="ch6-subsubsec-electrical-energy-3"><h4 class="heading"><span class="codenumber">7<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<div class="introduction" id="ch6-subsubsec-electrical-energy-3-1">
+<div class="para" id="ch6-subsubsec-electrical-energy-3-1-1">That same heater also has settings for 500 and 1000 watts. Suppose that on Tuesday we put it on the 1000 watt setting from 6 to 8 pm, then switch to 1500 watts from 8 till 11 pm, and then on the 500 watt setting through the night until 8 am, Wed­nesday. How much energy is consumed (in kwh)?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-subsubsec-electrical-energy-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div>
+<article class="task exercise-like" id="ch6-subsubsec-electrical-energy-3-2"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<div class="para" id="ch6-subsubsec-electrical-energy-3-2-1">Sketch the graphs of power demand <span class="process-math">\(p(T)\)</span> and accumulated energy consumption <span class="process-math">\(E(T)\)</span> for the space heater from Tuesday evening to Wed­nesday morning. Determine whether <span class="process-math">\(E'(T) = p(T)\)</span> in this case.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-subsubsec-electrical-energy-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 6.1.3.7.a"><a tabindex="-1" href="#ch6-subsubsec-electrical-energy-3-2" title="Copy heading and permalink for Task 6.1.3.7.a" aria-label="Copy heading and permalink for Task 6.1.3.7.a">🔗</a></div>
+</article>
+<article class="task exercise-like" id="ch6-subsubsec-electrical-energy-3-3"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<div class="para logical" id="ch6-subsubsec-electrical-energy-3-3-1">
+<div class="para">The <dfn class="terminology">average power demand</dfn> of the space heater is defined by:</div>
+<div class="displaymath process-math" id="ch6-subsubsec-electrical-energy-3-3-1-2">
+\begin{equation*}
+\text{average power demand} =
+\dfrac{\text{energy consumption}}{\text{elapsed time}}.
+\end{equation*}
+</div>
+<div class="para">If energy consumption is measured in kilowatt-hours, and time in hours, then we can measure average power demand in kilowatts—the same as power itself. (Notice the similarity with average staffing.) What is the average power demand from Tuesday evening to Wednesday morning? If the heater could be set at this average power level, how would the energy consumption compare to the actual energy consumption you determined in part (a)?</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-subsubsec-electrical-energy-3-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 6.1.3.7.b"><a tabindex="-1" href="#ch6-subsubsec-electrical-energy-3-3" title="Copy heading and permalink for Task 6.1.3.7.b" aria-label="Copy heading and permalink for Task 6.1.3.7.b">🔗</a></div>
+</article><div class="autopermalink" aria-hidden="true" data-description="Exercise 6.1.3.7"><a tabindex="-1" href="#ch6-subsubsec-electrical-energy-3" title="Copy heading and permalink for Exercise 6.1.3.7" aria-label="Copy heading and permalink for Exercise 6.1.3.7">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="ch6-subsubsec-electrical-energy-4"><h4 class="heading"><span class="codenumber">8<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<div class="para" id="ch6-subsubsec-electrical-energy-4-1-1">
+<a href="ch6-sec-measuring-work.html#fig_calc1_power1" class="xref" data-knowl="./knowl/xref/fig_calc1_power1.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 6.1.3">Figure 6.1.3</a> and <a href="ch6-sec-measuring-work.html#fig_calc1_power2" class="xref" data-knowl="./knowl/xref/fig_calc1_power2.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 6.1.4">Figure 6.1.4</a> describe the power demand of a town over a 24-hour period. Give an estimate of the average power demand of the town during that period. Explain what you did to produce your estimate. [Answer: 60.29 megawatts is one estimate.]<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-subsubsec-electrical-energy-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Exercise 6.1.3.8"><a tabindex="-1" href="#ch6-subsubsec-electrical-energy-4" title="Copy heading and permalink for Exercise 6.1.3.8" aria-label="Copy heading and permalink for Exercise 6.1.3.8">🔗</a></div>
+</article>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Exercise Group 6.1.3.6–8: Electrical energy"><a tabindex="-1" href="#ch6-subsubsec-electrical-energy" title="Copy heading and permalink for Exercise Group 6.1.3.6–8: Electrical energy" aria-label="Copy heading and permalink for Exercise Group 6.1.3.6–8: Electrical energy">🔗</a></div>
+</div>
+<div class="exercisegroup" id="ch6-subsubsec-work-as-force-times-distance">
+<h3 class="heading"><span class="title">Work as force <span class="process-math">\(\times\)</span> distance.</span></h3>
+<div class="introduction" id="ch6-subsubsec-work-as-force-times-distance-2">
+<div class="para logical" id="ch6-subsubsec-work-as-force-times-distance-2-1">
+<div class="para">The effort it takes to move an object is also called work. Since it takes <em class="emphasis">twice</em> as much effort to move the object twice as far, or to move another object that is twice as heavy, we can see that the work done in moving an object is proportional to both the force applied and to the distance moved. The simplest way to express this fact is to define</div>
+<div class="displaymath process-math" id="ch6-subsubsec-work-as-force-times-distance-2-1-2">
+\begin{equation*}
+\mbox{work} = \mbox{force} \times \mbox{distance}.
+\end{equation*}
+</div>
+<div class="para">For example, to lift a weight of 20 pounds straight up it takes 20 pounds of force. If the vertical distance is 3 feet then</div>
+<div class="displaymath process-math" id="ch6-subsubsec-work-as-force-times-distance-2-1-3">
+\begin{equation*}
+20 \ \mbox{pounds} \times 3 \ \mbox{feet} =
+60 \ \mbox{foot-pounds}
+\end{equation*}
+</div>
+<div class="para">of work is done. Thus, once again the quantity we are interested in has the form of a product. The <em class="emphasis">foot-pound</em> is one of the standard units for measuring work.</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-subsubsec-work-as-force-times-distance-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div>
+<div class="exercisegroup-exercises">
+<article class="exercise exercise-like" id="ch6-subsubsec-work-as-force-times-distance-3"><h4 class="heading"><span class="codenumber">9<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<div class="para" id="ch6-subsubsec-work-as-force-times-distance-3-1-1">Suppose a tractor pulls a loaded wagon over a road whose steepness varies. If the first 150 feet of road are relatively level and the tractor has to exert only 200 pounds of force while the next 400 feet are inclined and the tractor has to exert 550 pounds of force, how much work does the tractor do altogether?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-subsubsec-work-as-force-times-distance-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Exercise 6.1.3.9"><a tabindex="-1" href="#ch6-subsubsec-work-as-force-times-distance-3" title="Copy heading and permalink for Exercise 6.1.3.9" aria-label="Copy heading and permalink for Exercise 6.1.3.9">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="ch6-subsubsec-work-as-force-times-distance-4"><h4 class="heading"><span class="codenumber">10<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<div class="introduction" id="ch6-subsubsec-work-as-force-times-distance-4-1">
+<div class="para" id="ch6-subsubsec-work-as-force-times-distance-4-1-1">A motor on a large ship is lifting a 2000 pound anchor that is already out of the water at the end of a 30 foot chain. The chain weighs 40 pounds per foot. As the motor lifts the anchor, the part of the chain that is hanging gets shorter and shorter, thereby reducing the weight the motor must lift.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-subsubsec-work-as-force-times-distance-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div>
+<article class="task exercise-like" id="ch6-subsubsec-work-as-force-times-distance-4-2"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<div class="para" id="ch6-subsubsec-work-as-force-times-distance-4-2-1">What is the combined weight of anchor and hanging chain when the anchor has been lifted <span class="process-math">\(x\)</span> feet above its initial position?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-subsubsec-work-as-force-times-distance-4-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 6.1.3.10.a"><a tabindex="-1" href="#ch6-subsubsec-work-as-force-times-distance-4-2" title="Copy heading and permalink for Task 6.1.3.10.a" aria-label="Copy heading and permalink for Task 6.1.3.10.a">🔗</a></div>
+</article>
+<article class="task exercise-like" id="ch6-subsubsec-work-as-force-times-distance-4-3"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<div class="para" id="ch6-subsubsec-work-as-force-times-distance-4-3-1">Divide the 30-foot distance that the anchor must move into 3 equal intervals of 10 feet each. Estimate how much work the motor does lifting the anchor and chain over each 10-foot interval by multiplying the combined weight at the <em class="emphasis">bottom</em> of the interval by the 10-foot height. What is your estimate for the total work done by the motor in raising the anchor and chain 30 feet?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-subsubsec-work-as-force-times-distance-4-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 6.1.3.10.b"><a tabindex="-1" href="#ch6-subsubsec-work-as-force-times-distance-4-3" title="Copy heading and permalink for Task 6.1.3.10.b" aria-label="Copy heading and permalink for Task 6.1.3.10.b">🔗</a></div>
+</article>
+<article class="task exercise-like" id="ch6-subsubsec-work-as-force-times-distance-4-4"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<div class="para" id="ch6-subsubsec-work-as-force-times-distance-4-4-1">Repeat all the steps of part (b), but this time use 30 equal intervals of 1 foot each. Is your new estimate of the work done larger or smaller than your estimate in part (b)? Which estimate is likely to be more accurate? On what do you base your judgment?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-subsubsec-work-as-force-times-distance-4-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 6.1.3.10.c"><a tabindex="-1" href="#ch6-subsubsec-work-as-force-times-distance-4-4" title="Copy heading and permalink for Task 6.1.3.10.c" aria-label="Copy heading and permalink for Task 6.1.3.10.c">🔗</a></div>
+</article>
+<article class="task exercise-like" id="ch6-subsubsec-work-as-force-times-distance-4-5"><h5 class="heading"><span class="codenumber">(d)</span></h5>
+<div class="para" id="ch6-subsubsec-work-as-force-times-distance-4-5-1">If you ignore the weight of the chain entirely, what is your estimate of the work done? How much <em class="emphasis">extra</em> work do you therefore estimate the motor must do to raise the heavy chain along with the anchor?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-subsubsec-work-as-force-times-distance-4-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 6.1.3.10.d"><a tabindex="-1" href="#ch6-subsubsec-work-as-force-times-distance-4-5" title="Copy heading and permalink for Task 6.1.3.10.d" aria-label="Copy heading and permalink for Task 6.1.3.10.d">🔗</a></div>
+</article><div class="autopermalink" aria-hidden="true" data-description="Exercise 6.1.3.10"><a tabindex="-1" href="#ch6-subsubsec-work-as-force-times-distance-4" title="Copy heading and permalink for Exercise 6.1.3.10" aria-label="Copy heading and permalink for Exercise 6.1.3.10">🔗</a></div>
+</article>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Exercise Group 6.1.3.9–10: Work as force \times distance"><a tabindex="-1" href="#ch6-subsubsec-work-as-force-times-distance" title="Copy heading and permalink for Exercise Group 6.1.3.9–10: Work as force \times distance" aria-label="Copy heading and permalink for Exercise Group 6.1.3.9–10: Work as force \times distance">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Exercises 6.1.3: Exercises"><a tabindex="-1" href="#ch6-subsec-exercises" title="Copy heading and permalink for Exercises 6.1.3: Exercises" aria-label="Copy heading and permalink for Exercises 6.1.3: Exercises">🔗</a></div>
+</section><div class="autopermalink" aria-hidden="true" data-description="Section 6.1: Measuring Work"><a tabindex="-1" href="#ch6-sec-measuring-work" title="Copy heading and permalink for Section 6.1: Measuring Work" aria-label="Copy heading and permalink for Section 6.1: Measuring Work">🔗</a></div>
+</section>
+</div>
+<div id="ptx-content-footer" class="ptx-content-footer">
+<a class="previous-button button" href="ch6-chap-the-integral-2.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="ch6-sec-riemann-sums.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+</div></main>
+</div>
+<div id="ptx-page-footer" class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="338 3000 8772 6866" role="img"><title>PreTeXt logo</title><g style="stroke-width:.025in; stroke:currentColor; fill:none"><polyline points="472,3590 472,9732 " style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png" alt="Runstone Academy logo"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png" alt="MathJax logo"></a>
+</div>
+</body>
+</html>

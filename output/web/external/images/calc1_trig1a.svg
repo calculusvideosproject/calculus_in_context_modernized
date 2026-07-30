@@ -1,0 +1,725 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   version="1.1"
+   id="svg1"
+   width="642.66669"
+   height="768"
+   viewBox="0 0 642.66669 768"
+   sodipodi:docname="calc1_trig1a.pdf"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1">
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath1">
+      <path
+         d="M -108,-672.00002 H 2276.0001 V 2698.0001 H -108 Z"
+         id="path1" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath2">
+      <path
+         d="m -516,351.12003 2384.0001,-10e-5 -2e-4,-3370.00013 -2384.00003,1e-4 z"
+         id="path2" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath3">
+      <path
+         d="M -125.52,-383.28001 H 2258.4801 V 2986.7201 H -125.52 Z"
+         id="path3" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath4">
+      <path
+         d="M -149.75986,-383.28001 H 2234.2402 V 2986.7201 H -149.75986 Z"
+         id="path4" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath5">
+      <path
+         d="M -500.70001,151.6 H 1883.3 V -3218.4001 H -500.70001 Z"
+         id="path5" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath6">
+      <path
+         d="M -125.52,-225.60001 H 2258.4801 V 3144.4001 H -125.52 Z"
+         id="path6" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath7">
+      <path
+         d="M -163.43993,-225.60001 H 2220.5601 V 3144.4001 H -163.43993 Z"
+         id="path7" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath8">
+      <path
+         d="M -3.6648536,-384.55 H 37.897211 V 6636.2833 H -3.6648536 Z"
+         id="path8" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath9">
+      <path
+         d="M -210.24001,-173.52 H 2173.7601 V 3196.4801 H -210.24001 Z"
+         id="path9" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath10">
+      <path
+         d="M -5.9535565,-384.55 H 35.608508 V 6636.2833 H -5.9535565 Z"
+         id="path10" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath11">
+      <path
+         d="M -341.52001,-173.52 H 2042.4801 V 3196.4801 H -341.52001 Z"
+         id="path11" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath12">
+      <path
+         d="M -6.6666667,774.66667 H 649.33333 V -6.6666667 H -6.6666667 Z"
+         id="path12" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath13">
+      <path
+         d="M 0,768 H 642.66667 V 0 H 0 Z"
+         id="path13" />
+    </clipPath>
+  </defs>
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1">
+    <inkscape:page
+       x="0"
+       y="0"
+       inkscape:label="1"
+       id="page1"
+       width="642.66669"
+       height="768"
+       margin="0"
+       bleed="0" />
+  </sodipodi:namedview>
+  <g
+     id="g1"
+     inkscape:groupmode="layer"
+     inkscape:label="1">
+    <g
+       id="g140">
+      <g
+         clip-path="url(#clipPath13)"
+         id="g139">
+        <g
+           clip-path="url(#clipPath12)"
+           id="g138">
+          <g
+             aria-label="x2.TheMathematicalIdeas41&#10;b)Regraphf(x)ontheinterval:70x:71togettwodecimal&#10;placesofaccuracyinthelocationofthex-intercept.Continuethis&#10;processuntilyouhave7placesofaccuracy.Whatisthex-intercept?&#10;[Answer:x=.7071067812....]&#10;ThecircularfunctionsGraphingpackages\know&quot;thefamiliarfunc-&#10;tionsoftrigonometry.Trigonometricfunctionsarequalitativelydier-&#10;entfromthefunctionsintheprecedingproblems.Thosefunctionsare&#10;denedbyalgebraicformulas,sotheyarecalledalgebraicfunctions.&#10;Thetrigonometricfunctionsaredenedbyexplicit\recipes,&quot;butnot&#10;byalgebraicformulas;theyarecalledtranscendentalfunctions.For&#10;calculus,wealwaysusethedenitionofthetrigonometricfunctionsas&#10;circularfunctions.Thisdenitionbeginswithaunitcirclecentered&#10;attheorigin.Giventheinputnumbert,locateapointPonthecircle&#10;bytracinganarcoflengthtalongthecirclefromthepoint(1;0).If&#10;tispositive,tracethearccounterclockwise;iftisnegative,traceit&#10;clockwise.Becausethecirclehasradius1,thearcoflengthtsubtends&#10;acentralangleofradianmeasuret."
+             transform="matrix(1.3333333,0,0,-1.3333333,0,12)"
+             clip-path="url(#clipPath1)"
+             id="g59">
+            <path
+               d=""
+               style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+               id="path14" />
+            <path
+               d=""
+               style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+               id="path15" />
+            <path
+               d=""
+               style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+               id="path16" />
+            <path
+               d=""
+               style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+               id="path17" />
+            <path
+               d=""
+               style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+               id="path18" />
+            <path
+               d=""
+               style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+               id="path19" />
+            <path
+               d=""
+               style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+               id="path20" />
+            <path
+               d=""
+               style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+               id="path21" />
+            <path
+               d=""
+               style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+               id="path22" />
+            <path
+               d=""
+               style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+               id="path23" />
+            <path
+               d=""
+               style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+               id="path24" />
+            <path
+               d=""
+               style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+               id="path25" />
+            <path
+               d=""
+               style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+               id="path26" />
+            <path
+               d=""
+               style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+               id="path27" />
+            <path
+               d=""
+               style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+               id="path28" />
+            <path
+               d=""
+               style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+               id="path29" />
+            <path
+               d=""
+               style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+               id="path30" />
+            <path
+               d=""
+               style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+               id="path31" />
+            <path
+               d=""
+               style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+               id="path32" />
+            <path
+               d=""
+               style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+               id="path33" />
+            <path
+               d=""
+               style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+               id="path34" />
+            <path
+               d=""
+               style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+               id="path35" />
+            <path
+               d=""
+               style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+               id="path36" />
+            <path
+               d=""
+               style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+               id="path37" />
+            <path
+               d=""
+               style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+               id="path38" />
+            <path
+               d=""
+               style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+               id="path39" />
+            <path
+               d=""
+               style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+               id="path40" />
+            <path
+               d=""
+               style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+               id="path41" />
+            <path
+               d=""
+               style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+               id="path42" />
+            <path
+               d=""
+               style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+               id="path43" />
+            <path
+               d=""
+               style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+               id="path44" />
+            <path
+               d=""
+               style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+               id="path45" />
+            <path
+               d=""
+               style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+               id="path46" />
+            <path
+               d=""
+               style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+               id="path47" />
+            <path
+               d=""
+               style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+               id="path48" />
+            <path
+               d=""
+               style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+               id="path49" />
+            <path
+               d=""
+               style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+               id="path50" />
+            <path
+               d=""
+               style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+               id="path51" />
+            <path
+               d=""
+               style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+               id="path52" />
+            <path
+               d=""
+               style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+               id="path53" />
+            <path
+               d=""
+               style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+               id="path54" />
+            <path
+               d=""
+               style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+               id="path55" />
+            <path
+               d=""
+               style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+               id="path56" />
+            <path
+               d=""
+               style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+               id="path57" />
+            <path
+               d=""
+               style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+               id="path58" />
+            <path
+               d=""
+               style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+               id="path59" />
+          </g>
+          <path
+             d="m 5640,3315.2 c 0,176.73 -143.27,320 -320,320 -176.73,0 -320,-143.27 -320,-320 0,-176.73 143.27,-320 320,-320 176.73,0 320,143.27 320,320 h 56 c 0,207.66 -168.34,376 -376,376 -66,0 -130.84,-17.38 -188,-50.38 m 13.57,8.48 4.24,-6.78 -31.38,-10.17 22.9,23.74 4.24,-6.79 m -50.88,5.95 33.92,-54.28 m 12.45,-20.48 -5.37,7.96 c -4.4,-2.96 -5.55,-8.93 -2.59,-13.32 2.96,-4.4 8.93,-5.56 13.33,-2.6 4.39,2.97 5.55,8.93 2.59,13.33 -2.97,4.39 -8.94,5.55 -13.33,2.59 M 5640,3315.2 h 9.6 c 0,5.3 -4.3,9.6 -9.6,9.6 -5.3,0 -9.6,-4.3 -9.6,-9.6 0,-5.3 4.3,-9.6 9.6,-9.6 5.3,0 9.6,4.3 9.6,9.6"
+             style="fill:none;stroke:#000000;stroke-width:2.4;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+             transform="matrix(0.13333333,0,0,-0.13333333,-144,908)"
+             id="path60" />
+          <path
+             d="m 4920,3315.2 h 840 m -16,0 v 8 l 32,-8 -32,-8 v 8 m -424,-400 v 840 m 0,-16 h -8 l 8,32 8,-32 h -8"
+             style="fill:none;stroke:#000000;stroke-width:2.4;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+             transform="matrix(0.13333333,0,0,-0.13333333,-144,908)"
+             id="path61" />
+          <text
+             xml:space="preserve"
+             transform="matrix(1.3333333,5.3333333e-8,-5.3333333e-8,1.3333333,544,439.84)"
+             clip-path="url(#clipPath2)"
+             id="text71"><tspan
+               style="font-style:italic;font-variant:normal;font-weight:normal;font-size:10px;font-family:Times;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+               x="0"
+               y="0"
+               id="tspan61">P</tspan><tspan
+               style="font-style:italic;font-variant:normal;font-weight:normal;font-size:10px;font-family:Times;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+               x="59.3801"
+               y="17.200001"
+               id="tspan62">x</tspan><tspan
+               style="font-style:italic;font-variant:normal;font-weight:normal;font-size:10px;font-family:Times;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+               x="8.3601999"
+               y="-23.6"
+               id="tspan63">y</tspan><tspan
+               style="font-style:italic;font-variant:normal;font-weight:normal;font-size:10px;font-family:Times;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+               x="34.400002"
+               y="-16.4"
+               id="tspan64">t</tspan><tspan
+               style="font-variant:normal;font-weight:normal;font-size:10px;font-family:Times;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+               x="-56"
+               y="-6.8000002"
+               id="tspan65">(cos </tspan><tspan
+               style="font-style:italic;font-variant:normal;font-weight:normal;font-size:10px;font-family:Times;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+               x="-36.839802"
+               y="-6.8000002"
+               id="tspan66">t</tspan><tspan
+               style="font-variant:normal;font-weight:normal;font-size:10px;font-family:Times;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+               x="-33.25972"
+               y="-6.8000002"
+               id="tspan67">, sin </tspan><tspan
+               style="font-style:italic;font-variant:normal;font-weight:normal;font-size:10px;font-family:Times;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+               x="-14.08982"
+               y="-6.8000002"
+               id="tspan68">t</tspan><tspan
+               style="font-variant:normal;font-weight:normal;font-size:10px;font-family:Times;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+               x="-10.50974"
+               y="-6.8000002"
+               id="tspan69">)</tspan><tspan
+               style="font-variant:normal;font-weight:normal;font-size:10px;font-family:Times;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+               x="29.500059"
+               y="18"
+               id="tspan70">1</tspan><tspan
+               style="font-variant:normal;font-weight:normal;font-size:10px;font-family:Times;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+               x="52.000061"
+               y="29.6"
+               id="tspan71">(1, 0)</tspan></text>
+          <path
+             d=""
+             style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             aria-label="The"
+             transform="matrix(1.3333333,0,0,-1.3333333,23.36,396.96)"
+             clip-path="url(#clipPath3)"
+             id="path71" />
+          <g
+             aria-label="circular(ortrigonometric)functionscostandsintaredened&#10;asthecoordinatesofthepointP,&#10;P=(cost;sint):&#10;Theothertrigonometricfunctionsaredenedintermsofthesineand&#10;cosine:&#10;tant=sint=costsect=1=cost&#10;cott=cost=sintcsct=1=sint"
+             transform="matrix(1.3333333,0,0,-1.3333333,55.679808,396.96)"
+             clip-path="url(#clipPath4)"
+             id="g109">
+            <path
+               d=""
+               style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+               id="path72" />
+            <path
+               d=""
+               style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+               id="path73" />
+            <path
+               d=""
+               style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+               id="path74" />
+            <path
+               d=""
+               style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+               id="path75" />
+            <path
+               d=""
+               style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+               id="path76" />
+            <path
+               d=""
+               style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+               id="path77" />
+            <path
+               d=""
+               style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+               id="path78" />
+            <path
+               d=""
+               style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+               id="path79" />
+            <path
+               d=""
+               style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+               id="path80" />
+            <path
+               d=""
+               style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+               id="path81" />
+            <path
+               d=""
+               style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+               id="path82" />
+            <path
+               d=""
+               style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+               id="path83" />
+            <path
+               d=""
+               style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+               id="path84" />
+            <path
+               d=""
+               style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+               id="path85" />
+            <path
+               d=""
+               style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+               id="path86" />
+            <path
+               d=""
+               style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+               id="path87" />
+            <path
+               d=""
+               style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+               id="path88" />
+            <path
+               d=""
+               style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+               id="path89" />
+            <path
+               d=""
+               style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+               id="path90" />
+            <path
+               d=""
+               style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+               id="path91" />
+            <path
+               d=""
+               style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+               id="path92" />
+            <path
+               d=""
+               style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+               id="path93" />
+            <path
+               d=""
+               style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+               id="path94" />
+            <path
+               d=""
+               style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+               id="path95" />
+            <path
+               d=""
+               style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+               id="path96" />
+            <path
+               d=""
+               style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+               id="path97" />
+            <path
+               d=""
+               style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+               id="path98" />
+            <path
+               d=""
+               style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+               id="path99" />
+            <path
+               d=""
+               style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+               id="path100" />
+            <path
+               d=""
+               style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+               id="path101" />
+            <path
+               d=""
+               style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+               id="path102" />
+            <path
+               d=""
+               style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+               id="path103" />
+            <path
+               d=""
+               style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+               id="path104" />
+            <path
+               d=""
+               style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+               id="path105" />
+            <path
+               d=""
+               style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+               id="path106" />
+            <path
+               d=""
+               style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+               id="path107" />
+            <path
+               d=""
+               style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+               id="path108" />
+            <path
+               d=""
+               style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+               id="path109" />
+          </g>
+          <path
+             d="m 5704,1448 c 0,469.44 -380.56,850 -850,850"
+             style="fill:none;stroke:#000000;stroke-width:5.1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+             transform="matrix(0.13333333,0,0,-0.13333333,-144,908)"
+             id="path110" />
+          <path
+             d="m 4990,1448 c 0,42.7 -20.05,82.92 -54.15,108.61 M 4854,1448 l 510,680 h 11.9 c 0,6.57 -5.33,11.9 -11.9,11.9 -6.57,0 -11.9,-5.33 -11.9,-11.9 0,-6.57 5.33,-11.9 11.9,-11.9 6.57,0 11.9,5.33 11.9,11.9 M 5364,1448 v 680"
+             style="fill:none;stroke:#000000;stroke-width:5.1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+             transform="matrix(0.13333333,0,0,-0.13333333,-144,908)"
+             id="path111" />
+          <path
+             d="m 4769,1448 h 1020 m -17,0 v 8.5 l 34,-8.5 -34,-8.5 v 8.5 m -918,-85 v 1020 m 0,-17 h -8.5 l 8.5,34 8.5,-34 h -8.5"
+             style="fill:none;stroke:#000000;stroke-width:5.1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+             transform="matrix(0.13333333,0,0,-0.13333333,-144,908)"
+             id="path112" />
+          <text
+             xml:space="preserve"
+             transform="matrix(1.3333333,0,0,1.3333333,523.6,705.86667)"
+             clip-path="url(#clipPath5)"
+             id="text124"><tspan
+               style="font-style:italic;font-variant:normal;font-weight:normal;font-size:10px;font-family:Times;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+               x="0"
+               y="0"
+               id="tspan112">t</tspan><tspan
+               style="font-style:italic;font-variant:normal;font-weight:normal;font-size:10px;font-family:Times;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+               x="79.380096"
+               y="1.7"
+               id="tspan113">x</tspan><tspan
+               style="font-style:italic;font-variant:normal;font-weight:normal;font-size:10px;font-family:Times;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+               x="-23.1399"
+               y="-85"
+               id="tspan114">y</tspan><tspan
+               style="font-variant:normal;font-weight:normal;font-size:10px;font-family:Times;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+               x="39.099899"
+               y="-61.200001"
+               id="tspan115">(cos </tspan><tspan
+               style="font-style:italic;font-variant:normal;font-weight:normal;font-size:10px;font-family:Times;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+               x="58.260101"
+               y="-61.200001"
+               id="tspan116">t</tspan><tspan
+               style="font-variant:normal;font-weight:normal;font-size:10px;font-family:Times;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+               x="62.740181"
+               y="-61.200001"
+               id="tspan117">, sin </tspan><tspan
+               style="font-style:italic;font-variant:normal;font-weight:normal;font-size:10px;font-family:Times;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+               x="81.91008"
+               y="-61.200001"
+               id="tspan118">t</tspan><tspan
+               style="font-variant:normal;font-weight:normal;font-size:10px;font-family:Times;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+               x="86.39016"
+               y="-61.200001"
+               id="tspan119">)</tspan><tspan
+               style="font-variant:normal;font-weight:normal;font-size:10px;font-family:Times;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+               x="3.50036"
+               y="-32.299999"
+               id="tspan120">1</tspan><tspan
+               style="font-variant:normal;font-weight:normal;font-size:10px;font-family:Times;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+               x="1.69997"
+               y="16.799999"
+               id="tspan121">cos </tspan><tspan
+               style="font-style:italic;font-variant:normal;font-weight:normal;font-size:10px;font-family:Times;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+               x="17.530069"
+               y="16.799999"
+               id="tspan122">t</tspan><tspan
+               style="font-variant:normal;font-weight:normal;font-size:10px;font-family:Times;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+               x="39.099972"
+               y="-20.4"
+               id="tspan123">sin </tspan><tspan
+               style="font-style:italic;font-variant:normal;font-weight:normal;font-size:10px;font-family:Times;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+               x="53.269871"
+               y="-20.4"
+               id="tspan124">t</tspan></text>
+          <path
+             d=""
+             style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             aria-label="Notice"
+             transform="matrix(1.3333333,0,0,-1.3333333,23.36,607.2)"
+             clip-path="url(#clipPath6)"
+             id="path124" />
+          <g
+             aria-label="thatwhentisapositiveacuteangle,thecircledenition&#10;agreeswiththerighttriangledenitionsofthesineandcosine:&#10;sint=&#10;opposite"
+             transform="matrix(1.3333333,0,0,-1.3333333,73.919904,607.2)"
+             clip-path="url(#clipPath7)"
+             id="g129">
+            <path
+               d=""
+               style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+               id="path125" />
+            <path
+               d=""
+               style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+               id="path126" />
+            <path
+               d=""
+               style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+               id="path127" />
+            <path
+               d=""
+               style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+               id="path128" />
+            <path
+               d=""
+               style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+               id="path129" />
+          </g>
+          <rect
+             x="0"
+             y="0"
+             width="1"
+             height="1"
+             style="fill:#000000;fill-opacity:1;fill-rule:nonzero"
+             transform="matrix(76.48,0,0,-0.64,136.288,661.888)"
+             clip-path="url(#clipPath8)"
+             id="rect129" />
+          <g
+             aria-label="hypotenuse&#10;andcost=&#10;adjacent"
+             transform="matrix(1.3333333,0,0,-1.3333333,136.32,676.64)"
+             clip-path="url(#clipPath9)"
+             id="g132">
+            <path
+               d=""
+               style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+               id="path130" />
+            <path
+               d=""
+               style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+               id="path131" />
+            <path
+               d=""
+               style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+               id="path132" />
+          </g>
+          <rect
+             x="0"
+             y="0"
+             width="1"
+             height="1"
+             style="fill:#000000;fill-opacity:1;fill-rule:nonzero"
+             transform="matrix(76.48,0,0,-0.64,311.328,661.888)"
+             clip-path="url(#clipPath10)"
+             id="rect132" />
+          <g
+             aria-label="hypotenuse&#10;:&#10;However,thecircledenitionsofthesineandcosinehavetheimpor-&#10;tantadvantagethattheyproducefunctionswhosedomainsaretheset&#10;ofallrealnumbers.(Whatarethedomainsofthetangent,secant&#10;andcosecantfunctions?)Incalculus,notonlyarethecircledenitions"
+             transform="matrix(1.3333333,0,0,-1.3333333,311.36,676.64)"
+             clip-path="url(#clipPath11)"
+             id="g137">
+            <path
+               d=""
+               style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+               id="path133" />
+            <path
+               d=""
+               style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+               id="path134" />
+            <path
+               d=""
+               style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+               id="path135" />
+            <path
+               d=""
+               style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+               id="path136" />
+            <path
+               d=""
+               style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+               id="path137" />
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

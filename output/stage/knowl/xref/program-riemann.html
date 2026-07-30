@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<figure class="listing figure-like"><figcaption><span class="type">Listing</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.2.14<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>RIEMANN<div class="autopermalink" aria-hidden="true" data-description="Listing 6.2.14: RIEMANN"><a tabindex="-1" href="#program-riemann" title="Copy heading and permalink for Listing 6.2.14: RIEMANN" aria-label="Copy heading and permalink for Listing 6.2.14: RIEMANN">🔗</a></div></figcaption><div class="listing__contents"><div class="code-box"><pre class="program clipboardable"><code class="language-none">DEF fnf(x) = SQR(1 + x^3)
+
+a = 1
+b = 3
+numberofsteps = 4
+
+deltax = (b - a)/numberofsteps
+
+x = a
+accumulation = 0
+
+FOR k = 1 TO numberofsteps
+    deltaS = fnf(x)*deltax
+    accumulation = accumulation + deltaS
+    x = x + deltax
+
+    PRINT deltaS, accumulation
+NEXT k
+</code></pre></div></div>
+</figure><span class="incontext"><a class="internal" href="ch6-sec-riemann-sums.html#program-riemann">In Context</a></span>
+</body>
+</html>

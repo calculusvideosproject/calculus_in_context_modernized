@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   version="1.1"
+   id="svg1"
+   width="469.33334"
+   height="186.66667"
+   viewBox="0 0 469.33334 186.66667"
+   sodipodi:docname="calc2_lynx2.pdf"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1">
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath1">
+      <path
+         d="M -36.580901,18.710198 H 2347.4192 V -3351.2899 H -36.580901 Z"
+         id="path1" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath2">
+      <path
+         d="M -82.775402,-13.2602 V 2370.7399 H 3287.2247 V -13.2602 Z"
+         id="path2" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath3">
+      <path
+         d="M -6.6666667,193.33333 H 476 V -6.6666667 H -6.6666667 Z"
+         id="path3" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath4">
+      <path
+         d="M 0,186.66667 H 469.33333 V 0 H 0 Z"
+         id="path4" />
+    </clipPath>
+  </defs>
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1">
+    <inkscape:page
+       x="0"
+       y="0"
+       inkscape:label="1"
+       id="page1"
+       width="469.33334"
+       height="186.66667"
+       margin="0"
+       bleed="0" />
+  </sodipodi:namedview>
+  <g
+     id="g1"
+     inkscape:groupmode="layer"
+     inkscape:label="1">
+    <g
+       id="g15">
+      <g
+         clip-path="url(#clipPath4)"
+         id="g14">
+        <g
+           clip-path="url(#clipPath3)"
+           id="g13">
+          <path
+             d="m 471.898,350.645 26.102,7.238 26.102,36.75 26.097,39.808 26.102,84.079 26.097,187.363 26.102,154.094 26.102,280.483 26.097,-138.22 L 706.801,671.918 732.898,386 759,326.84 l 26.102,11.973 26.097,13.222 26.102,18.098 26.097,261.14 26.102,55.68 26.102,100.781 26.097,-220.632 26.102,-196.969 26.097,-35.914 26.102,-14.754 26.1,3.199 26.1,20.184 26.1,46.355 26.1,67.789 26.1,152.567 26.1,56.652 26.1,-219.797 26.1,-82.961 26.1,2.227 26.1,-21.16 26.1,18.793 26.1,51.644 26.1,126.254 26.1,151.309 26.1,20.324 26.1,-104.68 26.1,-199.75 26.1,-53.594 26.1,-8.769 26.1,1.254 26.1,42.734 26.1,149.082 26.1,234.969 26.1,474.67 26.1,-343.405 26.1,-496.523 26.1,-60.137 26.1,30.348 26.1,-16.008 26.1,59.297 26.1,112.754 26.1,11.414 26.1,80.039 26.1,-114.84 26.1,-93.265 26.1,-63.614 26.1,-13.64 26.1,3.898 26.1,33.406 26.1,37.168 26.1,181.793 26.1,107.047 26.1,225.504 26.1,-267.266 26.1,-295.382 26.1,-43.985 26.1,-4.734 26.1,1.391 26.1,1.394 26.1,17.957 26.1,26.309 26.1,127.367 26.1,381.269 26.1,-74.613 26.1,-404.793 26.1,-67.094 26.1,6.68 26.1,32.574 26.1,51.645 26.1,76.418 26.1,300.394 26.1,490.823 26.1,-94.38 26.1,-350.646 26.1,-272.554 26.1,-207.547 26.1,5.152 26.1,59.297 26.1,80.738 26.1,184.442 26.1,151.308 26.1,-98.691 26.1,-14.758 26.1,112.059 26.1,-433.75 26.1,-82.543 26.1,-0.141 26.1,3.898 26.1,16.844 26.1,23.664 26.1,102.031 26.1,180.961 26.1,158.965 26.1,-88.945 26.1,-194.602 26.1,-140.316 26.1,-6.125 26.1,24.641 26.1,47.046 26.1,82.129 26.1,148.528 26.1,102.867"
+             style="fill:none;stroke:#000000;stroke-width:9;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+             transform="matrix(0.13333333,0,0,-0.13333333,-8,188)"
+             id="path5" />
+          <path
+             d="M 445.801,313.199 H 3490.8 m -40,0 v 10 l 40,-10 -40,-10 v 10 h 40 m -3044.999,0 V 1400.7 m 0,-40 h -10 l 10,40 10,-40 h -10 v 40"
+             style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             transform="matrix(0.13333333,0,0,-0.13333333,-8,188)"
+             id="path6" />
+          <path
+             d="m 445.801,313.199 v -17.398 m 522,17.398 v -17.398 m 521.999,17.398 v -17.398 m 522,17.398 v -17.398 m 522,17.398 v -17.398 m 522,17.398 V 295.801 M 445.801,452.398 h -17.403 m 17.403,139.204 h -17.403 m 17.403,139.199 H 428.398 M 445.801,870 h -17.403 m 17.403,139.2 h -17.403 m 17.403,139.2 h -17.403 m 17.403,139.2 h -17.403"
+             style="fill:none;stroke:#000000;stroke-width:2.61;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+             transform="matrix(0.13333333,0,0,-0.13333333,-8,188)"
+             id="path7" />
+          <text
+             xml:space="preserve"
+             transform="matrix(1.3333333,0,0,1.3333333,40.774533,163.05307)"
+             clip-path="url(#clipPath1)"
+             id="text12"><tspan
+               style="font-variant:normal;font-weight:normal;font-size:8px;font-family:Symbol;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+               x="0"
+               dx="0 0 0 0 36.200001 0 0 0 36.200001 0 0 0 36.200001 0 0 0 36.200001 0 0 0 36.200001"
+               y="0"
+               id="tspan7">182018401860188019001920</tspan><tspan
+               style="font-variant:normal;font-weight:normal;font-size:8px;font-family:Symbol;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+               x="-14.0895"
+               y="-37.839802"
+               id="tspan8">2000</tspan><tspan
+               style="font-variant:normal;font-weight:normal;font-size:8px;font-family:Symbol;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+               x="-14.0895"
+               y="-65.679604"
+               id="tspan9">4000</tspan><tspan
+               style="font-variant:normal;font-weight:normal;font-size:8px;font-family:Symbol;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+               x="-14.0895"
+               y="-93.519798"
+               id="tspan10">6000</tspan><tspan
+               style="font-variant:normal;font-weight:normal;font-size:10px;font-family:Times;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+               x="303.8945"
+               y="-1.7397"
+               id="tspan11">year</tspan><tspan
+               style="font-variant:normal;font-weight:normal;font-size:10px;font-family:Times;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+               x="107.9405"
+               y="14.7904"
+               id="tspan12">Annual harvest of lynx pelts</tspan></text>
+          <text
+             xml:space="preserve"
+             transform="matrix(0,-1.3333333,1.3333333,0,9.6802667,77.6328)"
+             clip-path="url(#clipPath2)"
+             id="text13"><tspan
+               style="font-variant:normal;font-weight:normal;font-size:10px;font-family:Times;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+               x="0"
+               y="0"
+               id="tspan13">pelts</tspan></text>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

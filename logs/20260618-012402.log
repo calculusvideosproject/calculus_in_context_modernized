@@ -1,0 +1,37 @@
+WARNING : Project's CLI version could not be detected from `requirements.txt`.
+WARNING : Try `pretext update-project` to produce a compatible file.
+INFO    : Building target print
+INFO    : XSL conversion of /workspaces/calculus_in_context/source/main.ptx by /root/.ptx/2.41.2/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : successful application of /root/.ptx/2.41.2/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : Generating any needed assets.
+INFO    : Finished generating assets.
+
+INFO    : Preparing to build into /workspaces/calculus_in_context/output/print.
+INFO    : discovering source file's directory name: /workspaces/calculus_in_context/source
+INFO    : verifying and expanding input directory: /workspaces/calculus_in_context/source/../generated-assets
+INFO    : input directory expanded to absolute path: /workspaces/calculus_in_context/generated-assets
+INFO    : verifying and expanding input directory: /workspaces/calculus_in_context/source/../assets
+INFO    : input directory expanded to absolute path: /workspaces/calculus_in_context/assets
+INFO    : XSL conversion of /workspaces/calculus_in_context/source/main.ptx by /root/.ptx/2.41.2/core/xsl/utilities/report-publisher-variables.xsl
+INFO    : successful application of /root/.ptx/2.41.2/core/xsl/utilities/report-publisher-variables.xsl
+INFO    : converting /workspaces/calculus_in_context/source/main.ptx to LaTeX as /ptx-uhoovhjm/main.tex
+INFO    : XSL conversion of /workspaces/calculus_in_context/source/main.ptx by /root/.ptx/2.41.2/core/xsl/pretext-latex.xsl
+INFO    : messages from the log for XSL processing:
+WARNING : * PTX:WARNING:   a <tabular> has at least one paragraph (<p>) inside a <cell>, yet there are no <col> elements with a @width attribute.  Default widths will be supplied.
+INFO    : *              located at: pretext/book/chapter/section/subsection/paragraphs/table/tabular/row/cell/table/tabular
+INFO    : *              located within: "" (title)
+INFO    : *              located at: pretext/book/chapter/section/exercises/exercisegroup/exercise/statement/table/tabular
+INFO    : *              located at: pretext/book/chapter/section/exercises/exercise/statement/table/tabular
+INFO    : *              located at: pretext/book/chapter/section/subsection/table/tabular
+INFO    : * PTX:INFO:   checking all deprecated elements.
+INFO    : successful application of /root/.ptx/2.41.2/core/xsl/pretext-latex.xsl
+INFO    : Removing temporary directory /ptx-uhoovhjm
+INFO    : Removing temporary directory /ptx-u1ts5fsh
+INFO    : Removing temporary directory /ptx-69eb2mj9
+INFO    : 
+Finished build for target print. The output is in /workspaces/calculus_in_context/output/print.
+
+INFO    : 
+Success!  Built requested target(s) without errors.
+
+INFO    : 

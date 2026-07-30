@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<pretext xml:lang="en-US" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <!-- we first include a file which contains the docinfo element: -->
+  <xi:include href="./docinfo.ptx" />
+
+  <book xml:id="calculus-in-context-2026">
+    <title>Calculus in Context</title>
+    <subtitle>The Five College Calculus Project</subtitle>
+
+    <!-- Include frontmatter -->
+    <xi:include href="./frontmatter.ptx" />
+
+    <!-- Include chapters -->
+    <xi:include href="./ch1.ptx" />
+    <xi:include href="./ch2.ptx" />
+    <xi:include href="./ch3.ptx" />
+    <xi:include href="./ch4.ptx" />
+    <xi:include href="./ch5.ptx" />
+    <xi:include href="./ch6.ptx" />
+<!--    <xi:include href="./ch7.ptx" />
+    <xi:include href="./ch8.ptx" />
+    <xi:include href="./ch9.ptx" />
+    <xi:include href="./ch10.ptx" />
+    <xi:include href="./ch11.ptx" />
+    <xi:include href="./ch12.ptx" /> -->
+
+
+    <!-- Include backmatter -->
+    <xi:include href="./backmatter.ptx" />
+
+  </book>
+</pretext>

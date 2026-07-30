@@ -1,0 +1,75 @@
+INFO    : Building target web
+INFO    : XSL conversion of /Volumes/Sonnet_SSD/DocumentsS/GitHub/calculus_in_context_modernized/source/main.ptx by /Users/aaronweinberg/.ptx/2.45.0/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : successful application of /Users/aaronweinberg/.ptx/2.45.0/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : Generating any needed assets.
+WARNING : Now generating latex images
+INFO    : converting latex-image pictures from /Volumes/Sonnet_SSD/DocumentsS/GitHub/calculus_in_context_modernized/source/main.ptx to svg graphics for placement in /Volumes/Sonnet_SSD/DocumentsS/GitHub/calculus_in_context_modernized/generated-assets/latex-image
+INFO    : extracting latex-image pictures from /Volumes/Sonnet_SSD/DocumentsS/GitHub/calculus_in_context_modernized/source/main.ptx
+INFO    : string parameters passed to extraction stylesheet: {'cli.version': '2.45', 'publisher': '/Volumes/Sonnet_SSD/DocumentsS/GitHub/calculus_in_context_modernized/publication/publication.ptx'}
+INFO    : discovering source file's directory name: /Volumes/Sonnet_SSD/DocumentsS/GitHub/calculus_in_context_modernized/source
+INFO    : verifying and expanding input directory: /Volumes/Sonnet_SSD/DocumentsS/GitHub/calculus_in_context_modernized/source/../generated-assets
+INFO    : input directory expanded to absolute path: /Volumes/Sonnet_SSD/DocumentsS/GitHub/calculus_in_context_modernized/generated-assets
+INFO    : verifying and expanding input directory: /Volumes/Sonnet_SSD/DocumentsS/GitHub/calculus_in_context_modernized/source/../assets
+INFO    : input directory expanded to absolute path: /Volumes/Sonnet_SSD/DocumentsS/GitHub/calculus_in_context_modernized/assets
+INFO    : discovering source file's directory name: /Volumes/Sonnet_SSD/DocumentsS/GitHub/calculus_in_context_modernized/source
+INFO    : XSL conversion of /Volumes/Sonnet_SSD/DocumentsS/GitHub/calculus_in_context_modernized/source/main.ptx by /Users/aaronweinberg/.ptx/2.45.0/core/xsl/extract-latex-image.xsl
+INFO    : successful application of /Users/aaronweinberg/.ptx/2.45.0/core/xsl/extract-latex-image.xsl
+INFO    : converting fig-modeling-cycle_tikz-1.tex to fig-modeling-cycle_tikz-1.pdf
+INFO    : cropping fig-modeling-cycle_tikz-1.pdf to cropped-fig-modeling-cycle_tikz-1.pdf
+INFO    : renaming cropped-fig-modeling-cycle_tikz-1.pdf to fig-modeling-cycle_tikz-1.pdf
+INFO    : converting fig-modeling-cycle_tikz-1.pdf to fig-modeling-cycle_tikz-1.svg
+INFO    : converting fig-SIR-modeling-cycle_tikz-1.tex to fig-SIR-modeling-cycle_tikz-1.pdf
+INFO    : cropping fig-SIR-modeling-cycle_tikz-1.pdf to cropped-fig-SIR-modeling-cycle_tikz-1.pdf
+INFO    : renaming cropped-fig-SIR-modeling-cycle_tikz-1.pdf to fig-SIR-modeling-cycle_tikz-1.pdf
+INFO    : converting fig-SIR-modeling-cycle_tikz-1.pdf to fig-SIR-modeling-cycle_tikz-1.svg
+INFO    : Removing temporary directory /var/folders/gs/h69vjsl512b8200d29lxpgrc0000gn/T/ptx-ua23338_
+INFO    : Finished generating assets.
+
+INFO    : Preparing to build into /Volumes/Sonnet_SSD/DocumentsS/GitHub/calculus_in_context_modernized/output/web.
+INFO    : discovering source file's directory name: /Volumes/Sonnet_SSD/DocumentsS/GitHub/calculus_in_context_modernized/source
+INFO    : verifying and expanding input directory: /Volumes/Sonnet_SSD/DocumentsS/GitHub/calculus_in_context_modernized/source/../generated-assets
+INFO    : input directory expanded to absolute path: /Volumes/Sonnet_SSD/DocumentsS/GitHub/calculus_in_context_modernized/generated-assets
+INFO    : verifying and expanding input directory: /Volumes/Sonnet_SSD/DocumentsS/GitHub/calculus_in_context_modernized/source/../assets
+INFO    : input directory expanded to absolute path: /Volumes/Sonnet_SSD/DocumentsS/GitHub/calculus_in_context_modernized/assets
+INFO    : discovering source file's directory name: /Volumes/Sonnet_SSD/DocumentsS/GitHub/calculus_in_context_modernized/source
+INFO    : XSL conversion of /Volumes/Sonnet_SSD/DocumentsS/GitHub/calculus_in_context_modernized/source/main.ptx by /Users/aaronweinberg/.ptx/2.45.0/core/xsl/utilities/report-publisher-variables.xsl
+INFO    : successful application of /Users/aaronweinberg/.ptx/2.45.0/core/xsl/utilities/report-publisher-variables.xsl
+INFO    : Downloading rs services file from https://runestone.academy/cdn/runestone/latest/webpack_static_imports.xml.
+INFO    : Runestone Services via online CDN query: version 8.1.16
+INFO    : Downloading Runestone Services, version 8.1.16
+INFO    : Extracting Runestone Services from archive file
+INFO    : Building custom css theme: theme-default-modern
+INFO    : converting /Volumes/Sonnet_SSD/DocumentsS/GitHub/calculus_in_context_modernized/source/main.ptx to HTML in /var/folders/gs/h69vjsl512b8200d29lxpgrc0000gn/T/ptx-0r6yaenj
+INFO    : XSL conversion of /Volumes/Sonnet_SSD/DocumentsS/GitHub/calculus_in_context_modernized/source/main.ptx by /Users/aaronweinberg/.ptx/2.45.0/core/xsl/pretext-html.xsl
+INFO    : messages from the log for XSL processing (prefaced with a *):
+INFO    : * PTX:INFO:   checking all deprecated elements.
+ERROR   : * PTX:ERROR:   a cross-reference ("xref") uses references [ch8-chap-dynamical-systems] that do not point to any target, or perhaps point to multiple targets.  Maybe you typed an @xml:id value wrong, maybe the target of the @xml:id is nonexistent, or maybe you temporarily removed the target from your source, or maybe an auxiliary file contains a duplicate.  Your output will contain some placeholder text that you will not want to distribute to your readers.
+INFO    : *              located at: pretext/book/chapter/section/exercises/exercisegroup/exercise/task/p/xref
+INFO    : *              located within: "ch4-subsubsec-two-species-models" (xml:id), "Two-species models" (title)
+ERROR   : * PTX:ERROR:   a cross-reference ("xref") uses references [ch11-chap-techniques-of-integration] that do not point to any target, or perhaps point to multiple targets.  Maybe you typed an @xml:id value wrong, maybe the target of the @xml:id is nonexistent, or maybe you temporarily removed the target from your source, or maybe an auxiliary file contains a duplicate.  Your output will contain some placeholder text that you will not want to distribute to your readers.
+INFO    : *              located at: pretext/book/chapter/section/subsection/p/xref
+INFO    : *              located within: "ch4-subsec-antiderivatives" (xml:id), "Antiderivatives" (title)
+ERROR   : * PTX:ERROR:   a cross-reference ("xref") uses references [ch11-chap-techniques-of-integration] that do not point to any target, or perhaps point to multiple targets.  Maybe you typed an @xml:id value wrong, maybe the target of the @xml:id is nonexistent, or maybe you temporarily removed the target from your source, or maybe an auxiliary file contains a duplicate.  Your output will contain some placeholder text that you will not want to distribute to your readers.
+INFO    : *              located at: pretext/book/chapter/section/subsection/paragraphs/p/xref
+INFO    : *              located within: "ch6-subsubsec-accumulated-energy-consumption" (xml:id), "Accumulated energy consumption" (title)
+ERROR   : * PTX:ERROR:   a cross-reference ("xref") uses references [ch11-chap-techniques-of-integration] that do not point to any target, or perhaps point to multiple targets.  Maybe you typed an @xml:id value wrong, maybe the target of the @xml:id is nonexistent, or maybe you temporarily removed the target from your source, or maybe an auxiliary file contains a duplicate.  Your output will contain some placeholder text that you will not want to distribute to your readers.
+INFO    : *              located at: pretext/book/chapter/section/subsection/aside/p/xref
+INFO    : *              located within: "ch6-subsec-refining-riemann-sums" (xml:id), "Refining Riemann Sums" (title)
+ERROR   : * PTX:ERROR:   a cross-reference ("xref") uses references [ch11-chap-techniques-of-integration] that do not point to any target, or perhaps point to multiple targets.  Maybe you typed an @xml:id value wrong, maybe the target of the @xml:id is nonexistent, or maybe you temporarily removed the target from your source, or maybe an auxiliary file contains a duplicate.  Your output will contain some placeholder text that you will not want to distribute to your readers.
+INFO    : *              located at: pretext/book/chapter/section/subsection/paragraphs/p/xref
+INFO    : *              located within: "ch6-example" (xml:id), "Example." (title)
+INFO    : successful application of /Users/aaronweinberg/.ptx/2.45.0/core/xsl/pretext-html.xsl
+INFO    : Removing temporary directory /var/folders/gs/h69vjsl512b8200d29lxpgrc0000gn/T/ptx-0r6yaenj
+INFO    : Removing temporary directory /var/folders/gs/h69vjsl512b8200d29lxpgrc0000gn/T/ptx-e5jp0es8
+INFO    : 
+Finished build for target web. Run `pretext view web` to see the results.
+
+FATAL   : There were errors during the build.  See above.
+INFO    : ------------------------
+FATAL   : Failed to build without errors.  Exiting...
+INFO    : 
+----------------------------------------------------
+INFO    : While running pretext, the following errors occurred:
+
+INFO    : (see log messages above or in the 'logs' folder for more information)
+INFO    : ----------------------------------------------------

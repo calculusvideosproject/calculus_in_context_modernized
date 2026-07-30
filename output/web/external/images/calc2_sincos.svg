@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   version="1.1"
+   id="svg1"
+   width="453.33334"
+   height="68"
+   viewBox="0 0 453.33334 68"
+   sodipodi:docname="calc2_sincos.pdf"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1">
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath1">
+      <path
+         d="M -2.5000001e-6,2.5000002e-6 H 23840.001 V 33700.001 H -2.5000001e-6 Z"
+         id="path1" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath2">
+      <path
+         d="M -358.61001,-1 H 2025.3901 V -3371.0001 H -358.61001 Z"
+         id="path2" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath3">
+      <path
+         d="M -1.3333333,73.333333 H 460 V -6.6666667 H -1.3333333 Z"
+         id="path3" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath4">
+      <path
+         d="M 0,68 H 453.33333 V 0 H 0 Z"
+         id="path4" />
+    </clipPath>
+  </defs>
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1">
+    <inkscape:page
+       x="0"
+       y="0"
+       inkscape:label="1"
+       id="page1"
+       width="453.33334"
+       height="68"
+       margin="0"
+       bleed="0" />
+  </sodipodi:namedview>
+  <g
+     id="g1"
+     inkscape:groupmode="layer"
+     inkscape:label="1">
+    <g
+       id="g16">
+      <g
+         clip-path="url(#clipPath4)"
+         id="g15">
+        <g
+           clip-path="url(#clipPath3)"
+           id="g14">
+          <path
+             d="m 270,-78.4492 v 0 l 18,-5.4961 18,-3.7539 18,-1.9766 18,-0.1797 18,1.6172 18,3.4024 18,5.1523 18,6.8438 18,8.4765 18,10.0195 18,11.4649 18,12.793 18,13.9921 18,15.05474 18,15.96486 18,16.7187 18,17.3008 18,17.707 18,17.9454 18,18.0003 18,17.871 18,17.566 18,17.086 18,16.438 18,15.617 18,14.648 18,13.531 18,12.274 18,10.902 18,9.41 18,7.836 18,6.176 18,4.457 18,2.692 18,0.898 18,-0.898 18,-2.692 18,-4.457 18,-6.176 18,-7.836 18,-9.41 18,-10.902 18,-12.274 18,-13.531 18,-14.648 18,-15.617 18,-16.438 18,-17.086 18,-17.566 18,-17.871 18,-18.0003 18,-17.9454 18,-17.707 18,-17.3008 18,-16.7187 18,-15.96486 18,-15.05474 18,-13.9921 18,-12.793 18,-11.4649 18,-10.0195 18,-8.4765 18,-6.8438 18,-5.1523 18,-3.4024 18,-1.6172 18,0.1797 18,1.9766 18,3.7539 18,5.4961 18,7.1797 18,8.789 18,10.3203 18,11.7383 18,13.043 18,14.2187 18,15.24614 18,16.12886 18,16.8477 18,17.3945 18,17.7735 18,17.9687 18,17.9888 18,17.824 18,17.484 18,16.973 18,16.285 18,15.437 18,14.434 18,13.289 18,12.012 18,10.609 18,9.106 18,7.507 18,5.836 18,4.106 18,2.332 18,0.543 18,-1.262 18,-3.047 18,-4.804 18,-6.512 18,-8.156 18,-9.719 18,-11.184 18,-12.535 18,-13.766 18,-14.855 18,-15.793 18,-16.582 18,-17.195 18,-17.641 18,-17.914 18,-18 18,-17.9141 18,-17.6406 18,-17.1953 18,-16.582 18,-15.793 18,-14.8555 18,-13.7656 18,-12.5352 18,-11.1835 18,-9.7188 18,-8.1562 18,-6.5118 18,-4.8047 18,-3.0468 18,-1.2617 18,0.5429 18,2.3321 18,4.1054 18,5.836 18,7.5078 18,9.1054 18,10.6094 18,12.0117 18,13.2891 18,14.4336 18,15.43749 18,16.28521 18,16.9726 18,17.4844 18,17.8242 18,17.9883 18,17.9692 18,17.773 18,17.395 18,16.847 18,16.129 18,15.246 18,14.219 18,13.043 18,11.738 18,10.32 18,8.79 18,7.179 18,5.496 18,3.754 18,1.977 18,0.179 18,-1.617 18,-3.402 18,-5.152 18,-6.844 18,-8.477 18,-10.019 18,-11.465 18,-12.793 18,-13.992 18,-15.055 18,-15.965 18,-16.719 18,-17.3 18,-17.707 18,-17.9457 18,-18 18,-17.871 18,-17.5665 18,-17.0859"
+             style="fill:none;stroke:#000000;stroke-width:9;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+             transform="matrix(0.13333333,0,0,-0.13333333,-29.333333,66.666667)"
+             clip-path="url(#clipPath1)"
+             id="path5" />
+          <path
+             d="m 225,90 h 3375 m -40,0 v 10 l 40,-10 -40,-10 v 10 h 40 M 900,-180 v 630 m 0,-40 h -10 l 10,40 10,-40 h -10 v 40"
+             style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             transform="matrix(0.13333333,0,0,-0.13333333,-29.333333,66.666667)"
+             clip-path="url(#clipPath1)"
+             id="path6" />
+          <path
+             d="M 334.801,90 V 72 M 900,90 V 72 m 565.2,18 V 72 m 565.2,18 V 72 m 565.2,18 V 72 m 565.2,18 V 72 M 882,-90 h 18 m -18,360 h 18"
+             style="fill:none;stroke:#000000;stroke-width:2.7;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+             transform="matrix(0.13333333,0,0,-0.13333333,-29.333333,66.666667)"
+             clip-path="url(#clipPath1)"
+             id="path7" />
+          <text
+             xml:space="preserve"
+             transform="matrix(1.3333333,0,0,1.3333333,448.81333,68)"
+             clip-path="url(#clipPath2)"
+             id="text14"><tspan
+               style="font-style:italic;font-variant:normal;font-weight:normal;font-size:10px;font-family:Times;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+               x="0"
+               y="0"
+               id="tspan7">t</tspan><tspan
+               style="font-style:italic;font-variant:normal;font-weight:normal;font-size:10px;font-family:Times;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+               x="-276.64999"
+               y="-46"
+               id="tspan8">x</tspan><tspan
+               style="font-style:italic;font-variant:normal;font-weight:normal;font-size:10px;font-family:Times;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+               x="-331.6102"
+               y="-34.299999"
+               id="tspan9">x = </tspan><tspan
+               style="font-variant:normal;font-weight:normal;font-size:10px;font-family:Times;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+               x="-315.42041"
+               y="-34.299999"
+               id="tspan10">cos(</tspan><tspan
+               style="font-style:italic;font-variant:normal;font-weight:normal;font-size:10px;font-family:Times;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+               x="-297.8602"
+               y="-34.299999"
+               id="tspan11">t</tspan><tspan
+               style="font-variant:normal;font-weight:normal;font-size:10px;font-family:Times;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+               x="-294.18011"
+               y="-34.299999"
+               id="tspan12">)</tspan><tspan
+               style="font-variant:normal;font-weight:normal;font-size:10px;font-family:Symbol;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+               x="-330.61993"
+               dx="0 0 104.805 48.5299 0 46.0303 0 46.0299"
+               y="0"
+               id="tspan13">−ππ2π3π4π</tspan><tspan
+               style="font-variant:normal;font-weight:normal;font-size:8px;font-family:Symbol;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+               x="-274.41013"
+               y="-29.799999"
+               id="tspan14">1</tspan></text>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

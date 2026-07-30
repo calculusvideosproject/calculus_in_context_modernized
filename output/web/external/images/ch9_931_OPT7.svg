@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   version="1.1"
+   id="svg1"
+   width="3178.6667"
+   height="4493.3335"
+   viewBox="0 0 3178.6667 4493.3335"
+   sodipodi:docname="ch9_931_OPT7.pdf"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1">
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath1">
+      <path
+         d="M 0.54152419,2.2288332 H 20.062667 V 29.823737 H 0.54152419 Z"
+         id="path1" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath2">
+      <path
+         d="M 0,4493.3333 H 3178.6667 V 0 H 0 Z"
+         id="path2" />
+    </clipPath>
+  </defs>
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1">
+    <inkscape:page
+       x="0"
+       y="0"
+       inkscape:label="1"
+       id="page1"
+       width="3178.6667"
+       height="4493.3335"
+       margin="0"
+       bleed="0" />
+  </sodipodi:namedview>
+  <g
+     id="g1"
+     inkscape:groupmode="layer"
+     inkscape:label="1">
+    <g
+       id="g4">
+      <g
+         clip-path="url(#clipPath2)"
+         id="g3">
+        <g
+           clip-path="url(#clipPath2)"
+           id="g2">
+          <image
+             width="1"
+             height="1"
+             style="image-rendering:optimizeSpeed"
+             preserveAspectRatio="none"
+             xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAABHNCSVQICAgIfAhkiAAAAoBJREFUWIXNl+tuwyAMhbm4Tdu0Sl+h7/+MCftl5ji2MaSThhQBCWUf59jA4ufzKeEfF6CdUmzW1ve/GAOeQdbEI2N65lIB6eBvtUfGQYyxdmibD+S1910LqPUdYoziCjyQZ2vPtwqILyQVNVhp8m8vYgdIP3BQq60BfmMBB0AJQvsuAXlge4BVwB5oL+wIJKSUQiklbNvmgvEswgLshYSUUti2LWCNRYtND5QUo6cA6QuEpMCY3RKox/Zey01AColQFI5nd2tbaoE3AXPOIcZ4iEFqOwW11GypZ4WABloVlArCUUBJzV4V+SI0uFLKr4Kt7YbC9kCNqEhrAICwrush3vgfQThJ0bMq0j6tK2CMMazragLyQhXlkCOJo7UBYH8ltAAlJTmkB4Yrx8FovyqIDypprdQDat0tOaw0Pxa4XC5ilmor94LimNaFWAKnpQJKCaAVhMVznP+WLrY3cdyAGpS2f1kK9oDycXC9XkNKSVWhNREF9ljdazNM0yQCSmpSqJzzAVCz/cz5DdM0DcWgBNeCHInJqiA+FigHyTmrkFpM927mcLvdDmBa0mixQx+8BVnJI0FqwHC/33cKUlitWBcAy14tHrXFi4CWgnwiCVCy3ZM4WoHH4xFyzmoMSupROAmUWsytpsp5IGGe5x0gt3jUahqTMcaDilrs8T7M8yzGoAXKTxMLlieMBGolIjyfz5BzVm0eOQJpNksx2ROL8Hq9RIuxbdncsparqNltQVZArmJvwlBgCmfZLTnE90dYliUAwAFOikE+EY9FDkhrnNOyWzphYFmWnYI8Fj0bd0s9/o7/P4NFshre73cAgKqipaSkIFdTUq+lJLeeLvoHyc/QwisxHFEAAAAASUVORK5CYII="
+             transform="matrix(162.832,0,0,-162.832,-88.177467,4856.2587)"
+             opacity="1"
+             clip-path="url(#clipPath1)"
+             id="image2" />
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

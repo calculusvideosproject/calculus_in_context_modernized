@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<figure class="listing figure-like"><figcaption><span class="type">Listing</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.1.7<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>SIRPLOT<div class="autopermalink" aria-hidden="true" data-description="Listing 2.1.7: SIRPLOT"><a tabindex="-1" href="#listing-sirplot" title="Copy heading and permalink for Listing 2.1.7: SIRPLOT" aria-label="Copy heading and permalink for Listing 2.1.7: SIRPLOT">🔗</a></div></figcaption><div class="listing__contents"><div class="code-box"><pre class="program clipboardable"><code class="language-none">' Set up GRAPHICS
+
+tinitial = 0
+tfinal = 3
+
+t = tinitial
+
+S = 45400
+I = 2100
+R = 2500
+
+numberofsteps = 30
+
+deltat = (tfinal - tinitial)/numberofsteps
+
+FOR k = 1 TO numberofsteps
+
+    Sprime = -0.00001 * S * I
+    Iprime = 0.00001 * S * I - I / 14
+    Rprime = I / 14
+
+    deltaS = Sprime * deltat
+    deltaI = Iprime * deltat
+    deltaR = Rprime * deltat
+
+    ' Plot the line from
+    ' (t,S) to
+    ' (t+deltat,S+deltaS)
+
+    t = t + deltat
+
+    S = S + deltaS
+    I = I + deltaI
+    R = R + deltaR
+
+NEXT k
+</code></pre></div></div>
+</figure><span class="incontext"><a class="internal" href="ch2-sec-making-approximations.html#listing-sirplot">In Context</a></span>
+</body>
+</html>

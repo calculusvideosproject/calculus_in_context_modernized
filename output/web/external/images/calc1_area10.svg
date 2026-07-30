@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   version="1.1"
+   id="svg1"
+   width="145.33333"
+   height="140"
+   viewBox="0 0 145.33333 140"
+   sodipodi:docname="calc1_area10.pdf"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1">
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath1">
+      <path
+         d="M -112.78,53.000002 H 2271.2201 V -3317.0001 H -112.78 Z"
+         id="path1" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath2">
+      <path
+         d="M -109.2463,0.46456916 1576.4963,1686.2071 3959.4461,-696.74272 2273.7036,-2382.4853 Z"
+         id="path2" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath3">
+      <path
+         d="M -9.5101599,33.000001 2374.4899,33.000025 V -3337.0001 H -9.5101936 Z"
+         id="path3" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath4">
+      <path
+         d="M -6.6666667,146.66667 H 152 V -6.6666667 H -6.6666667 Z"
+         id="path4" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath5">
+      <path
+         d="M 0,140 H 145.33333 V 0 H 0 Z"
+         id="path5" />
+    </clipPath>
+  </defs>
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1">
+    <inkscape:page
+       x="0"
+       y="0"
+       inkscape:label="1"
+       id="page1"
+       width="145.33333"
+       height="140"
+       margin="0"
+       bleed="0" />
+  </sodipodi:namedview>
+  <g
+     id="g1"
+     inkscape:groupmode="layer"
+     inkscape:label="1">
+    <g
+       id="g16">
+      <g
+         clip-path="url(#clipPath5)"
+         id="g15">
+        <g
+           clip-path="url(#clipPath4)"
+           id="g14">
+          <path
+             d="M 250,500 V 200 l 750,750 V 500 Z"
+             style="fill:#e6e6e6;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             transform="matrix(0.13333333,0,0,-0.13333333,-12,152)"
+             id="path6" />
+          <path
+             d="m 200,150 900,900"
+             style="fill:none;stroke:#000000;stroke-width:9;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+             transform="matrix(0.13333333,0,0,-0.13333333,-12,152)"
+             id="path7" />
+          <path
+             d="M 220,490 V 190 m 0,40 h 10 l -10,-40 -10,40 h 10 v -40 m 810,320 v 440 m 0,-40 h -10 l 10,40 10,-40 h -10 v 40"
+             style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             transform="matrix(0.13333333,0,0,-0.13333333,-12,152)"
+             id="path8" />
+          <path
+             d="m 150,500 h 1000 m -40,0 v 10 l 40,-10 -40,-10 v 10 h 40 M 550,100 v 1000 m 0,-40 h -10 l 10,40 10,-40 h -10 v 40"
+             style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             transform="matrix(0.13333333,0,0,-0.13333333,-12,152)"
+             id="path9" />
+          <path
+             d="m 250,500 v -15 m 150,15 v -15 m 150,15 v -15 m 150,15 v -15 m 150,15 v -15 m 150,15 V 485 M 550,200 h -15 m 15,150 h -15 m 15,150 h -15 m 15,150 h -15 m 15,150 h -15 m 15,150 h -15"
+             style="fill:none;stroke:#000000;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+             transform="matrix(0.13333333,0,0,-0.13333333,-12,152)"
+             id="path10" />
+          <text
+             xml:space="preserve"
+             transform="matrix(1.3333333,0,0,1.3333333,138.37333,81.333333)"
+             clip-path="url(#clipPath1)"
+             id="text11"><tspan
+               style="font-style:italic;font-variant:normal;font-weight:normal;font-size:10px;font-family:Times;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+               x="0"
+               y="0"
+               id="tspan10">x</tspan><tspan
+               style="font-style:italic;font-variant:normal;font-weight:normal;font-size:10px;font-family:Times;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+               x="-65.219902"
+               y="-56"
+               id="tspan11">y</tspan></text>
+          <text
+             xml:space="preserve"
+             transform="matrix(0.94280904,-0.94280904,0.94280904,0.94280904,90.5604,48.5636)"
+             clip-path="url(#clipPath2)"
+             id="text12"><tspan
+               style="font-style:italic;font-variant:normal;font-weight:normal;font-size:10px;font-family:Times;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+               x="0"
+               y="0"
+               id="tspan12">y = x</tspan></text>
+          <text
+             xml:space="preserve"
+             transform="matrix(1.3333333,-1.3333333e-8,-1.3333333e-8,1.3333333,0.68021333,108)"
+             clip-path="url(#clipPath3)"
+             id="text14"><tspan
+               style="font-variant:normal;font-weight:normal;font-size:10px;font-family:Symbol;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+               x="0"
+               y="0"
+               id="tspan13">−2</tspan><tspan
+               style="font-variant:normal;font-weight:normal;font-size:10px;font-family:Symbol;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+               x="96.489799"
+               y="-37"
+               id="tspan14">3</tspan></text>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

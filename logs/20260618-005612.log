@@ -1,0 +1,54 @@
+WARNING : Project's CLI version could not be detected from `requirements.txt`.
+WARNING : Try `pretext update-project` to produce a compatible file.
+INFO    : Building target web
+INFO    : XSL conversion of /workspaces/calculus_in_context/source/main.ptx by /home/codespace/.ptx/2.41.2/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : successful application of /home/codespace/.ptx/2.41.2/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : Generating any needed assets.
+INFO    : Finished generating assets.
+
+INFO    : Preparing to build into /workspaces/calculus_in_context/output/web.
+INFO    : discovering source file's directory name: /workspaces/calculus_in_context/source
+INFO    : verifying and expanding input directory: /workspaces/calculus_in_context/source/../generated-assets
+INFO    : input directory expanded to absolute path: /workspaces/calculus_in_context/generated-assets
+INFO    : verifying and expanding input directory: /workspaces/calculus_in_context/source/../assets
+INFO    : input directory expanded to absolute path: /workspaces/calculus_in_context/assets
+INFO    : discovering source file's directory name: /workspaces/calculus_in_context/source
+INFO    : XSL conversion of /workspaces/calculus_in_context/source/main.ptx by /home/codespace/.ptx/2.41.2/core/xsl/utilities/report-publisher-variables.xsl
+INFO    : successful application of /home/codespace/.ptx/2.41.2/core/xsl/utilities/report-publisher-variables.xsl
+INFO    : Downloading rs services file from https://runestone.academy/cdn/runestone/latest/webpack_static_imports.xml.
+INFO    : Runestone Services via online CDN query: version 8.1.2
+INFO    : Downloading Runestone Services, version 8.1.2
+INFO    : Extracting Runestone Services from archive file
+INFO    : Building custom css theme: theme-default-modern
+INFO    : converting /workspaces/calculus_in_context/source/main.ptx to HTML in /tmp/ptx-hj27eug6
+INFO    : XSL conversion of /workspaces/calculus_in_context/source/main.ptx by /home/codespace/.ptx/2.41.2/core/xsl/pretext-html.xsl
+INFO    : messages from the log for XSL processing:
+WARNING : * PTX:WARNING:   a <tabular> has at least one paragraph (<p>) inside a <cell>, yet there are no <col> elements with a @width attribute.  Default widths will be supplied.
+INFO    : *              located at: pretext/book/chapter/section/subsection/paragraphs/table/tabular/row/cell/table/tabular
+INFO    : *              located within: "" (title)
+WARNING : * PTX:WARNING:   a <tabular> has at least one paragraph (<p>) inside a <cell>, yet there are no <col> elements with a @width attribute.  Default widths will be supplied.
+INFO    : *              located at: pretext/book/chapter/section/subsection/paragraphs/table/tabular/row/cell/table/tabular
+INFO    : *              located within: "" (title)
+WARNING : * PTX:WARNING:   a <tabular> has at least one paragraph (<p>) inside a <cell>, yet there are no <col> elements with a @width attribute.  Default widths will be supplied.
+INFO    : *              located at: pretext/book/chapter/section/exercises/exercisegroup/exercise/statement/table/tabular
+INFO    : *              located within: "" (title)
+WARNING : * PTX:WARNING:   a <tabular> has at least one paragraph (<p>) inside a <cell>, yet there are no <col> elements with a @width attribute.  Default widths will be supplied.
+INFO    : *              located at: pretext/book/chapter/section/exercises/exercisegroup/exercise/statement/table/tabular
+INFO    : *              located within: "" (title)
+WARNING : * PTX:WARNING:   a <tabular> has at least one paragraph (<p>) inside a <cell>, yet there are no <col> elements with a @width attribute.  Default widths will be supplied.
+INFO    : *              located at: pretext/book/chapter/section/exercises/exercise/statement/table/tabular
+INFO    : *              located within: "" (title)
+WARNING : * PTX:WARNING:   a <tabular> has at least one paragraph (<p>) inside a <cell>, yet there are no <col> elements with a @width attribute.  Default widths will be supplied.
+INFO    : *              located at: pretext/book/chapter/section/subsection/table/tabular
+INFO    : *              located within: "" (title)
+INFO    : * PTX:INFO:   checking all deprecated elements.
+INFO    : successful application of /home/codespace/.ptx/2.41.2/core/xsl/pretext-html.xsl
+INFO    : Removing temporary directory /tmp/ptx-hj27eug6
+INFO    : Removing temporary directory /tmp/ptx-yyhlx9in
+INFO    : 
+Finished build for target web. Run `pretext view web` to see the results.
+
+INFO    : 
+Success!  Built requested target(s) without errors.
+
+INFO    : 

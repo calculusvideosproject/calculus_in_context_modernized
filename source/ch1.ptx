@@ -1,0 +1,3349 @@
+<chapter xml:id="ch1-chap-a-context-for-calculus">
+  <title>A Context for Calculus</title>
+  <introduction>
+    <p>
+			Calculus gives us a language to describe how quantities are related to one another, and it gives us a set of computational and visual tools for exploring those relationships. Usually, we want to understand how quantities are related in the context of a particular problem—it might be in chemistry, or public policy, or mathematics itself. In this chapter we take a single context—an infectious disease spreading through a population—to see how calculus emerges and how it is used.
+		</p>
+  </introduction><section xml:id="ch1-sec-the-spread-of-disease">
+    <title>The Spread of Disease</title>
+    <subsection xml:id="ch1-subsec-making-a-model">
+      <title>Making a Model</title>
+      <p>
+Many human diseases are contagious: you <q>catch</q> them from someone who is already infected. Contagious diseases are of many kinds. Smallpox, polio, and plague are severe and even fatal, 
+<aside>
+          <p>Some properties of contagious diseases</p>
+        </aside>
+ while the common cold and the childhood illnesses of measles, mumps, and rubella are usually relatively mild. Moreover, you can catch a cold over and over again, but you get measles only once. A disease like measles is said to <q>confer immunity</q> on someone who recovers from it. Some diseases have the potential to affect large segments of a population; they are called <em>epidemics</em> (from the Greek words <em>epi</em>, upon + <em>demos</em>, the people.)  <em>Epidemiology</em> is the scientific study of these diseases.
+				</p>
+
+				<p>
+An epidemic is a complicated matter, but the dangers posed by contagion—and especially by the appearance of new and uncontrollable diseases—compel us to learn as much as we can about the nature of epidemics. Mathematics offers a very special kind of help. First, we can try to draw out of the situation its essential features and describe them mathematically. This is calculus as <em>language</em>. We substitute an <q>ideal</q> mathematical world for the real one. 
+<aside>
+          <p>The idea of a mathematical model</p>
+        </aside>
+      </p>
+
+				<p>
+This is calculus as <em>tool</em>. Any conclusion we reach about the model can then be interpreted to tell us something about the reality.
+				</p>
+
+				<p>
+To give you an idea how this process works, we’ll build a model of an epidemic. Its basic purpose is to help us understand the way a contagious disease spreads through a population—to the point where we can even predict what fraction falls ill, and when. Let’s suppose the disease we want to model is like measles. In particular,
+				</p>
+      <p>
+        <ul>
+          <li>
+            <p>
+it is mild, so anyone who falls ill eventually recovers;
+				</p>
+          </li>
+
+<li>
+            <p>
+it confers permanent immunity on every recovered victim.
+				</p>
+          </li>
+        </ul>
+      </p>
+
+				<p>
+In addition, we will assume that the affected population is large but fixed in size and confined to a geographically well-defined region. To have a concrete image, you can imagine the elementary school population of a big city.
+				</p>
+<p>
+  At any time, that population can be divided into three distinct classes:
+</p>
+
+<ul>
+  <li>
+    <p>
+      <term>Susceptible</term>: those who have never had the illness and can catch it.
+    </p>
+  </li>
+  <li>
+    <p>
+      <term>Infected</term>: those who currently have the illness and are contagious.
+    </p>
+  </li>
+  <li>
+    <p>
+      <term>Recovered</term>: those who have already had the illness and are immune.
+    </p>
+  </li>
+</ul>
+
+				<p>
+Suppose we let <m>S</m>, <m>I</m>, and <m>R</m>
+        <aside>
+          <p>The quantities that our model analyzes</p>
+        </aside>
+ denote the number of people in each of these three classes, respectively. Of course, the classes are all mixed together throughout the population: on a given day, we may find persons who are susceptible, infected, and recovered in the same family. For the purpose of organizing our thinking, though, we’ll represent the whole population as separated into three <q>compartments</q> as in the following diagram:
+				</p>
+
+<figure xml:id="ch1-pic001">
+        <image source="images/ch1_pic001" width="65%"/>
+        <caption />
+      </figure>
+      <p>
+The goal of our model is to determine what happens to the numbers <m>S</m>, <m>I</m>, and <m>R</m> over the course of time. Let’s first see what our knowledge and experience of childhood diseases might lead us to expect. When we say there is a <q>measles outbreak,</q> we mean that there is a relatively sudden increase in the number of cases, and then a gradual decline. After some weeks or months, the illness virtually disappears. In other words, the number <m>I</m> is a  <term>variable</term>; its value changes over time. One possible way that <m>I</m> might vary is shown in the following graph.
+				</p>
+
+<figure xml:id="ch1-pic002">
+        <image source="images/ch1_pic002" />
+        <caption />
+      </figure>
+      <p>
+During the course of the epidemic, susceptibles are constantly falling ill. Thus we would expect the number <m>S</m> to show a steady decline. Unless we know more about the illness, we cannot decide whether everyone eventually catches it. In graphical terms, this means we don’t know whether the graph of <m>S</m> levels off at zero or at a value above zero. Finally, we would expect more and more people in the recovered group as time passes. The graph of <m>R</m> should therefore climb from left to right. The graphs of <m>S</m> and <m>R</m> might take the following forms:
+				</p>
+
+<figure xml:id="ch1-pic003">
+        <image source="images/ch1_pic003" />
+        <caption />
+      </figure>
+      <figure xml:id="ch1-pic004">
+        <image source="images/ch1_pic004" />
+        <caption />
+      </figure>
+      <p>
+
+				</p>
+      <p>
+While these graphs give us an idea about what might happen, they raise some new questions, too. For example, because there are no scales marked along the axes, 
+<aside>
+          <p>Some quantitative questions that the graphs raise</p>
+        </aside>
+ the first graph does not tell us how large <m>I</m> becomes when the infection reaches its peak, nor when that peak occurs. Likewise, the second and third graphs do not say how rapidly the population either falls ill or recovers. A good model of the epidemic should give us graphs like these and it should also answer the quantitative questions we have already raised—for example: When does the infection hit its peak? How many susceptibles eventually fall ill?
+				</p>
+    </subsection>
+
+			<subsection xml:id="ch1-subsec-a-simple-model-for-predicting-change">
+      <title>A Simple Model for Predicting Change</title>
+      <p>
+Suppose we know the values of <m>S</m>, <m>I</m>, and <m>R</m> today; can we figure out what they will be tomorrow, or the next day, or a week or a month from now? Basically, this is a problem of predicting the future. One way to deal with it is to get an idea how <m>S</m>, <m>I</m>, and <m>R</m> are <em>changing</em>. To start with a very simple example, suppose the city’s Board of Health reports that the measles infection has been spreading at the rate of 470 new cases per day for the last several days. If that rate continues to hold steady and we start with 20,000 susceptible children, then we can expect 470 fewer susceptibles with each passing day. The immediate future would then look like this:
+				</p>
+
+<!-- div attr= class="center"-->
+      <table>
+
+  <title>Infections Over Time</title>
+  <tabular>
+    <row>
+      <cell halign="center">Days after today</cell>
+      <cell halign="center">Accumulated number of new infections</cell>
+      <cell halign="center">Remaining number of susceptibles</cell>
+    </row>
+<row>
+            <cell halign="center">0</cell>
+            <cell halign="right">0</cell>
+            <cell halign="right">
+              <m>20\,000</m>
+            </cell>
+          </row><row>
+            <cell halign="center">1</cell>
+            <cell halign="right">470</cell>
+            <cell halign="right">
+              <m>19\,530</m>
+            </cell>
+          </row><row>
+            <cell halign="center">2</cell>
+            <cell halign="right">940</cell>
+            <cell halign="right">
+              <m>19\,060</m>
+            </cell>
+          </row><row>
+            <cell halign="center">3</cell>
+            <cell halign="right">
+              <m>1410</m>
+            </cell>
+                  <cell halign="right">
+              <m>18\,590</m>
+            </cell>
+          </row><row class="odd">
+            <cell halign="center">⋮</cell>
+            <cell halign="center">⋮</cell>
+            <cell halign="center">⋮</cell>
+          </row>
+        </tabular>
+      </table><!--</div attr= class="center">-->
+      <p>
+Of course, these numbers will be correct only if the infection continues to spread at its present rate of 470 persons per day. 
+<aside>
+          <p>Knowing rates, we can predict future values</p>
+        </aside>
+ If we want to follow <m>S</m>, <m>I</m>, and <m>R</m> into the future, our example suggests that we should pay attention to the  <term>rates</term> at which these quantities change. To make it easier to refer to them, let’s denote the three rates by <m>S'</m>, <m>I'</m>, and <m>R'</m>. For example, in the illustration above, <m>S</m> is changing at the rate <m>S' = -470</m> persons per day. We use a minus sign here because <m>S</m> is <em>decreasing</em> over time. If <m>S'</m> stays fixed we can express the value of <m>S</m> after <m>t</m> days by the following formula: <md>S = 20000 + S' \cdot t = 20000 - 470\,t \mbox{ persons.}</md> Check that this gives the values of <m>S</m> found in the table when <m>t =
+0</m>, 1, 2, or 3. How many susceptibles does it say are left after 10 days?
+				</p>
+
+				<p>
+Our assumption that <m>S' = -470</m> persons per day amounts to a mathematical characterization 
+<aside>
+          <p>The equation <m>S' = -470</m> is a model</p>
+        </aside>
+ of the susceptible population—in other words, a model! Of course it is quite simple, but it led to a formula that told us what value we could expect <m>S</m> to have at any time <m>t</m>.
+				</p>
+
+				<p>
+The model will even take us backwards in time. For example, two days ago the value of <m>t</m> was <m>-2</m>; according to the model, there were <md>S = 20000 - 470 \times -2 = 20940</md> susceptible children then. There is an obvious difference between going backwards in time and going forwards: we already know the past. Therefore, by letting <m>t</m> be negative we can generate values for <m>S</m> that can be checked against health records. If the model gives good agreement with <em>known</em> values of <m>S</m> we become more confident in using it to predict <em>future</em> values.
+				</p>
+
+				<p>
+To predict the value of <m>S</m> using the rate <m>S'</m> we clearly need to have a starting point—a known value of <m>S</m>
+        <aside>
+          <p>Predictions depend on the initial value, too</p>
+        </aside>
+ from which we can measure changes. In our case that starting point is <m>S = 20000</m>. This is called the <term>initial value</term> of <m>S</m>, because it is given to us at the <q>initial time</q>
+        <m>t
+= 0</m>. To construct the formula <m>S = 20000 - 470\,t</m>, we needed to have an initial value as well as a rate of change for <m>S</m>.
+				</p>
+
+				<p>
+In the following sections we will develop a more complex model for all three population groups that has the same general design as this simple one. Specifically, the model will give us information about the rates <m>S'</m>, <m>I'</m>, and <m>R'</m>, and with that information we will be able to predict the values of <m>S</m>, <m>I</m>, and <m>R</m> at any time <m>t</m>.
+				</p>
+    </subsection>
+
+			<subsection xml:id="ch1-subsec-the-rate-of-recovery">
+      <title>The Rate of Recovery</title>
+      <p>
+Our first task will be to model the recovery rate <m>R'</m>. We look at the process of recovering first, because it’s simpler to analyze. An individual caught in the epidemic first falls ill and then recovers—recovery is just a matter of time. In particular, someone who catches measles has the infection for about fourteen days. So if we look at the entire infected population today, we can expect to find some who have been infected less than one day, some who have been infected between one and two days, and so on, up to fourteen days. Those in the last group will recover today. In the absence of any definite information about the fourteen groups, let’s assume they are the same size. Then 1/14-th of the infected population will recover today: <md>\mbox{today the change in the recovered population} = 
+          \dfrac{I \mbox{ persons}}{14 \mbox{ days}}.</md> There is nothing special about today, though; <m>I</m> has a value at any time. Thus we can make the same argument about any other day: <md>\mbox{every day the change in the recovered population} 
+        = \dfrac{I \mbox{ persons}}{14 \mbox{ days}}.</md> This equation is telling us about <m>R'</m>, the rate at which <m>R</m> is changing. We can write it more simply in the form 
+<aside>
+          <p>The first piece of the <m>S</m>-<m>I</m>-<m>R</m> model</p>
+        </aside>
+ <md>R' = \dfrac{1}{14}I \mbox{ persons per day} .</md>
+      </p>
+
+				<p>
+We call this a <term>rate equation</term>. Like any equation, it links different quantities together. In this case, it links <m>R'</m> to <m>I</m>. The rate equation for <m>R</m> is the first part of our model of the measles epidemic.
+				</p>
+
+				
+<aside>
+        <p>Are you uneasy about our claim that 1/14-th of the infected population recovers every day? You have good reason to be. After all, during the first few days of the epidemic almost no one has had measles the full fourteen days, so the recovery rate will be much less than <m>I/14</m> persons per day. About a week before the infection disappears altogether there will be no one in the early stages of the illness. The recovery rate will then be much greater than <m>I/14</m> persons per day. Evidently our model is not a perfect mirror of reality!</p>
+<p>Don’t be particularly surprised or dismayed by this. Our goal is to gain insight into the workings of an epidemic and to suggest how we might intervene to reduce its effects. So we start off with a model which, while imperfect, still captures some of the workings. The simplifications in the model will be justified if we are led to inferences which help us understand how an epidemic works and how we can deal with it. If we wish, we can then refine the model, replacing the simple expressions with others that mirror the reality more fully.</p>
+      </aside>
+
+      <p>
+Notice that the rate equation for <m>R'</m> does indeed give us a tool to predict future values of <m>R</m>. For suppose today 2100 people are infected and 2500 have already recovered. Can we say how large the recovered population will be tomorrow or the next day? Since <m>I =
+2100</m>, <md>R' = \dfrac{1}{14} \times 2100 = 150 \mbox{ persons per day}\, .</md> Thus 150 people will recover in a single day, and twice as many, or 300, will recover in two. At this rate the recovered population will number 2650 tomorrow and 2800 the next day.
+				</p>
+
+				<p>
+These calculations assume that the rate <m>R'</m> holds steady at 150 persons per day for the entire two days. Since <m>R' = I/14</m>, this is the same as assuming that <m>I</m> holds steady at 2100 persons. If instead <m>I</m> varies during the two days we would have to adjust the value of <m>R'</m> and, ultimately, the future values of <m>R</m> as well. In fact, <m>I</m>
+        <em>does</em> vary over time. We shall see this when we analyze how the infection is transmitted. Then, in <xref ref="ch2-chap-successive-approximations" />, we’ll see how to make the adjustments in the values of <m>R'</m> that will permit us to predict the value of <m>R</m> in the model with as much accuracy as we wish.
+				</p>
+
+				<p>
+        <term>Other diseases</term>. What can we say about the recovery rate for a contagious disease other than measles? If the period of infection of the new illness is <m>k</m> days, instead of 14, and if we assume that 1/<m>k</m> of the infected people recover each day, then the new recovery rate is <md>R' = \dfrac{I \mbox{ persons}}{k \mbox{ days}} = 
+            \dfrac{1}{k}I  \mbox{ persons per day.}</md> If we set <m>b = 1/k</m> we can express the recovery rate equation in the form <md>R' = bI  \mbox{ persons per day.}</md> The constant <m>b</m> is called the <term>recovery coefficient</term> in this context.
+				</p>
+
+<figure xml:id="ch1-pic005">
+        <image source="images/ch1_pic005" width="50%"/>
+        <caption />
+      </figure>
+      <p>
+ Let’s incorporate our understanding of recovery into the compartment diagram. For the sake of illustration, we’ll separate the three compartments. As time passes, people <q>flow</q> from the infected compartment to the recovered. We represent this flow by an arrow from <m>I</m> to <m>R</m>. We label the arrow with the recovery coefficient <m>b</m> to indicate that the flow is governed by the rate equation <m>R' = b I</m>.
+				</p>
+    </subsection>
+
+			<subsection xml:id="ch1-subsec-the-rate-of-transmission">
+      <title>The Rate of Transmission</title>
+      <p>
+Since susceptibles become infected, the compartment diagram above should also have an arrow that goes from <m>S</m> to <m>I</m> and a rate equation for <m>S'</m> to show how <m>S</m> changes as the infection spreads. While <m>R'</m> depends only on <m>I</m>, because recovery involves only waiting for people to leave the infected population, <m>S'</m> will depend on both <m>S</m> and <m>I</m>, because transmission involves contact between susceptible and infected persons.
+				</p>
+
+				<p>
+Here’s a way to model the transmission rate. First, consider a single susceptible person on a single day. On average, this person will contact only a small fraction, <m>p</m>, of the infected population. For example, suppose there are 5000 infected children, so <m>I = 5000</m>. We might expect only a couple of them—let’s say 2—will be in the same classroom with our <q>average</q> susceptible. So the fraction of contacts is <m>p = 2/I = 2/5000 = .0004</m>. The 2 contacts themselves can be expressed as <m>2 = (2/I)\cdot I = pI</m> contacts per day per susceptible.
+				</p>
+
+				<p>
+To find out how many daily contacts the <em>whole</em>
+        <aside>
+          <p>Contacts are proportional to both <m>S</m> and <m>I</m>
+          </p>
+        </aside>
+ susceptible population will have, we can just multiply the average number of contacts per susceptible person by the number of susceptibles: this is <m>pI \cdot S = pSI</m>.
+				</p>
+
+				<p>
+Not all contacts lead to new infections; only a certain fraction <m>q</m> do. The more contagious the disease, the larger <m>q</m> is. Since the number of daily contacts is <m>pSI</m>, we can expect <m>q \cdot pSI</m> new infections per day (i.e., to convert contacts to infections, multiply by <m>q</m>). This becomes <m>aSI</m> if we define <m>a</m> to be the product <m>qp</m>.
+				</p>
+
+				<p>
+Recall, the value of the recovery coefficient <m>b</m> depends only on the illness involved. It is the same for all populations. By contrast, the value of <m>a</m> depends on the general health of a population and the level of social interaction between its members. Thus, when two different populations experience the same illness, the values of <m>a</m> could be different. One strategy for dealing with an epidemic is to alter the value of <m>a</m>. Quarantine does this, for instance; see the exercises.
+				</p>
+
+				<p>
+Since each new infection decreases the number of susceptibles, we have the rate equation for <m>S</m>: 
+<aside>
+          <p>Here is the second piece of the <m>S</m>-<m>I</m>-<m>R</m> model</p>
+        </aside>
+ <md>S' =  - a S I \mbox{ persons per day} \, .</md> The minus sign here tells us that <m>S</m> is decreasing (since <m>S</m> and <m>I</m> are positive). We call <m>a</m> the <term>transmission coefficient</term>.
+				</p>
+
+				<p>
+ Just as people flow from the infected to the recovered compartment when they recover, they flow from the susceptible to the infected when they fall ill. To indicate the second flow let’s add another arrow to the compartment diagram.  Because this flow is due to the transmission of the illness, we will label the arrow with the transmission coefficient <m>a</m>. The compartment diagram now reflects all aspects of our model.
+				</p>
+
+<figure xml:id="ch1-pic006">
+        <image source="images/ch1_pic006" width="65%"/>
+        <caption />
+      </figure>
+      
+<aside>
+        <p>We haven’t talked about the units in which to measure <m>a</m> and <m>b</m>. They must be chosen so that any equation in which <m>a</m> or <m>b</m> appears will balance. Thus, in <m>R' = bI</m> the units on the left are persons/day; since the units for <m>I</m> are persons, the units for <m>b</m> must be 1/(days). The units in <m>S' = -aSI</m> will balance only if <m>a</m> is measured in 1/(person-day).</p>
+<p>The reciprocals have more natural interpretations. First of all, 1/<m>b</m> is the number of days a person needs to recover. Next, note that 1/<m>a</m> is measured in person-days (i.e., persons <m>\times</m> days), which are the natural units in which to measure exposure. Here is why. Suppose you contact 3 infected persons for each of 4 days. That gives you the same exposure to the illness that you get from 6 infected persons in 2 days—both give 12 <q>person-days</q> of exposure. Thus, we can interpret <m>1/a</m> as the level of exposure of a typical susceptible person.</p>
+      </aside>
+    </subsection>
+
+			<subsection xml:id="ch1-subsec-completing-the-model">
+      <title>Completing the Model</title>
+      <p>
+The final rate equation we need—the one for <m>I'</m>—reflects what is already clear from the compartment diagram: every loss in <m>I</m> is due to a gain in <m>R</m>, while every gain in <m>I</m> is due to a loss in <m>S</m>.
+				</p>
+
+				
+<aside>
+        <p>Here is the complete <m>S</m>-<m>I</m>-<m>R</m> model</p>
+      </aside>
+
+<p>
+        <md alignat-columns="3">
+          <mrow>S' \amp=  -a S I           \amp    \amp</mrow>
+          <mrow>I' \amp=  \hphantom{-}a S I \amp-\, \amp b I</mrow>
+          <mrow>R' \amp=                    \amp    \amp b I</mrow>
+        </md> If you add up these three rates you should get the overall rate of change of the whole population. The sum is zero. Do you see why?</p>
+
+				
+<aside>
+        <p>You should not draw the conclusion that the only use of rate equations is to model an epidemic. Rate equations have a long history, and they have been put to many uses. Isaac Newton (1642–1727) introduced them to model the motion of a planet around the sun. He showed that the same rate equations could model the motion of the moon around the earth and the motion of an object falling to the ground. Newton created calculus as a tool to analyze these equations. He did the work while he was still an undergraduate—on an extended vacation, curiously enough, because a plague epidemic was raging at Cambridge!</p>
+        <p>Today we use Newton’s rate equations to control the motion of earth satellites and the spacecraft that have visited the moon and the planets. We use other rate equations to model radioactive decay, chemical reactions, the growth and decline of populations, the flow of electricity in a circuit, the change in air pressure with altitude—just to give a few examples. You will have an opportunity in the following chapters to see how they arise in many different contexts, and how they can be analyzed using the tools of calculus.</p>
+      </aside>
+
+      <p>
+The following diagram summarizes, in a schematic way, the relation between our model and the reality it seeks to portray.
+				</p>
+<!--      <figure xml:id="ch1-pic007">
+        <image source="images/ch1_pic007" />
+        <caption />
+      </figure>
+-->  
+
+
+<figure xml:id="fig-modeling-cycle_tikz">
+
+  <image>
+  <latex-image><![CDATA[
+
+\begin{tikzpicture}[>=latex]
+
+\node[
+draw,
+minimum width=4cm,
+minimum height=1.8cm,
+align=center
+] (reality)
+{
+people fall ill\\
+and eventually\\
+recover
+};
+
+\node[
+font=\bfseries,
+above=4pt of reality
+]
+{Reality};
+
+\node[
+draw,
+minimum width=4cm,
+minimum height=1.8cm,
+align=center,
+right=4cm of reality
+] (math)
+{
+$S'=-aSI$\\
+$I'=aSI-bI$\\
+$R'=bI$
+};
+
+\node[
+font=\bfseries,
+above=4pt of math
+]
+{Mathematics};
+
+\draw[-latex]
+([yshift=6pt]reality.east)
+--
+node[above,align=center]
+{
+Modelling\\
+the reality
+}
+([yshift=6pt]math.west);
+
+\draw[latex-]
+([yshift=-6pt]reality.east)
+--
+node[below,align=center]
+{
+Interpreting\\
+the mathematics
+}
+([yshift=-6pt]math.west);
+
+\end{tikzpicture}
+]]>
+</latex-image>
+</image>
+  <caption>
+    The relationship between reality and a mathematical model.
+  </caption>
+</figure>      
+
+      <p>
+The diagram calls attention to several facts. 
+<aside>
+          <p>The model is part of mathematics; it only approximates reality</p>
+        </aside>
+ First, the model is a part of mathematics. It is distinct from the reality being modelled. Second, the model is based on a simplified interpretation of the epidemic. As such, it will not match the reality exactly; it will be only an  <term>approximation</term>. Thus, we cannot expect the values of <m>S</m>, <m>I</m>, and <m>R</m> that we calculate from the rate equations to give us the exact sizes of the susceptible, infected, and recovered populations. Third, the connection between reality and mathematics is a two-way street. We have already travelled one way by constructing a mathematical object that reflects some aspects of the epidemic. This is model-building. Presently we will travel the other way. First we need to get mathematical answers to mathematical questions; then we will see what those answers tell us about the epidemic. This is interpretation of the model. Before we begin the interpretation, we must do some mathematics.
+				</p>
+    </subsection>
+
+			<subsection xml:id="ch1-subsec-analyzing-the-model">
+      <title>Analyzing the Model</title>
+      <introduction>
+      <p>
+Now that we have a model we shall analyze it as a mathematical object. We will set aside, at least for the moment, the connection between the mathematics and the reality. Thus, for example, you should not be concerned when our calculations produce a value for <m>S</m> of 44,446.6 persons at a certain time—a value that will never be attained in reality. In the following analysis <m>S</m> is just a numerical quantity that varies with <m>t</m>, another numerical quantity. Using only mathematical tools we must now extract from the rate equations the information that will tell us just how <m>S</m> and <m>I</m> and <m>R</m> vary with <m>t</m>.
+				</p>
+
+				<p>
+We already took the first steps in that direction when we used the rate equation <m>R' = I/14</m> to predict the value of <m>R</m> two days into the future (see <xref ref="ch1-subsec-the-rate-of-recovery" />). We assumed that <m>I</m> remained fixed at 2100 during those two days, so the rate <m>R' = 2100/14 = 150</m> was also fixed. We concluded that if <m>R = 2500</m> today, it will be 2650 tomorrow and 2800 the next day.
+				</p>
+
+				<p>
+A glance at the full <m>S</m>-<m>I</m>-<m>R</m> model tells us those first steps have to be modified. The assumption 
+<aside>
+          <p>Rates are continually changing; this affects the calculations</p>
+        </aside>
+ we made—that <m>I</m> remains fixed—is not justified, because <m>I</m> (like <m>S</m> and <m>R</m>) is continually changing. As we shall see, <m>I</m> actually increases over those two days. Hence, over the same two days, <m>R'</m> is not fixed at 150, but is continually increasing also. That means that <m>R'</m> becomes larger than 150 during the first day, so <m>R</m> will be larger than <m>2650</m> tomorrow.
+				</p>
+
+				<p>
+The fact that the rates are continually changing complicates the mathematical work we need to do to find <m>S</m>, <m>I</m>, and <m>R</m>. In <xref ref="ch2-chap-successive-approximations" /> we will develop tools and concepts that will overcome this problem. For the present we’ll assume that the rates <m>S'</m>, <m>I'</m>, and <m>R'</m> stay fixed for the course of an entire day. This will still allow us to produce reasonable estimates for the values of <m>S</m>, <m>I</m>, and <m>R</m>. With these estimates we will get our first glimpse of the predictive power of the <m>S</m>-<m>I</m>-<m>R</m> model. We will also use the estimates as the starting point for the work in <xref ref="ch2-chap-successive-approximations" /> that will give us precise values. Let’s look at the details of a specific problem.
+				</p>
+</introduction>
+
+				<subsubsection xml:id="ch1-the-problem">
+        <title>The Problem.</title>
+        <p>
+	Consider a measles epidemic in a school population of 50,000 children. The recovery coefficient is <m>b = 1/14</m>. For the transmission coefficient we choose <m>a = .00001</m>, a number within the range used in epidemic studies. We suppose that 2100 people are currently infected and 2500 have already recovered. Since the total population is 50,000, there must be 45,400 susceptibles. Here is a summary of the problem in mathematical terms:
+</p>
+
+<!--<figure xml:id="ch1-pic008">
+          <image source="images/ch1_pic008" />
+          <caption />
+        </figure>-->
+        
+
+<md>
+\begin{aligned}
+S' &amp;= -0.00001SI\\
+I' &amp;= 0.00001SI-\frac{I}{14}\\
+R' &amp;= \frac{I}{14}
+\end{aligned}
+</md>
+
+<md>
+S(0)=45400,\qquad
+I(0)=2100,\qquad
+R(0)=2500
+</md>
+
+
+        </subsubsection>
+        <subsubsection xml:id="ch1-tomorrow">
+        
+          <title>Tomorrow</title>. <p>From our earlier discussion, <m>R' = 2100/14
+= 150</m> persons per day, giving us an estimated value of <m>R = 2650</m> persons for tomorrow. To estimate <m>S</m> we use <md>S' = - .00001\,SI = - .00001 \times 45400 \times 2100
+        = -953.4 \ \mbox{persons/day.}</md> Hence we estimate that tomorrow <md>S = 45400 - 953.4 = 44446.6 \ \mbox{persons.}</md> Since <m>S + I + R = 50000</m> and we have <m>S + R = 47096.6</m> tomorrow, a final subtraction gives us <m>I = 2903.4</m> persons. (Alternatively, we could have used the rate equation for <m>I'</m> to estimate <m>I</m>.)
+</p>
+
+<p>
+	The fractional values in the estimates for <m>S</m> and <m>I</m> remind us that the <m>S</m>-<m>I</m>-<m>R</m> model describes the behavior of the epidemic only approximately.
+</p>
+</subsubsection>
+          <subsubsection xml:id="ch1-several-days-hence">
+          <title>Several days hence</title>. <p>According to the model, we estimate that tomorrow <m>S = 44446.6</m>, <m>I = 2903.4</m>, and <m>R = 2650</m>. Therefore, from the new <m>I</m> we get a new approximation for the value of <m>R'</m> tomorrow; it is <md>R' = \dfrac{1}{14} I = \dfrac{1}{14} \times 2903.4 = 207.4 \ 
+            \mbox{persons/day.}</md> Hence, two days from now we estimate that <m>R</m> will have the new value <m>2650 + 207.4 = 2857.4</m>. Now follow this pattern to get new approximations for <m>S'</m> and <m>I'</m>, and then use those to estimate the values of <m>S</m> and <m>I</m> two days from now.
+</p>
+
+<p>
+	The pattern of steps that just carried you from the first day to the second will work just as well to carry you from the second to the third. 
+<aside>
+            <p>Stop and do the calculations</p>
+          </aside>
+ Pause now and do all these calculations yourself. See exercises 15 and 16 in <xref ref="ch1-subsubsec-the-measles-epidemic" />. If you round your calculated values of <m>S</m>, <m>I</m>, and <m>R</m> to the nearest tenth, they should agree with those in the following table.
+</p>
+
+<!-- div attr= class="center"-->
+        <p>
+	Estimates for the first three days
+</p>
+        <table xml:id="table-first-three-day-estimates">
+          <title />
+          <tabular>
+            <row header="yes">
+              <cell halign="center">
+                <m>t</m>
+              </cell>
+		<cell halign="center">
+                <m>S</m>
+              </cell>
+		<cell halign="center">
+                <m>I</m>
+              </cell>
+		<cell halign="center">
+                <m>R</m>
+              </cell>
+		<cell halign="center">
+                <m>S'</m>
+              </cell>
+		<cell halign="center">
+                <m>I'</m>
+              </cell>
+		<cell halign="center">
+                <m>R'</m>
+              </cell>
+            </row>
+	<row>
+              <cell halign="center">0</cell>
+              <cell halign="right">
+                <m>45\,400.0</m>
+              </cell>
+                    <cell halign="right">
+                <m>2100.0</m>
+              </cell>
+                    <cell halign="right">
+                <m>2500.0</m>
+              </cell>
+                    <cell halign="right">
+                <m>-953.4</m>
+              </cell>
+                    <cell halign="right">803.4</cell>
+              <cell halign="right">150.0</cell>
+            </row><row>
+              <cell halign="center">1</cell>
+              <cell halign="right">
+                <m>44\,446.6</m>
+              </cell>
+                    <cell halign="right">
+                <m>2903.4</m>
+              </cell>
+                    <cell halign="right">
+                <m>2650.0</m>
+              </cell>
+                    <cell halign="right">
+                <m>-1290.5</m>
+              </cell>
+                    <cell halign="right">
+                <m>1083.1</m>
+              </cell>
+                    <cell halign="right">207.4</cell>
+            </row><row>
+              <cell halign="center">2</cell>
+              <cell halign="right">
+                <m>43\,156.1</m>
+              </cell>
+                    <cell halign="right">
+                <m>3986.5</m>
+              </cell>
+                    <cell halign="right">
+                <m>2857.4</m>
+              </cell>
+                    <cell halign="right">
+                <m>-1720.4</m>
+              </cell>
+                    <cell halign="right">
+                <m>1435.7</m>
+              </cell>
+                    <cell halign="right">284.7</cell>
+            </row><row>
+              <cell halign="center">3</cell>
+              <cell halign="right">
+                <m>41\,435.7</m>
+              </cell>
+                    <cell halign="right">
+                <m>5422.</m>1</cell>
+                    <cell halign="right">
+                <m>3142.1</m>
+              </cell>
+                    <cell halign="right" />
+              <cell halign="right" />
+              <cell halign="right" />
+            </row>
+          </tabular>
+        </table><!--</div attr= class="center">-->
+      </subsubsection>
+
+				<subsubsection xml:id="ch1-yesterday">
+        <title>Yesterday</title>
+        <p>
+	We previously noted that we can use our models to go  <em>backwards</em> in time, too. This is a valuable way to see how well the model fits reality, because we can compare estimates that the model generates with health records for the days in the recent past.
+</p>
+
+<p>
+	To find how <m>S</m>, <m>I</m>, and <m>R</m> change when we go one day into the future we multiplied the rates <m>S'</m>, <m>I'</m>, and <m>R'</m> by a time step of +1. To find how they change when we go one day into the past we do the same thing, except that we must now use a time step of –1. According to the table above, the rates at time <m>t = 0</m> (i.e., today) are <md>S' = -953.4, \qquad I' = 803.4, \qquad R' = 150.0.</md> Therefore we estimate that, one day ago, <md alignat-columns="3">
+            <mrow>S \amp= 45400 + (-953.4 \times -1)\; \amp= 45400 + 953.4 
+        \amp=  46353.4,</mrow>
+            <mrow>I \amp= 2100 + (803.4 \times -1)   \amp= \hphantom{0}2100 - 803.4 
+        \amp= 1296.6,</mrow>
+            <mrow>R \amp= 2500 + (150.0 \times -1)   \amp= \hphantom{0}2500 - 150.0 
+        \amp= 2350.0.</mrow>
+          </md> Just as we would expect with a spreading infection, there are more susceptibles yesterday than today, but fewer infected or recovered. In the exercises for section 3 you will have an opportunity to continue this process, tracing the epidemic many days into the past. For example, you will be able to go back and see when the infection started—that is, find the day when the value of <m>I</m> was only about 1.
+</p>
+</subsubsection>
+<subsubsection xml:id="ch1-there-and-back-again">
+        
+          <title>There and back again</title> <p>
+
+<aside>
+            <p>Go forward a day and then back again</p>
+          </aside>
+ What happens when we start with tomorrow’s values and use tomorrow’s rates to go back one day—back to today? We should get <m>S = 45400</m>, <m>I = 2100</m>, and <m>R = 2500</m> once again, shouldn’t we? Tomorrow’s values are <md alignat-columns="5">
+            <mrow>S  \amp= 44446.6, \amp   I  \amp= 2903.4, \amp   R  \amp= 2650.0,</mrow>
+            <mrow>S' \amp= -1290.5, \amp   I' \amp= 1083.1, \amp   R' \amp= 207.4.</mrow>
+          </md> To go backwards one day we must use a time step of <m>-1</m>. The predicted values are thus <md alignat-columns="3">
+            <mrow>S \amp= 44446.6 + (-1290.6 \times -1) \amp\amp= 45737.2,</mrow>
+            <mrow>I \amp= 2903.4 + (1083.1 \times -1) \amp\amp= 1820.3,</mrow>
+            <mrow>R \amp= 2650.0 + (207.4 \times -1) \amp\amp= 2442.6.</mrow>
+          </md> These are <em>not</em> the values that we had at the start, when <m>t =
+0</m>. In fact, it’s worth noting the difference between the original values and those produced by <q>going there and back again.</q>
+        </p>
+
+<!-- div attr= class="center"-->
+        <table>
+          <title />
+          <tabular>
+            <row class="odd">
+              <cell halign="center" />
+              <cell halign="center">original</cell>
+              <cell halign="center">there and</cell>
+              <cell halign="center" />
+            </row>
+	<row class="even">
+              <cell halign="center" />
+              <cell halign="center">value</cell>
+              <cell halign="center">back again</cell>
+              <cell halign="center">difference</cell>
+            </row>
+	<row>
+              <cell halign="center">
+                <m>S</m>
+              </cell>
+                    <cell halign="right">45400</cell>
+              <cell halign="right">45737.1</cell>
+              <cell halign="right">337.1</cell>
+            </row><row>
+              <cell halign="center">
+                <m>I</m>
+              </cell>
+                    <cell halign="right">2100</cell>
+              <cell halign="right">1820.3</cell>
+              <cell halign="right">–279.7</cell>
+            </row><row>
+              <cell halign="center">
+                <m>R</m>
+              </cell>
+                    <cell halign="right">2500</cell>
+              <cell halign="right">2442.6</cell>
+              <cell halign="right">–57.4</cell>
+            </row>
+          </tabular>
+        </table><!--</div attr= class="center">-->
+        <p>
+	Do you see why there are differences? We went forward in time using the rates that were current at <m>t = 0</m>, but when we returned we used the rates that were current at <m>t = 1</m>. Because these rates were different, we didn’t get back where we started. These differences do not point to a flaw in the model; the problem lies with the way we are trying to extract information from the model. As we have been making estimates, 
+<aside>
+            <p>The differences measure how rough an estimate is</p>
+          </aside>
+ we have assumed that the rates don’t change over the course of a whole day. We already know that’s not true, so the values that we have been getting are not exact. What this test adds to our knowledge is a way to measure just <em>how</em> inexact those values are—as we do in the table above.
+</p>
+
+<p>
+	In <xref ref="ch2-chap-successive-approximations" /> we will solve the problem of rough estimates by recalculating all the quantities ten times a day, a hundred times a day, or even more. When we do the computations with shorter and shorter time steps we will be able to see how the estimates improve. We will even be able to see how to get values that are mathematically exact!
+</p>
+        </subsubsection>
+        
+        <subsubsection xml:id="ch1-delta-notation">
+        
+          <title>Delta notation</title> <p>This work has given us some insights about the way our model predicts future values of <m>S</m>, <m>I</m>, and <m>R</m>. The basic idea is very simple: <em>determine how <m>S</m>, <m>I</m>, and <m>R</m> change</em>. Because these changes play such an important role in what we do, it is worth having a simple way to refer to them. Here is the notation that we will use:
+</p>
+
+<!-- div attr= class="center"-->
+        <p>
+          <m>\Delta x</m> stands for a <em>change</em> in the quantity <m>x</m>
+        </p><!--</div attr= class="center">-->
+        <p>
+	The symbol <q>
+            <m>\Delta</m>
+          </q> is the Greek capital letter <em>delta</em>; it corresponds to the Roman letter <q>D</q> and stands for <term>difference</term>.
+</p>
+
+<p>
+	Delta notation gives us a way to refer to changes of all sorts. For example, in the table in <xref ref="ch1-several-days-hence" />, between day 1 and day 3 the quantities <m>t</m> and <m>S</m> change by <md>
+			\begin{aligned}
+            \Delta t &amp;= 2 \text{ days}
+            \Delta S &amp;=  -3010.9 \text{ persons}
+            \end{aligned}
+          </md> We sometimes refer to a change as a <term>step</term>. 
+<aside>
+            <p>
+              <m>\Delta</m> stands for a change, a difference, or a step</p>
+          </aside>
+ For instance, in this example we can say there is a <q>
+            <m>t</m> step</q> of 2 days, and an <q>
+            <m>S</m> step</q> of <m>-3010.9</m> persons. In the calculations that produced the table in <xref ref="ch1-several-days-hence" /> we <q>stepped into</q> the future, a day at a time. Finally, delta notation gives us a concise and vivid way to describe the relation between rates and changes. For example, if <m>S</m> changes at the constant rate <m>S'</m>, then under a <m>t</m> step of <m>\Delta t</m>, the value of <m>S</m> changes by <md>\Delta S = S' \cdot \Delta t.</md>
+        </p>
+        </subsubsection>
+
+				<subsubsection xml:id="ch1-using-the-computer-as-a-tool">
+        <title>Using the computer as a tool.</title>
+        <p>
+	Suppose we wanted to find out what happens to <m>S</m>, <m>I</m>, and <m>R</m> after a month, or even a year. We need only repeat—30 times, or 365 times—the three rounds of calculations we used to go three days into the future. The computations would take time, though. The same is true if we wanted to do ten or one hundred rounds of calculations per day—which is the approach we’ll take in <xref ref="ch2-chap-successive-approximations" /> to get more accurate values. To save our time and effort we will soon begin to use a computer to do the repetitive calculations.
+</p>
+
+<p>
+	A computer does calculations by following a set of instructions called a <term>program</term>. Of course, if we had to give a million instructions to make the computer carry out a million steps, there would be no savings in labor. The trick is to write a program with just a few instructions that can be repeated over and over again to do all the calculations we want. The usual way to do this is to arrange the instructions in a <term>loop</term>. To give you an idea what a loop is, we’ll look at the <m>S</m>-<m>I</m>-<m>R</m> calculations. They form a loop. We can see the loop by making a flow chart.
+</p>
+</subsubsection>
+<subsubsection xml:id="ch1-the-flow-chart">
+          <title>The flow chart</title> <p> We’ll start by writing down the three steps that take us from one day to the next:
+</p>
+
+<algorithm>
+<title>Updating the SIR Model One Day at a Time</title>
+<ol>
+  <li>
+    <p>
+      Given the current values of <m>S</m>, <m>I</m>, and <m>R</m>, we get current
+      <m>S'</m>, <m>I'</m>, and <m>R'</m> by using the rate equations
+      <md alignat-columns="3">
+        <mrow>S' \amp = - a S I \amp  \amp</mrow>
+        <mrow>I' \amp = \hphantom{-}a S I \amp -\, \amp b I</mrow>
+        <mrow>R' \amp =          \amp  \amp b I</mrow>
+      </md>
+    </p>
+  </li>
+
+  <li>
+    <p>
+      Given the current values of <m>S'</m>, <m>I'</m>, and <m>R'</m>, we find the
+      changes <m>\Delta S</m>, <m>\Delta I</m>, and <m>\Delta R</m> over the course
+      of a day by using the equations
+      <md alignat-columns="2">
+        <mrow>\Delta S \mbox{ persons} \amp= S' \ \dfrac{\mbox{persons}}{\mbox{day}} 
+        \times 1 \ \mbox{day},</mrow>
+        <mrow>\Delta I \mbox{ persons} \amp= I' \ \dfrac{\mbox{persons}}{\mbox{day}} 
+        \times 1 \ \mbox{day},</mrow>
+        <mrow>\Delta R \mbox{ persons} \amp= R' \ \dfrac{\mbox{persons}}{\mbox{day}} 
+        \times 1 \ \mbox{day}.</mrow>
+      </md>
+    </p>
+  </li>
+
+  <li>
+    <p>
+      Given the current values of <m>\Delta S</m>, <m>\Delta I</m>, and
+      <m>\Delta R</m>, we find the new values of <m>S</m>, <m>I</m>, and
+      <m>R</m> a day later by using the equations
+      <md alignat-columns="2">
+        <mrow>\text{new } S \amp= \text{current } S + \Delta S,</mrow>
+        <mrow>\text{new } I \amp= \text{current } I + \Delta I,</mrow>
+        <mrow>\text{new } R \amp= \text{current } R + \Delta R.</mrow>
+      </md>
+    </p>
+  </li>
+</ol>
+</algorithm>
+
+<p>
+	Each step takes three numbers as <term>input</term>, and produces three new numbers as <term>output</term>. Note that the output of each step is the input of the next, so the steps flow together. The diagram below, called a <term>flow chart</term>, 
+<aside>
+            <p>The flow chart forms a loop</p>
+          </aside>
+ shows us how the steps are connected.
+</p>
+
+<!--<figure xml:id="ch1-pic009">
+          <image source="images/ch1_pic009" />
+          <caption />
+        </figure>
+-->
+<figure xml:id="fig-SIR-modeling-cycle_tikz">
+
+  <image>
+  <latex-image><![CDATA[
+
+\begin{tikzpicture}[>=latex]
+
+% Box 1
+\node[
+draw,
+minimum width=3cm,
+minimum height=2cm,
+align=left
+] (A)
+{
+values of\\
+$S,I,R$
+};
+
+% Box 2
+\node[
+draw,
+minimum width=3cm,
+minimum height=2cm,
+align=left,
+right=1.5cm of A
+] (B)
+{
+values of\\
+$S',I',R'$
+};
+
+% Box 3
+\node[
+draw,
+minimum width=3cm,
+minimum height=2cm,
+align=left,
+right=1.5cm of B
+] (C)
+{
+values of\\
+$\Delta S,\Delta I,\Delta R$
+};
+
+% Arrow I
+\draw[-latex]
+(A.east)
+--
+node[above]
+{I}
+(B.west);
+
+% Arrow II
+\draw[-latex]
+(B.east)
+--
+node[above]
+{II}
+(C.west);
+
+% Feedback arrow III
+\draw[-latex]
+(C.south)
+-- (9,-2)
+-- (0,-2)
+node[midway,below]{III}
+-- (A.south);
+
+\end{tikzpicture}
+]]>
+</latex-image>
+</image>
+  <caption>
+    Flow chart of the steps of the S-I-R model
+  </caption>
+</figure>      
+
+
+        <p>
+	The calculations form a <term>loop</term>, because the output of step III is the input for step I. If we go once around the loop, the output of step III gives us the values of <m>S</m>, <m>I</m>, and <m>R</m>
+          <em>on the following day</em>. The steps do indeed carry us into the future.
+</p>
+
+<p>
+	Each step involves calculating three numbers. If we count each calculation as a single instruction, then it takes nine instructions to carry the values of <m>S</m>, <m>I</m>, and <m>R</m> one day into the future. To go a million days into the future, we need add only one more instruction: <q>Go around the loop a million times.</q> In this way, a computer program with only ten instructions can carry out a million rounds of calculations!
+</p>
+
+<p>
+	Later in <xref ref="ch1-sec-using-a-program" /> you will find a real computer program that lists these instructions (for three days instead of a million, though). 
+<aside>
+            <p>A computer program will carry out the three steps</p>
+          </aside>
+ Study the program to see which instructions accomplish which steps. In particular, see how it makes a loop. Then run the program to check that the computer reproduces the values you already computed by hand. Once you see how the program works, you can modify it to get further information—for example, you can find out what happens to <m>S</m>, <m>I</m>, and <m>R</m> thirty days into the future. You will even be able to plot the graphs of <m>S</m>, <m>I</m>, and <m>R</m>.
+</p>
+
+
+<aside>
+          <p>Rate equations have always been at the heart of calculus, and they have been analyzed using mechanical and electronic computers for as long as those tools have been available. Now that small powerful computers have begun to appear in the classroom, it is possible for beginning calculus students to explore interesting and complex problems that are modelled by rate equations. Computers are changing how mathematics is done and how it is learned.</p>
+        </aside>
+</subsubsection>
+        <subsubsection xml:id="ch1-analysis-without-a-computer">
+          <title>Analysis without a computer</title>. <p>A computer is a powerful tool for exploring the <m>S</m>-<m>I</m>-<m>R</m> model, but there are many things we can learn about the model without using a computer. Here is an example.
+</p>
+
+<p>
+	According to the model, the rate at which the infected population grows is given by the equation <md>I' = .00001 \, S I - \dfrac{1}{14} \quad \mbox{persons/day.}</md> In our example, <m>I' = 803.4</m> at the outset. This is a positive number, so <m>I</m> increases initially. In fact, <m>I</m> will continue to increase as long as <m>I'</m> is positive. If <m>I'</m> ever becomes negative, then <m>I</m> decreases. So let’s ask the question: when is <m>I'</m> positive, when is it negative, and when is it zero? By factoring out <m>I</m> in the last equation we obtain <md>I' = I \left( .00001 \, S - \dfrac{1}{14} \right) \ \mbox{persons/day.}</md> Consequently <m>I' = 0</m> if either <md>I = 0 \qquad \mbox{or} \qquad .00001 \, S - \dfrac{1}{14} = 0.</md> The first possibility <m>I = 0</m> has a simple interpretation: there is no infection within the population. The second possibility is more interesting; it says that <m>I'</m> will be zero when <md>.00001 \, S - \dfrac{1}{14} = 0 \qquad \mbox{or} \qquad
+        S = \dfrac{100000}{14} \approx 7142.9.</md>
+        </p>
+
+<p>
+	If <m>S</m> is <em>greater</em> than <m>100000/14</m> and <m>I</m> is positive, then you can check that the formula <md>I' = I \left( .00001 \, S - \dfrac{1}{14} \right) 
+        \ \mbox{persons/day}</md> tells us <m>I'</m> is positive—so <m>I</m> is increasing. If, on the other hand, <m>S</m> is <em>less than</em>
+          <m>100000/14</m>, then <m>I'</m> is negative and <m>I</m> is decreasing. So <m>S = 100000/14</m> represents a  <term>threshold</term>. If <m>S</m> falls below the threshold, <m>I</m> decreases. If <m>S</m> exceeds the threshold, <m>I</m> increases. Finally, <m>I</m> reaches its peak when <m>S</m> equals the threshold.
+</p>
+
+<p>
+	The presence of a threshold value for <m>S</m> is purely a mathematical result. However, it has an interesting interpretation for the epidemic. 
+<aside>
+            <p>The threshold determines whether there will be an epidemic</p>
+          </aside>
+ As long as there are at least <m>7143</m> susceptibles, the infection will spread, in the sense that there will be more people falling ill than recovering each day. As new people fall ill, the number of susceptibles declines. Finally, when there are fewer than <m>7143</m> susceptibles, the pattern reverses: each day more people will recover than will fall ill.
+</p>
+
+<p>
+	If there were fewer than <m>7143</m> susceptibles in the population <em>at the outset</em>, then the number of infected would only decline with each passing day. The infection would simply never catch hold. The clear implication is that the noticeable surge in the number of cases that we associate with an <q>epidemic</q> disease is due to the presence of a large susceptible population. If the susceptible population lies below a certain threshold value, a surge just isn’t possible. This is a valuable insight—and we got it with little effort. We didn’t need to make lengthy calculations or call on the resources of a computer; a bit of algebra was enough.
+</p>
+      </subsubsection>
+    </subsection>
+
+			<exercises xml:id="ch1-subsec-exercises-1-1">
+      <title>Exercises</title>
+      <exercisegroup xml:id="ch1-subsubsec-reading-a-graph">
+        <title>Reading a Graph</title>
+        <introduction>
+          <p>
+	The graphs in <xref ref="ch1-subsec-making-a-model" /> and  have no scales marked along their axes, so they provide mainly <em>qualitative</em> information. The graphs below do have scales, so you can now answer <em>quantitative</em> questions about them. For example, on day 20 there are about 18,000 susceptible people. Read the graphs to answer the following questions. (Note: <m>S
++ I + R</m> is <em>not</em> constant in this example, so these graphs cannot be solutions to our model..)
+</p>
+
+<figure xml:id="ch1-pic010">
+            <image source="images/ch1_pic010" />
+            <caption />
+          </figure>
+        <figure xml:id="ch1-pic011">
+            <image source="images/ch1_pic011" />
+            <caption />
+          </figure>
+        <figure xml:id="ch1-pic012">
+            <image source="images/ch1_pic012" />
+            <caption />
+          </figure>
+        </introduction><exercise>
+          <statement>
+            <p>
+	When does the infection hit its peak? How many people are infected at that time?
+</p>
+          </statement>
+        </exercise><exercise>
+          <statement>
+            <p>
+	Initially, how many people are susceptible? How many days does it take for the susceptible population to be cut in half?
+</p>
+          </statement>
+        </exercise><exercise>
+          <statement>
+            <p>
+	How many days does it take for the recovered population to reach 25,000? How many people <em>eventually</em> recover? Where did you look to get this information?
+</p>
+          </statement>
+        </exercise><exercise>
+          <statement>
+            <p>
+	On what day is the size of the infected population increasing most rapidly? When is it decreasing most rapidly? How do you know?
+</p>
+          </statement>
+        </exercise><exercise>
+          <statement>
+            <p>
+	How many people caught the illness at some time during the first 20 days? (Note that this is not the same as the number of people who are infected on day 20.) Explain where you found this information.
+</p>
+          </statement>
+        </exercise><exercise>
+          <statement>
+            <p>
+	Copy the graph of <m>R</m> as accurately as you can, and then superimpose a sketch of <m>S</m> on it. Notice the time scales on the  <em>original</em> graphs of <m>S</m> and <m>R</m> are different. Describe what happened to the graph of <m>S</m> when you superimposed it on the graph of <m>R</m>. Did it get compressed or stretched? Was this change in the horizontal direction or the vertical?
+</p>
+          </statement>
+        </exercise>
+      </exercisegroup><exercisegroup xml:id="ch1-subsubsec-a-simple-model">
+        <title>A Simple Model</title>
+        <introduction>
+          <p>
+	These questions concern the rate equation <m>S' = -470</m> persons per day that we used to model a susceptible population in <xref ref="ch1-subsec-a-simple-model-for-predicting-change" />.
+</p>
+        </introduction><exercise>
+          <introduction>
+            <p>
+	Suppose the initial susceptible population was 20,000 on Wednesday. Use the model to answer the following questions.
+</p>
+          </introduction><task>
+            <p>
+		How many susceptibles will be left ten days later?
+	</p>
+          </task><task>
+            <p>
+		How many days will it take for the susceptible population to vanish entirely?
+	</p>
+          </task><task>
+            <p>
+		How many susceptibles were there on the previous Sunday?
+	</p>
+          </task><task>
+            <p>
+		How many days before Wednesday were there 30,000 susceptibles?
+	</p>
+          </task>
+        </exercise>
+      </exercisegroup><exercisegroup xml:id="ch1-subsubsec-mark-twains-mississippi">
+        <title>Mark Twain’s Mississippi</title>
+        <introduction>
+          <p>
+	The Lower Mississippi River meanders over its flat valley, forming broad loops called ox-bows. In a flood, the river can jump its banks and cut off one of these loops, getting shorter in the process. In his book <em>Life on the Mississippi</em> (1884), Mark Twain suggests, with tongue in cheek, that some day the river might even vanish! Here is a passage that shows us some of the pitfalls in using rates to predict the future and the past.
+</p>
+
+<blockquote>
+            <p>
+	 In the space of one hundred and seventy six years the Lower Mississippi has shortened itself two hundred and forty-two miles. That is an average of a trifle over a mile and a third per year. Therefore, any calm person, who is not blind or idiotic, can see that in the Old Oölitic Silurian Period, just a million years ago next November, the Lower Mississippi was upwards of one million three hundred thousand miles long, and stuck out over the Gulf of Mexico like a fishing-pole. And by the same token any person can see that seven hundred and forty-two years from now the Lower Mississippi will be only a mile and three-quarters long, and Cairo [Illinois] and New Orleans will have joined their streets together and be plodding comfortably along under a single mayor and a mutual board of aldermen. There is something fascinating about science. One gets such wholesome returns of conjecture out of such a trifling investment of fact.
+</p>
+          </blockquote>
+
+<p>
+	Let <m>L</m> be the length of the Lower Mississippi River. Then <m>L</m> is a variable quantity we shall analyze.
+</p>
+        </introduction><exercise>
+          <statement>
+            <p>
+	According to Twain’s data, what is the exact  <em>rate</em> at which <m>L</m> is changing, in miles per year? What approximation does he use for this rate? Is this a reasonable approximation? Is this rate <em>positive</em> or <em>negative</em>? Explain. In what follows, use Twain’s approximation.
+</p>
+          </statement>
+        </exercise><exercise>
+          <statement>
+            <p>
+	Twain wrote his book in 1884. Suppose the Mississippi that Twain wrote about had been 1100 miles long; how long would it have become in 1990?
+</p>
+          </statement>
+        </exercise><exercise>
+          <statement>
+            <p>
+	Twain does not tell us how long the Lower Mississippi was in 1884 when he wrote the book, but he does say that 742 years later it will be only <m>1\tfrac{3}{4}</m> miles long. How long must the river have been when he wrote the book?
+</p>
+          </statement>
+        </exercise><exercise>
+          <statement>
+            <p>
+	Suppose <m>t</m> is the number of years since 1884. Write a formula that describes how much <m>L</m> has changed in <m>t</m> years. Your formula should complete the equation <md>\mbox{the change in $L$ in $t$ years} = \ldots \ . \rule{90pt}{0pt}</md>
+            </p>
+          </statement>
+        </exercise><exercise>
+          <statement>
+            <p>
+	From your answer to question 10, you know how long the river was in 1884. From question 11, you know how much the length has changed <m>t</m> years after 1884. Now write a formula that describes how long the river is <m>t</m> years later.
+</p>
+          </statement>
+        </exercise><exercise>
+          <statement>
+            <p>
+	Use your formula to find what <m>L</m> was a million years ago. Does your answer confirm Twain’s assertion that the river was <q>upwards of 1,300,000 miles long</q> then?
+</p>
+          </statement>
+        </exercise><exercise>
+          <statement>
+            <p>
+	Was the river ever 1,300,000 miles long; will it ever be <m>1\tfrac{3}{4}</m> miles long? (This is called a <term>reality check</term>.) What, if anything, is wrong with the <q>trifling investment of fact</q> which led to such <q>wholesale returns of conjecture</q> that Twain has given us?
+</p>
+          </statement>
+        </exercise>
+      </exercisegroup><exercisegroup xml:id="ch1-subsubsec-the-measles-epidemic">
+        <title>The Measles Epidemic</title>
+        <introduction>
+          <p>
+	We consider once again the specific rate equations <md>
+              <mrow>S' \amp= -.00001 \, SI,</mrow>
+              <mrow>I' \amp= .00001 \, SI - \dfrac{I}{14},</mrow>
+              <mrow>R' \amp= \dfrac{I}{14},</mrow>
+            </md> discussed in the text in <xref ref="ch1-subsec-analyzing-the-model" />. We saw that at time <m>t = 1</m>, <md>S = 44446.6, \qquad I = 2903.4, \qquad R = 2650.0.</md>
+          </p>
+        </introduction><exercise>
+          <statement>
+            <p>
+	Calculate the current rates of change <m>S'</m>, <m>I'</m>, and <m>R'</m> when <m>t = 1</m>, and then use these values to determine <m>S</m>, <m>I</m>, and <m>R</m> one day later.
+</p>
+          </statement>
+        </exercise><exercise>
+          <statement>
+            <p>
+	In the previous question you found <m>S</m>, <m>I</m>, and <m>R</m> when <m>t =
+	2</m>. Using these values, calculate the rates <m>S'</m>, <m>I'</m>, and <m>R'</m> and then determine the new values of <m>S</m>, <m>I</m>, and <m>R</m> when <m>t = 3</m>. See the <xref ref="table-first-three-day-estimates" />.
+</p>
+          </statement>
+        </exercise><exercise>
+          <statement>
+            <p>
+              <strong>Double the time step</strong>. Go back to the starting time <m>t = 0</m> and to the initial values <md>S = 45400, \qquad I = 2100, \qquad R = 2500.</md> Recalculate the values of <m>S</m>, <m>I</m>, and <m>R</m> at time <m>t = 2</m> by using a time step of <m>\Delta t = 2</m>. You should perform only a single round of calculations, and use the rates <m>S'</m>, <m>I'</m>, and <m>R'</m> that are current at time <m>t = 0</m>.
+</p>
+          </statement>
+        </exercise><exercise xml:id="ch1-there-and-back-again-exercise">
+          <introduction>
+            <p>
+              <strong>There and back again</strong>. In the text we went one day into the future and then back again to the present. Here you’ll go forward two days from <m>t = 0</m> and then back again. There are two ways to do this: with a time step of <m>\Delta t = \pm 2</m> (as in the previous question), and with a pair of time steps of <m>\Delta t = \pm 1</m> .
+</p>
+          </introduction><task>
+            <p>
+		(<m>\Delta t = \pm 2</m>). Using the values of <m>S</m>, <m>I</m>, and <m>R</m> at time <m>t = 2</m> that you just got in the previous question, calculate the rates <m>S'</m>, <m>I'</m>, and <m>R'</m>. Then using a time step of <m>\Delta t =
+	-2</m>, estimate new values of <m>S</m>, <m>I</m>, and <m>R</m> at time <m>t = 0</m>. How much do these new values differ from the original values 45,400, 2100, 2500?
+	</p>
+          </task><task>
+            <p>
+		(<m>\Delta t = \pm 1</m>). Now make a new start, using the values <md alignat-columns="5">
+                <mrow>S  \amp= 43156.1, \amp  I  \amp= 3986.5, \amp  R  \amp= 2857.4,</mrow>
+                <mrow>S' \amp= -1720.4, \amp  I' \amp= 1435.7, \amp  R' \amp= 284.7.</mrow>
+              </md> that occur when <m>t = 2</m> if we make estimates with a time step <m>\Delta
+	t = 1</m>. (These values come from <xref ref="table-first-three-day-estimates" />) Using two rounds of calculations with a time step of <m>\Delta t = -1</m>, estimate another set of new values for <m>S</m>, <m>I</m>, and <m>R</m> at time <m>t = 0</m>. How much do these new values differ from the original values 45,400, 2100, 2500?
+	</p>
+          </task><task>
+            <p>
+		Which process leads to a <em>smaller</em> set of differences: a single round of calculations with <m>\Delta t = \pm 2</m>, or two rounds of calculations with <m>\Delta t = \pm 1</m>? Consequently, which process produces better estimates—in the sense in which we used to measure estimates in <xref ref="ch1-there-and-back-again" />?
+	</p>
+          </task>
+        </exercise><exercise>
+          <introduction>
+            <p>
+              <strong>Quarantine</strong>. One of the ways to treat an epidemic is to keep the infected away from the susceptible; this is called quarantine. The intention is to reduce the chance that the illness will be transmitted to a susceptible person. Thus, quarantine alters the <em>transmission coefficient</em>.
+</p>
+          </introduction><task>
+            <p>
+		Suppose a quarantine is put into effect that cuts in half the chance that a susceptible will fall ill. What is the new transmission coefficient?
+	</p>
+          </task><task>
+            <p>
+		In <xref ref="ch1-analysis-without-a-computer" /> it was determined that whenever there were fewer than 7143 susceptibles, the number of infected would decline instead of grow. We called 7143 a  <em>threshold</em> level for <m>S</m>. Changing the transmission coefficient, as in part (a), changes the threshold level for <m>S</m>. What is the new threshold?
+	</p>
+          </task><task>
+            <p>
+		Suppose we start with <m>S</m> = 45,400. Does quarantine eliminate the epidemic, in the sense that the number of infected immediately goes down from 2100, without ever showing an increase in the number of cases?
+	</p>
+          </task><task>
+            <p>
+		Since the new transmission coefficient is not small enough to guarantee that <m>I</m> never goes up, can you find a smaller value that <em>does</em> guarantee <m>I</m> never goes up? Continue to assume we start with <m>S = 45400</m>.
+	</p>
+          </task><task>
+            <p>
+		Suppose the initial susceptible population is 45,400. What is the <em>largest</em> value that the transmission coefficient can have and still guarantee that <m>I</m> never goes up? What level of quarantine does this represent? That is, do you have to reduce the chance that a susceptible will fall ill to one-third of what it was with no quarantine at all, to one-fourth, or what?
+	</p>
+          </task>
+        </exercise>
+      </exercisegroup><exercisegroup xml:id="ch1-subsubsec-other-diseases">
+        <title>Other Diseases</title>
+        <exercise>
+          <introduction>
+            <p>
+	Suppose the spread of an illness similar to measles is modelled by the following rate equations: <md>
+                <mrow>S' \amp= -.00002 \, SI,</mrow>
+                <mrow>I' \amp= .00002 \, SI - .08 \, I,</mrow>
+                <mrow>R' \amp= .08 \, I.</mrow>
+              </md> Note: the initial values <m>S = 45400</m>, etc. that we used in the text do not apply here.
+</p>
+          </introduction><task>
+            <p>
+		Roughly how long does someone who catches this illness remain infected? Explain your reasoning.
+	</p>
+          </task><task>
+            <p>
+		How large does the susceptible population have to be in order for the illness to take hold—that is, for the number of cases to increase? Explain your reasoning.
+	</p>
+          </task><task>
+            <p>
+		Suppose 100 people in the population are currently ill. According to the model, how many (of the 100 infected) will recover during the next 24 hours?
+	</p>
+          </task><task>
+            <p>
+		Suppose 30 <em>new</em> cases appear during the same 24 hours. What does that tell us about <m>S'</m>?
+	</p>
+          </task><task>
+            <p>
+		Using the information in parts (c) and (d), can you determine how large the current susceptible population is?
+	</p>
+          </task>
+        </exercise><exercise>
+          <introduction>
+            <p>
+	Construct the appropriate <m>S</m>-<m>I</m>-<m>R</m> model for a measles-like illness that lasts for 4 days. It is also known that a typical susceptible person meets only about 0.3% of infected population each day, and the infection is transmitted in only one contact out of six.
+</p>
+          </introduction><task>
+            <p>
+		How small does the susceptible population have to be for this illness to fade away without becoming an epidemic?
+	</p>
+          </task>
+        </exercise><exercise>
+          <introduction>
+            <p>
+	Consider the general <m>S</m>-<m>I</m>-<m>R</m> model for a measles-like illness: <md alignat-columns="3">
+                <mrow>S' \amp=  - a S I,         \amp     \amp</mrow>
+                <mrow>I' \amp= \hphantom{-}a S I \amp -\, \amp b I,</mrow>
+                <mrow>R' \amp=                   \amp     \amp b I.</mrow>
+              </md>
+            </p>
+          </introduction><task>
+            <p>
+		The threshold level for <m>S</m>—below which the number of infected will only decline—can be expressed in terms of the transmission coefficient <m>a</m> and the recovery coefficient <m>b</m>. What is that expression?
+	</p>
+          </task><task>
+            <p>
+		Consider two illnesses with the same transmission coefficient <m>a</m>; assume they differ only in the length of time someone stays ill. Which one has the lower threshold level for <m>S</m>? Explain your reasoning.
+	</p>
+          </task>
+        </exercise>
+      </exercisegroup><exercisegroup xml:id="ch1-subsubsec-what-goes-around-comes-around">
+        <title>What Goes Around Comes Around</title>
+        <introduction>
+          <p>
+	Some relatively mild illnesses, like the common cold, return to infect you again and again. For a while, right after you recover from a cold, you are immune. But that doesn’t last; after some weeks or months, depending on the illness, you become susceptible again. This means there is now a flow from the recovered population to the susceptible. These exercises ask you to modify the basic <m>S</m>-<m>I</m>-<m>R</m> model to describe an illness where immunity is temporary.
+</p>
+        </introduction><exercise>
+          <statement>
+            <p>
+	Draw a compartment diagram for such an illness. Besides having all the ingredients of <xref ref="ch1-pic006" />, it should depict a flow from <m>R</m> to <m>S</m>. Call this <term>immunity loss</term>, and use <m>c</m> to denote the coefficient of immunity loss.
+</p>
+          </statement>
+        </exercise><exercise>
+          <statement>
+            <p>
+	Suppose immunity is lost after about six weeks. Show that you can set <m>c = 1/42</m> per day, and explain your reasoning carefully. A suggestion: adapt the discussion of recovery in the text.
+</p>
+          </statement>
+        </exercise><exercise>
+          <statement>
+            <p>
+	Suppose this illness lasts 5 days and it has a transmission coefficient of .00004 in the population we are considering. Suppose furthermore that the total population is fixed in size (as was the case in the text). Write down rate equations for <m>S</m>, <m>I</m>, and <m>R</m>.
+</p>
+          </statement>
+        </exercise><exercise>
+          <statement>
+            <p>
+	We saw in the text that the model for an illness that confers permanent immunity has a threshold value for <m>S</m> in the sense that when <m>S</m> is above the threshold, <m>I</m> increases, but when it is below, <m>I</m> decreases. Does <em>this</em> model have the same feature? If so, what is the threshold value?
+</p>
+          </statement>
+        </exercise><exercise>
+          <introduction>
+            <p>
+	For a mild illness that confers permanent immunity, the size of the recovered population can only grow. This question explores what happens when immunity is only temporary.
+</p>
+          </introduction><task>
+            <p>
+		Will <m>R</m> increase or decrease if <md>S = 45400, \qquad I = 2100, \qquad R = 2500?</md>
+            </p>
+          </task><task>
+            <p>
+		Suppose we shift 20000 susceptibles to the recovered population (so that <m>S = 25400</m> and <m>R = 22500</m>), leaving <m>I</m> unchanged. Now, will <m>R</m> increase or will it decrease?
+	</p>
+          </task><task>
+            <p>
+		Using a total population of 50,000, give two other sets of values for <m>S</m>, <m>I</m>, and <m>R</m> that lead to a decreasing <m>R</m>.
+	</p>
+          </task><task>
+            <p>
+		In fact, the relative sizes of <m>I</m> and <m>R</m> determine whether <m>R</m> will increase or decrease. Show that <md>
+                <mrow>text{if } \amp I &gt; \tfrac{5}{42} R, \quad 
+	        \text{then $R$ will increase;}</mrow>
+                <mrow>\text{if } \amp I &lt; \tfrac{5}{42} R,  \quad
+	        \text{then $R$ will decrease.}</mrow>
+              </md> Explain your argument clearly. A suggestion: consider the rate equation for <m>R'</m>.
+	</p>
+          </task>
+        </exercise><exercise>
+          <introduction>
+            <p>
+              <strong>The steady state</strong>. Any illness that confers only temporary immunity can appear to linger in a population forever. You may not always have a cold, but someone does, and eventually you catch another one. (<q>What goes around comes around.</q>) Individuals gradually move from one compartment to the next. When they return to where they started, they begin another cycle.
+</p>
+	
+<p>
+	Each compartment (in the diagram you drew in exercise 23) has an  <em>inflow</em> and an <em>outflow</em>. It is conceivable that the two exactly balance, so that the <em>size</em> of the compartment doesn’t change (even though its individual occupants do). When this happens for all three compartments simultaneously, the illness is said to be in a <term>steady state</term>. In this question you explore the steady state of the model we are considering. Recall that the total population is 50,000.
+</p>
+          </introduction><task>
+            <p>
+		What must be true if the inflow and outflow to the <m>I</m> compartment are to balance?
+	</p>
+          </task><task>
+            <p>
+		What must be true if the inflow and outflow to the <m>R</m> compartment are to balance?
+	</p>
+          </task><task>
+            <p>
+		If neither <m>I</m> nor <m>R</m> is changing, then the model must be at the steady state. Why?
+	</p>
+          </task><task>
+            <p>
+		What is the value of <m>S</m> at the steady state?
+	</p>
+          </task><task>
+            <p>
+		What is the value of <m>R</m> at the steady state? A suggestion: you know <m>R + I = 50000 - \mbox{(the steady state value of $S$)}</m>. You also have a connection between <m>I</m> and <m>R</m> at the steady state.
+	</p>
+          </task>
+        </exercise>
+      </exercisegroup>
+    </exercises>
+  </section>
+
+		<section xml:id="ch1-sec-the-mathematical-ideas">
+    <title>The Mathematical Ideas</title>
+    <introduction>
+      <p>
+				A number of important mathematical ideas have already emerged in our study of an epidemic. In this section we pause to consider them, because they have a <q>universal</q> character. Our aim is to get a fuller understanding of what we have done so we can use the ideas in other contexts.
+			</p>
+
+			
+<aside>
+        <p>We often draw out of a few particular experiences a lesson that can be put to good use in new settings. This process is the essence of mathematics, and it has been given a name—abstraction—which means literally <q>drawing from.</q> Of course abstraction is not unique to mathematics; it is a basic part of the human psyche.</p>
+      </aside>
+    </introduction><subsection xml:id="ch1-subsec-functions">
+      <title>Functions</title>
+	<introduction>
+      <p>
+A <term>function</term> describes how one quantity depends on another. In our study of a measles epidemic, 
+<aside>
+          <p>Functions and their notation</p>
+        </aside>
+ the relation between the number of susceptibles <m>S</m> and the time <m>t</m> is a function. We write <m>S(t)</m> to denote that <m>S</m> is a function of <m>t</m>. We can also write <m>I(t)</m> and <m>R(t)</m> because <m>I</m> and <m>R</m> are functions of <m>t</m>, too. We can even write <m>S'(t)</m> to indicate that the rate <m>S'</m> at which <m>S</m> changes over time is a function of <m>t</m>. In speaking, we express <m>S(t)</m> as <q>
+          <m>S</m> of <m>t</m>
+        </q> and <m>S'(t)</m> as <q>
+          <m>S</m> prime of <m>t</m>.</q>
+      </p>
+
+				<p>
+You can find functions everywhere. The amount of postage you pay for a letter is a function of the weight of the letter. The time of sunrise is a function of what day of the year it is. The crop yield from an acre of land is a function of the amount of fertilizer used. The position of a car’s gasoline gauge (measured in centimeters from the left edge of the gauge) is a function of the amount of gasoline in the fuel tank. On a polygraph (<q>lie detector</q>) there is a pen that records breathing; its position is a function of the amount of expansion of the lungs. The volume of a cubical box is a function of the length of a side. The last is a rather special kind of function because it can be described by an algebraic formula: if <m>V</m> is the volume of the box and <m>s</m> is the length of a side, then <m>V(s) = s^3</m>.
+				</p>
+
+				<p>
+Most functions are <em>not</em> described by algebraic formulas, however. For instance, the postage function is given by a set of verbal instructions and the time of sunrise is given by a table in an almanac. The relation between a gas gauge and the amount of fuel in the tank is determined simply by making measurements. There is no algebraic formula that tells us how the number of susceptibles, <m>S</m>, depends upon <m>t</m>, either. Instead, we find <m>S(t)</m> by carrying out the steps in the flow chart in <xref ref="fig-SIR-modeling-cycle_tikz" /> until we reach <m>t</m> days into the future.
+				</p>
+
+				<p>
+In the function <m>S(t)</m> the variable <m>t</m> is called the  <term>input</term>
+        <aside>
+          <p>A function has input and output</p>
+        </aside>
+ and the variable <m>S</m> is called the <term>output</term>. In the sunrise function, the day of the year is the input and the time of sunrise is the output. In the function <m>S(t)</m> we think of <m>S</m> as  <em>depending on</em>
+        <m>t</m>, so <m>t</m> is also called the independent variable and <m>S</m> the dependent variable. The set of values that the input takes is called the <term>domain</term> of the function. The set of values that the output takes is called the  <term>range</term>.
+				</p>
+
+				<p>
+The idea of a function is one of the central notions of mathematics. It is worth highlighting:
+				</p>
+<definition>      <p>
+        A <term>function</term> is a rule that specifies how the value of one variable, the input, determines the value of a second variable, the output.
+      </p>
+</definition>
+      <p>
+Notice that we say <em>rule</em> here, and not <em>formula</em>. This is deliberate. We want the study of functions to be as broad as possible, to include all the ways one quantity is likely to be related to another in a scientific question.
+				</p>
+</introduction>
+
+				<subsubsection xml:id="ch1-some-technical-details">
+        <title>Some technical details.</title>
+        <p>
+	It is important not to confuse an expression like <m>S(t)</m> with a product; <m>S(t)</m> does <em>not</em> mean <m>S
+\times t</m>. On the contrary, the expression <m>S(1.4)</m>, for example, stands for the output of the function <m>S</m> when 1.4 is the input. In the epidemic model we then interpret it as the number of susceptibles that remain 1.4 days after today.
+</p>
+
+<p>
+	We have followed the standard practice in science by letting the single letter <m>S</m> designate both the <em>function</em>—that is, the <em>rule</em>—and the <em>output</em> of that function. Sometimes, though, we will want to make the distinction. In that case we will use two different symbols. For instance, we might write <m>S = f(t)</m>. Then we are still using <m>S</m> to denote the output, but the new symbol <m>f</m> stands for the function rule.
+</p>
+
+<p>
+	The symbols we use to denote the input and the output of a function are just names; if we change them, we don’t change the function. For example, here are three ways to describe the same function <m>g</m>: 
+
+	
+	<md alignat-columns="2">
+            <mrow>g \amp: \mbox{multiply the input by 5, then subtract 3}</mrow>
+            <mrow>g(x) \amp= 5x - 3</mrow>
+            <mrow>g(u) \amp= 5u - 3 \, .</mrow>
+          </md> 
+          
+It is important to realize that the <em>formulas</em> we just wrote in the last two lines are merely shorthand for the instructions stated in the first line. If you keep this in mind, then absurd-looking combinations like <m>g(g(2))</m> can be decoded easily by remembering <m>g</m> of <em>anything</em> is just 5 times that thing, minus 3. We could thus evaluate <m>g(g(2))</m> from the inside out (which is usually easier) as <md>g(g(2))=g(5\cdot 2-3)=g(7)=5\cdot 7 -3=32,</md> or we could evaluate it from the outside in as <md>g(g(2))=5g(2)-3=5(5\cdot 2 -3)-3=5\cdot 7-3=32,</md> as before.
+</p>
+
+<p>
+	Suppose <m>f</m> is some other rule, say <m>f(t)=t^2+4t-1</m>. Remember that this is just shorthand for <q>Take the input (whatever it is), square it, add four times the input, and subtract 1.</q> We could then evaluate <md>f(g(3))=f(5\cdot 3 -3)=f(12)= 12^2+4\cdot 12 - 1 = 144+48-1=191,</md> while <md>g(f(3))=g(20)=97.</md>
+        </p>
+
+<p>
+	This process of <term>chaining</term> functions together by using the output of one function as the input for another turns out to be very 
+<aside>
+            <p>Part of math is simply learning the language</p>
+          </aside>
+ important later in this course, and will be taken up again in <xref ref="ch3-chap-the-derivative" />. For now, though, you should treat it simply as part of the formal language of mathematics, requiring a knowledge of the rules but no cleverness. It is analogous to learning how to conjugate verbs in French class—it’s not very exciting for its own sake, but it allows us to read the interesting stuff later on!
+</p>
+
+<p>
+	A particularly important class of functions is composed of the  <term>constant functions</term> which give the same output for every input. If <m>h</m> is the constant function that always gives back 17, then in formula form we would express this as <m>h(x) = 17</m>. Constant functions are so simple you might feel you are missing the point, but that’s all there is to it!
+</p>
+      </subsubsection>
+    </subsection>
+
+			<subsection xml:id="ch1-subsec-graphs">
+      <title>Graphs</title>
+      <p>
+A graph describes a function in a visual form. Sometimes—as with a seismograph or a lie detector, 
+<aside>
+          <p>A graph is a function rule given visually</p>
+        </aside>
+ for instance—this is the <em>only</em> description we have of a particular function. The usual arrangement is to put the input variable on the horizontal axis and the output on the vertical—but it is a good idea when you are looking at a particular graph to take a moment to check; sometimes, the opposite convention is used! This is often the case in geology and economics, for instance.
+				</p>
+
+<figure xml:id="ch1-pic013">
+        <image source="images/ch1_pic013" />
+        <caption />
+      </figure>
+      <p>
+Sketched above is the graph of a function <m>S(t)</m> that tells how many susceptibles there are after <m>t</m> days. Given any <m>t_0</m>, we <q>read</q> the graph to find <m>S(t_0)</m>, as follows: from the point <m>t_0</m> on the <m>t</m>-axis, go vertically until you reach the graph; then go horizontally until you reach the <m>S</m>-axis. The value <m>S_0</m> at that point is the output <m>S(t_0)</m>. Here <m>t_0</m> is about 13 and <m>S_0</m> is about 27,000; thus, the graph says that <m>S(13) \approx 27000</m>, or about 27,000 susceptibles are left after 13 days.
+				</p>
+    </subsection>
+
+			<subsection xml:id="ch1-subsec-linear-functions">
+      <title>Linear Functions</title>
+<subsubsection xml:id="ch1-changes-in-input-and-output">
+        <title>Changes in input and output</title>
+      <p>
+<aside>
+          <p>If <m>y</m> depends on <m>x</m>, then <m>\Delta y</m> depends on <m>\Delta x</m>
+          </p>
+        </aside>
+ Suppose <m>y</m> is a function of <m>x</m>. Then there is some rule that answers the question: What is the value of <m>y</m> for any given <m>x</m>? Often, however, we start by knowing the value of <m>y</m> for a particular <m>x</m>, and the question we really want to ask is: How does <m>y</m> respond to <em>changes</em> in <m>x</m>? We are still dealing with the same function—just looking at it from a different point of view. This point of view is important; we use it to analyze functions (like <m>S(t)</m>, <m>I(t)</m>, and <m>R(t)</m>) that are defined by rate equations.
+				</p>
+
+				<p>
+The way <m>\Delta y</m> depends on <m>\Delta x</m> can be simple or it can be complex, depending on the function involved. The simplest possibility is that <m>\Delta y</m> and <m>\Delta x</m> are  <em>proportional</em>: <md>\Delta y = m\cdot\Delta x, \quad 
+        \mbox{for some constant $m$.}</md> Thus, if <m>\Delta x</m> is doubled, so is <m>\Delta y</m>; if <m>\Delta x</m> is tripled, so is <m>\Delta y</m>. 
+<aside>
+          <p>The defining property of a linear function</p>
+        </aside>
+ A function whose input and output are related in this simple way is called a <term>linear function</term>, because the graph is a straight line. Let’s take a moment to see why this is so.
+				</p>
+
+</subsubsection>
+
+
+<subsubsection xml:id="ch1-the-graph-of-a-linear-function">
+        <title>The graph of a linear function</title> 
+        
+        <p>The graph consists of certain points <m>(x, y)</m> in the <m>x, y</m>-plane. Our job is to see how those points are arranged. Fix one of them, and call it <m>(x_0, y_0)</m>. Let <m>(x, y)</m> be any other point on the graph. Draw the line that connects this point to <m>(x_0, y_0)</m>, as we have done in the figure at the right. Now set
+				</p>
+
+				<p>
+        <md>\Delta x = x - x_0, \qquad \Delta y = y - y_0.</md>
+      </p>
+
+<figure xml:id="ch1-pic014" >
+        <image source="images/ch1_pic014" width="65%"/>
+        <caption />
+      </figure>
+      <p>
+By definition of a linear function, <m>\Delta y=m\cdot\Delta x</m>, as the figure shows, so the slope of this line is <m>\Delta y/\Delta x = m</m>. Recall that <m>m</m> is a constant; thus, if we pick a new point <m>(x, y)</m>, the slope of the connecting line won’t change.
+				</p>
+
+				<p>
+Since <m>(x, y)</m> is an arbitrary point on the graph, what we have shown is that <observation><p>every point on the graph lies on a line of slope <m>m</m> through the point <m>(x_0, y_0)</m></p></observation>
+But there is only one such line—and all the points lie on it! That line must be the graph of the linear function.
+				</p>
+
+
+<definition>
+<title>Linear function</title>
+  <p>
+    A <term>linear function</term> is one that satisfies
+    <m>\Delta y = m\cdot\Delta x</m>.
+  </p>
+</definition>
+
+<observation>
+  <p>
+    Its graph is a straight line whose slope is <m>m</m>.
+  </p>
+</observation>
+
+</subsubsection>
+
+<subsubsection xml:id="ch1-rates-slopes-and-multipliers">
+        <title>Rates, slopes, and multipliers</title> <p> The interpretation of <m>m</m> as a slope is just one possibility; there are two other interpretations that are equally important. To illustrate them we’ll use Mark Twain’s vivid description of the shortening of the Lower Mississippi River (see <xref ref="ch1-subsubsec-mark-twains-mississippi" />). This will also give us the chance to see how a linear function emerges in context.
+				</p>
+
+				<p>
+Twain says <q>the Lower Mississippi has shortened itself … an average of a trifle over a mile and a third per year.</q> Suppose we let <m>L</m> denote the length of the river, in miles, and <m>t</m> the time, in years. Then <m>L</m> depends on <m>t</m>, and Twain’s statement implies that <m>L</m> is a <em>linear</em> function of <m>t</m>—in the sense in which we have just defined a linear function. Here is why. According to our definition, there must be some number <m>m</m> which makes <m>\Delta L =
+m\cdot\Delta t</m>. But notice that Twain’s statement has exactly this form if we translate it into mathematical language. Convince yourself that it 
+<aside>
+          <p>Stop and do the translation</p>
+        </aside>
+ says <md>\Delta L \ \mbox{miles} = -1 \tfrac{1}{3} \ 
+            \dfrac{\text{miles}}{\text{year}}
+        \times \Delta t \ \mbox{years}.</md> Thus we should take <m>m</m> to be <m>-1\tfrac{1}{3}</m> miles per year.
+				</p>
+
+				<p>
+The role of <m>m</m> here is to convert one quantity (<m>\Delta t</m> years) into another (<m>\Delta L</m> miles) by multiplication. All linear functions work this way. In the defining equation <m>\Delta y =
+m\cdot\Delta x</m>, multiplication by <m>m</m> converts <m>\Delta x</m> into <m>\Delta y</m>. Any change in <m>x</m> produces a change in <m>y</m> that is <m>m</m> times as large. For this reason we give <m>m</m> its second interpretation as a <term>multiplier</term>.
+				</p>
+
+				
+<aside>
+        <p>It is easier to understand why the usual symbol for  <em>slope</em> is <m>m</m>—instead of <m>s</m>—when you see that a slope can be interpreted as a multiplier.</p>
+      </aside>
+
+
+				<p>
+It is important to note that, in our example, <m>m</m> is not simply <m>-1\tfrac{1}{3}</m>; it is <m>-1\tfrac{1}{3}</m>
+        <em>miles per year</em>. In other words, <m>m</m> is the <term>rate</term> at which the river is getting shorter. All linear functions work this way, too. We can rewrite the equation <m>\Delta y = m\cdot\Delta x</m> as a ratio <md>m = \dfrac{\Delta y}{\Delta x} = 
+        \mbox{the rate of change of $y$ with respect 
+            to $x$}.</md> For these reasons we give <m>m</m> its third interpretation as a <term>rate of change</term>.
+				</p>
+
+<observation>
+  <p>
+    For a linear function satisfying <m>\Delta y = m\cdot\Delta x</m>,
+    the coefficient <m>m</m> is the rate of change (slope) and serves
+    as a multiplier.
+  </p>
+</observation>
+      <p>
+We already use <m>y'</m> to denote the rate of change of <m>y</m>, so we can now write <m>m = y'</m> when <m>y</m> is a linear function of <m>x</m>. In that case we can also write <md>\Delta y = y' \cdot \Delta x.</md> This expression should recall a pattern very familiar to you. (If not, change <m>y</m> to <m>S</m> and <m>x</m> to <m>t</m>!) It is the fundamental formula we have been using to calculate future values of <m>S</m>, <m>I</m>, and <m>R</m>. We can approach the relation between <m>y</m> and <m>x</m> the same way. That is, if <m>y_0</m> is an <q>initial value</q> of <m>y</m>, when <m>x = x_0</m>, then  <em>any</em> value of <m>y</m> can be calculated from <md>y = y_0 + y' \cdot \Delta x \quad \mbox{or} \quad
+        y = y_0 + m \cdot \Delta x.</md>
+      </p>
+</subsubsection>
+
+<subsubsection xml:id="ch1-units">
+        <title>Units</title> <p> Suppose <m>x</m> and <m>y</m> are quantities that are 
+<aside>
+          <p>If <m>x</m> and <m>y</m> have units, so does <m>m</m>
+          </p>
+        </aside>
+ measured in specific units. If <m>y</m> is a linear function of <m>x</m>, with <m>\Delta y = m\cdot\Delta x</m>, then <m>m</m> must have units too. Since <m>m</m> is the multiplier that <q>converts</q>
+        <m>x</m> into <m>y</m>, the units for <m>m</m> must be chosen so they will convert <m>x</m>’s units into <m>y</m>’s units. In other words, <md>\mbox{units for $y$} = \mbox{units for $m$} \times 
+        \mbox{units for $x$}.</md> This implies <md>\mbox{units for $m$} 
+    = \dfrac{\mbox{units for $y$}}{\mbox{units for $x$}}.</md>
+      </p>
+
+				<p>
+For example, the multiplier in the Mississippi River problem converts years to miles, so it must have units of miles per year. The rate equation <m>R' = bI</m> in the <m>S</m>-<m>I</m>-<m>R</m> model is a more subtle example. It says that <m>R'</m> is a linear function of <m>I</m>. Since <m>R'</m> is measured in persons per day and <m>I</m> is measured in persons, we must have <md>\mbox{units for $b$} 
+   = \dfrac{\text{units for $R'$}}{\text{units for $I$}}
+   = \dfrac{
+         \dfrac{\text{persons}}{\text{days}}} {\text{persons}}</md>
+      </p>
+
+</subsubsection>
+<subsubsection xml:id="ch1-formulas-for-linear-functions">
+        <title>Formulas for linear functions</title> <p> The expression <m>\Delta y = m\cdot\Delta x</m> declares that <m>y</m> is a linear function of <m>x</m>, but it doesn’t quite tell us what <m>y</m> itself <em>looks like</em> directly in terms of <m>x</m>. In fact, there are several equivalent ways to write the relation <m>y = f(x)</m> in a formula, depending on what information we are given about the function.
+				</p>
+
+<ul>
+<li>
+
+      <p>  <term>The initial-value form</term>
+      </p>
+
+				<p>
+Here is a very common situation: we know the value of <m>y</m> at an <q>initial</q> point—let’s say <m>y_0 = f(x_0)</m>—and we know the rate of change—let’s say it is <m>m</m>. Then the graph is the straight line of slope <m>m</m> that passes through the point <m>(x_0, y_0)</m>. The formula for <m>f</m> is
+				</p>
+
+<figure xml:id="ch1-pic015">
+        <image source="images/ch1_pic015" width="65%"/>
+        <caption />
+      </figure>
+      <p>
+        <md>y = y_0 + \Delta y = y_0 + m\cdot\Delta x = 
+        y_0 + m(x - x_0) = f(x).</md>
+      </p>
+
+				<p>
+What you should note particularly about this formula is that it expresses <m>y</m> in terms of the initial data <m>x_0</m>, <m>y_0</m>, and <m>m</m>—as well as <m>x</m>. Since that data consists of a point <m>(x_0, y_0)</m> and a slope <m>m</m>, the initial-value formula is also referred to as the  <term>point-slope form</term> of the equation of a line. It may be more familiar to you with that name.
+				</p>
+
+<figure xml:id="ch1-pic016">
+        <image source="images/ch1_pic016" width="65%"/>
+        <caption />
+      </figure>
+      </li>
+<li>      <p>
+        <term>The interpolation form</term>
+      </p>
+
+				<p>
+This time we are given the value of <m>y</m> at <em>two</em> points—let’s say <m>y_1 = f(x_1)</m> and <m>y_2 = f(x_2)</m>. The graph is the line that passes through <m>(x_1, y_1)</m> and <m>(x_2, y_2)</m>, and its slope is therefore <md>m = \dfrac{y_2 - y_1}{x_2 - x_1}.</md>
+      </p>
+
+				<p>
+Now that we know the slope of the graph we can use the point-slope form (taking <m>(x_1, y_1)</m> as the <q>point</q>, for example) to get the equation. We have <md>y = y_1 + m(x - x_1) = y_1 + 
+        \dfrac{y_2 - y_1}{x_2 - x_1}(x - x_1) = f(x).</md> Notice how, once again, <m>y</m> is expressed in terms of the initial data—which consists of the two points <m>(x_1, y_1)</m> and <m>(x_2, y_2)</m>.
+				</p>
+
+				<p>
+The process of finding values of a quantity between two given values is called <term>interpolation</term>. Since our new expression does precisely that, it is called the interpolation formula. (Of course, it also finds values outside the given interval.) Since the initial data is a pair of points, the interpolation formula is also called the <term>two-point formula</term> for the equation of a line.
+				</p>
+
+<figure xml:id="ch1-pic017">
+        <image source="images/ch1_pic017" width="65%"/>
+        <caption />
+      </figure>
+</li>
+<li>      <p>
+        <term>The slope-intercept form</term>
+      </p>
+
+				<p>
+This is a special case of the initial-value form that occurs when the initial <m>x_0 = 0</m>. Then the point <m>(x_0, y_0)</m> lies on the <m>y</m>-axis, and it is frequently written in the alternate form <m>(0, b)</m>. The number <m>b</m> is called the  <term>
+          <m>y</m>-intercept</term>. The equation is
+				</p>
+
+				<p>
+        <md>y = mx + b = f(x).</md>
+      </p>
+
+				<p>
+In the past you may have thought of this as <em>the</em> formula for a linear function, but for us it is only one of several. You will find that we will use the other forms more often.
+				</p>
+				</li>
+				</ul>
+				</subsubsection>
+				
+    </subsection>
+
+			<subsection xml:id="ch1-subsec-functions-of-several-variables">
+      <title>Functions of Several Variables</title>
+      <subsubsection xml:id="ch1-language-and-notation">
+        <title>Language and notation.</title>
+        <p>
+	Many functions depend on more than one variable. For example, sunrise depends on the day of the year but it also depends on the latitude 
+<aside>
+            <p>A function can have several input variables</p>
+          </aside>
+ (position north or south of the equator) of the observer. Likewise, the crop yield from an acre of land depends on the amount of fertilizer used, but it also depends on the amount of rainfall, on the composition of the soil, on the amount of weeding done—to mention just a few of the other variables that a farmer has to contend with.
+</p>
+        <p>
+	The rate equations in the <m>S</m>-<m>I</m>-<m>R</m> model also provide examples of functions with more than one input variable. The equation <md>I' = .00001\,SI - \dfrac{I}{14}</md> says that we need to specify both <m>S</m> and <m>I</m> to find <m>I'</m>. We can say that <md>F(S, I) = .00001\,SI - \dfrac{I}{14}</md> is a function whose input is the <term>ordered pair</term> of variables <m>(S, I)</m>. In this case <m>F</m> is given by an algebraic formula. While many other functions of several variables also have formulas—and they are extremely useful—not all functions do. The sunrise function, for example, is given by a two-way table (see <xref ref="ch3-two-way-table" />) that shows the time of sunrise for different days of the year and different latitudes.
+</p>
+
+<p>
+	As a technical matter it is important to note that the input variables <m>S</m> and <m>I</m> of the function <m>F(S, I)</m> above appear in a particular <em>order</em>, and that order is part of the definition of the function. For example, <m>F(1, 0) = 0</m>, but <m>F(0, 1) = -1/14</m>. (Do you see why? Work out the calculations yourself.)
+</p>
+
+</subsubsection>
+      <subsubsection xml:id="ch1-parameters">
+        <title>Parameters</title> <p>Suppose we rewrite the rate equation for <m>I'</m>, replacing .00001 and 1/14 with the general values <m>a</m> and <m>b</m>: <md>I' = aSI - bI.</md> This makes it clear that <m>I'</m> depends on <m>a</m> and <m>b</m>, too. But note that <m>a</m> and <m>b</m> are not variables in quite the same way that <m>S</m> and <m>I</m> are. For example, <m>a</m> and <m>b</m> will vary if we switch from one disease to another or from one population to another. However, they will stay fixed while we consider a particular disease in a particular population. By contrast, <m>S</m> and <m>I</m> will <em>always</em> be treated as variables. We call a quantity like <m>a</m> or <m>b</m> a <term>parameter</term>.
+</p>
+
+<p>
+	To emphasize that <m>I'</m> depends on the parameters as well as <m>S</m> and <m>I</m>, we can write <m>I'</m> as the output of a new function <md>I'= I'(S, I, a, b) = aSI - bI</md> whose input is the set of <em>four</em> variables 
+<aside>
+            <p>Some functions depend on parameters</p>
+          </aside>
+ <m>(S, I, a, b)</m>, in that order. The variables <m>S</m>, <m>I</m>, and <m>R</m> must also depend on the parameters, too, and not just on <m>t</m>. Thus, we should write <m>S(t, a, b)</m>, for example, instead of simply <m>S(t)</m>. We implicitly used the fact that <m>S</m>, <m>I</m>, and <m>R</m> depend on <m>a</m> and <m>b</m> when we discovered there was a threshold for an epidemic (<xref ref="ch1-analysis-without-a-computer" />). In exercise 22 of section 1 (<xref ref="ch1-subsubsec-other-diseases" />), you made the relation explicit. In that problem you show <m>I</m> will simply decrease over time (i.e., there will be no <q>burst</q> of infection) if <md>S &lt; \dfrac{b}{a}.</md>
+        </p>
+
+<p>
+	There are even more parameters lurking in the <m>S</m>-<m>I</m>-<m>R</m> problem. To uncover them, recall that we needed <em>two</em> pieces of information to estimate <m>S</m>, <m>I</m>, and <m>R</m> over time:
+</p>
+
+<ol>
+<li><p>
+the rate equations;
+</p></li>
+<li>        <p>
+the initial values <m>S_0</m>, <m>I_0</m>, and <m>R_0</m>.
+</p></li>
+</ol>
+
+<p>
+	We used <m>S_0 = 45400</m>, <m>I_0 = 2100</m>, and <m>R_0 = 2500</m> in the text, but if we had started with other values then <m>S</m>, <m>I</m>, and <m>R</m> would have ended up being different functions of <m>t</m>. Thus, we should really write <md>S = S(t, a, b, S_0, I_0, R_0)</md> to tell a more complete story about the inputs that determine the output <m>S</m>. Most of the time, though, we do <em>not</em> want to draw attention to the parameters; we usually write just <m>S(t)</m>.
+</p>
+      </subsubsection>
+
+				<subsubsection xml:id="ch1-further-possibilities">
+        <title>Further possibilities.</title>
+        <p>
+	Steps I, II, and III in <xref ref="fig-SIR-modeling-cycle_tikz" />" are also functions, because they have well-defined input and output. They are unlike the other examples we have discussed up to this point because they have more than one output variable. You should see, though, that there is nothing more difficult going on here.
+</p>
+        <p>
+	In our study of the <m>S</m>-<m>I</m>-<m>R</m> model it was natural not to separate functions that have one input variable from those that have several. This is the pattern we shall follow in the rest of the course. In particular, we will want to deal with parameters, and we will want to understand how the quantities we are studying depend on those parameters.
+</p>
+      </subsubsection>
+    </subsection>
+
+			<subsection xml:id="ch1-subsec-the-beginnings-of-calculus">
+      <title>The Beginnings of Calculus</title>
+      <p>
+While functions, graphs, and computers are part of the general fabric of mathematics, we can also abstract from the <m>S</m>-<m>I</m>-<m>R</m> model some important aspects of the calculus itself. The first of these is the idea of a <term>rate of change</term>. In this chapter we just assumed the idea was intuitively clear. However, there are some important questions not yet answered; for example, how do you deal with a quantity whose rate of change is itself always changing? These questions, which lead to the fundamental idea of a  <term>derivative</term>, are taken up in <xref ref="ch3-chap-the-derivative" />.
+				</p>
+
+				<p>
+Rate equations—more commonly called  <term>differential equations</term>—lie at the very heart of calculus. We will have much more to say about them, because many processes in the physical, biological, and social realms can be modelled by rate equations. In our analysis of the <m>S</m>-<m>I</m>-<m>R</m> model, we used rate equations to estimate future values by assuming that rates stay fixed 
+<aside>
+          <p>How the next several chapters are connected</p>
+        </aside>
+ for a whole day at a time. The discussion called <q>there and back again</q> (<xref ref="ch1-there-and-back-again" />)  points up the shortcomings of this assumption. In <xref ref="ch2-chap-successive-approximations" /> we will develop a procedure, called Euler’s method, to address this problem. In <xref ref="ch4-chap-differential-equations" /> we will return to differential equations in a general way, equipped with Euler’s method and the concept of the derivative.
+				</p>
+    </subsection>
+
+			<exercises xml:id="ch1-subsec-exercises-1-2">
+      <title>Exercises</title>
+      <exercisegroup xml:id="ch1-subsubsec-functions-and-graphs">
+        <title>Functions and Graphs</title>
+        <exercise>
+          <introduction>
+            <p>
+	Sketch the graph of each of the following functions. Label each axis, and mark a scale of units on it. For each line that you draw, indicate
+</p>
+            <p>
+	i) its slope;
+</p>
+            <p>
+	ii) its <m>y</m>-intercept;
+</p>
+	
+<p>
+	iii) its <m>x</m>-intercept (where it crosses the <m>x</m>-axis).
+</p>
+          </introduction><task>
+            <p>
+              <m>y =  -\tfrac{1}{2} x + 3</m> c) <m>5x + 3y = 12</m>
+            </p>
+          </task><task>
+            <p>
+              <m>y = (2 x - 7)/3</m>
+            </p>
+          </task>
+        </exercise><exercise>
+          <introduction>
+            <p>
+	Graph the following functions. Put labels and scales on the axes.
+</p>
+          </introduction><task>
+            <p>
+              <m>V = .3Z -1</m>; b) <m>W = 600 - P^2</m>.
+	</p>
+          </task>
+        </exercise><exercise>
+          <statement>
+            <p>
+	Sketch the graph of each of the following functions. Put labels and scales on the axes. For each graph that you draw, indicate
+</p>
+            <p>
+	i) its <m>y</m>-intercept;
+</p>
+	
+<p>
+	ii) its <m>x</m>-intercept(s).
+</p>
+	
+<p>
+	For part (d) you will need the <term>quadratic formula</term>
+              <md>x = \frac{- b \pm \sqrt{b^2 - 4ac}}{2a}</md> for the roots of the <term>quadratic equation</term>
+              <m>ax^2 + bx + c = 0.</m>
+            </p>
+	
+<p>
+	a) <m>y = x^2</m>
+            </p>
+	
+<p>
+	b) <m>y = x^2 + 1</m>
+            </p>
+	
+<p>
+	c) <m>y = (x+1)^2</m>
+            </p>
+	
+<p>
+	d) <m>y = 3x^2 +x -1</m>
+            </p>
+	
+<p>
+	The next four questions refer to these functions: <md alignat-columns="3">
+                <mrow>c(x, y) \amp=  17 \amp \amp\mbox{a constant function}</mrow>
+                <mrow>j(z) \amp= z  \amp  \amp\mbox{the identity function}</mrow>
+                <mrow>r(u) \amp= 1/u \amp \amp \mbox{the reciprocal function}</mrow>
+                <mrow>D(p,q) \amp= p - q \amp \amp\mbox{the difference function}</mrow>
+                <mrow>s(y) \amp= y^2 \amp \amp\mbox{the squaring function}</mrow>
+                <mrow>Q(v) \amp= \dfrac{2v+1}{3v-6} \amp \amp\mbox{a rational function}</mrow>
+                <mrow>H(x) \amp= \begin{cases}
+	    5 \amp \text{if $x &lt; 0$}</mrow>
+                <mrow>x^2 + 2 \amp \text{if $0 \leq x &lt; 6$}</mrow>
+                <mrow>29 - x \amp \text{if $6 \leq x$}
+	       \end{cases}  \amp \amp</mrow>
+                <mrow>T(x, y) \amp= r(x) + Q(y) \amp \amp</mrow>
+              </md>
+            </p>
+          </statement>
+        </exercise><exercise>
+          <statement>
+            <p>
+	Determine the following values:
+</p>
+            <!-- div attr= class="center"-->
+            <table>
+              <title />
+              <tabular>
+                <row class="odd">
+                  <cell halign="center">
+                    <m>c(5,-3)</m>
+                  </cell>
+		<cell halign="center">
+                    <m>j(17)</m>
+                  </cell>
+		<cell halign="center">
+                    <m>c(a,b)</m>
+                  </cell>
+		<cell halign="center">
+                    <m>j(u^2+1)</m>
+                  </cell>
+                </row>
+	<row class="even">
+                  <cell halign="center">
+                    <m>j(c(3,-5))</m>
+                  </cell>
+		<cell halign="center">
+                    <m>s(1.1)</m>
+                  </cell>
+		<cell halign="center">
+                    <m>r(1/17)</m>
+                  </cell>
+		<cell halign="center">
+                    <m>Q(0)</m>
+                  </cell>
+                </row>
+	<row class="odd">
+                  <cell halign="center">
+                    <m>Q(2)</m>
+                  </cell>
+		<cell halign="center">
+                    <m>Q(3/7)</m>
+                  </cell>
+		<cell halign="center">
+                    <m>D(5,-3)</m>
+                  </cell>
+		<cell halign="center">
+                    <m>D(-3,5)</m>
+                  </cell>
+                </row>
+	<row class="even">
+                  <cell halign="center">
+                    <m>H(1)</m>
+                  </cell>
+		<cell halign="center">
+                    <m>H(7)</m>
+                  </cell>
+		<cell halign="center">
+                    <m>H(4)</m>
+                  </cell>
+		<cell halign="center">
+                    <m>H(H(H(-3)))</m>
+                  </cell>
+                </row>
+	<row class="odd">
+                  <cell halign="center">
+                    <m>r(s(-4))</m>
+                  </cell>
+		<cell halign="center">
+                    <m>r(Q(3))</m>
+                  </cell>
+		<cell halign="center">
+                    <m>Q(r(3))</m>
+                  </cell>
+		<cell halign="center">
+                    <m>T(3, 7)</m>
+                  </cell>
+                </row>
+              </tabular>
+            </table><!--</div attr= class="center">-->
+          </statement>
+        </exercise><exercise>
+          <introduction>
+            <p>
+	True or false. Give reasons for your answers: if you say true, explain why; if you say false, give an example that shows why it is false.
+</p>
+          </introduction><task>
+            <p>
+		For every non-zero number <m>x</m>, <m>r(r(x)) = j(x)</m>.
+	</p>
+          </task><task>
+            <p>
+		If <m>a &gt; 1</m>, then <m>s(a) &gt; 1</m>.
+	</p>
+          </task><task>
+            <p>
+		If <m>a &gt; b</m>, then <m>s(a) &gt; s(b)</m>.
+	</p>
+          </task><task>
+            <p>
+		For all real numbers <m>a</m> and <m>b</m>, <m>s(a+b) = s(a) + s(b)</m>.
+	</p>
+          </task><task>
+            <p>
+		For all real numbers <m>a</m>, <m>b</m>, and <m>c</m>, <m>D(D(a,b),c)) = D(a,D(b,c))</m>.
+	</p>
+          </task>
+        </exercise><exercise>
+          <statement>
+            <p>
+	Find all numbers <m>x</m> for which <m>Q(x) = r(Q(x))</m>.
+</p>
+          </statement>
+        </exercise><exercise>
+          <introduction>
+            <p>
+	The <term>natural domain</term> of a function <m>f</m> is the largest possible set of real numbers <m>x</m> for which <m>f(x)</m> is defined. For example, the natural domain of <m>r(x) =
+	1/x</m> is the set of all non-zero real numbers.
+</p>
+          </introduction><task>
+            <p>
+		Find the natural domains of <m>Q</m> and <m>H</m>.
+	</p>
+          </task><task>
+            <p>
+		Find the natural domains of <m>P(z) = Q(r(z))</m>; <m>R(v) = r(Q(v))</m>.
+	</p>
+          </task><task>
+            <p>
+		What is the natural domain of the function <m>W(t) =
+	\sqrt{\dfrac{1 - t^2}{t^2 - 4}}</m>?
+	</p>
+          </task>
+        </exercise>
+      </exercisegroup><exercisegroup xml:id="ch1-subsubsec-computer-graphing">
+        <title>Computer Graphing</title>
+        <introduction>
+          <p>
+	The purpose of these exercises is to give you some experience using a <q>graphing package</q> on a computer. This is a program that will draw the graph of a function <m>y = f(x)</m> whose formula you know. You must type in the formula, using the following symbols to represent the basic arithmetic operations:
+</p>
+
+<!-- div attr= class="center"-->
+          <table>
+            <title />
+            <tabular>
+              <row header="yes">
+                <cell halign="center">to indicate</cell>
+                <cell halign="center" />
+                <cell halign="center">type</cell>
+              </row>
+	<row class="odd">
+                <cell halign="center">addition</cell>
+                <cell halign="center" />
+                <cell halign="center">
+                  <c>+</c>
+                </cell>
+              </row>
+	<row class="even">
+                <cell halign="center">subtraction</cell>
+                <cell halign="center" />
+                <cell halign="center">
+                  <c>-</c>
+                </cell>
+              </row>
+	<row class="odd">
+                <cell halign="center">multiplication</cell>
+                <cell halign="center" />
+                <cell halign="center" />
+              </row>
+	<row class="even">
+                <cell halign="center">division</cell>
+                <cell halign="center" />
+                <cell halign="center">
+                  <c>/</c>
+                </cell>
+              </row>
+	<row class="odd">
+                <cell halign="center">an exponent</cell>
+                <cell halign="center" />
+                <cell halign="center">
+                  <c>^</c>
+                </cell>
+              </row>
+            </tabular>
+          </table><!--</div attr= class="center">-->
+          <p>
+	The caret <q>
+              <c>^</c>
+            </q> appears above the <q>
+              <c>6</c>
+            </q> on a keyboard (Shift-6).
+</p>
+
+<p>
+	Here is an example:
+</p>
+          <!-- div attr= class="center"-->
+          <table>
+            <title />
+            <tabular>
+              <row class="odd">
+                <cell halign="center">to enter:</cell>
+                <cell halign="center">
+                  <!-- Horizontal Rule Not Implimented -->
+                </cell>
+		<cell halign="center">type:</cell>
+              </row>
+	<row class="even">
+                <cell halign="center">
+                  <m>\dfrac{7 x^5 - 9 x^2}{x^3 + 1}</m>
+                </cell>
+		<cell halign="center" />
+                <cell halign="center">
+                  <c>(7*x^5 - 9*x^2)/(x^3 + 1)</c>
+                </cell>
+              </row>
+            </tabular>
+          </table><!--</div attr= class="center">-->
+          <p>
+	The parentheses you see here are important. If you do not include them, the computer will interpret your entry as <md>7 x^5 - \dfrac{9 x^2}{x^3} + 1 = 
+        7 x^5 - \dfrac{9}{x} + 1 \neq 
+        \dfrac{7 x^5 - 9 x^2}{x^3 + 1}.</md> In some graphing packages, you do not need to use to indicate a multiplication. If this is true for the package you use, then you can enter the fractional expression above in the somewhat simpler form
+</p>
+
+<!-- div attr= class="center"-->
+          <p>
+            <c>(7x^5 - 9x^2)/(x^3 + 1).</c>
+          </p><!--</div attr= class="center">-->
+          <p>
+	To do the following exercises, follow the specific instructions for the graphing package you are using.
+</p>
+        </introduction><exercise>
+          <introduction>
+            <p>
+	Graph the function <m>f(x) = .6 x + 2</m> on the interval <m>-4 \leq x \leq 4</m>.
+</p>
+          </introduction><task>
+            <p>
+		What is the <m>y</m>-intercept of this graph? What is the <m>x</m>-intercept?
+	</p>
+          </task><task>
+            <p>
+		Read from the graph the value of <m>f(x)</m> when <m>x = -1</m> and when <m>x
+	= 2</m>. What is the difference between these <m>y</m> values? What is the difference between the <m>x</m> values? According to these differences, what is the slope of the graph? According to the <em>formula</em>, what is the slope?
+	</p>
+          </task>
+        </exercise><exercise xml:id="ch1-x-intercept-exercise">
+          <introduction>
+            <p>
+	Graph the function <m>f(x) = 1 - 2 x^2</m> on the interval <m>-1 \leq x
+	\leq 1</m>.
+</p>
+          </introduction><task>
+            <p>
+		What is the <m>y</m>-intercept of this graph? The graph has two <m>x</m>-intercepts; use algebra to find them.
+	</p>
+	
+	<p>
+		You can also find an <m>x</m>-intercept using the computer. The idea is to
+	</p>
+	
+	<p>
+              <term>magnify</term> the graph near the intercept until you can determine as many decimal places in the <m>x</m> coordinate as you want. For a start, graph the function on the interval <m>0\leq
+	x\leq1</m>. You should be able to see that the graph on your computer monitor crosses the <m>x</m>-axis somewhere around .7. Regraph <m>f(x)</m> on the interval <m>.6 \leq x \leq .8</m>. You should then be able to determine that the <m>x</m>-intercept lies between .70 and .71. This means <m>x =</m> .7…; that is, you know the location of the <m>x</m>-intercept to one decimal place of accuracy.
+	</p>
+          </task><task>
+            <p>
+		Regraph <m>f(x)</m> on the interval <m>.70 \leq x \leq .71</m> to get two decimal places of accuracy in the location of the <m>x</m>-intercept. Continue this process until you have at least 7 places of accuracy. What is the <m>x</m>-intercept?
+	</p>
+          </task>
+        </exercise>
+      </exercisegroup><exercisegroup xml:id="ch1-the-circular-functions">
+        <title>The circular functions</title>
+        <introduction>
+          <p>
+	Graphing packages <q>know</q> the familiar functions of trigonometry. Trigonometric functions are qualitatively different from the functions in the preceding problems. Those functions are defined by algebraic formulas, so they are called  <term>algebraic functions</term>. The trigonometric functions are defined by explicit “recipes," but <em>not</em> by algebraic formulas; they are called
+</p>
+
+<p>
+            <term>transcendental functions</term>. For calculus, we usually use the definition of the trigonometric functions as <term>circular functions</term>. This definition begins with a unit circle centered at the origin. Given the input number <m>t</m>, locate a point <m>P</m> on the circle by tracing an arc of length <m>t</m> along the circle from the point <m>(1,0)</m>. If <m>t</m> is positive, trace the arc counterclockwise; if <m>t</m> is negative, trace it clockwise. Because the circle has radius <m>1</m>, the arc of length <m>t</m> subtends a central angle of <term>radian</term> measure <m>t</m>.
+</p>
+
+<figure xml:id="fig_calc1_trig1">
+            <image source="images/calc1_trig1" width="65%"/>
+            <caption>image</caption>
+          </figure>
+
+<p>
+	The circular (or trigonometric) functions <m>\cos t</m> and <m>\sin t</m> are defined as the coordinates of the point <m>P</m>, <md>P = (\cos{t}, \sin{t}).</md> The other trigonometric functions are defined in terms of the sine and cosine: <md alignat-columns="3">
+              <mrow>tan{t} \amp= \sin{t}/\cos{t}, \amp \qquad \sec{t} \amp= 1/\cos{t},</mrow>
+              <mrow>\cot{t} \amp= \cos{t}/\sin{t}, \amp        \csc{t} \amp= 1/\sin{t}.</mrow>
+            </md>
+          </p>
+
+<figure xml:id="fig_calc1_trig2">
+            <image source="images/calc1_trig2" width="65%"/>
+            <caption>image</caption>
+          </figure>
+
+<p>
+	Notice that when <m>t</m> is a positive acute angle, the circle definition agrees with the right triangle definitions of the sine and cosine: <md>\sin t = \frac{\mbox{opposite}}{\mbox{hypotenuse}} \qquad \mbox{and} \qquad 
+\cos t = \frac{\mbox{adjacent}}{\mbox{hypotenuse}}.</md> However, the circle definitions of the sine and cosine have the important advantage that they produce functions whose domains are the set of <em>all</em> real numbers. (What are the domains of the tangent, secant, cotangent and cosecant functions?)
+</p>
+
+<p>
+	In calculus, angles are also always measured in radians. To convert between radians and degrees, notice that the circumference of a unit circle is <m>2\pi</m>, so the radian measure of a semi-circular arc is half of this, and thus we have <md>\pi \  \mbox{radians} \; = 180 \  \mbox{degrees}.</md> As the course progresses, you 
+<aside>
+              <p>Simplicity determines the choice of radians for measuring angles</p>
+            </aside>
+ will see why radians are used rather than degrees (or mils or any other unit for measuring angles)—it turns out that the formulas important to calculus take their simplest form when angles are expressed in radians.
+</p>
+
+<p>
+	Graphing packages “know" the trigonometric functions in exactly this form: circular functions with the input variable given in radians. You might wonder, though, how a computer or calculator <q>knows</q> that <m>\sin(1) = .017452406\ldots</m>. It certainly isn’t drawing a very accurate circle somewhere and measuring the <m>y</m> coordinate of some point. While the circular function approach is 
+<aside>
+              <p>How do we get values for the circular functions?</p>
+            </aside>
+ a useful way to think about the trigonometric functions conceptually, it isn’t very helpful if we actually want values of the functions. One of the achievements of calculus, as you will see later in this course, is that it provides effective methods for computing values of functions like the circular functions that aren’t given by algebraic formulas.  
+</p>
+
+<p>
+	The following exercises let you review the trigonometric functions and explore some of the possibilities using computer graphing.
+</p>
+        </introduction><exercise>
+          <introduction>
+            <p>
+	Graph the function <m>f(x) = \sin(x)</m> on the interval <m>-2 \leq x
+	\leq 10</m>.
+</p>
+          </introduction><task>
+            <p>
+		What are the <m>x</m>-intercepts of <m>\sin(x)</m> on the interval <m>-2 \leq
+	x \leq 10</m>? Determine them to two decimal places accuracy.
+	</p>
+          </task><task>
+            <p>
+		What is the largest value of <m>f(x)</m> on the interval <m>-2 \leq x
+	\leq 10</m>? Which value of <m>x</m> makes <m>f(x)</m> largest? Determine <m>x</m> to two decimal places accuracy.
+	</p>
+          </task><task>
+            <p>
+		Regraph <m>f(x)</m> on the very small interval <m>-.001 \leq x \leq
+	.001</m>. Describe what you see. Can you determine the slope of this graph?
+	</p>
+          </task>
+        </exercise><exercise>
+          <introduction>
+            <p>
+	Graph the function <m>f(x) = \cos(x)</m> on the interval <m>0 \leq x
+	\leq 14</m>. On the same screen graph the <em>second</em> function <m>g(x)
+	= \cos(2x)</m>.
+</p>
+          </introduction><task>
+            <p>
+		How far apart are the <m>x</m>-intercepts of <m>f(x)</m>? How far apart are the <m>x</m>-intercepts of <m>g(x)</m>?
+	</p>
+          </task><task>
+            <p>
+		The graph of <m>g(x)</m> has a pattern that repeats. How wide is this pattern? The graph of <m>f(x)</m> also has a repeating pattern; how wide is <em>it</em>?
+	</p>
+          </task><task>
+            <p>
+		Compare the graphs of <m>f(x)</m> and <m>g(x)</m> to one another. In particular, can you say that one of them is a stretched or compressed version of the other? Is the compression (or stretching) in the vertical or the horizontal direction?
+	</p>
+          </task><task>
+            <p>
+		Construct a <em>new</em> function <m>f(x)</m> whose graph is the same shape as the graph of <m>g(x) = \cos(2x)</m>, but make the graph of <m>f(x)</m> twice as tall as the graph of <m>g(x)</m>. [A suggestion: either deduce what <m>f(x)</m> should be, or make a guess. Then test your choice on the computer. If your choice doesn’t work, think how you might modify it, and then test your modifications the same way.]
+	</p>
+          </task>
+        </exercise><exercise>
+          <introduction>
+            <p>
+	The aim here is to find a solution to the equation <m>\sin x =
+	\cos(3x)</m>. There is no purely <em>algebraic</em> procedure to solve this equation. Because the sine and cosine are not defined by  <em>algebraic</em> formulas, this should not be particularly surprising. (Even for algebraic equations, there are only a few very special cases for which there are formulas like the quadratic formula. In <xref ref="ch5-chap-techniques-of-differentiation" /> we will look at a method for solving equations when formulas can’t help us.)
+</p>
+          </introduction><task>
+            <p>
+		Graph the two functions <m>f(x) = \sin(x)</m> and <m>g(x) = \cos(3x)</m> on the interval <m>0 \leq x \leq 1</m>.
+	</p>
+          </task><task>
+            <p>
+		Find a solution of the equation <m>\sin(x) = \cos(3x)</m> that is accurate to six decimal places.
+	</p>
+          </task><task>
+            <p>
+		Find <em>another</em> solution of the equation <m>\sin(x) =
+	\cos(3x)</m>, accurate to four decimal places. Explain how you found it.
+	</p>
+          </task>
+        </exercise><exercise>
+          <statement>
+            <p>
+	Use a graphing program to make a sketch of the graph of each of the following functions. In each case, make clear the domain and the range of the function, where the graph crosses the axes, and where the function has a maximum or a minimum. <md alignat-columns="3">
+                <mrow>\amp\text{a) } F(w) = (w-1)(w-2)(w-3) \amp\qquad
+	    \amp\text{b) } Q(a) = \dfrac{1}{a^2+5}</mrow>
+                <mrow>[3pt]
+	\amp\text{c) } E(x) = x + \dfrac{1}{x}  \amp
+	        \amp\text{d) } e(x) = x - \dfrac{1}{x}</mrow>
+                <mrow>[3pt]
+	\amp\text{e) } g(u) = \sqrt{\dfrac{u-1}{u+1}} \amp
+	        \amp\text{f) } M(u) = \dfrac{u^2-2}{u^2+2}</mrow>
+              </md>
+            </p>
+          </statement>
+        </exercise><exercise>
+          <introduction>
+            <p>
+	Graph on the same screen the following three functions: <md>f(x) = 2^x, \quad\qquad g(x) = 3^x, \quad\qquad h(x) = 10^x.</md> Use the interval <m>-2 \leq x \leq 1.2</m>.
+</p>
+          </introduction><task>
+            <p>
+		Which function has the largest value when <m>x = -2</m>?
+	</p>
+          </task><task>
+            <p>
+		Which is climbing most rapidly when <m>x = 0</m>?
+	</p>
+          </task><task>
+            <p>
+		Magnify the picture at <m>x = 0</m> by resetting the size of the interval to <m>-.0001 \leq x \leq .0001</m>. Describe what you see. Estimate the slopes of the three graphs.
+	</p>
+          </task>
+        </exercise>
+      </exercisegroup><exercisegroup xml:id="ch1-subsubsec-proportions-linear-functions-and-models">
+        <title>Proportions, Linear Functions, and Models</title>
+        <exercise>
+          <statement>
+            <p>
+	Go back to the three functions given in problem 1. For each function, choose an initial value <m>x_0</m> for <m>x</m>, find the corresponding value <m>y_0</m> for <m>y</m>, and express the function in the form <m>y-y_0=m\cdot(x-x_0)</m>.
+</p>
+          </statement>
+        </exercise><exercise>
+          <introduction>
+            <p>
+	You should be able to answer all parts of this problem without ever finding the equations of the functions involved.
+</p>
+          </introduction><task>
+            <p>
+		Suppose <m>y=f(x)</m> is a linear function with multiplier <m>m=3</m>. If <m>f(2)=-5</m>, what is <m>f(2.1)</m>? <m>f(2.0013)</m>? <m>f(1.87)</m>? <m>f(922)</m>?
+	</p>
+          </task><task>
+            <p>
+		Suppose <m>y=G(x)</m> is a linear function with multiplier <m>m=-2</m>. If <m>G(-1)=6</m>, for what value of <m>x</m> is <m>G(x)=8</m>? <m>G(x)=0</m>? <m>G(x)=5</m>? <m>G(x)=491</m>?
+	</p>
+          </task><task>
+            <p>
+		Suppose <m>y=h(x)</m> is a linear function with <m>h(2)=7</m> and <m>h(6)=9</m>. What is <m>h(2.046)</m>? <m>h(2+a)</m>?
+	</p>
+          </task>
+        </exercise><exercise>
+          <statement>
+            <p>
+	In Massachusetts there is a sales tax of 5%. The tax <m>T</m>, in dollars, is proportional to the price <m>P</m> of an object, also in dollars. The constant of proportionality is <m>k = 5\%
+	= .05</m>. Write a formula that expresses the sales tax as a linear function of the price, and use your formula to compute the tax on a television set that costs $289.00 and a toaster that costs $37.50.
+</p>
+          </statement>
+        </exercise><exercise>
+          <statement>
+            <p>
+	Suppose <m>W = 213 - 17\, Z</m>. How does <m>W</m> change when <m>Z</m> changes from 3 to 7; from 3 to 3.4; from 3 to 3.02? Let <m>\Delta Z</m> denote a change in <m>Z</m> and <m>\Delta W</m> the change thereby produced in <m>W</m>. Is <m>\Delta W = m\,\Delta Z</m> for some constant <m>m</m>? If so, what is <m>m</m>?
+</p>
+          </statement>
+        </exercise><exercise>
+          <introduction>
+            <p>
+	In the following table, <m>q</m> is a linear function of <m>p</m>. Fill in the blanks in the table.
+</p>
+	
+	<!-- div attr= class="center"-->
+            <table>
+              <title />
+              <tabular>
+                <row class="odd">
+                  <cell halign="center" />
+                  <cell halign="center" />
+                  <cell halign="center" />
+                  <cell halign="center" />
+                  <cell halign="center" />
+                  <cell halign="center" />
+                  <cell halign="center" />
+                  <cell halign="center" />
+                </row>
+              </tabular>
+            </table><!--</div attr= class="center">-->
+          </introduction><task>
+            <p>
+		Find a formula to express <m>\Delta q</m> as a function of <m>\Delta p</m>, and another to express <m>q</m> as a function of <m>p</m>.
+	</p>
+          </task>
+        </exercise><exercise>
+          <introduction>
+            <p>
+              <term>Thermometers</term>. There are two scales in common use to measure the temperature, called <term>Fahrenheit degrees</term> and the <term>Celsius degrees</term>. Let <m>F</m> and <m>C</m>, respectively, be the temperature on each of these scales. Each of these quantities is a linear function of the other; the relation between them in determined by the following table:
+</p>
+	
+	<!-- div attr= class="center"-->
+            <table>
+              <title />
+              <tabular>
+                <row header="yes">
+                  <cell halign="center">physical measurement</cell>
+                  <cell halign="center">
+                    <m>C</m>
+                  </cell>
+		<cell halign="center">
+                    <m>F</m>
+                  </cell>
+                </row>
+	<row class="odd">
+                  <cell halign="center">freezing point of water</cell>
+                  <cell halign="center">0</cell>
+                  <cell halign="center">32</cell>
+                </row>
+	<row class="even">
+                  <cell halign="center">boiling point of water</cell>
+                  <cell halign="center">100</cell>
+                  <cell halign="center">212</cell>
+                </row>
+              </tabular>
+            </table><!--</div attr= class="center">-->
+          </introduction><task>
+            <p>
+		Which represents a larger change in temperature, a Celsius degree or a Fahrenheit degree?
+	</p>
+          </task><task>
+            <p>
+		How many Fahrenheit degrees does it take to make the temperature go up one Celsius degree? How many Celsius degrees does it take to make it go up one Fahrenheit degree?
+	</p>
+          </task><task>
+            <p>
+		What is the multiplier <m>m</m> in the equation <m>\Delta F = m \cdot
+	\Delta C</m>? What is the multiplier <m>\mu</m> in the equation <m>\Delta C =
+	\mu \cdot \Delta F</m>? (The symbol <m>\mu</m> is the Greek letter <em>mu</em>.) What is the relation between <m>\mu</m> and <m>m</m>?
+	</p>
+          </task><task>
+            <p>
+		Express <m>F</m> as a linear function of <m>C</m>. Graph this function. Put scales and labels on the axes. Indicate clearly the slope of the graph and its vertical intercept.
+	</p>
+          </task><task>
+            <p>
+		Express <m>C</m> as a linear function of <m>F</m> and graph this function. How are the graphs in parts (d) and (e) related? Give a clear and detailed explanation.
+	</p>
+          </task><task>
+            <p>
+		Is there any temperature that has the same reading on the two temperature scales? What is it? Does the temperature of the air ever reach this value? Where?
+	</p>
+          </task>
+        </exercise><exercise>
+          <introduction>
+            <p>
+              <term>The Greenhouse Effect</term>. The concentration of carbon dioxide (CO<m>_2</m>) in the atmosphere is increasing. The concentration is measured in parts per million (PPM). Records kept at the South Pole show an increase of .8 PPM per year during the 1960s.
+</p>
+          </introduction><task>
+            <p>
+		At that rate, how many years does it take for the concentration to increase by 5 PPM; by 15 PPM?
+	</p>
+          </task><task>
+            <p>
+		At the beginning of 1960 the concentration was about 316 PPM. What would it be at the beginning of 1970; at the beginning of 1980?
+	</p>
+          </task><task>
+            <p>
+		Draw a graph that shows CO<m>_2</m> concentration as a function of the time since 1960. Put scales on the axes and label everything clearly.
+	</p>
+          </task><task>
+            <p>
+		The <em>actual</em> CO<m>_2</m> concentration at the South Pole was 324 PPM at the beginning of 1970 and 338 PPM at the beginning of 1980. Plot these values on your graph, and compare them to your calculated values.
+	</p>
+          </task><task>
+            <p>
+		Using the actual concentrations in 1970 and 1980, calculate a new rate of increase in concentration. Using that rate, estimate what the increase in CO<m>_2</m> concentration was between 1970 and 1990. Estimate the CO<m>_2</m> concentration at the beginning of 1990.
+	</p>
+          </task><task>
+            <p>
+		Using the rate of .8 PPM per year that held during the 1960s, determine how many years before 1960 there would have been <em>no</em> carbon dioxide at all in the atmosphere.
+	</p>
+          </task>
+        </exercise><exercise>
+          <introduction>
+            <p>
+              <term>Thermal Expansion</term>. Measurements show that the length of a metal bar increases in proportion to the increase in temperature. An aluminum bar that is exactly 100 inches long when the temperature is 40<m>^\circ</m>F becomes 100.0052 inches long when the temperature increases to 80<m>^\circ</m>F.
+</p>
+          </introduction><task>
+            <p>
+		How long is the bar when the temperature is 60<m>^\circ</m>F? 100<m>^\circ</m>F?
+	</p>
+          </task><task>
+            <p>
+		What is the multiplier that connects an increase in length <m>\Delta L</m> to an increase in temperature <m>\Delta T</m>?
+	</p>
+          </task><task>
+            <p>
+		Express <m>\Delta L</m> as a linear function of <m>\Delta T</m>.
+	</p>
+          </task><task>
+            <p>
+		How long will the bar be when <m>T = 0^\circ</m>F?
+	</p>
+          </task><task>
+            <p>
+		Express <m>L</m> as a linear function of <m>T</m>.
+	</p>
+          </task><task>
+            <p>
+		What temperature change would make <m>L</m> = 100.01 inches?
+	</p>
+          </task><task>
+            <p>
+		For a <em>steel</em> bar that is also 100 inches long when the temperature is 40<m>^\circ</m> F, the relation between <m>\Delta L</m> and <m>\Delta T</m> is <m>\Delta L = .00067 \, \Delta T</m>. Which expands more when the temperature is increased; aluminum or steel?
+	</p>
+          </task><task>
+            <p>
+		How long will this steel bar be when <m>T = 80^\circ</m>F?
+	</p>
+          </task>
+        </exercise><exercise>
+          <introduction>
+            <p>
+              <term>Falling Bodies</term>. In the simplest model of the motion of a falling body, the velocity increases in proportion to the increase in the time that the body has been falling. If the velocity is given in feet per second, measurements show the constant of proportionality is approximately 32.
+</p>
+          </introduction><task>
+            <p>
+		A ball is falling at a velocity of 40 feet/sec after 1 second. How fast is it falling after 3 seconds?
+	</p>
+          </task><task>
+            <p>
+		Express the change in the ball’s velocity <m>\Delta v</m> as a linear function of the change in time <m>\Delta t</m>.
+	</p>
+          </task><task>
+            <p>
+		Express <m>v</m> as a linear function of <m>t</m>.
+	</p>
+	
+	<p>
+		The model can be expanded to keep track of the <em>distance</em> that the body has fallen. If the distance <m>d</m> is measured in feet, the units of <m>d'</m> are feet per second; in fact, <m>d'=v</m>. So the model describing the motion of the body is given by the rate equations <md>
+                <mrow>d' \amp= v  \quad \mbox{feet per second};</mrow>
+                <mrow>v' \amp= 32 \quad \mbox{feet per second per second}.</mrow>
+              </md>
+            </p>
+          </task><task>
+            <p>
+		At what rate is the distance increasing after 1 second? After 2 seconds? After 3 seconds?
+	</p>
+          </task><task>
+            <p>
+		Is <m>d</m> a linear function of <m>t</m>? Explain your answer.
+	</p>
+	
+	<p>
+		In many cases, the rate of change of a variable quantity is proportional to the quantity itself. Consider a human population as an example. If a city of 100,000 is increasing at the rate of 1500 persons per year, we would expect a similar city of 200,000 to be increasing at the rate of 3000 persons per year. That is, if <m>P</m> is the population at time <m>t</m>, then the <term>net growth rate</term>
+              <m>P'</m> is proportional to <m>P</m>: <md>P' = k\, P.</md> In the case of the two cities, we have <md>P' = 1500 = k\, P = k \times 100000 \quad 
+	        \mbox{so} \quad k =
+	        \dfrac{1500}{100000} = 0.015.</md>
+            </p>
+          </task>
+        </exercise><exercise xml:id="ch1-per-capita-growth-exercise">
+          <statement>
+            <p>
+	In the equation <m>P' = k\, P</m>, above, explain why the units for <m>k</m> are <md>\dfrac{\text{persons per year}}{\text{person}}.</md> The number <m>k</m> is called the <term>per capita growth rate</term>. (<q>Per capita</q> means <q>per person</q>—<q>per <em>head</em>
+              </q>, literally.)
+</p>
+          </statement>
+        </exercise><exercise xml:id="ch1-poland-exercise">
+          <introduction>
+            <p>
+              <term>Poland and Afghanistan</term>. In 1985 the per capita growth rate in Poland was 9 persons per year per thousand persons. (That is, <m>k = 9/1000 = .009</m>.) In Afghanistan it was 21.6 persons per year per thousand.
+</p>
+          </introduction><task>
+            <p>
+		Let <m>P</m> denote the population of Poland and <m>A</m> the population of Afghanistan. Write the equations that govern the growth rates of these populations.
+	</p>
+          </task><task>
+            <p>
+		In 1985 the population of Poland was estimated to be 37.5 million persons, that of Afghanistan 15 million. What are the net growth rates <m>P'</m> and <m>A'</m> (as distinct from the <em>per capita</em> growth rates)? Comment on the following assertion: When comparing two countries, the one with the larger per capita growth rate will have the larger net growth rate.
+	</p>
+          </task><task>
+            <p>
+		On the average, how long did it take the population to increase by one person in Poland in 1985? What was the corresponding time interval in Afghanistan?
+	</p>
+          </task>
+        </exercise><exercise>
+          <introduction>
+            <p>
+              <term>Bacterial Growth</term>. A colony of bacteria on a culture medium grows at a rate proportional to the present size of the colony. When the colony weighed 32 grams it was growing at the rate of 0.79 grams per hour. Write an equation that links the growth rate to the size of the population.
+</p>
+          </introduction><task>
+            <p>
+		What is <m>\Delta P</m> if <m>\Delta t</m> = 1 minute? Estimate how long it would take to make <m>\Delta P</m> = .5 grams.
+	</p>
+          </task>
+        </exercise><exercise>
+          <statement>
+            <p>
+              <term>Radioactivity</term>. In radioactive decay, radium slowly changes into lead. If one sample of radium is twice the size of a second lump, then the larger sample will produce twice as much lead as the second in any given time. In other words, the rate of decay is proportional to the amount of radium present. Measurements show that 1 gram of radium decays into lead at the rate of 1/2337 grams per year. Write an equation that links the decay rate to the size of the radium sample. How does your equation indicate that the process involves <em>decay</em> rather than <em>growth</em>?
+</p>
+          </statement>
+        </exercise><exercise>
+          <introduction>
+            <p>
+              <term>Cooling</term>. Suppose a cup of hot coffee is brought into a room at 70<m>^{\circ}</m>F. It will cool off, and it will cool off <em>faster</em> when the temperature difference between the coffee and the room is greater. The simplest assumption we can make is that the rate of cooling is proportional to this temperature difference (this is called Newton’s law of cooling). Let <m>C</m> denote the temperature of the coffee, in <m>^{\circ}</m>F, and <m>C'</m> the rate at which it is cooling, in <m>^{\circ}</m>F per minute. The new element here is that <m>C'</m> is proportional, not to <m>C</m>, but to the  <em>difference</em> between <m>C</m> and the room temperature of 70<m>^{\circ}</m>F.
+</p>
+          </introduction><task>
+            <p>
+		Write an equation that relates <m>C'</m> and <m>C</m>. It will contain a proportionality constant <m>k</m>. How did you indicate that the coffee is <em>cooling</em> and not <em>heating up</em>?
+	</p>
+          </task><task>
+            <p>
+		When the coffee is at 180<m>^{\circ}</m>F it is cooling at the rate of 9<m>^{\circ}</m>F per minute. What is <m>k</m>?
+	</p>
+          </task><task>
+            <p>
+		At what rate is the coffee cooling when its temperature is 120<m>^{\circ}</m>F?
+	</p>
+          </task><task>
+            <p>
+		Estimate how long it takes the temperature to fall from 180<m>^{\circ}</m>F to 120<m>^{\circ}</m>F. Then make a better estimate, and explain why it is better.
+	</p>
+          </task>
+        </exercise>
+      </exercisegroup>
+    </exercises>
+  </section>
+
+		<section xml:id="ch1-sec-using-a-program">
+    <title>Using a Program</title>
+    <subsection xml:id="ch1-subsec-computers">
+      <title>Computers</title>
+      <introduction>
+      <p>
+A computer changes the way we can use calculus as a tool, and it vastly enlarges the range of questions that we can tackle. No longer need we back away from a problem that involves a lot of computations. There are two aspects to the power of a computer. First, it is fast. It can do a million additions in the time it takes us to do one. Second, it can be programmed. By arranging computations into a loop—as we did in <xref ref="ch1-delta-notation" />—we can construct a program with only a few instructions that will carry out millions of repetitive calculations.
+				</p>
+      <p>
+The purpose of this section is to give you practice using a computer program that estimates values of <m>S</m>, <m>I</m>, and <m>R</m> in the epidemic model. As you will see, it carries out the three rounds of calculations you have already done by hand. It also contains a loop that will allow you to do a hundred, or a million, rounds of calculations with no extra effort.
+				</p>
+
+</introduction>
+				<subsubsection xml:id="ch1-subsubsec-the-program-sir-1">
+        <title>The Program SIR</title>
+        <p>
+	The program below calculates values of <m>S</m>, <m>I</m>, and <m>R</m>. It is a set of instructions—sometimes called  <term>code</term>—that is designed to be read by you and by a computer. These instructions mirror the operations we performed by hand to generate <xref ref="table-first-three-day-estimates" />. 
+<aside>
+            <p>Read a program line by line from the top</p>
+          </aside>
+          </p>
+
+<listing xml:id="sirprogram">
+  <title>Program: SIR</title>          
+<program>
+        <code>  
+  t = 0
+  S = 45400
+  I = 2100
+  R = 2500
+  deltat = 1
+  PRINT t, S, I, R
+  FOR k = 1 TO 3
+          Sprime = -.00001 * S * I
+          Iprime = .00001 * S * I - I / 14
+          Rprime = I / 14
+          deltaS = Sprime * deltat
+          deltaI = Iprime * deltat
+          deltaR = Rprime * deltat
+          t = t + deltat
+          S = S + deltaS
+          I = I + deltaI
+          R = R + deltaR
+          PRINT t, S, I, R
+  NEXT k
+  </code>
+  </program>
+  </listing>
+
+<p>          
+ The code here is similar to what it would be in most programming languages. The line numbers, however, are not part of the program; they are there to help us refer to the lines. A computer reads the code one line at a time, starting at the top. Each line is a complete instruction which causes the computer to do something. The purpose of nearly every instruction in this program is to assign a numerical value to a symbol. Watch for this as we go down the lines of code.
+</p>
+
+<p>
+	The first line, <c>t = 0</c>, 
+<aside>
+            <p>Lines 1–5</p>
+          </aside>
+ is the instruction <q>Give <m>t</m> the value 0.</q> The next four lines are similar. Notice, in the fifth line, how <m>\Delta t</m> is typed out as <c>deltat</c>. It is a common practice for the name of a variable to be several letters long. A few lines later <m>S'</m> is typed out as <c> Sprime</c>, for instance. The instruction on the sixth line 
+<aside>
+            <p>Line 6</p>
+          </aside>
+ is the first that does not assign a value to a symbol. Instead, it causes the computer to print the following on the computer monitor screen:
+</p>
+
+<!-- div attr= class="center"-->
+        <p>
+          <c>0</c>
+        </p>
+<!--</div attr= class="center">-->
+   
+        
+        
+
+<p>
+	Skip over the line that says <c>FOR k = 1 TO 3</c>. 
+<aside>
+            <p>Line 7</p>
+          </aside>
+ It will be easier to understand after we’ve read the rest of the program.
+</p>
+
+<p>
+	Look at the first three indented lines. 
+<aside>
+            <p>Lines 8–10</p>
+          </aside>
+ You should recognize them as coded versions of the rate equations <md  alignat-columns="2">
+            <mrow>S' \amp= -.00001\,SI</mrow>
+            <mrow>I' \amp= .00001\,SI - I/14</mrow>
+            <mrow>R' \amp= I/14</mrow>
+          </md> for the measles epidemic. (The program uses to denote multiplication.) They are instructions to assign numerical values to the symbols <m>S'</m>, <m>I'</m>, and <m>R'</m>. For instance, <c>Sprime = -.00001 * S * I</c> (line 8) says
+</p>
+
+<!-- div attr= class="center"-->
+        <p>
+	Give <m>S'</m> the value <m>-.00001\,SI</m>;<!-- linebreak -->use the current values of <m>S</m> and <m>I</m> to get <m>-.00001\,SI</m>.<!-- linebreak -->
+        </p><!--</div attr= class="center">-->
+        <p>
+	Now the computer knows that the current values of <m>S</m> and <m>I</m> are 45400 and 2100, respectively. (Can you see why?) So it calculates the product <m>-.00001 \times 45400 \times 2100 = -953.4</m> and then gives <m>S'</m> the value <m>-953.4</m>. There is an extra step to calculate the product.
+</p>
+
+<p>
+	Notice that the first three indented lines are bracketed together and labelled <q>Step I,</q> because they carry out Step I in the flow chart. 
+<aside>
+            <p>Lines 11–13</p>
+          </aside>
+ The next three indented lines carry out Step II in the flow chart. They assign values to three more symbols—namely <m>\Delta S</m>, <m>\Delta
+I</m>, and <m>\Delta R</m>—using the current values of <m>S'</m>, <m>I'</m>, <m>R'</m> and <m>\Delta t</m>.
+</p>
+
+<p>
+	The next four indented lines present a puzzle. 
+<aside>
+            <p>Lines 14–17</p>
+          </aside>
+ They don’t make sense if we read them as ordinary mathematics. For example, in an expression like <c>t = t + deltat</c>, we would cancel the <c>t</c>’s and conclude <c>deltat = 0</c>. The lines <em>do</em> make sense when we read them as computer instructions, however. As a computer instruction, <c>t = t + deltat</c> says
+</p>
+
+<!-- div attr= class="center"-->
+        <p>
+	Make the new value of <m>t</m> equal to the current value of <m>t + \Delta t</m>.
+</p><!--</div attr= class="center">-->
+        <p>
+	(To make this clear, some computer languages express this instruction in the form <c>let t = t + deltat</c>.) Once again we have an instruction that assigns a numerical value to a symbol, but this time the symbol (<m>t</m>, in this case) already has a value before the instruction is carried out. The instruction gives it a <em>new</em> value. (Here the value of <m>t</m> is changed from 0 to 1.) Likewise, the instruction <c>S = S + deltaS</c> gives <m>S</m> a new value. What was the old value, and what is the new?
+</p>
+
+<p>
+	Compare the three lines of code 
+<aside>
+            <p>How a program computes new values</p>
+          </aside>
+ that produce new values of <m>S</m>, <m>I</m>, and <m>R</m> with the original equations that we used to define Step III in <xref ref="fig-modeling-cycle_tikz" />: <md alignat-columns="3">
+            <mrow>\amp\texttt{S = S + deltaS} \amp\qquad\qquad  \text{new $S$} \amp= 
+           \text{current $S$ + $\Delta S$},</mrow>
+            <mrow>\amp\texttt{I = I + deltaI} \amp              \text{new $I$} \amp= 
+           \text{current $I$ + $\Delta I$},</mrow>
+            <mrow>\amp\texttt{R = R + deltaR} \amp              \text{new $R$} \amp= 
+           \text{current $R$ + $\Delta R$}.</mrow>
+          </md> The words <q>new</q> and <q>current</q> aren’t needed in the computer code because they are automatically understood to be there. Why? First of all, a symbol (like <c>S</c>) always has a <em>current</em> value, but an instruction can give it a <em>new</em> value. Second, a computer instruction of the form <c>A = B</c> is always understood to mean <q>new <c>A</c> = current <c>B</c>.</q>
+
+
+<aside>
+          <p>Notice that the instructions <c>A = B</c> and <c>B = A</c> mean different things. The second says <q>new <c>B</c> = current <c> A</c>.</q> Thus, in <c>A = B</c>, <c>A</c> is altered to equal <c>B</c>, while in <c>B = A</c>, <c>B</c> is altered to equal <c>A</c>. To emphasize that the symbol on the left is always the one affected, some programming languages use a modified equal sign, as in <c>A := B</c>. We sometimes read this as <q>
+              <c>A</c> gets <c>B</c>
+            </q>.</p>
+        </aside>
+        </p>
+
+
+<p>
+	The next line is another <c>PRINT</c> statement, 
+<aside>
+            <p>Line 18</p>
+          </aside>
+ exactly like the one on line 6. It causes the current values of <m>t</m>, <m>S</m>, <m>I</m>, and <m>R</m> to be printed on the computer monitor screen. But this time what appears is
+</p>
+
+<!-- div attr= class="center"-->
+        <p>
+          <c>1</c>
+        </p><!--</div attr= class="center">-->
+        <p>
+	The values were changed by the previous four instructions. It is important to remember that the computer carries out instructions in the order they are written. Had the second <c>PRINT</c> statement appeared right after line 13, say, the old values of <m>t</m>, <m>S</m>, <m>I</m>, and <m>R</m> would have appeared on the monitor screen a second time.
+</p>
+
+<p>
+	We will take the last line and line 7 together. 
+<aside>
+            <p>Lines 7 and 19: the loop</p>
+          </aside>
+ They are the instructions for the loop. Consider the situation when we reach the last line. The variables <m>t</m>, <m>S</m>, <m>I</m>, and <m>R</m> now have their <q>day 1</q> values. To continue, we need an instruction that will get us back to line 8, because the instructions on lines 8–17 will convert the current (day 1) values of <m>t</m>, <m>S</m>, <m>I</m>, and <m>R</m> into their <q>day 2</q> values. That’s what lines 7 and 19 do.
+</p>
+
+<p>
+	Here is the meaning of the instruction <c>FOR k = 1 TO 3</c> on line 7:
+</p>
+
+<!-- div attr= class="center"-->
+        <p>
+	Give <m>k</m> the value 1, 
+<aside>
+            <p>
+              <c>FOR k = 1 TO 3</c>
+            </p>
+          </aside>
+ and be prepared later to<!-- linebreak -->give it the value 2 and then the value 3.
+</p><!--</div attr= class="center">-->
+        <p>
+	The variable <m>k</m> plays the role of a <term>counter</term>, telling us how many times we have gone around the loop. Notice that <m>k</m> did not appear in our hand calculations. However, when we said we had done three rounds of calculations, for example, we were really saying <m>k = 3</m>.
+</p>
+
+<p>
+	After the computer reads and executes line 7, it carries out all the instructions from lines 8 to 18, arriving finally at the last line. The computer then interprets the instruction <c>NEXT k</c> on the last line as follows:
+</p>
+
+<!-- div attr= class="center"-->
+        <p>
+	Give <m>k</m> the next value 
+<aside>
+            <p>
+              <c>NEXT k</c>
+            </p>
+          </aside>
+ that the <c>FOR</c>
+          command allows, and move back to the line immediately after the
+          <c>FOR</c>
+          command.
+        </p><!--</div attr= class="center">-->
+        <p>
+	After the computer carries out this instruction, <m>k</m> has the value 2 and the computer is set to carry out the instruction on line 8. It then executes that instruction, and continues down the program, line by line, until it reaches line 19 once again. This sets the value of <m>k</m> to 3 and moves the computer back to line 8. Once again it continues down the program to line 19. 
+<aside>
+            <p>How the program stops</p>
+          </aside>
+ This time there is no allowable value that <m>k</m> can be given, so the program stops.
+</p>
+
+<p>
+	The <c>NEXT k</c> command is different from all the others in the program. It is the only one that directs the computer to go to a different line. That action causes the program to <term>loop</term>. Because the loop involves all the indented instructions between the <c>FOR</c> statement and the <c>NEXT</c> statement, it is called a  <term>FOR–NEXT loop</term>. This is just one kind of loop. Computer programs can contain other sorts that carry out different tasks. In the upcoming chapters we will see how a  <term>DO–WHILE</term> loop is used.
+</p>
+      </subsubsection>
+    </subsection>
+
+			<exercises xml:id="ch1-subsec-exercises-1-3">
+      <title>Exercises</title>
+      <exercisegroup xml:id="ch1-subsubsec-the-program-sir-2">
+        <title>The program SIR</title>
+        <introduction>
+          <p>
+	The object of these exercises is to verify that the program SIR works the way the text says it does. Follow the instructions for running a program on the computer you are using.
+</p>
+        </introduction><exercise>
+          <statement>
+            <p>
+	Run the program to confirm that it reproduces what you have already calculated by hand (<xref ref="table-first-three-day-estimates" />).
+</p>
+          </statement>
+        </exercise><exercise>
+          <introduction>
+            <p>
+	On a copy of the program, mark the instructions that carry out the following tasks:
+</p>
+          </introduction><task>
+            <p>
+		give the input values of <m>S</m>, <m>I</m>, and <m>R</m>;
+	</p>
+          </task><task>
+            <p>
+		say that the calculations take us 1 day into the future;
+	</p>
+          </task><task>
+            <p>
+		carry out step II (see <xref ref="fig-SIR-modeling-cycle_tikz" />);
+	</p>
+          </task><task>
+            <p>
+		carry out step III;
+	</p>
+          </task><task>
+            <p>
+		give us the output values of <m>S</m>, <m>I</m>, and <m>R</m>;
+	</p>
+          </task><task>
+            <p>
+		take us once around the whole loop;
+	</p>
+          </task><task>
+            <p>
+		say how many times we go around the loop.
+	</p>
+          </task>
+        </exercise><exercise>
+          <statement>
+            <p>
+	Delete all the lines of the program from line 7 onward (or else type in the first 6 lines). Will this program run? What will it do? Run it and report what you see. Is this what you expected?
+</p>
+          </statement>
+        </exercise><exercise>
+          <statement>
+            <p>
+	Starting with the original SIR program (<xref ref="sirprogram" />), delete lines 7 and 19. These are the ones that declare the FOR–NEXT loop. Will this program run? What will it do? Run it and report what you see. Is this what you expected?
+</p>
+          </statement>
+        </exercise><exercise>
+          <statement>
+            <p>
+	Using the 17-line program you constructed in the previous question, remove the PRINT statement from the last line and insert it between what appear as lines 13 and 14 in <xref ref="sirprogram" />. Will this program run? What will it do? Run it and report what you see. Is this what you expected?
+</p>
+          </statement>
+        </exercise><exercise>
+          <statement>
+            <p>
+	Starting with the original SIR program (<xref ref="sirprogram" />), change line 7 so it reads <c>FOR k = 26 TO 28</c>. Thus, the counter <m>k</m> takes the values 26, 27, and 28. Will this program run? What will it do? Run it and report what you see. Is this what you expected?
+</p>
+          </statement>
+        </exercise>
+      </exercisegroup><exercisegroup xml:id="ch1-subsubsec-programs-to-practice-on">
+        <title>Programs to practice on</title>
+        <introduction>
+<p>
+  In this section there are a number of short programs for you to
+  analyze and run.
+</p>
+
+<dl>
+
+  <dt>
+    <term>Program 1</term>
+  </dt>
+
+  <dd>
+    <program>
+      <code>
+A = 2
+B = 3
+
+A = B
+
+PRINT A, B
+      </code>
+    </program>
+  </dd>
+
+  <dt>
+    <term>Program 2</term>
+  </dt>
+
+  <dd>
+    <program>
+      <code>
+A = 2
+B = 3
+
+B = A
+
+PRINT A, B
+      </code>
+    </program>
+  </dd>
+
+  <dt>
+    <term>Program 3</term>
+  </dt>
+
+  <dd>
+    <program>
+      <code>
+A = 2
+B = 3
+
+A = A + B
+B = A + B
+
+PRINT A, B
+      </code>
+    </program>
+  </dd>
+
+</dl>
+          
+        </introduction><exercise>
+          <statement>
+            <p>
+	When Program 1 runs it will print the values of <m>A</m> and <m>B</m> that are current when the program stops. What values will it print? Type in this program and run it to verify your answers.
+</p>
+          </statement>
+        </exercise><exercise>
+          <statement>
+            <p>
+	What will Program 2 do when it runs? Type in this program and run it to verify your answers.
+</p>
+          </statement>
+        </exercise><exercise>
+          <statement>
+            <p>
+	After each line in Program 3 write the values that <m>A</m> and <m>B</m> have <em>after</em> that line has been carried out. What values of <m>A</m> and <m>B</m> will it print? Type in this program and run it to verify your answers.
+</p>
+	
+<p>
+  The next three programs have an element not found in the
+  program <c>SIR</c>.  In each of them, there is a
+  <c>FOR–NEXT</c> loop, and the counter <m>k</m>
+  actually appears in statements within the loop.
+</p>
+
+<ol>
+
+  <li>
+    <title>Program 4</title>
+
+    <program>
+      <code>
+FOR k = 1 TO 5
+
+    A = k^3
+
+    PRINT A
+
+NEXT k
+      </code>
+    </program>
+  </li>
+
+  <li>
+    <title>Program 5</title>
+
+    <program>
+      <code>
+FOR k = 1 TO 5
+
+    A = k^3
+
+NEXT k
+
+PRINT A
+      </code>
+    </program>
+  </li>
+
+  <li>
+    <title>Program 6</title>
+
+    <program>
+      <code>
+x = 0
+
+FOR k = 1 TO 5
+
+    x = x + k
+
+    PRINT k, x
+
+NEXT k
+      </code>
+    </program>
+  </li>
+
+</ol>
+          </statement>
+        </exercise><exercise>
+          <statement>
+            <p>
+	What output does Program 4 produce? Type in the code and run the program to confirm your answer.
+</p>
+          </statement>
+        </exercise><exercise>
+          <statement>
+            <p>
+	What is the difference between the code in Program 5 and the code in Program 4? What is the output of Program 5? Does it differ from the output of Program 4? If so, why?
+</p>
+          </statement>
+        </exercise><exercise>
+          <statement>
+<p>
+  What output does Program 6 produce?
+  Type in the code and run the program
+  to confirm your answer.
+</p>
+
+<dl>
+
+  <dt>
+    <term>Program 7</term>
+  </dt>
+
+  <dd>
+    <program>
+      <code>
+A = 0
+B = 0
+
+FOR k = 1 TO 5
+
+    A = A + 1
+
+    B = A + B
+
+    PRINT A, B
+
+NEXT k
+      </code>
+    </program>
+  </dd>
+
+  <dt>
+    <term>Program 8</term>
+  </dt>
+
+  <dd>
+    <program>
+      <code>
+A = 0
+B = 1
+
+FOR k = 1 TO 5
+
+    A = A + B
+
+    B = A + B
+
+    PRINT A, B
+
+NEXT k
+      </code>
+    </program>
+  </dd>
+
+  <dt>
+    <term>Program 9</term>
+  </dt>
+
+  <dd>
+    <program>
+      <code>
+A = 0
+B = 1
+
+FOR k = 1 TO 5
+
+    A = A + B
+
+    B = A + B
+
+NEXT k
+
+PRINT A, B
+      </code>
+    </program>
+  </dd>
+
+</dl>
+
+          </statement>
+        </exercise><exercise>
+          <statement>
+            <p>
+	Program 7 prints five lines of output. What are they? Type in the program and run it to confirm your answers.
+</p>
+          </statement>
+        </exercise><exercise>
+          <statement>
+            <p>
+	What is the output of Program 8? Type in the program and run it to confirm your answers.
+</p>
+          </statement>
+        </exercise><exercise>
+          <statement>
+            <p>
+	Describe exactly how the <em>codes</em> for Programs 8 and 9 differ. How do the <em>outputs</em> differ?
+</p>
+          </statement>
+        </exercise>
+      </exercisegroup><exercisegroup xml:id="ch1-subsubsec-analyzing-the-measles-epidemic">
+        <title>Analyzing the measles epidemic</title>
+        <exercise>
+          <statement>
+            <p>
+	Alter the program SIR to have it calculate estimates for <m>S</m>, <m>I</m>, and <m>R</m> over the first <em>six</em> days. Construct a table that shows those values.
+</p>
+          </statement>
+        </exercise><exercise>
+          <introduction>
+            <p>
+	Alter the program to have it estimate the values of <m>S</m>, <m>I</m>, and <m>R</m> for the first <em>thirty</em> days.
+</p>
+          </introduction><task>
+            <p>
+		What are the values of <m>S</m>, <m>I</m>, and <m>R</m> when <m>t = 30</m>?
+	</p>
+          </task><task>
+            <p>
+		According to these figures, on what day does the infection peak? What values do you get for <m>S</m>, <m>I</m>, and <m>R</m>?
+	</p>
+          </task><task>
+            <p>
+		How can you reconcile the value you just got for <m>S</m> with the value we obtained algebraically in <xref ref="ch1-analysis-without-a-computer" />?
+	</p>
+          </task>
+        </exercise><exercise>
+          <statement>
+            <p>
+	By adding an appropriate PRINT statement after line 10 you can also get the program to print values for <m>S'</m>, <m>I'</m>, and <m>R'</m>. Do this, and check that you get the values shown in <xref ref="table-first-three-day-estimates" />.
+</p>
+          </statement>
+        </exercise><exercise>
+          <statement>
+            <p>
+	According to these estimates, on what day do the largest number new infections occur? How many are there? Explain where you got your information.
+</p>
+          </statement>
+        </exercise><exercise>
+          <statement>
+            <p>
+	On what day do you estimate that the largest number of recoveries occurs? Do you see a connection between this question and 17 (b)?
+</p>
+          </statement>
+        </exercise><exercise>
+          <statement>
+            <p>
+	On what day do you estimate the infected population grows most rapidly? Declines most rapidly? What value does <m>I'</m> have on those days?
+</p>
+          </statement>
+        </exercise><exercise>
+          <introduction>
+            <p>
+	Alter the original SIR program so that it will go  <em>backward</em> in time, with time steps of 1 day. Specify the changes you made in the program. Use this altered program to obtain estimates for the values of <m>S</m>, <m>I</m>, and <m>R</m> yesterday. Compare your estimates with those in <xref ref="ch1-yesterday" />.
+</p>
+          </introduction><task>
+            <p>
+		Estimate the values of <m>S</m>, <m>I</m>, and <m>R</m>
+              <em>three</em> days before today.
+	</p>
+          </task>
+        </exercise><exercise>
+          <statement>
+            <p>
+	According to the <m>S</m>-<m>I</m>-<m>R</m> model, when did the infection begin? That is, how many days before today was the estimated value of <m>I</m> approximately 1?
+</p>
+          </statement>
+        </exercise><exercise>
+          <statement>
+            <p>
+              <term>There and back again</term>. Use the SIR program, modified as necessary, to carry out the calculations described in <xref ref="ch1-there-and-back-again-exercise" />. Do your computer results agree with those you obtained earlier?
+</p>
+          </statement>
+        </exercise><exercise>
+          <statement>
+            <p>
+	In exercises 22–26 (in <xref ref="ch1-subsubsec-proportions-linear-functions-and-models" />) you set up rate equations to model some other systems. Choose a couple of these and think of some interesting questions that could be answered using a suitably modified SIR program. Make the modifications and report your results.
+</p>
+          </statement>
+        </exercise>
+      </exercisegroup>
+    </exercises>
+  </section>
+
+		<section xml:id="ch1-sec-chapter-summary">
+    <title>Chapter Summary</title>
+    <subsection xml:id="ch1-subsec-the-main-ideas">
+      <title>The Main Ideas</title>
+      <p>
+        <ul>
+          <li>
+            <p>
+Natural processes like the spread of disease can often be described by <term>mathematical models</term>. Initially, this involves identifying <term>numerical quantities</term> and relations between them.
+				</p>
+          </li>
+
+<li>
+            <p>
+A relation between quantities often takes the form of a  <term>function</term>. A function can be described in many different ways;  <term>graphs</term>, <term>tables</term>, and <term>formulas</term> are among the most common.
+				</p>
+          </li>
+
+<li>
+            <p>
+              <term>Linear functions</term> make up a special but important class. If <m>y</m> is a linear function of <m>x</m>, then <term>
+                <m>\Delta y =
+    m\cdot\Delta x</m>
+              </term>, for some constant <m>m</m>. The constant <m>m</m> is a <term>multiplier</term>, <term>slope</term>, and <term>rate of change</term>.
+				</p>
+          </li>
+
+<li>
+            <p>
+If <m>y = f(x)</m>, then we can consider the <term>rate of change <m>y'</m>
+              </term> of <m>y</m> with respect to <m>x</m>. A mathematical model whose variables are connected by <term>rate equations</term> can be analyzed to predict how those variables will change.
+				</p>
+          </li>
+
+<li>
+            <p>
+Predicted changes are <term>estimates</term> of the form  <term>
+                <m>\Delta y = y'\cdot\Delta x</m>
+              </term>.
+				</p>
+          </li>
+
+<li>
+            <p>
+The computations that produce estimates from rate equations can be put into a <term>loop</term>, and they are readily carried out on a  <term>computer</term>.
+				</p>
+          </li>
+
+<li>
+            <p>
+A computer increases the <term>scope</term> and <term>complexity</term> of the problems we can consider.
+				</p>
+          </li>
+        </ul>
+      </p>
+    </subsection>
+
+			<subsection xml:id="ch1-subsec-expectations">
+      <title>Expectations</title>
+      <p>
+        <ul>
+          <li>
+            <p>
+You should be able to work with functions given in various forms, to find the output for any given input.
+				</p>
+          </li>
+
+<li>
+            <p>
+You should be able to read a graph. You should also be able to construct the graph of a linear function directly, and the graph of a more complicated function using a computer graphing package.
+				</p>
+          </li>
+
+<li>
+            <p>
+You should be able to determine the natural domain of a function given by a formula.
+				</p>
+          </li>
+
+<li>
+            <p>
+You should be able to express proportional quantities by a linear function, and interpret the constant of proportionality as a multiplier.
+				</p>
+          </li>
+
+<li>
+            <p>
+Given any two of these quantities for a linear function—multiplier, change in input, change in output—you should be able to determine the third.
+				</p>
+          </li>
+
+<li>
+            <p>
+You should be able to model a situation in which one variable is proportional to its rate of change.
+				</p>
+          </li>
+
+<li>
+            <p>
+Given the value of a quantity that depends on time and given its rate of change, you should be able to estimate values of the quantity at other times.
+				</p>
+          </li>
+
+<li>
+            <p>
+For a set of quantities determined by rate equations and initial conditions, you should be able to estimate how the quantities change.
+				</p>
+          </li>
+
+<li>
+            <p>
+Given a set of rate equations, you should be able to determine what happens when one of the quantities reaches a maximum or minimum, or remains unchanged over time.
+				</p>
+          </li>
+
+<li>
+            <p>
+You should be able to understand how a computer program with a FOR–NEXT loop works.
+				</p>
+          </li>
+        </ul>
+      </p>
+    </subsection>
+
+			<subsection xml:id="ch1-subsec-chapter-exercises">
+      <title>Chapter Exercises</title>
+			<exercises xml:id="ch1-subsec-exercises-1-4">
+      <exercisegroup xml:id="ch1-subsubsec-a-model-of-an-orchard">
+        <title>A Model of an Orchard</title>
+        <introduction>
+        <p>
+	If an apple orchard occupies one acre of land, how many trees should it contain so as to produce the largest apple crop? This is an example of an <term>optimization</term> problem. The word <em>optimum</em> means <q>best possible</q>—especially, the best under a given set of conditions. These exercises seek an optimum by analyzing a simple mathematical model of the orchard. The model is the function that describes how the total yield depends on the number of trees.
+</p>
+
+<p>
+	An immediate impulse is just to plant a lot of trees, on the principle: more trees, more apples. But there is a catch: if there are too many trees in a single acre, they crowd together. Each tree then gets less sunlight and nutrients, so it produces fewer apples. For example, the relation between the <em>yield per tree</em>, <m>Y</m>, and the <em>number of trees</em>, <m>N</m>, may be like that shown in the graph drawn on the left, below.
+</p>
+
+<figure xml:id="ch1-pic018">
+          <image source="images/ch1_pic018" />
+          <caption />
+        </figure>
+        <p>
+	When there are only a few trees, they don’t get in each other’s way, and they produce at the maximum level—say, 750 pounds per tree. Hence the graph starts off level. At some point, the trees become too crowded to produce <em>anything</em>! In between, the yield per tree drops off as shown by the curved middle part of the graph.
+</p>
+
+<p>
+	We want to choose <m>N</m> so that the <em>total yield</em>, <m>T</m>, will be as large as possible. We have <m>T(N) = Y(N) \cdot N</m>, but since we don’t know <m>Y(N)</m> very precisely, it is difficult to analyze <m>T(N)</m>. To help, let’s replace <m>Y(N)</m> by the approximation shown in the graph on the right. Now carry out an analysis using this graph to represent <m>Y(N)</m>.
+</p>
+		</introduction>
+
+		<exercise>
+			<statement>
+              <p> Find a formula for the straight segment of the new graph of <m>Y(N)</m> on the interval <m>40 \leq N \leq 180</m>. What is the formula for <m>T(N)</m> on the same interval?</p>
+            </statement>
+        </exercise>
+        <exercise>
+			<statement>
+              <p>What are the formulas for <m>T(N)</m> when <m>0 \leq N \leq 40</m> and when <m>180 \leq N</m>? Graph <m>T</m> as a function of <m>N</m>. Describe the graph in words.</p>
+            </statement>
+        </exercise>
+        <exercise>
+			<statement>
+              <p>What is the maximum possible total yield <m>T</m>? For which <m>N</m> is this maximum attained?</p>
+            </statement>
+        </exercise>
+        <exercise>
+			<statement>
+              <p>Suppose the endpoints of the sloping segment were <m>P</m> and <m>Q</m>, instead of 40 and 180, respectively. Now what is the formula for <m>T(N)</m>? (Note that <m>P</m> and <m>Q</m> are <em>parameters</em> here. Different values of <m>P</m> and <m>Q</m> will give different models for the behavior of the total output.) How many trees would then produce the maximum total output? Expect the maximum to depend on the parameters <m>P</m> and <m>Q</m>.</p>
+			</statement>
+		</exercise>
+      </exercisegroup>
+
+				<exercisegroup xml:id="ch1-subsubsec-rate-equations">
+        <title>Rate Equations</title>
+        <introduction>
+        <p>
+	Do the following exercises by hand. You may wish to check your answers by using suitable modifications of the program SIR.
+</p>
+		</introduction>
+		<exercise>
+			<statement>
+        <p> <strong>Radioactivity</strong>. From exercise 25 of section 2 we know a sample of <m>R</m> grams of radium decays into lead at the rate <md>R' = \dfrac{-1}{2337} R \quad \mbox{grams per year} .</md> Using a step size of 10 years, estimate how much radium remains in a 0.072 gram sample after 40 years.</p>
+			</statement>
+		</exercise>
+		<exercise>
+			<statement>
+              <p><strong>Poland and Afghanistan</strong>. If <m>P</m> and <m>A</m> denote the populations of Poland and Afghanistan, respectively, then their net per capita growth rates imply the following equations: 
+              	<md alignat-columns="2">
+                  <mrow>P' \amp= .009 \, P \quad \mbox{persons per year;}</mrow>
+                  <mrow>A' \amp= .0216 \, A \quad \mbox{persons per year.}</mrow>
+                </md> (See exercise 23 of section 2.) In 1985, <m>P = 37.5</m> million, <m>A = 15</m> million. Using a step size of 1 year, estimate <m>P</m> and <m>A</m> in 1990.
+</p>
+			</statement>
+		</exercise>
+		<exercise>
+			<statement>
+              <p><strong>Falling bodies.</strong> If <m>d</m> and <m>v</m> denote the distance fallen (in feet) and the velocity (in feet per second) of a falling body, then the motion can be described by the following equations: 
+              <md alignat-columns="2">
+                  <mrow>d' \amp= v  \quad \mbox{feet per second};</mrow>
+                  <mrow>v' \amp= 32 \quad \mbox{feet per second per second}.</mrow>
+                </md> (See exercise 21 of section 2.) Assume that when <m>t=0</m>, <m>d=0</m> feet and <m>v=10</m> feet/sec. Using a step size of 1 second, estimate <m>d</m> and <m>v</m> after 3 seconds have passed.
+</p>
+			</statement>
+		</exercise>
+      </exercisegroup>
+      </exercises>
+    </subsection>
+  </section>
+</chapter>

@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   version="1.1"
+   id="svg1"
+   width="133.33333"
+   height="112"
+   viewBox="0 0 133.33333 112"
+   sodipodi:docname="calc1_pend10.pdf"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1">
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath1">
+      <path
+         d="M -482.58001,254.00001 H 1901.42 V -3116.0001 H -482.58001 Z"
+         id="path1" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath2">
+      <path
+         d="M -6.6666667,118.66667 H 140 V -6.6666667 H -6.6666667 Z"
+         id="path2" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath3">
+      <path
+         d="M 0,112 H 133.33333 V 0 H 0 Z"
+         id="path3" />
+    </clipPath>
+  </defs>
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1">
+    <inkscape:page
+       x="0"
+       y="0"
+       inkscape:label="1"
+       id="page1"
+       width="133.33333"
+       height="112"
+       margin="0"
+       bleed="0" />
+  </sodipodi:namedview>
+  <g
+     id="g1"
+     inkscape:groupmode="layer"
+     inkscape:label="1">
+    <g
+       id="g16">
+      <g
+         clip-path="url(#clipPath3)"
+         id="g15">
+        <g
+           clip-path="url(#clipPath2)"
+           id="g14">
+          <path
+             d="m 4784,2800 c 0,13.25 -10.75,24 -24,24 -13.25,0 -24,-10.75 -24,-24 0,-13.25 10.75,-24 24,-24 13.25,0 24,10.75 24,24 m -17.31,-25.98 377.89,-434.72 m -359.78,450.46 377.89,-434.71 m 116.91,-152.78 v 0 c 40.01,34.78 44.25,95.42 9.47,135.43 -34.78,40.01 -95.42,44.26 -135.43,9.48 -40.01,-34.79 -44.26,-95.43 -9.48,-135.44 34.79,-40.01 95.43,-44.25 135.44,-9.47"
+             style="fill:none;stroke:#000000;stroke-width:6;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+             transform="matrix(0.13333333,0,0,-0.13333333,-576,377.33333)"
+             id="path4" />
+          <path
+             d="m 4769.63,2616.25 c 32.25,1.69 63.5,11.84 90.58,29.43"
+             style="fill:none;stroke:#000000;stroke-width:2.4;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+             transform="matrix(0.13333333,0,0,-0.13333333,-576,377.33333)"
+             id="path5" />
+          <path
+             d="m 4846.79,2636.97 -4.35,6.71 31.19,10.72 -22.48,-24.14 -4.36,6.71"
+             style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             transform="matrix(0.13333333,0,0,-0.13333333,-576,377.33333)"
+             id="path6" />
+          <path
+             d="m 4748,2776 v -576 m 24,576 v -576 m -12,-192 v 0 c 53.02,0 96,42.98 96,96 0,53.02 -42.98,96 -96,96 -53.02,0 -96,-42.98 -96,-96 0,-53.02 42.98,-96 96,-96"
+             style="fill:none;stroke:#000000;stroke-width:6;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:16, 16;stroke-dashoffset:16;stroke-opacity:1"
+             transform="matrix(0.13333333,0,0,-0.13333333,-576,377.33333)"
+             id="path7" />
+          <path
+             d="m 4728,2800 h -408 m 872,-528 h -712 m 264,-168 h -424"
+             style="fill:none;stroke:#000000;stroke-width:0.8;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:16, 32;stroke-dashoffset:0;stroke-opacity:1"
+             transform="matrix(0.13333333,0,0,-0.13333333,-576,377.33333)"
+             id="path8" />
+          <path
+             d="m 4560,2000 v 80 m 0,-16 h -8 l 8,32 8,-32 h -8 m 0,392 v -160 m 0,16 h 8 l -8,-32 -8,32 h 8 m 0,272 v 192 m 0,-16 h -8 l 8,32 8,-32 h -8 m -192,-408 v -232 m 0,16 h 8 l -8,-32 -8,32 h 8 m 0,376 v 264 m 0,-16 h -8 l 8,32 8,-32 h -8"
+             style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             transform="matrix(0.13333333,0,0,-0.13333333,-576,377.33333)"
+             id="path9" />
+          <text
+             xml:space="preserve"
+             transform="matrix(1.3333333,0,0,1.3333333,67.44,38.666667)"
+             clip-path="url(#clipPath1)"
+             id="text14"><tspan
+               style="font-style:italic;font-variant:normal;font-weight:normal;font-size:10px;font-family:Times;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+               x="0"
+               y="0"
+               id="tspan9">x</tspan><tspan
+               style="font-variant:normal;font-weight:normal;font-size:10px;font-family:Symbol;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+               x="20.6199"
+               y="-0.40000001"
+               id="tspan10">1</tspan><tspan
+               style="font-variant:normal;font-weight:normal;font-size:10px;font-family:Symbol;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+               x="-48.280102"
+               y="14"
+               id="tspan11">1</tspan><tspan
+               style="font-variant:normal;font-weight:normal;font-size:10px;font-family:Times;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+               x="-34.580101"
+               y="4.4000001"
+               id="tspan12">cos</tspan><tspan
+               style="font-style:italic;font-variant:normal;font-weight:normal;font-size:10px;font-family:Times;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+               x="-19.65"
+               y="4.4000001"
+               id="tspan13">x</tspan><tspan
+               style="font-style:italic;font-variant:normal;font-weight:normal;font-size:10px;font-family:Times;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+               x="-29.08008"
+               y="38"
+               id="tspan14">h</tspan></text>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="150.81133pt"
+   height="274.77655pt"
+   viewBox="0 0 150.81132 274.77654"
+   version="1.1"
+   id="svg12"
+   sodipodi:docname="calc1_irregular_region.pdf"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview12"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="pt" />
+  <defs
+     id="defs6">
+    <clipPath
+       id="clip-0">
+      <path
+         clip-rule="nonzero"
+         d="M 6,3 H 163.95312 V 133 H 6 Z m 0,0"
+         id="path1" />
+    </clipPath>
+    <clipPath
+       id="clip-1">
+      <path
+         clip-rule="nonzero"
+         d="M 9,158 H 160 V 262 H 9 Z m 0,0"
+         id="path2" />
+    </clipPath>
+    <clipPath
+       id="clip-2">
+      <path
+         clip-rule="nonzero"
+         d="m 54.4375,176.53906 c 24.726562,41.91406 86.39453,-46.38672 103.01953,23.21094 20.78125,86.99609 -91.324218,102.73828 -132.464842,53.71094 -35.996094,-42.89453 -2.5,-133.66016 29.445312,-76.92188"
+         id="path3" />
+    </clipPath>
+    <clipPath
+       id="clip-3">
+      <path
+         clip-rule="nonzero"
+         d="M 9,158 H 160 V 281 H 9 Z m 0,0"
+         id="path4" />
+    </clipPath>
+    <clipPath
+       id="clip-4">
+      <path
+         clip-rule="nonzero"
+         d="m 54.4375,176.53906 c 24.726562,41.91406 86.39453,-46.38672 103.01953,23.21094 20.78125,86.99609 -91.324218,102.73828 -132.464842,53.71094 -35.996094,-42.89453 -2.5,-133.66016 29.445312,-76.92188"
+         id="path5" />
+    </clipPath>
+    <clipPath
+       id="clip-5">
+      <path
+         clip-rule="nonzero"
+         d="M 6,155 H 163.95312 V 283.73828 H 6 Z m 0,0"
+         id="path6" />
+    </clipPath>
+  </defs>
+  <g
+     clip-path="url(#clip-0)"
+     id="g7"
+     transform="translate(-9.3099866,-6.297253)">
+    <path
+       fill="none"
+       stroke-width="2.4"
+       stroke-linecap="butt"
+       stroke-linejoin="miter"
+       stroke="#000000"
+       stroke-opacity="1"
+       stroke-miterlimit="10"
+       d="m 1285.9766,4592.7344 c 247.2656,-419.1407 863.9453,463.8672 1030.1953,-232.1094 207.8125,-869.9609 -913.2422,-1027.3828 -1324.64843,-537.1094 -359.96093,428.9453 -25,1336.6016 294.45313,769.2188"
+       transform="matrix(0.1,0,0,-0.1,-74.16016,483.8125)"
+       id="path7" />
+  </g>
+  <g
+     clip-path="url(#clip-1)"
+     id="g9"
+     transform="translate(-9.3099866,-6.297253)">
+    <g
+       clip-path="url(#clip-2)"
+       id="g8">
+      <path
+         fill-rule="nonzero"
+         fill="#e6e6e6"
+         fill-opacity="1"
+         d="M -11.003906,210.56641 111.56641,107.71875 175.84375,184.32422 83.917969,261.45703 19.640625,184.85156"
+         id="path8" />
+    </g>
+  </g>
+  <g
+     clip-path="url(#clip-3)"
+     id="g11"
+     transform="translate(-9.3099866,-6.297253)">
+    <g
+       clip-path="url(#clip-4)"
+       id="g10">
+      <path
+         fill="none"
+         stroke-width="2.4"
+         stroke-linecap="butt"
+         stroke-linejoin="miter"
+         stroke="#000000"
+         stroke-opacity="1"
+         stroke-miterlimit="10"
+         d="M 631.56254,2732.4609 1857.2657,3760.9375 2500.0391,2994.8828 1580.7813,2223.5547 938.00785,2989.6094 M 1274.375,1966.4453 1580.7813,2223.5547"
+         transform="matrix(0.1,0,0,-0.1,-74.16016,483.8125)"
+         id="path9" />
+    </g>
+  </g>
+  <g
+     clip-path="url(#clip-5)"
+     id="g12"
+     transform="translate(-9.3099866,-6.297253)">
+    <path
+       fill="none"
+       stroke-width="2.4"
+       stroke-linecap="butt"
+       stroke-linejoin="miter"
+       stroke="#000000"
+       stroke-opacity="1"
+       stroke-miterlimit="10"
+       d="m 1285.9766,3072.7344 c 247.2656,-419.1406 863.9453,463.8672 1030.1953,-232.1094 207.8125,-869.9609 -913.2422,-1027.3828 -1324.64843,-537.1094 -359.96093,428.9453 -25,1336.6016 294.45313,769.2188"
+       transform="matrix(0.1,0,0,-0.1,-74.16016,483.8125)"
+       id="path11" />
+  </g>
+</svg>

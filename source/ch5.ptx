@@ -1,0 +1,2856 @@
+<chapter xml:id="ch5-chap-techniques-of-differentiation">
+  <title>Techniques of Differentiation</title>
+  <introduction>
+    <p>
+			In this chapter we focus on functions given by <em>formulas</em>. The derivatives of such functions are then also given by formulas. In <xref ref="ch4-chap-differential-equations" /> we used information about the derivative of a function to recover the function itself; now we go <em>from</em> the function  <em>to</em> its derivative. We develop the rules for <em>differentiating</em> a function: computing the formula for its derivative from the formula for the function. Then we use differentiation to investigate the properties of functions, especially their <em>extreme values</em>. Finally we examine a powerful method for solving equations that depends on being able to find a formula for a derivative.
+		</p>
+  </introduction><section xml:id="ch5-sec-the-differentiation-rules">
+    <title>The Differentiation Rules</title>
+    <introduction>
+      <p>
+				There are three kinds of differentiation rules. First, any basic function has a specific rule giving its derivative. Second, the  <em>chain rule</em> will find the derivative of a <em>chain</em> of functions. Third, there are general rules that allow us to calculate the derivatives of algebraic combinations—e.g., sums, products, and quotients—of any functions provided we know the derivatives of each of the component functions. To obtain all three kinds of rules we will typically start with the analytic definition of the derivative as the limit of a quotient of differences:
+			</p>
+
+<definition>
+<title>Derivative</title>
+<p>
+The <term>derivative</term> of the function <m>f</m> at <m>x</m> is the value of the limit
+<md>\lim_{\Delta x \to 0} \dfrac{f(x+\Delta x) - f(x)}{\Delta x} = f'(x)</md>
+</p>
+</definition>
+
+    <p>
+				In this chapter we will look at the cases where this limit can be evaluated exactly. Although using this definition of derivative usually leads to many algebraic manipulations, the other interpretations of derivatives as slopes, rates, and multipliers will still be helpful in visualizing what’s going on. The process of calculating the derivative of a function is called  <term>differentiation</term>. For this reason, functions which are locally linear and not locally vertical (so they do have slopes, and hence derivatives at every point) are called  <term>differentiable</term> functions. Our goal in this chapter is to differentiate functions given by formulas.
+			</p>
+    </introduction><subsection xml:id="ch5-subsec-derivatives-of-basic-functions">
+      <title>Derivatives of Basic Functions</title>
+      <p>
+					When a function is given by a <em>formula</em>, 
+<aside>
+          <p>Functions given by formulas have derivatives given by formulas</p>
+        </aside>
+ there is in fact a formula for its derivative. We have already seen several examples in previous chapters. These examples include all of what we may consider the <term>basic functions</term>. We collect these formulas in the following table.
+				</p>
+
+<observation>
+        <title>Rules for Derivatives of Basic Functions</title>
+        <md>\begin{array}{cc}
+   \mbox{function}    &amp;\mbox{derivative} \\  
+   \hline \\ 
+        mx+b          &amp;m \\
+        x^{r}         &amp;rx^{r-1} \\
+        \sin{x}       &amp;\cos{x} \\
+        \cos{x}       &amp;-\sin{x}  \\
+        e^{x}         &amp;e^{x} \\
+        \ln{x}        &amp;1/x \\
+\end{array}</md>
+      </observation>
+      <p>
+					In the case of the linear function <m>mx+b</m>, we obtained the derivative by using its geometric description as the <em>slope</em> of the graph of the function. The derivatives of the exponential and logarithm functions came from the definition of the exponential function as the solution of an initial value problem. To find the derivatives of the other functions we will need to start from the definition.
+				</p>
+
+
+				<paragraphs xml:id="ch5-subsubsec-an-example-fxx3">
+        <title>An example: <m>f(x)=x^3</m>
+        </title>
+
+					<p>
+We begin by examining the calculation of the derivative of <m>f(x) =
+x^3</m> using the definition. The change <m>\Delta y</m> in <m>y = f(x)</m> corresponding to a change <m>\Delta x</m> in <m>x</m> is given by
+					</p>
+
+					<p>
+          <md>
+            <mrow>\Delta y \amp= f(x + \Delta x) - f(x)</mrow>
+            <mrow>\amp= (x + \Delta x)^{3} - x^{3}</mrow>
+            <mrow>\amp= 3x^{2}\cdot\Delta x + 3x(\Delta x)^{2} + (\Delta x)^{3}.</mrow>
+          </md> From this we get <md>
+            <mrow>f'(x) \amp= \lim_{\Delta x \rightarrow 0} \frac{\Delta y}{\Delta x}</mrow>
+            <mrow>
+      \amp= \lim_{\Delta x \rightarrow 0} 3x^{2} + 3x\cdot\Delta x + 
+        (\Delta x)^{2}.</mrow>
+          </md>
+        </p>
+
+					<p>
+To see what’s happening with this expression, let’s consider the specific value <m>x=2</m> and evaluate the corresponding values of <m>\frac{\Delta
+y}{\Delta x}</m> for successively smaller 
+<aside>
+            <p>The value of <m>\Delta y/ \Delta x</m> gets closer and closer to 12 as <m>\Delta x</m> gets smaller and smaller</p>
+          </aside>
+ <m>\Delta x</m>.
+					</p>
+
+<table>
+  <title>Values of the difference quotient</title>
+  <tabular>
+    <row header="yes">
+      <cell halign="right"><m>\Delta x</m></cell>
+      <cell halign="left"><m>3 \cdot 2^2+6\Delta x+(\Delta x)^2</m></cell>
+      <cell halign="right"><m>\frac{\Delta y}{\Delta x}</m></cell>
+    </row>
+
+    <row>
+      <cell halign="right"><m>0.1</m></cell>
+      <cell halign="left"><m>12+0.6+0.01</m></cell>
+      <cell halign="right"><m>12.61</m></cell>
+    </row>
+
+    <row>
+      <cell halign="right"><m>0.01</m></cell>
+      <cell halign="left"><m>12+0.06+0.0001</m></cell>
+      <cell halign="right"><m>12.0601</m></cell>
+    </row>
+
+    <row>
+      <cell halign="right"><m>0.001</m></cell>
+      <cell halign="left"><m>12+0.006+0.000001</m></cell>
+      <cell halign="right"><m>12.006001</m></cell>
+    </row>
+
+    <row>
+      <cell halign="right"><m>0.0001</m></cell>
+      <cell halign="left"><m>12+0.0006+0.00000001</m></cell>
+      <cell halign="right"><m>12.00060001</m></cell>
+    </row>
+
+    <row>
+      <cell halign="right"><m>0.00001</m></cell>
+      <cell halign="left"><m>12+0.00006+0.0000000001</m></cell>
+      <cell halign="right"><m>12.0000600001</m></cell>
+    </row>
+  </tabular>
+</table>
+
+        
+        <!--</div attr= class="center">-->
+        <p>
+It is clear from this table that we can make <m>\Delta y</m>/<m>\Delta x</m> as close to 12 as we like by making <m>\Delta x</m> small enough. Therefore <m>f'(2)=12</m>.
+					</p>
+
+					<p>
+Note that in the table above we have used positive values of <m>\Delta
+x</m>. You should check to convince yourself that if we had used negative values of <m>\Delta x</m> we would have come up with a different set of approximations <m>\Delta y</m>/<m>\Delta x</m>, but that the limit would still be the same, namely 12—it doesn’t matter whether we use positive or negative values for <m>\Delta x</m>, or a mixture of the two, so long as <m>\Delta x \rightarrow 0</m>.
+					</p>
+
+					<p>
+In general, for any given <m>x</m>, the second and third terms in the expansion for <m>\Delta y</m>/<m>\Delta x</m> become vanishingly small as <m>\Delta x \rightarrow 0</m>, so that <m>\Delta y</m>/<m>\Delta x</m> can be made as close to <m>3x^{2}</m> as we like by making <m>\Delta x</m> small enough. For this reason, we say that the derivative <m>f'(x)</m> is <em>exactly</em>
+          <m>3x^{2}</m> : <md>f'(x) = \lim_{\Delta x \rightarrow 0} 3x^2 + 3x\cdot\Delta x + 
+        (\Delta x)^2 = 3x^2.</md> In other words, given the function <m>f</m> specified by the formula <m>f(x)=x^3</m> we have found the formula for its derivative function <m>f'</m>: <m>f'(x) = 3 x^2</m>. Note that this general formula agrees with the specific value <m>f'(2)=12</m> we have already obtained.
+					</p>
+
+					<p>
+Notice the difference between the statements <md>f'(x) \approx \Delta y/\Delta x \qquad \mbox{and} \qquad
+        f'(x) = 3x^2.</md> 
+For a particular value of <m>\Delta x</m>, the corresponding value of <m>\Delta y/\Delta x</m> is an approximation of <m>f'(x)</m>. We can obtain another, better approximation by computing <m>\Delta y/\Delta x</m> for a smaller <m>\Delta x</m>. The successively better approximations differ from one another by less and less. In particular, they differ less and less from the <em>limit value</em>
+          <m>3x^2</m>. The value of the derivative <m>f'(x)</m> is <em>exactly</em>
+          <m>3x^2</m>.
+					</p>
+
+					<p>
+More generally, for any function <m>y=f(x)</m>, a particular difference quotient <m>\Delta y/\Delta x</m> is an approximation of <m>f'(x)</m>. Successively smaller values of <m>\Delta x</m> give successively better approximations of <m>f'(x)</m>. Again <m>f'(x)</m> <em>exactly</em> equals the limiting value of these successive approximations. In some cases, however, we are only able to approximate that limiting value, as we often did in <xref ref="ch3-chap-the-derivative" />, and for many purposes the approximation is entirely satisfactory. In this chapter we will concentrate on the exact statements that are possible for functions given by formulas.
+					</p>
+      </paragraphs>
+
+				<paragraphs xml:id="ch5-subsubsec-the-other-basic-functions">
+        <title>The other basic functions</title>
+        <p>
+Our formula for the derivative of the function <m>f(x) = x^{3}</m> is one instance of the general rule for the derivative 
+<aside>
+            <p>The rule for the derivative of a power function</p>
+          </aside>
+ of <m>f(x) = x^r</m>.
+					</p>
+
+<observation>
+        <p>
+          For every real number <m>r</m> , the derivative<!-- linebreak -->
+            of <m>f(x) = x^{\displaystyle r}</m> is <m>f'(x) = r\, x^{\displaystyle r-1}</m>.
+        </p>
+</observation>
+        <p>
+We can prove this rule for the case when <m>r</m> is a positive integer using algebraic manipulations very like the ones carried out for <m>x^{3}</m>; see the exercises for verifications of this and the other differentiation rules in this section. Using a rule for quotients of functions (coming later in this section), we can show that this rule also holds for <em>negative</em> integer exponents. Further arguments using the chain rule show that the pattern still holds for  <em>rational</em> exponents. We can eliminate this case-by-case approach, though, by recalling the approach developed in <xref ref="ch4-chap-differential-equations" />. We saw that we can give meaning to <m>b^{r}</m> for any positive base <m>b</m> and any real number <m>r</m> by defining <md>b^{\textstyle r} = e^{\textstyle r \ln(b)}.</md> Using the formulas for the derivatives of <m>e^{\displaystyle x}</m> and ln <m>x</m> together with the chain rule, we can prove the rule for <m>x&gt;0</m> and for arbitrary real exponent <m>r</m> directly, without first proving the special cases for integer or rational exponents. See the exercises for details. Arguments justifying the formulas for the derivatives of the trigonometric functions are also in the exercises.
+					</p>
+      </paragraphs>
+    </subsection>
+
+			<subsection xml:id="ch5-subsec-combining-functions">
+      <title>Combining Functions</title>
+      <p>
+					We can form new functions by combining functions. We have already studied one of the most useful ways of doing this in <xref ref="ch3-chap-the-derivative" /> when we looked at forming <q>chains</q> of functions and 
+<aside>
+          <p>Functions combined by chains…</p>
+        </aside>
+ developed the <term>chain rule</term> for taking the derivative of such a chain. Suppose <m>u=f(x)</m> and <m>y=g(u)</m>. Chaining these two functions together we have <m>y</m> as a function of <m>x</m>: <md>y = h(x) = g(f(x)).</md> The chain rule tells us how to find the derivative of <m>y</m> with respect to <m>x</m>. In function notation it takes the form <md>h'(x) = g'(f(x)) \cdot f'(x).</md> In Leibniz notation, using <m>f(x) = u</m> we can write the chain rule 
+<aside>
+          <p>The chain rule</p>
+        </aside>
+ as <md>\frac{dy}{dx} = \frac{dy}{du} \cdot \frac{du}{dx}.</md>
+      </p>
+
+				<p>
+					We also saw in <xref ref="ch3-chap-the-derivative" /> that the polynomial <m>5x^{3}-7x^2 +3</m> can be thought of as an <em>algebraic</em> combination of simple functions. 
+<aside>
+          <p>…and algebraically</p>
+        </aside>
+ We can build an even more complicated function by forming a quotient with this polynomial in the numerator and the difference of the functions <m>\sin{x}</m> and <m>e^x</m> in the denominator. The result is <md>\frac{5x^{3}-7x^2 +3}{\sin{x} - e^x}.</md>
+      </p>
+
+				<p>
+					The derivative of this function, as well as of other functions formed by adding, subtracting, multiplying and dividing simpler functions, is obtained by use of the following rules for the derivatives of algebraic combinations of differentiable functions.
+				</p>
+      <!-- div attr= class="center"-->
+<observation>
+        <title>Rules for Algebraic Combinations of Functions</title>
+        <aside>
+          <p>Combining functions by adding, subtracting, multiplying and dividing</p>
+        </aside>
+      <p>
+ <md>\begin{array}{cccc}
+   \mbox{function}    &amp;\mbox{derivative} \\[.05in]  \hline
+
+  \mbox{\rule{0in}{0.25in}$f(x) + g(x)$}           &amp;\mbox{\rule{0in}{0.25in}$f'(x) + g'(x)$}       \\[.1in]
+        f(x) - g(x)     &amp;f'(x) - g'(x)  \\[.1in]
+        cf(x)           &amp;cf'(x)  \\[.1in]
+        f(x)\cdot g(x)     &amp;f'(x)\cdot g(x) + f(x)\cdot g'(x)  \\[.1in]
+\displaystyle{\frac{f(x)}{g(x)}}  &amp;\displaystyle{ \frac{g(x)\cdot f'(x)-f(x)\cdot g'(x)}{[g(x)]^2} }
+\end{array}</md>
+      </p>
+      </observation>
+      <!--</div attr= class="center">-->
+      <p>
+					Notice carefully that the product rule has a plus sign but the quotient rule has a <em>minus</em> sign. 
+<aside>
+          <p>Notice the signs in the rules</p>
+        </aside>
+ You can remember these formulas better if you think about where these signs come from. Increasing <em>either</em> factor increases a (positive) product, so the derivative of <em>each</em> factor appears with a plus sign in the formula for the derivative of a product. Similarly, increasing the numerator increases a positive quotient, so the derivative of the numerator appears with a plus sign in the formula for the derivative of a quotient. However, increasing the denominator <em>decreases</em> a positive quotient, so the derivative of the denominator appears with a minus sign.
+				</p>
+
+				<p>
+					Let’s now use the rules to differentiate the quotient <md>\dfrac{5x^3-7x^2+3}{\sin{x} -e^x}.</md> First, the derivative of the numerator <m>5x^{3}-7x^{2}+3</m> is <md>5(3x^{2}) - 7(2x) + 0 = 15x^{2} - 14x.</md> Similarly the derivative of <m>\sin{x} - e^x</m> is <m>\cos{x} - e^x</m>. Finally, the derivative of the quotient function is obtained by using the rule for quotients: <md>\frac{(\sin{x} - e^x)(15x^{2} - 14x) - (5x^{3} - 7x^{2} + 3)(\cos{x} - e^x)}
+{(\sin{x} - e^x)^{2}}.</md>
+      </p>
+
+				<p>
+					The following examples further illustrate the use of the rules for algebraic combinations of functions. <md>\begin{array}{cccc}
+   \mbox{function}    &amp;  &amp;        &amp;\mbox{derivative} \\[.05in]  \hline
+\mbox{\rule{0in}{0.25in}$-3e^{t} + \sqrt[3]{t}$}    &amp;  &amp;        &amp;\mbox{\rule{0in}{0.25in}$-3e^{t} + (1/3)t^{-2/3}$}  \\[.1in]
+\displaystyle{\frac{5}{x^3}} -7x^4+\ln x &amp; &amp; &amp;5(-3)x^{-4} - 7(4x^3) + 1/x  \\[.1in]
+\displaystyle{7 \sqrt{x} \cos x}     &amp; &amp;      &amp;7 \displaystyle{(\frac{1}{2\sqrt{x}})} \cos x +7\sqrt{x}(-\sin x) \\[.1in]
+\displaystyle{\left(\frac43\right)} \pi r^3  &amp;     &amp;   &amp;\displaystyle{\left(\frac43\right) \pi 3r^2} \\[.22in]
+\displaystyle{ \frac{3s^6}{s^2 - s} }   &amp;   &amp;     &amp;\displaystyle{ \frac{(s^2-s)3(6s^5) -3s^6(2s-1)}{(s^{2} - s)^2} }   \end{array}</md>
+      </p>
+
+				<p>
+					For another kind of example, suppose the per capita daily energy consumption in a country is currently 800,000 BTU, and, due to energy conservation efforts, it is falling at the rate of 1,000 BTU per year. Suppose too that the population of the country is currently 200,000,000 people and is rising at the rate of 1,000,000 people per year. Is the total daily energy consumption of this country rising or falling? By how much?
+				</p>
+      <p>
+					Three different quantities vary with time in this example: daily per capita energy consumption, population and total daily energy consumption. We can model this situation with three functions <m>C(t)</m>, <m>P(t)</m> and <m>E(t)</m>. <md>
+          <mrow>C(t) \amp: \text{per capita consumption at time $t$}</mrow>
+          <mrow>P(t) \amp: \text{population at time $t$}</mrow>
+          <mrow>E(t) \amp: \text{total energy consumption at time $t$}</mrow>
+        </md>
+      </p>
+
+				<p>
+					Since the per capita consumption times the number of people in the population gives the total energy consumption, these three functions are related algebraically: <md>E(t) = C(t) \cdot P(t).</md> If <m>t=0</m> represents today, then we are given the two rates of change <md>
+          <mrow>C'(0) \amp=  -1,000 = - 10^{3} \, \mbox{BTU per person per year, and}</mrow>
+          <mrow>P'(0) \amp=  1,000,000 = 10^{6} \, \mbox{persons per year.}</mrow>
+        </md>
+      </p>
+
+				<p>
+					Using the product rule we can compute the current rate of change of the total daily energy consumption:
+				</p>
+      <p>
+        <md>
+          <mrow>E'(0) \amp= C(0) \cdot P'(0) + C'(0) \cdot P(0)</mrow>
+          <mrow>\amp= (8 \times 10^{5})\cdot (10^{6}) + (-10^{3})\cdot(2 \times 10^{8})</mrow>
+          <mrow>\amp= (8 \times 10^{11}) - (2 \times 10^{11})</mrow>
+          <mrow>\amp= 6 \times 10^{11} \, \mbox{BTU per year}.</mrow>
+        </md> So the total daily energy consumption is currently rising at the rate of <m>6 \times 10^{11}</m> BTU per year. Thus the growth in the population more than offsets the efforts to conserve energy.
+				</p>
+
+				<p>
+					Finally, it is a useful exercise to check that the units make sense in this computation. 
+<aside>
+          <p>Checking units</p>
+        </aside>
+ Recall that <m>C(t)</m> represents <em>per capita</em> daily energy consumption, so the units for <m>C(0) \cdot P'(0)</m> are <md>\frac{\mbox {BTU}}{\mbox {person}} \cdot \frac{\mbox{persons}}{\mbox{year}} = \frac{\mbox{BTU}}{\mbox{year}},</md> and, similarly, the units for <m>C'(0) \cdot P(0)</m> are <md>\frac{\mbox{BTU}}{\mbox{person}} \cdot \frac{1}{\mbox{year}} \cdot 
+{\mbox {persons}} = \frac{\mbox{BTU}}{\mbox{year}}.</md>
+      </p>
+    </subsection>
+
+			<subsection xml:id="ch5-subsec-informal-arguments">
+      <title>Informal Arguments</title>
+      <p>
+					All of the rules for differentiating algebraic combinations of functions can be proved by using the algebraic definition of the derivative as a limit of a difference quotient. In fact, we will examine such a formal proof below. However, informal arguments based on geometric ideas or other intuitive insights are also valuable aids to understanding. Here are three examples of such arguments.
+				</p>
+      <p>
+        <ul>
+          <li>
+            <p>
+				If a new function <m>g</m> is obtained from <m>f</m> by multiplying by a positive constant <m>c</m>, so <m>g(x)=cf(x)</m>, what is the relationship between the graphs of <m>y=f(x)</m> and of <m>y=g(x)</m>? 
+<aside>
+                <p>Stretching <m>y</m>-coordinates</p>
+              </aside>
+ Stretching (or compressing, if <m>c</m> is less than 1) the <m>y</m>-coordinates of the points of the graph of <m>f</m> by a factor of <m>c</m> yields the graph of <m>g</m>.
+			</p>
+					
+			<figure xml:id="fig_calc1_pic200a">
+              <image source="images/calc1_pic200a" />
+              <caption>image</caption>
+            </figure>
+					
+			<p>
+				What then is the relationship between the slopes <m>f'(x)</m> and <m>g'(x)</m>? If the <m>y</m>-coordinates are tripled, the slope will be three times as great. If they are halved, the slope will also be half as much. More generally, the elongated (or compressed) graph of <m>g</m> has a slope equal to <m>c</m> times the slope of the original graph of <m>f</m>. In other words, <m>g(x)=cf(x)</m> implies <m>g'(x)=cf'(x)</m>.
+			</p>
+          </li>
+
+					<li>
+            <p>
+				Now suppose instead that <m>g</m> is obtained from <m>f</m> by adding a constant <m>b</m>, so <m>g(x) = f(x) + b</m>. 
+<aside>
+                <p>Shifting <m>y</m>-coordinates</p>
+              </aside>
+ This time the graph of <m>y=g(x)</m> is obtained from the graph of <m>y=f(x)</m> by shifting up or down (according to the sign of <m>c</m>) by <m>|c|</m> units. What is the relationship between the slopes <m>f'(x)</m> and <m>g'(x)</m>? The shifted graph has exactly the same slope as the original graph, so in this case, <m>g(x)=f(x)+b</m> implies <m>g'(x)=f'(x)</m>.
+			</p>
+					
+			<figure xml:id="fig_calc1_pic200b">
+              <image source="images/calc1_pic200b" />
+              <caption>image</caption>
+            </figure>
+          </li>
+        </ul>
+      </p>
+
+				<p>
+					There is a similar pattern when the coordinates of the input variable are stretched or shifted—that is when <m>y=f(u)</m> and <m>u</m> is  <em>rescaled</em> by the linear relation <m>u=mx+b</m>. These results depend on the chain rule and appear in the exercises.
+				</p>
+
+				<p>
+					The fact that the derivative of <m>f(x)+b</m> is the same as the derivative of <m>f(x)</m> is a special case of the general <em>addition rule</em>, which says <em>the derivative of a sum is the sum of the derivatives</em>. In the special case, the derivative of the constant function <m>b</m> is zero, so adding a constant leaves the derivative unchanged. To see that how natural it is to add rates in the general case, consider the following example:
+				</p>
+
+				<p>
+					Suppose we are diluting concentrated orange juice 
+<aside>
+          <p>Adding flows</p>
+        </aside>
+ by mixing it with water in a big tub. We may let <m>f(t)</m> be the amount (in gallons) of concentrate in the tub and <m>g(t)</m> be the amount of water in the tub at time <m>t</m>. Then <m>f'(t)</m> is the rate at which concentrate is being added at time <m>t</m> (measured in gallons per minute), and <m>g'(t)</m> is the rate at which water is flowing into the tub. The formula <m>F(t) = f(t) + g(t)</m> then gives the total amount of liquid in the tub at time <m>t</m>, and <m>F'(t)</m> is the rate by which that total amount of liquid is changing at time <m>t</m>. Clearly that rate is the sum of the rates of flow of concentrate and water into the tank. If at some particular moment we are adding concentrate at the rate of 3.2 gal/min and water at the rate of 1.1 gal/min, the liquid in the tub is increasing by 4.3 gal/min at that moment.
+				</p>
+    </subsection>
+
+			<subsection xml:id="ch5-subsec-a-formal-proof-the-product-rule">
+      <title>A Formal Proof: The Product Rule</title>
+      <p>
+					We include here the algebraic calculations yielding the rule for the derivative of the product of two arbitrary functions—just to give the flavor of these arguments. Algebraic arguments for the rest of these rules may be found in the exercises.
+				</p>
+<theorem xml:id="product-rule">
+<title>The Product Rule</title>
+<statement>
+        <md>\text{If } F(x) = f(x) \cdot g(x) \mbox{ then }\ F'(x) = f'(x)\cdot g(x) + f(x)\cdot g'(x)</md> 
+</statement>
+<proof>        
+<p>
+        To save some writing, let 
+        <md>
+          <mrow>\Delta F \amp= F(x + \Delta x) - F(x),</mrow>
+          <mrow>\Delta f \amp= f(x + \Delta x) - f(x),</mrow>
+          <mrow>\mbox{and} \qquad \Delta g \amp= g(x + \Delta x) - g(x).</mrow>
+        </md> 
+        Rewrite the last two equations as 
+        <md>
+          <mrow>f(x + \Delta x) \amp= f(x) + \Delta f</mrow>
+          <mrow>g(x + \Delta x) \amp= g(x) + \Delta g.</mrow>
+        </md> 
+        Now we can write 
+        <md>
+          <mrow>F(x + \Delta x) \amp= f(x + \Delta x)\cdot g(x + \Delta x)</mrow>
+          <mrow>\amp= (f(x) + \Delta f) \cdot (g(x) + \Delta g)</mrow>
+          <mrow>\amp= f(x) \cdot g(x) + f(x) \cdot \Delta g + \Delta f \cdot g(x) 
+                + \Delta f \cdot \Delta g</mrow>
+        </md> 
+<aside>
+          <p>Simplifying <m>\Delta F</m>
+          </p>
+        </aside>
+ This gives us a simple expression for <md>\Delta F = F(x + \Delta x) - F(x)</md> namely, <md>\Delta F = f(x) \cdot \Delta g + \Delta f\cdot g(x) + \Delta f\cdot \Delta g</md>
+      </p>
+
+				<p>
+					These quantities all have nice geometric interpretations. 
+<aside>
+          <p>Interpret <m>\Delta f</m> and <m>\Delta g</m> as lengths</p>
+        </aside>
+ First, think of the numbers <m>f(x)</m> and <m>g(x)</m> as lengths that depend on <m>x</m>; then <m>F(x)</m> naturally stands for the area of the rectangle whose sides are <m>f(x)</m> and <m>g(x)</m>. If the sides of the rectangle grow by the amounts <m>\Delta f</m> and <m>\Delta g</m>, then the area <m>F</m> grows by <m>\Delta F</m>. As the following diagram shows, <m>\Delta F</m> has three parts, corresponding to the three terms in the expression we derived algebraically for <m>\Delta F</m>.
+				</p>
+
+<figure xml:id="ch5-pic002">
+        <image source="images/ch5_pic002" />
+        <caption />
+      </figure>
+      <p>
+					Now we divide <m>\Delta F</m> by <m>\Delta x</m> and finish the argument: <md>
+          <mrow>\frac{\Delta F}{\Delta x} \amp= \frac{f(x)\cdot \Delta g + \Delta f\cdot g(x) +
+\Delta f \cdot \Delta g}{\Delta x}</mrow>
+          <mrow>\amp= f(x) \cdot\frac{\Delta g}{\Delta x}  + \frac{\Delta f}{\Delta x} \cdot g(x) + \frac{\Delta f \cdot \Delta g}{\Delta x}</mrow>
+        </md>
+      </p>
+
+				<p>
+					Consider what happens to each of the three terms as <m>\Delta x</m> gets smaller and smaller. In the first term, the second factor <m>\Delta g/
+\Delta x</m> approaches <m>g'(x)</m>—by the <em>definition</em> of the derivative. The first factor, <m>f(x)</m> doesn’t change at all as <m>\Delta
+x</m> shrinks. So the first term approaches <m>f(x) \cdot g'(x)</m>. Similarly, in the second term, the quotient <m>\Delta f/ \Delta x</m> approaches <m>f'(x)</m>, and the second term approaches <m>f'(x) \cdot g(x)</m>.
+				</p>
+
+				<p>
+					Finally, look at the third term. We would know what to expect if we had another factor of <m>\Delta x</m> in the denominator. We can put ourselves in familiar territory by the <q>trick</q> of multiplying the third term by <m>\Delta x/ \Delta x</m>: <md>\frac{\Delta f \cdot \Delta g}{\Delta x} 
+= \frac{\Delta f}{\Delta x} \cdot \frac{\Delta g}{\Delta x} \cdot \Delta x</md> Thus we can see that as <m>\Delta x</m> approaches zero, the third term itself approaches <m>f'(x) \cdot g'(x) \cdot 0 = 0</m>.
+				</p>
+
+				<p>
+					We may summarize our calculation by writing <md>
+          <mrow>lim_{\Delta x \rightarrow 0} \frac{\Delta F}{\Delta x} \amp= 
+      f(x)\cdot\left(\lim_{\Delta x \rightarrow 0} 
+      \frac{\Delta g}{\Delta x}\right)  +  
+      \left(\lim_{\Delta x \rightarrow 0} 
+      \frac{\Delta f}{\Delta x}\right) \cdot g(x)</mrow>
+          <mrow>\amp    \quad + \left(\lim_{\Delta x \rightarrow 0} 
+      \frac{\Delta f}{\Delta x}\right)\cdot 
+      \left(\lim_{\Delta x \rightarrow 0}
+      \frac{\Delta g}{\Delta x}\right) \cdot
+      \left(\lim_{\Delta x \rightarrow 0} \Delta x\right)</mrow>
+        </md> from which we have <md>
+          <mrow>lim_{\Delta x \rightarrow 0} \frac{\Delta F}{\Delta x} \amp= 
+   f(x) \cdot g'(x) + f'(x) \cdot g(x) + f'(x) \cdot g'(x) \cdot 0</mrow>
+          <mrow>\amp= f(x) \cdot g'(x) + f'(x) \cdot g(x).</mrow>
+        </md> This completes the proof of the product rule. Other formal arguments are left to the exercises.
+				</p>
+</proof>
+</theorem>
+    </subsection>
+
+			<exercises xml:id="ch5-subsec-exercises">
+      <title>Exercises</title>
+      <exercisegroup xml:id="ch5-subsubsec-finding-derivatives">
+        <title>Finding Derivatives</title>
+        <exercise>
+          <statement>
+            <p>
+Find the derivative of each of the following functions.
+					</p>
+<ol cols="2">
+  <li><m>3x^5 - 10x^2 + 8</m></li>
+
+  <li><m>(5x^{12}+2)(\pi-\pi^2x^4)</m></li>
+
+  <li><m>\sqrt{u}-\frac{3}{u^3}+2u^7</m></li>
+
+  <li>
+    <m>mx+b</m>
+    (<m>m</m> and <m>b</m> constant)
+  </li>
+
+  <li><m>0.5\sin x+\sqrt[3]{x}+\pi^2</m></li>
+
+  <li><m>\dfrac{\pi-\pi^2x^4}{5x^{12}+2}</m></li>
+
+  <li><m>2\sqrt{x}-\dfrac{1}{\sqrt{x}}</m></li>
+
+  <li><m>\tan z(\sin z-5)</m></li>
+
+  <li><m>\dfrac{\sin x}{x^2}</m></li>
+
+  <li><m>x^2e^x</m></li>
+
+  <li><m>\cos x+e^x</m></li>
+
+  <li><m>\dfrac{\sin x}{\cos x}</m></li>
+
+  <li><m>e^x\ln x</m></li>
+
+  <li><m>\dfrac{2^x}{10+\sin x}</m></li>
+
+  <li><m>\sin(e^x\cos x)</m></li>
+
+  <li><m>\dfrac{6e^{\cos t}}{5\sqrt[3]{t}}</m></li>
+
+  <li><m>\ln(x^2+xe^x)</m></li>
+
+  <li><m>\dfrac{5x^2+\ln x}{7\sqrt{x}+5}</m></li>
+</ol>
+          </statement>
+        </exercise><exercise>
+          <statement>
+            <p>
+Suppose <m>f</m> and <m>g</m> are functions and that we are given <md alignat-columns="5">
+                <mrow>f(2)  \amp= 3, \amp  g(2) \amp= 4, \amp g(3) \amp= 2,</mrow>
+                <mrow>f'(2) \amp= 2, \amp      g'(2) \amp= -1, \amp    g'(3) \amp=17.</mrow>
+              </md> </p>
+              <task><p>Evaluate the derivative of each of the following functions at <m>t=2</m>:
+
+<ol cols="2">
+  <li><m>f(t)+g(t)</m></li>
+
+  <li><m>5f(t)-2g(t)</m></li>
+
+  <li><m>f(t)g(t)</m></li>
+
+  <li><m>\dfrac{f(t)}{g(t)}</m></li>
+
+  <li><m>g(f(t))</m></li>
+
+  <li><m>\sqrt{g(t)}</m></li>
+
+  <li><m>t^2f(t)</m></li>
+
+  <li><m>(f(t))^2+(g(t))^2</m></li>
+
+  <li><m>\dfrac{1}{f(t)}</m></li>
+
+  <li><m>f(3t-(g(1+t))^2)</m></li>
+</ol></p></task>
+
+<task><p>What additional piece of information would you need to calculate the derivative of <m>f(g(t))</m> at <m>t=2</m>?
+					</p></task>
+
+<task>					<p>
+Estimate the value of <m>f(t)/g(t)</m> at <m>t=1.95</m>
+            </p></task>
+          </statement>
+        </exercise><exercise>
+          <task>
+            <p>
+Extend the product rule to express <m>(f(t)g(t)h(t))'</m> in terms of <m>f</m>, <m>g</m>, and <m>h</m>.
+					</p>
+          </task><task>
+            <p>
+If the length, width, and height of a rectangular box are changing at the rates of 3, 6, and <m>-5</m> inches/minute at the moment when all three dimensions happen to be 10 inches, at what rate is the volume of the box changing then?
+					</p>
+          </task><task>
+            <p>
+If the length, width, and height of a box are 10 inches, 12 inches, and 8 inches, respectively, and if the length and height of the box are changing at the rates of 3 inches/minute and <m>-2</m> inches/minute, respectively, at what rate must the width be changing to keep the volume of the box constant?
+					</p>
+          </task>
+        </exercise><exercise>
+          <introduction>
+            <p>
+In this problem we examine the effect of stretching or shifting the coordinates of the input variable of a function. Your answers should address both the <em>algebra</em> and the <em>geometry</em> of the problem to show how the algebraic relations between the functions are manifested in their graphs.
+					</p>
+          </introduction><task>
+            <p>
+Suppose <m>f(x)=\sin(x)</m> and <m>g(x)= \sin(mx)</m>, where <m>m</m> is a constant stretching factor. What is the relation between <m>f'(x)</m> and <m>g'(x)</m>?
+					</p>
+          </task><task>
+            <p>
+As in (a), suppose <m>f(x) = \sin(x)</m>, but this time <m>g(x) =
+\sin(x+b)</m> where <m>b</m> is the size of a (constant) shift. What is the relation between <m>f'(x)</m> and <m>g'(x)</m> this time?
+					</p>
+          </task><task>
+            <p>
+Now consider the general case: <m>f(x)</m> in an unspecified differentiable function and <m>g(x) = f(mx+b)</m>, where the input variable is stretched by the constant factor <m>m</m> and shifted by the constant amount <m>b</m>. What is the relation between <m>f'(x)</m> and <m>g'(x)</m> in this general case?
+					</p>
+          </task>
+        </exercise><exercise>
+          <statement>
+            <p>
+Which of the following functions has a derivative which is always positive (except at <m>x=0</m>, where neither the function nor its derivative is defined)? <md>1/x \qquad    -1/x   \qquad   1/{x^2}  \qquad -1/{x^2}</md>
+            </p>
+          </statement>
+        </exercise><exercise>
+          <introduction>
+            <p>
+As a function of its radius <m>r</m>, the volume of a sphere is given by the formula <m>V(r) = \frac43 \pi r^3</m>. If <m>r</m> is measured in centimeters, what are the units for <m>V'(r)</m>?
+					</p>
+          </introduction><task>
+            <p>
+Explain why square cm are <em>not</em> the appropriate units for <m>V'(r)</m>, even though dimensionally correct.
+					</p>
+          </task>
+        </exercise><exercise>
+          <introduction>
+            <p>
+Do the following.
+					</p>
+          </introduction><task>
+            <p>
+Show that <m>\dfrac{1}{{1 - x^2}}</m> and <m>\dfrac{x^2}{{1 - x^2}}</m> have the same derivative.
+					</p>
+          </task><task>
+            <p>
+If <m>f'(x) = g'(x)</m> for every <m>x</m>, what can be concluded about the relationship between <m>f</m> and <m>g</m>? (Hint: What is <m>(f(x) - g(x))'</m> ?)
+					</p>
+          </task><task>
+            <p>
+Show that <m>\dfrac{1}{1 - x^2} = \dfrac{x^2}{{1 - x^2}} + C</m> by finding <m>C</m>.
+					</p>
+          </task>
+        </exercise><exercise>
+          <statement>
+            <p>
+Suppose that the current total daily energy consumption in a particular country is <m>16 \times 10^{13}</m> BTU and is rising at the rate of <m>6 \times 10^{11}</m> BTU per year. Suppose that the current population is <m>2 \times 10^{8}</m> people and is rising at the rate of <m>10^6</m> people per year. What is the current daily per capita energy consumption? Is it rising or falling? By how much?
+					</p>
+          </statement>
+        </exercise><exercise>
+          <statement>
+            <p>
+The population of a particular country is 15,000,000 people and is growing at the rate of 10,000 people per year. In the same country the per capita yearly expenditure for energy is $1,000 per person and is growing at the rate of $8 per year. What is the country’s current total yearly energy expenditure? How fast is the country’s total yearly energy expenditure growing?
+					</p>
+          </statement>
+        </exercise><exercise>
+          <statement>
+            <p>
+The population of a particular country is 30 million and is rising at the rate of 4,000 people per year. The total yearly personal income in the country is 20 billion dollars, and it is rising at the rate of 500 million dollars per year. What is the current per capita personal income? Is it rising or falling? By how much?
+					</p>
+          </statement>
+        </exercise><exercise>
+          <statement>
+            <p>
+An explorer is marooned on an iceberg. The top of the iceberg is shaped like a square with sides of length 100 feet. The length of the sides is shrinking at the rate of two feet per day. How fast is the area of the top of the iceberg shrinking? Assuming the sides continue to shrink at the rate of two feet per day, what will be the dimensions of the top of the iceberg in five days? How fast will the area of the top of the iceberg be shrinking then?
+					</p>
+          </statement>
+        </exercise><exercise>
+          <statement>
+            <p>
+Suppose the iceberg of problem 9 is shaped like a cube. How fast is the volume of the cube shrinking when the sides have length 100 feet? How fast after five days?
+					</p>
+          </statement>
+        </exercise>
+      </exercisegroup><exercisegroup xml:id="ch5-subsubsec-deriving-differentiation-rules">
+        <title>Deriving Differentiation Rules</title>
+        <exercise>
+          <introduction>
+            <p>
+In this problem we calculate the derivative of <m>f(x) = x^4</m>.
+					</p>
+          </introduction><task>
+            <p>
+Expand <m>f(x + \Delta x) = (x + \Delta x)^4 =</m>
+              <m>(x + \Delta x)(x +
+\Delta x)(x + \Delta x)(x + \Delta x)</m> as a sum of 16 terms. (Don’t collect <q>like</q> terms yet.)
+					</p>
+          </task><task>
+            <p>
+How many terms in part a involve <em>no</em>
+              <m>\Delta x</m>’s? What form do such terms have?
+					</p>
+          </task><task>
+            <p>
+How many terms in part a involve exactly <em>one</em>
+              <m>\Delta x</m>? What form do such terms have?
+					</p>
+          </task><task>
+            <p>
+Group the terms in part a so that <m>f(x + \Delta x)</m> has the form <md>Ax^4 + B \Delta x + R (\Delta x)^2 \ ,</md> where there are no <m>\Delta x</m>’s among the terms in <m>A</m> or <m>B</m>, but <m>R</m> has several terms, some involving <m>\Delta x</m>. Use part b to check your value of <m>A</m>; use part c to check your value of <m>B</m>.
+					</p>
+          </task><task>
+            <p>
+Compute the quotient <m>\dfrac{f(x + \Delta x) - f(x)}{\Delta x}</m>, taking advantage of part d.
+					</p>
+          </task><task>
+            <p>
+Now find <md>\lim_{\Delta x \rightarrow 0} 
+\dfrac{f(x + \Delta x) - f(x)}{\Delta x};</md> this is the derivative of <m>x^4</m>. Is your result here compatible with the rule for the derivative of <m>x^n</m> ?
+					</p>
+          </task>
+        </exercise><exercise>
+          <introduction>
+            <p>
+In this problem we calculate the derivative of <m>f(x) = x^n</m>, where <m>n</m> is any positive integer.
+					</p>
+          </introduction><task>
+            <p>
+First show that you can write <md>f(x + \Delta x) = x^n + nx^{n-1} \Delta x + R (\Delta x)^2</md> by developing the following line of argument. Write <m>(x + \Delta x)^n</m> as a product of <m>n</m> identical factors: <md>(x + \Delta x)^n = \underbrace{(x + \Delta x)}_{1\mbox{-st}}
+                   \underbrace{(x + \Delta x)}_{2\mbox{-nd}}
+                   \underbrace{(x + \Delta x)}_{3\mbox{-rd}} 
+            \ldots \underbrace{(x + \Delta x)}_{n\mbox{-th}}</md> But now, before tackling this general case, look at the following examples. In the examples we use notation to help us keep track of which factors are contributing to the final result.
+					</p>
+
+					<p>
+i) Consider the product <m>(a + b)(\underline{a} + \underline{b}) =
+a\underline{a} + a\underline{b} + b\underline{a} + b\underline{b}</m>. There are four individual terms. Each term contains one of the entries in the first factor (namely <m>a</m> or <m>b</m>) and one of the entries in the second factor (namely <m>\underline{a}</m> or <m>\underline{b}</m>). The four terms represent thereby all possible ways of choosing one entry in the first factor and one entry in the second factor.
+					</p>
+
+					<p>
+ii) Multiply out the product <m>(a + b)(\underline{a}+ \underline{b})(A
++ B)</m>. (Don’t combine like terms yet.) Does each term contain one entry from the first factor, one from the second, and one from the third? How many terms did you get? In fact there are two ways to choose an entry from the first factor, two ways to choose an entry from the second factor, and two ways to choose an entry from the third factor. Therefore, how many ways can you make a choice consisting of one entry from the first, one from the second, and one from the third?
+					</p>
+
+					<p>
+Now return to the general case: <md>(x + \Delta x)^n = \underbrace{(x + \Delta x)}_{1\mbox{-st}}
+\underbrace{(x + \Delta x)}_{2\mbox{-nd}}
+\underbrace{(x + \Delta x)}_{3\mbox{-rd}} \ldots \underbrace{(x + \Delta x)}_{n\mbox{-th}}</md> How many ways can you choose an entry from each factor and <em>not</em> get any <m>\Delta x</m>’s? Multiply these chosen entries together; what does the product look like (apart from having no <m>\Delta x</m>’s in it)?
+					</p>
+
+					<p>
+How many ways can you choose an entry from each factor in such a way that the resulting product has <em>precisely one</em>
+              <m>\Delta x</m>? Describe all the various choices which give that result. What does a product that contains precisely one <m>\Delta x</m> factor look like? What do you obtain for the sum of <em>all</em> such terms with precisely one <m>\Delta x</m> factor?
+					</p>
+
+					<p>
+What is the minimum number of <m>\Delta x</m> factors in any of the remaining terms in the full expansion of <m>(x + \Delta x)^n</m> ?
+					</p>
+
+					<p>
+Do your calculations agree with this summary: <md>(x + \Delta x)^n = x^n + nx^{n-1} \Delta x + R(\Delta x)^2 \ ?</md>
+            </p>
+          </task><task>
+            <p>
+Now find the value of <m>\dfrac{f(x + \Delta x) - f(x)}{\Delta x}</m>.
+					</p>
+          </task><task>
+            <p>
+Finally, find <md>\lim_{\Delta x \rightarrow 0} \dfrac{f(x + \Delta x) - f(x)}{\Delta x}.</md> Do you get <m>n x^{n-1}</m>?
+					</p>
+          </task>
+        </exercise><exercise>
+          <statement>
+            <p>
+In this problem we give another derivation of the power rule based on writing <md>x^{\textstyle r} = e^{\textstyle r \ln(x)}.</md> Use the chain rule to differentiate <m>e^{\textstyle r \ln(x)}</m>. Explain why your answer equals <m>rx^{r-1}</m>.
+					</p>
+          </statement>
+        </exercise><exercise>
+          <statement>
+            <p>
+Does the rule for the derivative of <m>x^r</m> hold for <m>r=0</m>? Why or why not?
+					</p>
+          </statement>
+        </exercise><exercise>
+          <introduction>
+            <p>
+In this exercise we prove the Addition Rule: <m>F(x) = f(x) + g(x)</m> implies <m>F'(x) = f'(x) + g'(x)</m>.
+					</p>
+          </introduction><task>
+            <p>
+Show <m>F(x + \Delta x) - F(x) =  f(x + \Delta x) - f(x) + g(x + \Delta x) - g(x)</m>
+            </p>
+          </task><task>
+            <p>
+Divide by <m>\Delta x</m> and finish the argument.
+					</p>
+          </task>
+        </exercise><exercise>
+          <introduction>
+            <p>
+In this exercise we prove the Quotient Rule: <m>F(x) = f(x) / g(x)</m> implies <md>F'(x) = \frac{g(x)f'(x) - f(x)g'(x)}{(g(x))^2}</md>
+            </p>
+          </introduction><task>
+            <p>
+Rewrite <m>F(x) = f(x) / g(x)</m> as <m>f(x) = g(x) F(x)</m>. Pretend for the moment that you know what <m>F'(x)</m> is and apply the Product Rule to find <m>f'(x)</m> in terms of <m>F(x)</m>, <m>g(x)</m>, <m>F'(x)</m>, <m>g'(x)</m>.
+					</p>
+          </task><task>
+            <p>
+Replace <m>F(x)</m> by <m>f(x) / g(x)</m> in your expression for <m>f'(x)</m> in part a.
+					</p>
+          </task><task>
+            <p>
+Solve the equation in part b for <m>F'(x)</m> in terms of <m>f(x)</m>, <m>g(x)</m>, <m>f'(x)</m> and <m>g'(x)</m>.
+					</p>
+          </task>
+        </exercise><exercise>
+          <introduction>
+            <p>
+In this problem we calculate the derivative of <m>f(x) = x^n</m> when <m>n</m> is a negative integer. First write <m>n = -m</m>, so <m>m</m> is a positive integer. Then <m>f(x) = x^{-m} = 1 / {x^m}</m>.
+					</p>
+          </introduction><task>
+            <p>
+Use the Quotient Rule and this new expression for <m>f</m> to find <m>f'(x)</m> .
+					</p>
+          </task><task>
+            <p>
+Do the algebra to re-express <m>f'(x)</m> as <m>nx^{n-1}</m>.
+					</p>
+          </task>
+        </exercise><exercise>
+          <introduction>
+            <p>
+In this problem we calculate the derivatives of <m>\sin{x}</m> and <m>\cos{x}</m>. We will need the <term>addition formulas</term>: <md>
+                <mrow>sin(A + B) \amp= \sin{A}\cos{B} + \cos{A}\sin{B}</mrow>
+                <mrow>\cos(A + B) \amp= \cos{A}\cos{B} - \sin{A}\sin{B}</mrow>
+              </md>
+            </p>
+
+					<p>
+First tackle <m>f(x) = \sin{x}</m>:
+					</p>
+          </introduction><task>
+            <p>
+Use the addition formula for <m>\sin(A + B)</m> to rewrite <m>f(x +
+\Delta x)</m> in terms of <m>\sin(x)</m>, <m>\cos(x)</m>, <m>\sin(\Delta x)</m>, and <m>\cos(\Delta x)</m>.
+					</p>
+          </task><task>
+            <p>
+The quotient <m>\dfrac{f(x + \Delta x) -
+  f(x)}{\Delta x}</m> can now be written in the form <md>P(\Delta x) \cdot \sin{x} + Q(\Delta x) \cdot \cos{x} \, ,</md> where <m>P</m> and <m>Q</m> are specific functions of <m>\Delta x</m>. What are the formulas for those functions?
+					</p>
+          </task><task>
+            <p>
+Use a calculator or computer to estimate the limits <md>\lim_{\Delta x \to 0}P(\Delta x) \qquad \mbox{and} \qquad
+        \lim_{\Delta x \to 0}Q(\Delta x) \ .</md> (Try <m>\Delta x =</m> 0.1, 0.01, 0.001, 0.0001. Be sure your calculator is set on radians, not degrees.) Using part b you should now be able to determine the limit <md>\lim_{\Delta x \rightarrow 0} 
+        \frac{f(x + \Delta x) - f(x)}{\Delta x} \
+</md> by writing it in the form <md>\left( \lim_{\Delta x \rightarrow 0} P(\Delta x) \right) 
+                    \cdot \sin{x} + 
+    \left( \lim_{\Delta x \rightarrow 0} Q(\Delta x) \right) 
+                    \cdot \cos{x} \ .</md>
+            </p>
+          </task><task>
+            <p>
+What is <m>f'(x)</m>?
+					</p>
+          </task><task>
+            <p>
+Proceed similarly to find the derivative of <m>g(x) = \cos{x}</m>.
+					</p>
+          </task>
+        </exercise><exercise>
+          <statement>
+            <p>
+In this problem we calculate the derivatives of the other circular functions. Use the quotient rule together with the derivatives of <m>\sin{x}</m> and <m>\cos{x}</m> to verify that the derivatives of the other four circular functions are as given in the table below: <md>\begin{array}{cc}
+\text{function}  &amp; \text{derivative} \\ 
+\hline 
+\tan{x} = \dfrac{\sin{x}}{\cos{x}}      
+        &amp;        \sec^2{x} \\ 
+\csc{x} = \dfrac{1}{\sin{x}}     
+         &amp; -\cot{x}\csc{x}  \\ 
+\sec{x} = \dfrac{1}{\cos{x}}     
+        &amp;      \sec{x}\tan{x} \\ 
+\cot{x} = \dfrac{1}{\tan{x}}     
+        &amp;       -\csc^2{x}
+\end{array}</md>
+            </p>
+          </statement>
+        </exercise>
+      </exercisegroup><exercisegroup xml:id="ch5-subsubsec-differential-equations">
+        <title>Differential Equations</title>
+        <exercise>
+          <introduction>
+            <p>
+If <m>y = f(x)</m> then the <term>second derivative</term> of <m>f</m> is just the derivative of the derivative of <m>f</m>; it is denoted <m>f''(x)</m> or <m>d^2y/dx^2</m>. Find the second derivative of each of the following functions.
+					</p>
+          </introduction><task>
+            <p>
+              <m>f(x) = e^{3x-2}</m>
+            </p>
+          </task><task>
+            <p>
+              <m>f(x) = \sin{\omega x}</m>, where <m>\omega</m> is a constant
+					</p>
+          </task><task>
+            <p>
+              <m>f(x) = x^2e^x</m>
+            </p>
+          </task>
+        </exercise><exercise>
+          <statement>
+            <p>
+Show that <m>e^{3x}</m> and <m>e^{-3x}</m> both satisfy the (<em>second order</em>) differential equation <md>f''(x) = 9 f(x).</md> Furthermore, show that <em>any</em> function of the form <m>g(x) = \alpha e^{3x} + \beta e^{-3x}</m> satisfies this differential equation. Here <m>\alpha</m> and <m>\beta</m> are arbitrary constants. Finally, choose <m>\alpha</m> and <m>\beta</m> so that <m>g(x)</m> also satisfies the two conditions <m>g(0) = 12</m> and <m>g'(0) = 15</m>.
+					</p>
+          </statement>
+        </exercise><exercise>
+          <statement>
+            <p>
+Show that <m>y = \sin{x}</m> satisfies the differential equation <m>y''
++ y = 0</m>. Show that <m>y = \cos{x}</m> also satisfies the differential equation. Show that, in fact, <m>y=a \sin{x} + b \cos{x}</m> satisfies the differential equation for any choice of constants <m>a</m> and <m>b</m>. Can you find a function <m>g(x)</m> that satisfies these three conditions: <md>
+                <mrow>g''(x) + g(x) \amp=  0</mrow>
+                <mrow>g(0)  \amp=  1</mrow>
+                <mrow>g'(0) \amp=  4 ?</mrow>
+              </md>
+            </p>
+          </statement>
+        </exercise><exercise>
+          <statement>
+            <p>
+Show that <m>\sin{\omega x}</m> satisfies the differential equation <m>y'' + {\omega}^2 y = 0</m>. What other solutions can you find to this differential equation? Can you find a function <m>L(x)</m> that satisfies these three conditions: <md>
+                <mrow>L''(x) + 4L(x) \amp=  0</mrow>
+                <mrow>L(0)   \amp=  36</mrow>
+                <mrow>L'(0)  \amp=  64 ?</mrow>
+              </md>
+            </p>
+          </statement>
+        </exercise>
+      </exercisegroup><exercisegroup xml:id="ch5-the-colorado-river-problem">
+        <title>The Colorado River Problem</title>
+        <introduction>
+          <p>
+
+					</p>
+          <p>
+Make your answer to this sequence of questions an essay. Identify all the variables you consider (e.g., <q>
+              <m>A</m> stands for the area of the lake</q>), and indicate the functional relationships between them (<q>
+              <m>A</m> depends on time <m>t</m>, measured in weeks from the present</q>). Identify the derivatives of those functions, as necessary.
+					</p>
+
+					<p>
+The Colorado River—which excavated the Grand Canyon, among others—used to empty into the Gulf of California. It no longer does. Instead, it runs into a marshy area some miles from the Gulf and stops. One of the major reasons for this change is the construction of dams—notably the Hoover Dam. Every dam creates a lake behind it, and every lake increases the total surface area of the river. Since the rate at which water evaporates is proportional to the area of the water surface exposed to air, the lakes along the Colorado have increased the loss of river water through evaporation. Over the years, these losses (in conjunction with other factors, like increased usage by a rapidly growing population) have been significant enough to dry up the river at its mouth.
+					</p>
+        </introduction><exercise>
+          <introduction>
+            <p>
+Let us analyze the evaporation rate along a river that was recently dammed. Suppose the lake is currently 50 yards wide, and getting wider at a rate of 3 yards per week. As the lake fills, it gets longer, too. Suppose it is currently 950 yards long, and it is extending upstream at a rate of 15 yards per week. Assuming the lake remains approximately rectangular as it grows, find
+					</p>
+          </introduction><task>
+            <p>
+the current area of the lake, in square yards;
+					</p>
+          </task><task>
+            <p>
+the rate at which the surface of the lake is currently growing, in square yards per week.
+					</p>
+          </task>
+        </exercise><exercise>
+          <introduction>
+            <p>
+Suppose the lake continues to spread sideways at the rate of 3 yards per week, and it continues to extend upstream at the rate of 15 yards per week.
+					</p>
+          </introduction><task>
+            <p>
+Express the area of the lake as a (quadratic!) function of time, where time is measured from the present, in weeks, and where the lake’s area is as given in problem 25.
+					</p>
+          </task><task>
+            <p>
+How many weeks will it take for the lake to cover 30 acres (= 145,200 square yards)?
+					</p>
+          </task><task>
+            <p>
+At what rate is the lake surface growing when it covers 30 acres?
+					</p>
+          </task>
+        </exercise><exercise>
+          <statement>
+            <p>
+Compare the rates at which the surface of the lake is growing in problem 25 (which is the <q>current</q> rate) and in problem 26 (which is the rate when the lake covers 30 acres). Are these rates the same? If they are not, how do you account for the difference? In particular, the width and length grow at fixed rates, so why doesn’t the area? Use what you know about derivatives to answer the question.
+					</p>
+          </statement>
+        </exercise><exercise>
+          <statement>
+            <p>
+Suppose the local climate causes water to evaporate from the surface of the lake at the rate of 0.22 cubic yards per week, for each square yard of surface. Write a formula that expresses total evaporation per week in terms of area. Use <m>E</m> to denote total evaporation.
+					</p>
+          </statement>
+        </exercise><exercise>
+          <statement>
+            <p>
+The lake is fed by the river, and that in turn is fed by rainwater and groundwater from its watershed. (The <term>watershed</term>, or basin, of a river is that part of the countryside containing the ponds and streams which drain into the river.) Suppose the watershed provides the lake, on average, with 25,000 cubic yards of new water each week.
+					</p>
+
+					<p>
+Assuming, as we did in problem 25, that the lake widens at the constant rate of 3 yards per week, and lengthens at the rate of 15 yards per week, will the time ever come that the water being added to the lake from its watershed balances the water being removed by evaporation? In other words, will the lake ever stop filling?
+					</p>
+          </statement>
+        </exercise>
+      </exercisegroup>
+    </exercises>
+  </section>
+
+		<section xml:id="ch5-sec-finding-partial-derivatives">
+    <title>Finding Partial Derivatives</title>
+    <introduction>
+      <p>
+				We know from <xref ref="ch3-chap-the-derivative" /> that no additional formulas are needed to calculate <em>partial</em> derivatives. We simply use the usual differentiation formulas, treating all the variables except one—the one with respect to which the partial derivative is formed—as if they were constants. If we do this we get new techniques for analyzing rates of change in problems that involve functions of several variables.
+			</p>
+    </introduction><subsection xml:id="ch5-subsec-some-examples">
+      <title>Some Examples</title>
+      <p>
+					Here are two examples to illustrate the technique for calculating partial derivatives: 
+<aside>
+          <p>Finding formulas for partial derivatives</p>
+        </aside>
+      </p>
+      <p>
+        <ol>
+          <li>
+            <p>
+				Suppose <m>f(x,y) = x^2y + 5x^3 - \sqrt{x+y}</m>. Then <md>
+                <mrow>f_x(x,y) \amp= 2xy + 15x^2 - \frac{1}{2\sqrt{x+y}}, \quad\mbox{and}</mrow>
+                <mrow>f_y(x,y) \amp= x^2  - \frac{1}{2\sqrt{x+y}}.</mrow>
+              </md>
+            </p>
+          </li>
+
+					<li>
+            <p>
+				Suppose <m>g(u,v) = e^{\displaystyle uv} + \displaystyle{\frac{u}{v}}</m>. Then <md>
+                <mrow>g_u(u,v) \amp= ve^{\displaystyle uv} + \frac{1}{v}, \quad\mbox{and}</mrow>
+                <mrow>[8pt]
+					g_v(u,v) \amp= ue^{\displaystyle uv} - \frac{u}{v^2}.</mrow>
+              </md>
+            </p>
+          </li>
+        </ol>
+      </p>
+    </subsection>
+
+			<subsection xml:id="ch5-subsec-eradication-of-disease">
+      <title>Eradication of Disease</title>
+      <p>
+					Controlling—or, better still, eradicating—a communicable disease depends first on the development of a vaccine. But even after this step has been accomplished, public health officials must still answer important questions, including:
+				</p>
+      <p>
+        <ul>
+          <li>
+            <p>
+				What proportion of the population must be vaccinated in order to eliminate the disease?
+			</p>
+          </li>
+
+					<li>
+            <p>
+				At what age should people be vaccinated?
+			</p>
+          </li>
+        </ul>
+      </p>
+
+				<p>
+					In their 1982 article, <q>Directly Transmitted Infectious Diseases: Control by Vaccination,</q> (<em>Science</em>, Vol. 215, 1053–1060), Roy Anderson and Robert May formulate a model for the spread of disease that permits them to answer these and other questions. For a particular disease in a particular environment, the important variables in their model are
+				</p>
+
+				<p>
+        <ol>
+          <li>
+            <p>
+				The average human life expectancy <m>L</m>, in years;
+			</p>
+          </li>
+
+					<li>
+            <p>
+				The average age <m>A</m> at which individuals catch the disease, in years;
+			</p>
+          </li>
+
+					<li>
+            <p>
+				The average age <m>V</m> at which individuals are vaccinated against the disease, in years.
+			</p>
+          </li>
+        </ol>
+      </p>
+
+				<p>
+					Anderson and May deduce from their model that in order to eradicate the disease, the proportion of the population that is vaccinated must exceed <m>p</m>, where <m>p</m> is given by <md>p = \frac{L + V}{L + A}.</md>
+      </p>
+
+				<p>
+					For a disease like measles, public health officials can directly affect the variable <m>V</m>, 
+<aside>
+          <p>Partial derivatives can tell us which variables are most significant</p>
+        </aside>
+ for example by the recommendations they make to physicians about immunization schedules for children. They may also indirectly affect the variables <m>A</m> and <m>L</m>, because public health policy influences factors which can modify the age at which children catch the disease or the overall life expectancy of the population. (Many other factors affect these variables as well.) Which of these three variables has the greatest effect on the proportion of the population that must be vaccinated?
+				</p>
+
+				<p>
+					In other words, which is largest: <m>\partial p/\partial L</m>, <m>\partial
+p/\partial A</m>, or <m>\partial p/\partial V</m>?
+				</p>
+
+				<p>
+					Using the rules, we compute: <md>
+          <mrow>\frac{\partial p}{\partial L} \amp= 
+   \frac{1\cdot (L+A)-1\cdot (L+V)}{(L+A)^2} = \frac{A-V}{(L+A)^2},</mrow>
+          <mrow>\frac{\partial p}{\partial A} \amp= \frac{-(L+V)}{(L+A)^2}, \quad\mbox{and}</mrow>
+          <mrow>\frac{\partial p}{\partial V} \amp= \frac{1}{L+A}.</mrow>
+        </md> For measles in the United States, reasonable values of the variables are <m>L</m> = 70 years, <m>A</m> = 5 years and <m>V</m> = 1 year. Using these values, the crucial proportion of the population needing to be vaccinated is <m>p=71/75 = 0.947</m>, and the partial derivatives are <md alignat-columns="3">
+          <mrow>\dfrac{\partial p}{\partial L} \amp= 
+    \dfrac{4}{(75)^2}   \amp\amp= 0.0007,</mrow>
+          <mrow>
+\dfrac{\partial p}{\partial A} \amp= 
+    \dfrac{-71}{(75)^2} \amp\amp= -0.0126,</mrow>
+          <mrow>
+\dfrac{\partial p}{\partial V} \amp= 
+    \dfrac{1}{75} \amp\amp= 0.0133.</mrow>
+        </md>
+      </p>
+
+				<p>
+					A comment is in order here on units. 
+<aside>
+          <p>Determining units</p>
+        </aside>
+ While the input variables <m>L</m>, <m>A</m> and <m>V</m> are all measured in years—so the rates are <em>per year</em>, the output variable <m>p</m> is dimensionless: it is the ratio of persons vaccinated to persons not vaccinated. It would be reasonable to write <m>p</m> as a percentage. Then we can attach the units <em>percent per year</em> to each of the three partial derivatives. Thus we have: <md alignat-columns="2">
+          <mrow>\frac{\partial p}{\partial L} 
+          \amp= 0.07\% \hspace{0.25in} \amp\mbox{per year}</mrow>
+          <mrow>
+\frac{\partial p}{\partial A} 
+          \amp= -1.26\% \hspace{0.25in} \amp\mbox{per year}</mrow>
+          <mrow>
+\frac{\partial p}{\partial V} 
+          \amp= 1.33\%  \hspace{0.25in} \amp\mbox{per year}</mrow>
+        </md>
+      </p>
+
+				<p>
+					It is not surprising that a change in average life expectancy has a negligible effect on the proportion <m>p</m> of the population that must be vaccinated in order to eradicate measles. Nor is it surprising that changing the age of vaccination has the greatest effect on <m>p</m>. But it is not obvious ahead of time that changing the age at which children catch the disease has nearly as large an effect on <m>p</m>:
+				</p>
+
+				<p>
+        <ul>
+          <li>
+            <p>
+				Decreasing the age of vaccination decreases the proportion <m>p</m> by 1.33% per year of decrease.
+			</p>
+          </li>
+
+					<li>
+            <p>
+				Increasing the age at which children catch measles decreases the proportion <m>p</m> by 1.26% per year of increase.
+			</p>
+          </li>
+        </ul>
+      </p>
+
+				<p>
+					Changes can also go the <q>wrong</q> way. For example, in an area where use of communal child care facilities is growing, contact among very young children increases, and the age at which children are exposed to—and can catch—communicable diseases like measles falls. The Anderson–May model tells us that immunization practices must change to compensate: either the age of vaccination must drop a like amount, or the fraction of the population that is vaccinated must grow by 1.26% per year of decrease in the average age at infection.
+				</p>
+    </subsection>
+
+			<exercises xml:id="ch5-subsec-exercises-2">
+      <title>Exercises</title>
+      <exercisegroup xml:id="ch5-subsubsec-finding-partial-derivatives">
+        <title>Finding Partial Derivatives</title>
+        <exercise>
+          <introduction>
+            <p>
+Find the partial derivatives of the following functions.
+					</p>
+          </introduction><task>
+            <p>
+              <m>x^2 y</m>.
+					</p>
+          </task><task>
+            <p>
+              <m>\sqrt{x + y}</m>
+            </p>
+          </task><task>
+            <p>
+              <m>e^{xy}</m>
+            </p>
+          </task><task>
+            <p>
+              <m>\displaystyle{\frac{y}{x}}</m>
+            </p>
+          </task><task>
+            <p>
+              <m>\dfrac{x + y}{y + z}</m>
+            </p>
+          </task><task>
+            <p>
+              <m>\sin{\displaystyle{\frac{y}{x}}}</m>
+            </p>
+          </task>
+        </exercise><exercise>
+          <introduction>
+            <p>
+Suppose <m>f(x,y) = \displaystyle{e^{-(x+2y)}(2x - 5y)}</m>. Find <m>f_x(x,y)</m> and <m>f_y(x,y)</m>.
+					</p>
+          </introduction><task>
+            <p>
+Find a point <m>(a, b)</m> at which <m>f_x(a,b)=0</m>. At such a point a small change in <m>x</m> leaves the value of <m>f</m> virtually unchanged.
+					</p>
+          </task><task>
+            <p>
+Find a point <m>(a, b)</m> at which a small <em>increase</em> in the <m>x</m>-value would produce the same change in <m>f(a,b)</m> as would the same-sized <em>decrease</em> in the <m>y</m>-value.
+					</p>
+          </task>
+        </exercise><exercise>
+          <statement>
+            <p>
+Suppose <m>g(u,v) = \dfrac{\sin{u+v^2}+7uv}{1+u^2+v^4}</m>. Find <m>g_u(u,v)</m> and <m>g_v(u,v)</m>.
+					</p>
+          </statement>
+        </exercise><exercise>
+          <introduction>
+            <p>
+The <term>second partial derivatives</term> of <m>z
+= f(x, y)</m> are the partial derivatives of <m>\partial f/\partial x</m> and <m>\partial f/\partial y</m>, namely: <md>
+                <mrow>\dfrac{\partial ^2 f}{\partial x ^2} \amp= 
+        \dfrac{\partial}{\partial x} \left( 
+        \dfrac{\partial f}{\partial x} \right)</mrow>
+                <mrow>
+\dfrac{\partial ^2 f}{\partial x \partial y} \amp= 
+        \dfrac{\partial}{\partial x} \left( 
+        \dfrac{\partial f}{\partial y} \right)</mrow>
+                <mrow>
+\dfrac{\partial ^2 f}{\partial y ^2} \amp= 
+        \dfrac{\partial}{\partial y} \left( 
+        \dfrac{\partial f}{\partial y} \right)</mrow>
+              </md> Find the three second partial derivatives of the following functions.
+					</p>
+          </introduction><task>
+            <p>
+              <m>x^2 y</m>.
+					</p>
+          </task><task>
+            <p>
+              <m>\sqrt{x + y}</m>
+            </p>
+          </task><task>
+            <p>
+              <m>e^{xy}</m>
+            </p>
+          </task><task>
+            <p>
+              <m>\displaystyle{\frac{y}{x}}</m>
+            </p>
+          </task><task>
+            <p>
+              <m>\sin{\displaystyle{\frac{y}{x}}}</m>
+            </p>
+          </task>
+        </exercise>
+      </exercisegroup><exercisegroup xml:id="ch5-subsubsec-eradication-of-disease">
+        <title>Eradication of Disease</title>
+        <exercise>
+          <statement>
+            <p>
+Suppose you were dealing with measles in a developing country where <m>L = 50</m> years, <m>A = 4</m> years, and <m>L=2</m> years. Discuss the impact on measles control if increased public health efforts increase <m>L</m> to 55 years, <m>A</m> to 5 years, and decrease <m>V</m> to 1.5 years.
+					</p>
+          </statement>
+        </exercise>
+      </exercisegroup><exercisegroup xml:id="ch5-partial-differential-equations">
+        <title>Partial differential equations</title>
+        <introduction>
+          <p>
+
+					</p>
+        </introduction><exercise>
+          <statement>
+            <p>
+Show that the function <m>z = \dfrac{1}{\sqrt{t}}
+\exp{\dfrac{-x^2}{4t}}</m> satisfies the <term>partial differential equation</term>
+              <md>\dfrac{\partial ^2 z}{\partial x^2} = 
+        \dfrac{\partial z}{\partial t}.</md>
+            </p>
+          </statement>
+        </exercise><exercise>
+          <statement>
+            <p>
+Show that <em>every</em> linear function of the form <m>z = px + qy + c</m> satisfies the partial differential equation <md>\dfrac{\partial ^2 z}{\partial x^2} +
+        \dfrac{\partial ^2 z}{\partial y^2} = 0.</md> Here <m>p</m>, <m>q</m>, and <m>c</m> are arbitrary constants.
+					</p>
+          </statement>
+        </exercise><exercise>
+          <statement>
+            <p>
+Show that the function <m>z = e^x\sin{y}</m> also satisfies the partial differential equation <md>\dfrac{\partial ^2 z}{\partial x^2} +
+        \dfrac{\partial ^2 z}{\partial y^2} = 0.</md>
+            </p>
+          </statement>
+        </exercise>
+      </exercisegroup>
+    </exercises>
+  </section>
+
+		<section xml:id="ch5-sec-the-shape-of-the-graph-of-a-mboxfunction">
+    <title>The Shape of the Graph of a Function</title>
+    <introduction>
+      <p>
+				We know from <xref ref="ch3-chap-the-derivative" /> that the derivative gives us qualitative information about the shape of the graph of a differentiable function.
+			</p>
+      <table>
+        <title />
+        <tabular>
+          <row header="yes">
+            <cell halign="left">function</cell>
+            <cell halign="left">derivative</cell>
+          </row>
+				<row class="odd">
+            <cell halign="left">increasing</cell>
+            <cell halign="left">positive</cell>
+          </row>
+				<row class="even">
+            <cell halign="left">decreasing</cell>
+            <cell halign="left">negative</cell>
+          </row>
+				<row class="odd">
+            <cell halign="left">level</cell>
+            <cell halign="left">zero</cell>
+          </row>
+				<row class="even">
+            <cell halign="left">steep (rising or falling)</cell>
+            <cell halign="left">large (positive or negative)</cell>
+          </row>
+				<row class="odd">
+            <cell halign="left">gradual (rising or falling)</cell>
+            <cell halign="left">small (positive or negative)</cell>
+          </row>
+				<row class="even">
+            <cell halign="left">straight</cell>
+            <cell halign="left">constant</cell>
+          </row>
+        </tabular>
+      </table><p>
+				Having a formula for the derivative of a function will thus give us a great deal of information about the behavior of the function itself. In particular we will be interested in using the derivative to solve 
+<aside>
+          <p>Contexts for optimization problems</p>
+        </aside>
+        <term>optimization problems</term>—finding maximum or minimum values of a function. Such problems occur frequently in many fields.
+			</p>
+
+			<p>
+        <ul>
+          <li>
+            <p>
+		Economists actually define human rationality in terms of optimization. Each person is assumed to have a <em>utility function</em>, a function that assigns to each of many possible outcomes its <em>utility</em>, a numerical measure of its value to her. (Different people may have different utility functions, depending on their personal value systems.) A rational person is one who acts to maximize her utility. Some utilities are expressed in terms of money. For example, a rational manufacturer will seek to maximize her profit (in dollars). Her profit will depend on—that is, be a function of—such variables as the cost of her raw materials and the unit price she charges for her product.
+	</p>
+          </li>
+
+				<li>
+            <p>
+		Many physical laws are expressed as minimum principles. Ordinary soap bubbles exhibit one of these principles. A soap film has a <em>surface energy</em> which is proportional to its surface area. For almost any physical system, its stable state is one which minimizes its energy. Stable soap films are thus examples of  <em>minimal surfaces</em>. Interfaces involving crystals also have surface energies, leading to the study of crystalline minimal surfaces.
+	</p>
+          </li>
+
+				<li>
+            <p>
+		Statisticians develop mathematical summaries for data—in other words, mathematical models. For example, a relationship between two numerical variables may be summarized by a linear function, say <m>y=mx+b</m>, where <m>x</m> and <m>y</m> are the variables of interest. It would be very rare to find data that were exactly linear. In a particular case, the statistician chooses the linear model that minimizes the <em>discrepancy</em> between the actual values of <m>y</m> and the theoretical values obtained from the linear function. Statisticians frequently measure this discrepancy by summing the squares of the differences between the actual and the theoretical values of <m>y</m> for each data point. The <em>best-fitting line</em> or <em>regression line</em> is the graph of the linear function which is optimal in this sense.
+	</p>
+          </li>
+
+				<li>
+            <p>
+		Psychologists who study decision-making have found that some people are “risk-averse"; they make their decisions primarily to avoid risks. If we regard risk as a function of the various outcomes under consideration (a bit like a utility function), such a person acts to minimize this function.
+	</p>
+          </li>
+        </ul>
+      </p>
+
+			<p>
+				The derivative is the key tool here. We will develop a general procedure for using the derivative of a function to locate its extremes.
+			</p>
+    </introduction><!-- div attr= class="center"-->
+    <!--</div attr= class="center">-->
+    <subsection xml:id="ch5-subsec-language">
+      <title>Language</title>
+      <p>
+					Here is a graph of what we might consider a “generic" differentiable function.
+				</p>
+      <figure xml:id="fig_calc1_pic244a">
+        <image source="images/calc1_pic244a" />
+        <caption>A "generic" differentiable function</caption>
+      </figure>
+
+				<p>
+					The most distinctive features are the hill tops and valley bottoms, points where the graph levels and the derivative is zero. 
+<aside>
+          <p>Local extremes and global extremes</p>
+        </aside>
+ We distinguish between <term>local</term> extremes, like those occurring at the points <m>x=b</m>, <m>x=c</m>, and <m>x=d</m> and a <term>global</term> extreme, like the global maximum at the point <m>x=a</m>. The function has a <term>local</term>
+        <term>minimum</term> at <m>x=b</m> because <m>f(x) \geq f(b)</m> for all <m>x</m>
+        <em>sufficiently near</em>
+        <m>b</m>. The function has a <term>global</term>
+        <term>maximum</term> at <m>x=a</m> because <m>f(x) \leq
+f(a)</m> for <em>all</em>
+        <m>x</m>. Notice that this particular function does not have a global minimum. What kinds of local extremes does the function have at <m>x=c</m> and <m>x=d</m>? The convention is to say that  <em>all</em> extremes are local extremes, and a local extreme may or may not also be a global extreme.
+				</p>
+
+				<p>
+					Examining the graph of as simple a function 
+<aside>
+          <p>A function may have no extreme at a point where its derivative equals zero</p>
+        </aside>
+ as <m>f(x)=x^3</m> shows us that a function need not have any extremes at all. Moreover, since <m>f'(0)=0</m> for this function, a zero derivative doesn’t necessarily identify a point where an extreme occurs.
+				</p>
+
+				<figure xml:id="fig_calc1_pic244b">
+        <image source="images/calc1_pic244b" width="65%"/>
+        <caption>A graph of <m>y=x^3</m></caption>
+      </figure>
+
+				<p>
+					Can a function have an extreme at a point 
+<aside>
+          <p>An extreme can occur at a cusp</p>
+        </aside>
+ <em>other</em> than where the derivative is zero? Consider the graph of <m>f(x)=x^{2/3}</m> below.
+				</p>
+
+				<figure xml:id="fig_calc1_pic245">
+        <image source="images/calc1_pic245" width="65%"/>
+        <caption>A graph of a function with a cusp</caption>
+      </figure>
+
+				<p>
+					This function is differentiable everywhere except at the point <m>x=0</m>. And it is at this very point, where <md>f'(x) = \frac{2}{3}x^{-1/3} = \frac{2}{3 \, \sqrt[3]{x}}</md> is undefined, that the function has its global minimum. For this reason, points where the derivative fails to exist (or is infinite) are as important as points where the derivative equals zero. All of these kinds of points are called <term>critical points</term> for the function.
+				</p>
+
+<!-- div attr= class="observation"-->
+      <p>
+					A <term>critical point</term> for a function <m>f</m> is a point on the<!-- linebreak -->graph of <m>f</m> where <m>f'</m> equals zero or infinity or fails to exist.
+				</p><!--</div attr= class="observation">-->
+      <p>
+					How can we recognize, from looking at its graph, that a function fails to be differentiable at a point? We know that when the graph has a sharp corner or <term>cusp</term> it isn’t locally linear at that point, and so has no derivative there. Thus critical points occur at these places. When the graph is locally linear but vertical, the slope cannot be given a finite numerical value. Critical points also occur at these vertical places where the slope is infinite. The graph below is an example of such a curve.
+				</p>
+
+				<figure xml:id="fig_calc1_pic246">
+        <image source="images/calc1_pic246" width="65%"/>
+        <caption>A graph of a function with a point of infinite slope</caption>
+      </figure>
+
+				<p>
+					 A weaker condition than differentiability, 
+<aside>
+          <p>Continuous functions</p>
+        </aside>
+ but one that is useful, especially in this context, is  <term>continuity</term>. We say that a function <m>f</m> is  <term>continuous at a point</term>
+        <m>x=a</m> if
+				</p>
+
+				<p>
+        <ul>
+          <li>
+            <p>
+				it is defined at the point, and
+			</p>
+          </li>
+
+					<li>
+            <p>
+				we can achieve changes in the output that are arbitrarily small by restricting changes in the input to be sufficiently small.
+			</p>
+          </li>
+        </ul>
+      </p>
+
+				<p>
+					This second condition can also be expressed in the following form:
+				</p>
+      <blockquote>
+        <p>
+					Given any positive number <m>\epsilon</m> (the proposed limit on the change in the output is traditionally designated by the Greek letter <m>\epsilon</m>, pronounced <sq>epsilon</sq>), there is always a positive number <m>\delta</m> (the Greek letter <sq>delta</sq>), such that whenever the change in the input is less than <m>\delta</m>, then the corresponding change in the output will be less than <m>\epsilon</m>.
+				</p>
+      </blockquote>
+
+				<p>
+					A function is continuous on a set of real numbers if it is continuous at each point of the set. 
+<aside>
+          <p>Graphs of continuous functions have no gaps or jumps</p>
+        </aside>
+ A natural way to think of (and recognize) a function which is continuous on an interval is by its graph on that interval, which is continuous in the usual sense: it has no gaps or jumps in it. You can draw it without picking up your pencil. Of the four functions whose graphs appear below, <m>f</m> is continuous (and differentiable); <m>g</m> is continuous, but not differentiable (because of the cusp at <m>x=a</m>); <m>h</m> is not continuous, because <m>h</m> is undefined at <m>x=b</m>; and <m>k</m> is not continuous, because of the “jump" at <m>x=c</m>.
+				</p>
+
+				<p>
+					Luckily, the functions that we are likely to encounter are continuous on their natural domains. 
+<aside>
+          <p>A quotient isn’t continuous where its denominator is zero</p>
+        </aside>
+ Among functions given by formulas, the only exceptions we have to worry about are quotients, like <m>f(x)=1/x</m>, which have gaps in their natural domains at points where the denominator vanishes (at <m>x=0</m> in the case of <m>f(x)=1/x</m>), so their domains are not single intervals. For convenience, we usually confine our attention to functions continuous on an interval.
+				</p>
+
+				<figure xml:id="fig_calc1_pic247a">
+        <image source="images/calc1_pic247a" />
+        <caption>A pair of continuous functions</caption>
+      </figure>
+
+				<figure xml:id="fig_calc1_pic247b">
+        <image source="images/calc1_pic247b" />
+        <caption>A pair of functions with discontinunities</caption>
+      </figure>
+    </subsection>
+
+			<subsection xml:id="ch5-subsec-the-existence-of-extremes">
+      <title>The Existence of Extremes</title>
+      <p>
+					Not every function has extremes, as the example of <m>f(x)=x^3</m> shows. We are, however, guaranteed extremes for certain functions.
+				</p>
+
+				<p>
+        <term>Principle I.</term> We are guaranteed that a function 
+<aside>
+          <p>A continuous function on a finite closed interval has extremes</p>
+        </aside>
+ has a global maximum and a global minimum if we know:
+				</p>
+
+				<p>
+        <ul>
+          <li>
+            <p>
+				the domain of the function is a <em>finite closed interval</em>, and
+			</p>
+          </li>
+
+					<li>
+            <p>
+				the function is <em>continuous</em> on this interval.
+			</p>
+          </li>
+        </ul>
+      </p>
+
+				<p>
+					The domain restriction in most optimization problems is likely to come from the physical constraints of the problem, not the mathematics. A
+        <term>finite closed interval</term>, written <m>[a,b]</m>, is the set of all real numbers between <m>a</m> and <m>b</m>, including the endpoints <m>a</m> and <m>b</m>. Other kinds of finite intervals are <m>(a,b]</m>, (this excludes the endpoint <m>a</m>), <m>[a,b)</m>, and <m>(a,b)</m>. Infinite intervals include open and closed “rays" like <m>(a,+\infty)</m>, <m>[a, +\infty)</m>, <m>(-\infty, b)</m> and <m>(-\infty,b]</m>, and the entire real line.
+				</p>
+
+				<p>
+					To illustrate Principle I, we note first that it does not apply to <m>f(x)=1/x</m> on the finite closed interval <m>[-1,2]</m>, because this function isn’t continuous at every point on this interval—in fact, the function isn’t even defined for <m>x=0</m>.
+				</p>
+
+				<figure xml:id="fig_calc1_pic248a">
+        <image source="images/calc1_pic248a" width="65%"/>
+        <caption>A discontinuous function</caption>
+      </figure>
+
+				<figure xml:id="fig_calc1_pic248b">
+        <image source="images/calc1_pic248b" width="65%"/>
+        <caption>A function that is defined on a closed interval</caption>
+      </figure>
+
+				<p>
+					By contrast, Principle I <em>does</em> apply to the same function if we change its domain to a finite closed interval that does not include <m>x=0</m>. In the figure above we use <m>[1,3]</m>.
+				</p>
+
+				<p>
+					A function hat fails to satisfy the first condition of Principle I can still have global extremes. For any function continuous on an interval we can apply the following principle.
+				</p>
+      <paragraphs xml:id="ch5-principle-ii">
+        <title>Principle II.</title>
+        <p>
+If a function <m>f</m> is continuous 
+<aside>
+            <p>Continuous functions have extremes only at endpoints or critical points</p>
+          </aside>
+ on an interval and has a local extreme at a point <m>x=c</m> of the interval, then either <m>x=c</m> is a critical point for the function, or <m>x=c</m> is an endpoint of the interval. In other words, we are guaranteed that one of the following three conditions holds:
+					</p>
+
+					<p>
+          <ul>
+            <li>
+              <p>
+                <m>f'(c)=0</m>,
+					</p>
+            </li>
+
+<li>
+              <p>
+                <m>f'(c)</m> is undefined,
+					</p>
+            </li>
+
+<li>
+              <p>
+                <m>x=c</m> is an endpoint of the interval.
+					</p>
+            </li>
+          </ul>
+        </p>
+
+					<p>
+The following graphs illustrate three local maxima, each satisfying one of these three conditions.
+					</p>
+        <figure xml:id="fig_calc1_pic249">
+          <image source="images/calc1_pic249" />
+          <caption>Graphs that illustrate conditions for local maxima</caption>
+        </figure>
+
+					<p>
+When we apply Principle II to optimization problems, an important part of the task will be ascertaining which, if any, of the critical points or endpoints we find actually gives the extreme we’re looking for. We’ll examine a variety of techniques, graphical and analytical, for locating critical points and determining what kind of extreme point (if any) they are. 
+					</p>
+      </paragraphs>
+    </subsection>
+
+			<subsection xml:id="ch5-subsec-finding-extremes">
+      <title>Finding Extremes</title>
+      <paragraphs xml:id="ch5-subsubsec-using-a-graphical-approach">
+        <title>Using a graphical approach</title>
+        <p>
+If we can use a computer 
+<aside>
+            <p>Computer graphing can be easy if the general location of the extremes is known</p>
+          </aside>
+ to examine the graph of the function of interest, we can determine the existence and location of extremes by inspection. However, every graphing utility requires the user to specify the interval on which the function will be graphed, and careful analysis may be required in order to choose an interval that contains all the extremes of interest.
+					</p>
+        <p>
+For functions given by data, whose graphs have only finitely many points, we can zoom in to find the exact coordinates of the extreme datapoints. For a function given by a formula, we can estimate the coordinates of an extreme to arbitrary accuracy by zooming in on the point as closely as desired. This is the method we used in some of the exercises of <xref ref="ch1-chap-a-context-for-calculus" />, and it is quite satisfactory in many situations.
+					</p>
+      </paragraphs>
+
+				<paragraphs xml:id="ch5-subsubsec-using-the-formula-for-the-derivative">
+        <title>Using the formula for the derivative</title>
+        <p>
+In this chapter we are concentrating 
+<aside>
+            <p>Formulas can give exact answers and can handle parameters</p>
+          </aside>
+ on functions given by formulas. For these functions we may want a method other than the approximation using a graphing utility described above.
+					</p>
+        <p>
+          <ul>
+            <li>
+              <p>
+For some functions, the determination of extremes using a formula for the derivative is at least as easy as using the computer.
+					</p>
+            </li>
+
+<li>
+              <p>
+Some functions are described in terms of a <em>parameter</em>, a constant whose value may vary from one problem to another. For example, the rate equation from the S-I-R model for change in the number of infected, <m>I' = aSI-bI</m>, involves two parameters <m>a</m> and <m>b</m>, the transmission and recovery coefficients. For such a function, we cannot use the computer unless we specify a numerical value for each parameter, thus limiting the generality of our results.
+					</p>
+            </li>
+
+<li>
+              <p>
+The computer gives only an approximation, while a precise answer may convey important additional information.
+					</p>
+            </li>
+          </ul>
+        </p>
+
+					<p>
+We will assume that the function we are studying is continuous on the domain of interest and that its domain is an interval. Our procedure for finding extremes of a function given by a formula <m>y=f(x)</m> is thus a direct application of Principle II.
+					</p>
+      </paragraphs>
+
+				<paragraphs xml:id="ch5-subsubsec-the-search-for-local-extremes">
+        <title>The search for local extremes</title>
+        <p>
+          <ol>
+            <li>
+              <p>
+Determine the domain of the function and identify its endpoints, if any. Keep in mind that in an applied context, the domain may be determined by physical or other restrictions.
+					</p>
+            </li>
+
+<li>
+              <p>
+Find a formula for <m>f'(x)</m>.
+					</p>
+            </li>
+
+<li>
+              <p>
+Find any roots of <m>f'(x) = 0</m> in the domain. An estimation procedure, for example Newton’s Method (see the end of this chapter), may be used for complicated equations.
+					</p>
+            </li>
+
+<li>
+              <p>
+Find any points in the domain where <m>f'(x)</m> is undefined.
+					</p>
+            </li>
+
+<li>
+              <p>
+Determine the shape of the graph to locate any local extremes. Find the shape either by looking directly at the graph of <m>y = f(x)</m> or by analyzing the sign of <m>f'(x)</m> on either side of each critical point <m>x=c</m>. (Sometimes the second derivative <m>f''(c)</m> aids the analysis; see the exercises for details.)
+					</p>
+            </li>
+          </ol>
+        </p>
+
+					<p>
+          <term>The search for global extremes</term>
+        </p>
+
+					<p>
+          <ol>
+            <li>
+              <p>
+Find the local extremes, as above.
+					</p>
+            </li>
+
+<li>
+              <p>
+If the domain is a finite closed interval, it is only necessary to compare the values of <m>f</m> at each of the critical points and at the endpoints to determine which is the global maximum and which is the global minimum.
+					</p>
+            </li>
+
+<li>
+              <p>
+More generally, use the shape of the graph to ascertain whether the desired global extreme exists and to identify it.
+					</p>
+            </li>
+          </ol>
+        </p>
+
+					<p>
+In the succeeding sections and in the exercises we will carry out these search procedures in a variety of situations. Since there are often substantial algebraic difficulties in analyzing the sign of the derivative, or even determining when it is equal to zero, in realistic problems, in section 5 we will develop some numerical methods for handling such complications. 
+					</p>
+      </paragraphs>
+    </subsection>
+
+			<exercises xml:id="ch5-subsec-exercises-3">
+      <title>Exercises</title>
+      <exercisegroup xml:id="ch5-subsubsec-describing-functions">
+        <title>Describing functions</title>
+        <exercise>
+          <introduction>
+            <p>
+For each of the following graphs, is the function continuous? Is the function differentiable?
+					</p>          </introduction>
+<task><statement>            
+              <image source="images/calc1_pic252a" width="40%"/>
+
+</statement></task>
+<task><statement>
+
+              <image source="images/calc1_pic252c" width="40%"/>
+
+</statement></task>
+<task><statement>
+              <image source="images/calc1_pic252b" width="40%"/>
+
+</statement></task>
+<task><statement>
+
+              <image source="images/calc1_pic252d" width="40%"/>
+
+</statement></task>            
+
+        </exercise><exercise>
+          <introduction>
+            <p>
+For each of the following graphs of a function <m>y=f(x)</m>, is <m>f'</m> increasing or decreasing? At the indicated point, what is the sign of <m>f'</m>? Is <m>f'</m> (<em>not</em>
+              <m>f</m>) increasing or decreasing at the point? What does this then say about the sign of <m>f''</m> (the derivative of <m>f'</m>) at the point?
+					</p>
+</introduction>
+
+<task><statement>            
+              <image source="images/calc1_pic253a" width="40%"/>
+</statement></task>
+<task><statement>
+              <image source="images/calc1_pic253b" width="40%"/>
+</statement></task>
+<task><statement>
+              <image source="images/calc1_pic253c" width="40%"/>
+</statement></task>
+<task><statement>
+              <image source="images/calc1_pic253d" width="40%"/>
+</statement></task>            
+<task><statement>
+              <image source="images/calc1_pic253e" width="40%"/>
+</statement></task>    
+<task><statement>
+              <image source="images/calc1_pic253f" width="40%"/>
+</statement></task>    
+        </exercise><exercise>
+          <introduction>
+            <p>
+For each of the following, sketch a graph of <m>y=f(x)</m> that is consistent with the given information. On each graph, mark any critical points or extremes.
+					</p>
+          </introduction><task>
+            <p>
+              <m>f'(x) &gt; 0</m> for <m>x&lt;1</m>; <m>f'(1)=0</m>; <m>f'(x) &lt; 0</m> for <m>1&lt;x&lt;2</m>; <m>f'(2)=0</m>; <m>f'(x)&gt;0</m> for <m>x&gt;2</m>.
+					</p>
+          </task><task>
+            <p>
+              <m>f'(x) &gt; 0</m> for <m>x&lt;2</m>; <m>f'(2)=0</m>; <m>f'(x)&gt;0</m> for <m>x&gt;2</m>.
+					</p>
+          </task><task>
+            <p>
+              <m>f'(x) &gt; 0</m> for <m>x&lt;2</m>; <m>f'(2)=0</m>; <m>f'(x)&lt;0</m> for <m>x&gt;2</m>.
+					</p>
+          </task><task>
+            <p>
+              <m>f'(3)=0</m>; <m>f''(3) &gt; 0</m>.
+					</p>
+          </task>
+        </exercise><exercise>
+          <introduction>
+            <p>
+              <term>The geometric meaning of the second derivative</term> If <m>f</m> is any function and if <m>f''(x)</m> is positive over some interval, then <m>f'</m> is increasing over that interval, and we say the curve is <term>concave upward</term> over that interval. If <m>f''(x)</m> is negative over some interval, then <m>f'</m> is decreasing over that interval, and we say the curve is <term>concave downward</term> over that interval. You should study the graphs in problem 2 until you are clear what this means geometrically.
+					</p>
+          </introduction><task>
+            <p>
+Suppose there were four functions <m>f</m>, <m>g</m>, <m>h</m>, and <m>k</m>, and that <m>f(0)=g(0)=h(0)=k(0)=0</m>, and <m>f'(0)=g'(0)=h'(0)=k'(0)=1</m>. Suppose, moreover, that <m>f''(0)=1</m>, <m>g''(0)=5</m>, <m>h''(0)=-1</m>, and <m>k''(0)=-5</m>. Sketch possible graphs of these functions near the origin.
+					</p>
+          </task><task>
+            <p>
+We know that the magnitude of the first derivative tells us how steep the curve is—the greater the value of <m>f'</m>, positive or negative, the steeper the curve. What does the magnitude of the second derivative tell us geometrically about the shape of the curve? Complete the sentence: “The greater the value of <m>f''</m>, the
+					</p>
+
+<!-- Horizontal Rule Not Implimented -->
+            <p>
+.”
+					</p>
+          </task>
+        </exercise><exercise>
+          <introduction>
+            <p>
+Here is the graph you saw in <xref ref="ch5-subsec-language" />:
+					</p>
+            <figure xml:id="fig_calc1_pic244a_2">
+              <image source="images/calc1_pic244a" />
+              <caption>A "generic" differentiable function</caption>
+            </figure>
+
+					<p>
+At which point is the second derivative greater, <m>b</m> or <m>d</m>, and why?
+					</p>
+          </introduction><task>
+            <p>
+Reproduce a sketch of this curve and indicate where the curve is concave up and where it is concave down.
+					</p>
+          </task><task>
+            <p>
+What must be true about the second derivative at the points where the curve changes concavity from up to down, or vice versa? Give a clear justification for your answer.
+					</p>
+          </task><task>
+            <p>
+What must be true about the second derivative near the right-hand end of the graph, and why?
+					</p>
+          </task><task>
+            <p>
+Put all this together to sketch the graph of the second derivative of this function. Label the values <m>a</m> – <m>d</m> on your sketch.
+					</p>
+          </task>
+        </exercise><exercise>
+          <statement>
+            <p>
+              <term>Second derivative test for maxima and minima</term> Explain why the following test works.
+					</p>
+
+					<p>
+              <ul>
+                <li>
+                  <p>
+If <m>f'(c)=0</m> and <m>f''(c) &gt; 0</m>, then <m>f</m> has a <em>local minimum</em> at <m>x=c</m>.
+					</p>
+                </li>
+
+<li>
+                  <p>
+If <m>f'(c)=0</m> and <m>f''(c)&lt;0</m>, then <m>f</m> has a <em>local maximum</em> at <m>x=c</m>.
+					</p>
+                </li>
+              </ul>
+            </p>
+<hint>
+					<p>
+If <m>f'(c)=0</m> and <m>f''(c) &gt; /</m>, what can you say about the value of <m>f'(x)</m>—and hence the geometry of the graph of <m>f</m>—on either side of <m>c</m>?
+					</p></hint>
+          </statement>
+        </exercise>
+      </exercisegroup><exercisegroup xml:id="ch5-subsubsec-finding-critical-points">
+        <title>Finding critical points</title>
+        <exercise>
+          <introduction>
+            <p>
+For each of the following functions, find the critical points, if any, without using a computer or calculator. Can you sketch the graph of the function near the critical point? Use the second derivative test if you can’t figure the behavior out from a simpler inspection.
+					</p>
+          </introduction><task>
+            <p>
+              <m>f(x) = x^{1/3}</m>
+            </p>
+          </task><task>
+            <p>
+              <m>f(x) = x^3 + \displaystyle{\frac{3}{2}}x^2 - 6x + 5</m>
+            </p>
+          </task><task>
+            <p>
+              <m>f(x) = \displaystyle{\frac{2x+1}{x-1}}</m>
+            </p>
+          </task><task>
+            <p>
+              <m>f(x)=\sin{x}</m>
+            </p>
+          </task><task>
+            <p>
+              <m>f(x) = \sqrt{1-x^2}</m>
+            </p>
+          </task><task>
+            <p>
+              <m>f(x) = \displaystyle{\frac{e^x}{x}}</m>
+            </p>
+          </task><task>
+            <p>
+              <m>f(x) = x\ln x</m>
+            </p>
+          </task><task>
+            <p>
+              <m>f(x)=\displaystyle{x^c +\frac{1}{x^c}}</m> where c is some constant
+					</p>
+          </task>
+        </exercise><exercise>
+          <statement>
+            <p>
+For each of the following graphs, mark any critical points or extremes. Indicate which extremes are local and which are global. (Assume that at their ends the curves continue in the direction they are headed.)
+					</p>
+              <image source="images/calc1_pic254a" />
+
+              <image source="images/calc1_pic254b" />
+
+              <image source="images/calc1_pic254c" />
+          </statement>
+        </exercise>
+      </exercisegroup><exercisegroup xml:id="ch5-subsubsec-finding-extremes">
+        <title>Finding extremes</title>
+        <introduction>
+          <p>
+Except where indicated, you should not use a computer or calculator to solve the following problems.
+					</p>
+        </introduction><exercise>
+          <statement>
+            <p>
+For what positive value of <m>x</m> does <m>f(x) = x + \dfrac{7}{x}</m> attain its minimum value? Explain how you found this value.
+					</p>
+          </statement>
+        </exercise><exercise>
+          <statement>
+            <p>
+For what value of <m>x</m> in the interval <m>[1,2]</m> does <m>f(x) = x +
+\dfrac{7}{x}</m> attain its minimum value? Explain how you found this value.
+					</p>
+          </statement>
+        </exercise><exercise>
+          <statement>
+            <p>
+Use a graphing program to make a sketch of the function <m>y = f(x)
+= x^{2} 2^{-x}</m> on the interval <m>0 \leq x \leq 10</m>. From the graph, estimate the value of <m>x</m> which makes <m>y</m> largest, accurately to four decimal places. Then find where <m>y</m> takes on its maximum by setting the derivative <m>f'(x)</m> equal to 0. You should find that the maximum occurs at <m>x = 2/\ln{2}</m>. Finally, what is the numerical value of this estimate of <m>2/\ln{2}</m>, accurate to seven decimal places?
+					</p>
+          </statement>
+        </exercise><exercise>
+          <statement>
+            <p>
+Use a graphing program to sketch the graph of <m>y = \dfrac{1}{x^2}
++ x</m> on the interval <m>0 &lt; x &lt; 4</m> and estimate the value of <m>x</m> that makes <m>y</m> smallest on this interval. Then use the derivative of <m>y</m> to find the exact value of <m>x</m> that makes <m>y</m> smallest on the same interval. Compare the estimated and exact values.
+					</p>
+          </statement>
+        </exercise><exercise>
+          <statement>
+            <p>
+What is the smallest value <m>y = \dfrac{4}{x^2} + x</m> takes on when <m>x</m> is a positive number? Explain how you found this value.
+					</p>
+          </statement>
+        </exercise><exercise>
+          <statement>
+            <p>
+The function <m>y = x^4 - 42 x^2 -80x</m> has two local minima. Where are they (that is, what are their <m>x</m> coordinates), and what are their values? Which is the lower of the two minima? In this problem you will have to solve a cubic equation. You can use an estimation procedure, but it is also possible to solve by factoring the cubic. (The roots are integers.)
+					</p>
+          </statement>
+        </exercise><exercise>
+          <statement>
+            <p>
+The function <m>y = x^4 - 6x^2 + 7</m> has two local minima. Where are they, and which of the two is lower? In this problem you will have to solve a cubic equation. Do this by factoring and then approximating the <m>x</m> values to 4 decimal places.
+					</p>
+          </statement>
+        </exercise><exercise>
+          <statement>
+            <p>
+Sketch the graph of <m>y = x \ln{x}</m> on the interval <m>0 &lt; x &lt; 1</m>. Where does this function have its minimum, and what is the minimum value?
+					</p>
+          </statement>
+        </exercise><exercise>
+          <statement>
+            <p>
+Let <m>x</m> be a positive number; if <m>x &gt; 1</m> then the cube of <m>x</m> is larger than its square. However, if <m>0 &lt; x &lt; 1</m> then the square is larger than the cube. How <em>much</em> larger can it be; that is, what is the greatest amount by which <m>x^2</m> can exceed <m>x^3</m>? For which <m>x</m> does this happen?
+					</p>
+          </statement>
+        </exercise><exercise>
+          <statement>
+            <p>
+By how much can <m>x^p</m> exceed <m>x^q</m>, when <m>0 &lt; p &lt; q</m> and <m>0 &lt; x</m>? For which <m>x</m> does this happen?
+					</p>
+          </statement>
+        </exercise>
+      </exercisegroup>
+    </exercises>
+  </section>
+
+		<section xml:id="ch5-sec-optimal-shapes">
+    <title>Optimal Shapes</title>
+    <subsection xml:id="ch5-subsec-the-problem-of-the-optimal-tin-can">
+      <title>The Problem of the Optimal Tin Can</title>
+      <aside>
+        <p>What is the minimum surface area?</p>
+      </aside>
+
+      <p>
+					Suppose you are a tin can manufacturer. You must make a can to hold a certain volume <m>V</m> of canned tomatoes. Naturally, the can will be a cylinder, but the proportions, the height <m>h</m> and the radius <m>r</m>, can vary. Your task is to choose the proportions so that you use the least amount of tin to make the can. In other words, you want the surface area of that can to be as small as possible.  
+				</p>
+				
+				      <figure xml:id="fig_calc1_tincan">
+        <image source="images/calc1_tincan" width="65%"/>
+        <caption>A tin can</caption>
+      </figure>
+				
+    </subsection>
+
+			<subsection xml:id="ch5-subsec-the-solution">
+      <title>The Solution</title>
+      <p>
+					The surface area is the sum of the areas of the two circles at the top and bottom of the can, plus the area of the rectangle that would be obtained if the top and bottom were removed and the side cut vertically.
+				</p>
+      <figure xml:id="fig_calc1_pic257b">
+        <image source="images/calc1_pic257b" />
+        <caption>The tin can expanded</caption>
+      </figure>
+
+				<p>
+					Thus <m>A</m> depends on <m>r</m> and <m>h</m>: <md>A = 2 \pi r^2 + 2 \pi r h.</md> However, <m>r</m> and <m>h</m> cannot vary independently. 
+<aside>
+          <p>Finding <m>A</m> as a function of <m>r</m>
+          </p>
+        </aside>
+ Because the volume <m>V</m> is fixed, <m>r</m> and <m>h</m> are related by <md>V = \pi r^2 h.</md> Solving the equation above for <m>h</m> in terms of <m>r</m>, <md>h = \frac{V}{\pi r^2},</md> we may express <m>A</m> as a function of <m>r</m> alone: <md>A = f(r) = 2 \pi r^2 + 2 \pi r \frac{V}{\pi r^2} = 2\pi r^2 + \frac{2V}{r}</md>
+        <aside>
+          <p>
+            <m>V</m> is a parameter</p>
+        </aside>
+      </p>
+
+				<p>
+					Notice that the formula for this function involves the parameter <m>V</m>. The mathematical description of our task is to find the value of <m>r</m> that makes <m>A=f(r)</m> a minimum.
+				</p>
+
+				<p>
+					Following the procedure of the previous section, we first determine the domain of the function. 
+<aside>
+          <p>Finding the domain of <m>f(r)</m>
+          </p>
+        </aside>
+ Clearly this problem makes physical sense only for <m>r&gt;0</m>. Looking at the equation <md>h = \frac{V}{\pi r^2},</md> we see that although <m>V</m> is fixed, <m>r</m> can be arbitrarily large provided <m>h</m> is sufficiently small (resulting in a can that looks like an elephant stepped on it). Thus the domain of our function is <m>r&gt;0</m>, which is not a closed interval, so we have no guarantee that a minimum exists.
+				</p>
+
+				<p>
+					Next we compute <m>f'(r)</m>, keeping in mind that the symbols <m>V</m> and <m>\pi</m> represent constants and that we are differentiating with respect to the variable <m>r</m>. <md>f'(r) = 4 \pi r  - \frac{2V}{r^2} = \frac{4 \pi r^3 - 2V}{r^2}</md> The derivative is undefined at <m>r=0</m>, which is outside the domain under consideration. 
+<aside>
+          <p>Looking for critical points</p>
+        </aside>
+ So now we set the derivative equal to zero and solve for any possible critical points. <md>
+          <mrow>f'(r) \amp= \frac{4 \pi r^3 - 2V}{r^2}</mrow>
+          <mrow>
+    0 \amp= \frac{4 \pi r^3 - 2V}{r^2}</mrow>
+          <mrow>
+    0 \amp= 4 \pi r^3 - 2V</mrow>
+          <mrow>
+    r \amp= \sqrt[3]{V/2 \pi}</mrow>
+        </md> Thus <m>r=\sqrt[3]{V/2 \pi}</m> is the only critical point.
+				</p>
+
+				<p>
+					We can actually sketch the shape of the graph of <m>A</m> versus <m>r</m>
+        <aside>
+          <p>Finding the shape of the graph of <m>A</m>
+          </p>
+        </aside>
+ based on this analysis of <m>f'(r)</m>. The sign of <m>f'(r)</m> is determined by its numerator, since the denominator <m>r^2</m> is always positive.
+				</p>
+
+				<p>
+        <ul>
+          <li>
+            <p>
+				When <m>r &lt; \sqrt[3]{V/2 \pi}</m>, the numerator is negative, so the graph of <m>A</m> is falling.
+			</p>
+          </li>
+
+					<li>
+            <p>
+				When <m>r&gt;\sqrt[3]{V/2 \pi}</m>, the numerator is positive, so the graph is rising.
+			</p>
+          </li>
+        </ul>
+      </p>
+
+				<figure xml:id="fig_calc1_pic259">
+        <image source="images/calc1_pic259" />
+        <caption>Value of r corresponding to the extreme value of A</caption>
+      </figure>
+
+				<p>
+					Obviously, <m>A</m> has a <em>minimum</em> at <md>r_{\rm extreme}=\sqrt[3]{V/2 \pi}.</md> It is also obvious 
+<aside>
+          <p>A has a minimum but no maximum</p>
+        </aside>
+ that there is no <em>maximum</em> area, since <md>\lim_{r \rightarrow 0} A = \infty \quad\mbox{and}\quad  \lim_{r \rightarrow \infty} A = \infty.</md> Thus we see again that not <em>every</em> optimization problem has a solution.
+				</p>
+    </subsection>
+
+			<subsection xml:id="ch5-subsec-the-mathematical-context-optimal-shapes">
+      <title>The Mathematical Context: Optimal Shapes</title>
+      <p>
+					It is interesting to find the value of the height <m>h=h_{\rm extreme}</m> when the area is a minimum. Since <md>h_\text{extreme} = \frac{V}{\pi r_\text{extreme}^2},</md> we can use <m>r_\text{extreme}=\sqrt[3]{V/2 \pi}</m> to write <m>V = 2 \pi
+r_\text{extreme}^3</m> and thus find <md>h_\text{extreme} 
+   = \dfrac{2 \pi r_\text{extreme}^3}{\pi r_\text{extreme}^2}
+   = 2 r_\text{extreme}.</md> In other words, the height of the optimal tin can exactly equals its diameter. Campbell soup cans are far from optimal, but a can of Progresso plum tomatoes has diameter 4 inches and height 4.5 inches. Does someone at Progresso know calculus?
+				</p>
+
+				<p>
+					Problems like the one above—as well as others that you will find in the exercises—have been among the mainstays of calculus courses for generations. However, if you really had to face the problem of optimizing the shape of a tin can as a practical matter, you would probably have a numerical value for <m>V</m> specified in advance. In that case, your first impulse might be to use a graphing utility to approximate <m>r_{\it extreme}</m>, as accurately as your needs warrant. This is entirely appropriate. Using a graphing utility gives the answer as quickly as taking derivatives, and you are less likely to make mistakes in algebra. Moreover, the functions encountered in many other real problems are often complicated and messy, and their derivatives are hard to analyze. A graphing utility may provide the only practical course open to you.
+				</p>
+
+				<p>
+					So why insist that you use derivatives on these problems? 
+<aside>
+          <p>So why do things the hard way?</p>
+        </aside>
+ It is because the actual context of these examples is not really saving money for food canners. The real context is geometry. If we had used a graphing facility to solve the can problem, we might have noticed that the optimal radius was about half the height, but we wouldn’t have known the relationship is exact. Nor would we have recognized that the relationship holds for cylinders of arbitrary volume.
+				</p>
+      <p>
+					Using a graphing utility is essentially mindless, which is part of its virtue if we just need a specific answer to a particular problem. Part of the purpose of a calculus course, though, is to develop the concepts, tools, and the geometric vocabulary for thinking about problems in general, to see the connecting threads between apparently disparate settings. The more clearly we can think within a general framework, not just that of the specific problem being addressed, the better intuitions we will develop that will help us see unsuspected relationships in the problem at hand or think more creatively about other problems in other settings. The ability to give precise expression to our intuitions can lead to deeper insights. You should thus try to see the exercises that follow as not just 
+<aside>
+          <p>Symmetric shapes are often optimal</p>
+        </aside>
+ about fences and storage bins—they are opportunities to observe that, often, the geometric regularity that pleases the eye is also optimal.
+				</p>
+    </subsection>
+
+			<exercises xml:id="ch5-subsec-exercises-4">
+      <title>Exercises</title>
+      <introduction>
+        <p>
+					For each of the following problems, find a function relating the variables and use differentiation to find the optimal value specified. Some of the problems (1, 3, 4, and 5) are expressed in terms of a general parameter—<m>P</m>, <m>L</m>, <m>A</m>, and <m>L</m> again—rather than specific numerical values. If this gives you trouble, try doing the problem using the specific parameter value given at the end of the problem for computer verification. Use other specific values as needed until you can do the problem in terms of the general parameter, which should behave exactly like any of the specific values you tried.
+				</p>
+      </introduction><exercise>
+        <statement>
+          <p>
+				Show that the rectangle of perimeter <m>P</m> whose area is a maximum is a square. Use a graphing utility to check your answer for the special case when <m>P</m>=100 feet.
+			</p>
+        </statement>
+      </exercise><exercise>
+        <statement>
+          <p>
+				An open rectangular box is to be made from a piece of cardboard 8 inches wide and 15 inches long by cutting a square from each corner and bending up the sides. Find the dimensions of the box of largest volume. Use a graphing utility to check your answer.
+			</p>
+        </statement>
+      </exercise><exercise>
+        <statement>
+          <p>
+				One side of an open field is bounded by a straight river. A farmer has <m>L</m> feet of fencing. How should the farmer proportion a rectangular plot along the river in order to enclose as great an area as possible? Use a graphing utility to check your answer for the special case when <m>L</m> = 100 feet.
+			</p>
+        </statement>
+      </exercise><exercise>
+        <statement>
+          <p>
+				An open storage bin with a square base and vertical sides is to be constructed from <m>A</m> square feet of wood. Determine the dimensions of the bin if its volume is to be a maximum. (Neglect the thickness of the wood and any waste in construction.) Use a graphing utility to check your answer for the special case when <m>A</m>=100 square feet.
+			</p>
+        </statement>
+      </exercise><exercise>
+        <statement>
+          <p>
+				A roman window is shaped like a rectangle surmounted by a semicircle. If the perimeter of the window is <m>L</m> feet, what are the dimensions of the window of maximum area? Use a graphing utility to check your answer for the special case when <m>L</m> = 100 feet.
+			</p>
+        </statement>
+      </exercise><exercise>
+        <statement>
+          <p>
+				Suppose the roman window of problem 5 has clear glass in its rectangular part and colored glass in its semicircular part. If the colored glass transmits only half as much light per square foot as the clear glass does, what are the dimensions of the window that transmits the most light? Use a graphing utility to check your answer for the special case when <m>L</m> = 100 feet.
+			</p>
+        </statement>
+      </exercise><exercise>
+        <introduction>
+          <p>
+				A cylindrical oil can with radius <m>r</m> inches and height <m>h</m> inches is made with a steel top and bottom and cardboard sides. The steel costs 3 cents per square inch, the cardboard costs 1 cent per square inch, and rolling the crimp around the top and bottom edges costs 1/2 cent per linear inch. (Both crimps are done at the same time, so only count the contribution of one circumference.)
+			</p>
+        </introduction><task>
+          <p>
+			Express the cost <m>C</m> of the can as a function of <m>r</m> and <m>h</m>.
+		</p>
+        </task><task>
+          <p>
+			Find the dimensions of the cheapest can holding 100 cubic inches of oil. (You’ll need to solve a cubic equation to find the critical point. Use a graphing utility or an estimation procedure to approximate the critical point to 3 decimal places.)
+		</p>
+        </task>
+      </exercise>
+    </exercises>
+  </section>
+
+		<section xml:id="ch5-sec-newtons-method">
+    <title>Newton’s Method</title>
+    <subsection xml:id="ch5-subsec-finding-critical-points">
+      <title>Finding Critical Points</title>
+      <p>
+					When we solve optimization problems for functions given by formulas, we begin by calculating the derivative and using the derivative formula to find critical points. Almost always the derivative is defined for all elements of the domain, and we find the critical points by determining the roots of the equation obtained by setting the derivative equal to zero.
+				</p>
+      <p>
+					Finding the roots of this equation often requires an estimation procedure. For example, consider the function <md>f(x) = x^4 + x^3 + x^2 + x + 1.</md> The derivative of <m>f</m> is <md>f'(x) = 4x^3 +3x^2 +2x + 1,</md> which is certainly defined for all <m>x</m>.
+				</p>
+
+				<p>
+					In order to use a graphing utility to find the roots of <m>f'(x)=0</m>, we need to choose an interval that will contain the roots we seek. 
+<aside>
+          <p>Solving <m>f'(x)=0</m>
+          </p>
+        </aside>
+ Since <m>f'(0)=1&gt;0</m> and <m>f'(-1) = -2 &lt; 0</m>, we know <m>f'</m> has at least one root on <m>[-1,0]</m>. (Why is this?) But might there be other roots outside this interval?
+				</p>
+
+				<p>
+					It is easy to see that <m>f'(x)</m> is positive for all <m>x&gt;0</m>, so there are no roots to the right of <m>[-1,0]</m>. What about <m>x&lt;-1</m>? Rewriting the derivative as <md>f'(x) = (2x+1)(2x^2+1) + x^2</md> lets us see that <m>f'(x)</m> is negative for all <m>x&lt;-1</m> (check this for yourself), so there are no roots to the left of <m>[-1,0]</m> either.
+				</p>
+
+				<p>
+					Examining the graph of <m>y=4x^3 +3x^2 +2x + 1</m> on <m>[-1,0]</m>, we see that it crosses the <m>x</m>-axis exactly once, so there is a unique critical point. Progressively shrinking the interval, we find that, to eight decimal places, this critical point is <md>c= -0.60582958 \ldots .</md> Notice that it in this method it requires roughly the same amount of work to get each additional digit in the answer.
+				</p>
+
+				<p>
+					There is, however, another approximation procedure we can use, called Newton’s method. This has wide applicability and usually converges very rapidly to solutions—additional digits are much easier 
+<aside>
+          <p>A good algorithm is a convenient tool</p>
+        </aside>
+ to get than in the method we just looked at. It also has the virtue of being algorithmic, so that we can write a single computer program which can then be used for any root-finding problem we may encounter without a great deal of thought and decision-making. Newton’s method is also an interesting application of both local linearity and successive approximation, two important themes of this course.
+				</p>
+    </subsection>
+
+			<subsection xml:id="ch5-subsec-local-linearity-and-the-tangent-line">
+      <title>Local Linearity and the Tangent Line</title>
+      <p>
+					Let’s give the derivative function the new name <m>g</m> to emphasize that we now want to consider it as a function in its own right, 
+<aside>
+          <p>The root is an <m>x</m>-intercept of the graph</p>
+        </aside>
+ out of the context of the function <m>f</m> from which it was derived. Look at the following graph of the function <md>y = g(x) = 4x^3 +3x^2 + 2x + 1\,.</md> We are seeking the number <m>r</m> such that <m>g(r) = 0</m>. The root <m>r</m> is the <m>x</m>-coordinate of the point where the graph crosses the <m>x</m>-axis.
+				</p>
+
+				<p>
+					The basic plan of attack in Newton’s method is to replace the graph of <m>y=g(x)</m> by a straight line that looks reasonably like the graph near the root <m>r</m>.Then, the <m>x</m>-intercept of that line will be a reasonably good estimate for <m>r</m>. The graph below includes such a line.
+				</p>
+
+<figure xml:id="fig_calc1_pic280">
+  <sidebyside>
+    <figure>
+      <image source="images/calc1_pic280a"/>
+      <caption>Graph of <m>g(x)</m></caption>
+    </figure>
+
+    <figure>
+      <image source="images/calc1_pic280b"/>
+      <caption>Nearby point of tangency added</caption>
+    </figure>
+  </sidebyside>
+</figure>
+
+				<p>
+					The function <m>g</m> is locally linear at <m>x=-1</m>, and we have drawn an extension of the local linear approximation of <m>g</m> at this point. 
+<aside>
+          <p>The tangent line extends the local linear approximation</p>
+        </aside>
+ This line is called the <term>tangent line</term> to the graph of <m>y=g(x)</m> at <m>x=-1</m>, by analogy to the tangent line to a circle. To find the <m>x</m>-intercept of the tangent line, we must know its equation. Clearly the line passes through the <term>point of tangency</term>
+        <m>(-1,g(-1))=(-1,-2)</m>. What is its slope? It is the same as the slope of the local linear approximation at <m>(-1,g(-1))</m>, namely <md>g'(-1)=12(-1)^2 + 6(-1) + 2 = 8.</md> Thus the equation 
+<aside>
+          <p>The equation of the tangent line</p>
+        </aside>
+ of the tangent line is <md>y + 2 = 8(x+1).</md>
+      </p>
+
+				<p>
+					To find the <m>x</m>-intercept of this line, we must set <m>y</m> equal to zero and solve for <m>x</m>:  <m>0+2=8(x+1)</m> gives us <m>x=-0.75</m>. 
+<aside>
+          <p>Finding the <m>x</m>-intercept of the tangent line</p>
+        </aside>
+ Of course, this <m>x</m>-intercept is not equal to <m>r</m>, but it’s a better approximation than, say, –1. To get an even better approximation, we repeat this process, starting with the line tangent to the graph of <m>g</m> at <m>x=-0.75</m> instead of at <m>x=-1</m>.
+				</p>
+
+				<figure xml:id="fig_calc1_pic281">
+        <image source="images/calc1_pic281" />
+        <caption>The point of tangency resulting from the first step of Newton's method</caption>
+      </figure>
+
+				<p>
+					The slope of this new tangent line is <m>g'(-0.75) = 4.25</m>, and it passes through <m>(-0.75, -0.5)</m>, so its equation is <md>y + 0.5 = 4.25(x+0.75).</md> Setting <m>y=0</m> and solving for <m>x</m> gives a new <m>x</m>-intercept whose value is equal to <m>-0.6323529</m>, closer still to <m>r</m>.
+				</p>
+
+				<p>
+					It seems reasonable to repeat the process yet again, using the tangent line at <m>x = -0.6323529</m>. Let’s first introduce some notation to keep track of our computations. 
+<aside>
+          <p>Successive approximations get closer to the root <m>r</m>
+          </p>
+        </aside>
+ Call the original point of tangency <m>x_0</m>, so <m>x_0=-1</m>. Let <m>x_1</m> be the <m>x</m>-intercept of the tangent line at <m>x=x_0</m>. Draw the tangent line at <m>x=x_1</m>, and call its <m>x</m>-intercept <m>x_2</m>. Continuing in this way, we get a sequence of points <m>x_{0}, x_{1}, x_{2}, x_{3}, \ldots</m> which appear to approach nearer and nearer to <m>r</m>. That is, they appear to approach <m>r</m> as their limit.
+				</p>
+    </subsection>
+
+			<subsection xml:id="ch5-subsec-the-algorithm">
+      <title>The Algorithm</title>
+      <p>
+					This process of using one number to determine the next number in the sequence is the heart of Newton’s method—it is an iterative method. Moreover, it turns out to be quite simple to calculate each new estimate in terms of the previous one. To see how this works, let’s compute <m>x_{1}</m> in terms of <m>x_{0}</m>. We know <m>x_{1}</m> is the <m>x</m>-intercept of the line tangent to the graph of <m>g</m> at <m>(x_{0},
+g(x_{0}))</m>. The slope of this line is <m>g'(x_{0})</m>, 
+<aside>
+          <p>The general equation of the tangent line</p>
+        </aside>
+ so <md>y - g(x_{0}) = g'(x_{0})(x - x_{0})</md> is the <term>equation of the tangent line</term>. Since this line crosses the <m>x</m>-axis at the point <m>(x_{1},0)</m>, we set <m>x = x_{1}</m> and <m>y = 0</m> in the equation to obtain <md>0 - g(x_{0}) = g'(x_{0})(x_{1} - x_{0}).</md> Now it is easy to solve for <m>x_{1}</m>: <md>
+          <mrow>g'(x_{0})(x_{1} - x_{0}) \amp= -g(x_{0})</mrow>
+          <mrow>x_{1} - x_{0} \amp= \frac{-g(x_{0})}{g'(x_{0})}</mrow>
+          <mrow>x_{1} \amp= x_{0} - \frac{g(x_{0})}{g'(x_{0})}.</mrow>
+        </md> In the same way we get <md>x_{2} = x_{1} - \frac{g(x_{1})}{g'(x_{1})},  \qquad
+x_{3} = x_{2} - \frac{g(x_{2})}{g'(x_{2})},</md> and so on.
+				</p>
+
+				<p>
+					To summarize, suppose that <m>x_{0}</m> is given some value START. Then Newton’s method is the computation of the sequence of numbers determined by <md>
+          <mrow>x_{0} \amp= \mbox{START}</mrow>
+          <mrow>x_{n+1} \amp= x_{n} - \frac{g(x_{n})}{g'(x_{n})}, 
+               \qquad n = 0,1,2,3,\ldots</mrow>
+        </md>
+      </p>
+
+				<p>
+					As we have seen many times, the sequence <md>x_1, x_2, x_3, \ldots, x_n, \ldots</md> is a list of numbers to which we can always add a new term—by iterating our method yet again. 
+<aside>
+          <p>The limit of the successive approximations is the root</p>
+        </aside>
+ For most functions, if we begin with an appropriate starting value of <m>x_0</m>, there is another number <m>r</m> that is the <em>limit</em> of this list of numbers, in the sense that the difference between <m>x_n</m> and <m>r</m> becomes as small as we wish as <m>n</m> increases without bound, <md>r= \lim_{n \rightarrow \infty} x_n.</md> The numbers <m>x_1, x_2, x_3, \ldots, x_n, \ldots</m> constitute a sequence of <em>successive approximations</em> for the root <m>r</m> of the equation <m>g(x)=0</m>. We can write a computer program to carry out this algorithm for as many steps as we choose. The program NEWTON does just that for <m>g(x) = 4x^3 + 3x^2 +2x +1</m>.
+				</p>
+
+<listing xml:id="program-newton">
+  <title>NEWTON</title>
+
+  <preamble>
+    <p>Newton's method for solving
+    <m>g(x)=4x^3+3x^2+2x+1=0</m>.</p>
+  </preamble>
+
+  <program>
+<code>
+start = -1
+numberofsteps = 8
+
+x = start
+
+FOR n = 0 TO numberofsteps
+    PRINT n, x
+
+    g = 4*x^3 + 3*x^2 + 2*x + 1
+    gprime = 12*x^2 + 6*x + 2
+
+    x = x - g/gprime
+NEXT n
+</code>
+  </program>
+</listing>
+      <p>
+					If we program a computer using this algorithm with START = –1, then we get <md>
+          <mrow>x_0 \amp= -1.00000000000</mrow>
+          <mrow>x_1 \amp= -0.75000000000</mrow>
+          <mrow>x_2 \amp= -0.63235294118</mrow>
+          <mrow>x_3 \amp= -0.60687911790</mrow>
+          <mrow>x_4 \amp= -0.60583128240</mrow>
+          <mrow>x_5 \amp= -0.60582958619</mrow>
+          <mrow>x_6 \amp= -0.60582958619</mrow>
+          <mrow>x_7 \amp= -0.60582958619</mrow>
+          <mrow>x_8 \amp= -0.60582958619.</mrow>
+        </md>
+      </p>
+
+				<p>
+					Thus we have found the root of <m>g(x)=0</m>—the critical point we were looking for. In fact, after only 6 steps we could see that the value of the critical point was specified to at least ten decimal places. Also at the sixth step, we had the eight decimal places obtained with the use of the graphing utility. In fact, it turns out that the number of decimal places fixed roughly doubles with each round. In the above list, for instance, <m>x_2</m> fixed one decimal, <m>x_3</m> fixed two decimals, <m>x_4</m> fixed four, <m>x_5</m> fixed ten (the eleventh digit of the root is really an 8, which gets rounded to a 9 in <m>x_6</m> – <m>x_8</m>.), and <m>x_6</m> would have fixed at least twenty if we had printed them all out! Moreover, by changing only three lines of the program—the first, sixth, and seventh—we can use NEWTON for any other function. With the use of the program NEWTON, we will see that in most cases we can obtain results more quickly and to a higher degree of accuracy with Newton’s method than by using a graphing utility, although it is still sometimes helpful to use a graphing utility to get a reasonable starting value.
+				</p>
+    </subsection>
+
+			<subsection xml:id="ch5-subsec-examples">
+      <title>Examples</title>
+      <example xml:id="ch5-ex1">
+        <title>Example 1</title>
+        <p>
+Start with <m>\cos{x} = x</m>. The solution(s) to this equation (if any) will be the <m>x</m>-coordinates of any points of intersection of the graphs of <m>y = \cos{x}</m> and <m>y = x</m>. Sketch these two graphs and convince yourself that there is one solution, between 0 and <m>\pi/2</m>. The equation <m>\cos{x} = x</m> is not in the form <m>g(x) = 0</m>, so rewrite it as <m>\cos{x} - x = 0</m>. Now we can apply Newton’s method with <m>g(x) = \cos{x} - x</m>. Try starting with <m>x_{0} = 1</m>. This gives the iteration scheme <md>
+            <mrow>x_{0} \amp= 1</mrow>
+            <mrow>x_{n+1} \amp= x_{n} - \frac{\cos{x_{n}} - x_{n}}{-\sin{x_{n}} - 1}, 
+         \qquad n = 0,1,2, \ldots</mrow>
+          </md>
+        </p>
+
+					<p>
+The numbers we get are <md>
+            <mrow>x_{0} \amp= 1.000000000</mrow>
+            <mrow>x_{1} \amp= \hphantom{1}.750363868 \ldots</mrow>
+            <mrow>x_{2} \amp= \hphantom{1}.739112891 \ldots</mrow>
+            <mrow>x_{3} \amp= \hphantom{1}.739085133 \ldots</mrow>
+            <mrow>x_{4} \amp= \hphantom{1}.739085133 \ldots</mrow>
+          </md> We have the solution to 9 decimal places in only four steps. Not only does Newton’s method work, it works fast!
+					</p>
+      </example>
+
+				<example xml:id="ch5-ex2">
+        <title>Example 2</title>
+        <p>
+Suppose we continue with the equation <m>\cos{x} = x</m>, but this time choose <m>x_{0} = 0</m>. What will we find? The numbers we get are <md>
+            <mrow>x_{0} \amp= 0.000000000</mrow>
+            <mrow>x_{1} \amp= 1.000000000</mrow>
+            <mrow>x_{2} \amp= 0.750363868</mrow>
+          </md> There is no need to continue; we can see that we will again obtain <m>r
+= 0.739085133 \ldots</m> as in Example 1. Look again at your sketch and see why you might have predicted this result.
+					</p>
+					</example>
+
+				<example xml:id="ch5-ex3">
+        <title>Example 3</title>
+        <p>
+Next, let’s find the roots of the polynomial <m>x^{5} - 3x + 1</m>. This means solving the equation <m>x^{5}- 3x + 1 = 0</m>. We know the necessary derivative, 
+<aside>
+            <p>Finding the starting value <m>x_0</m> can be hard</p>
+          </aside>
+ so we’re ready to apply Newton’s method, except for one thing: which starting value <m>x_{0}</m> do we pick? This is the part of Newton’s method that leaves us on our own.
+					</p>
+
+					<p>
+Assuming that some graphing software is available, the best thing to do is graph the function. But for most graphing utilities, we need to choose an interval. How do we choose one which is sure to include all the roots of the polynomial? The derivative <m>5x^4 -3</m> of this polynomial is simple enough that we can use it to get an idea of the shape of the graph of <m>y=x^5-3x+1</m> before we turn to the computer. Clearly the derivative is zero only for <m>x = \pm \sqrt[4]{3/5}</m>, and the derivative is positive except between these two values of <m>x</m>. 
+<aside>
+            <p>Using the derivative to find the shape of the graph</p>
+          </aside>
+ In other words, we know the shape of the graph of <m>y=g(x)</m>—it is increasing, then decreases for a bit, then increases from there on out. This still is not enough information to tell us how many roots <m>g</m> has, though; its graph might lie in any one of the following configurations and so have 1, 2, or 3 roots (there are two other possibilities not shown—one has 2 roots and one has 1 root). 
+<aside>
+            <p> Using the derivative to find the shape of the graph:
+              <image source="images/calc1_pic285" />
+            </p>
+          </aside>
+ We can thus say that <m>g(x)=0</m> has at least one and at most three real roots. However, if we further observe that <m>g(-2) = -25, g(-1)=3,
+g(0) = 1,g(1)= -1</m>, and <m>g(2)=27</m>, we see that the graph of <m>g</m> must cross the <m>x</m>–axis at some value of <m>x</m> between -2 and -1, between 0 and 1, and again between 1 and 2. Therefore the right–hand sketch above must be the correct one.
+					</p>
+
+					<p>
+Or we can almost as easily turn to a graphing utility. If we try the interval <m>[-2,2]</m>, we see again that the graph crosses the <m>x</m>-axis in exactly three points.
+					</p>
+
+					<figure xml:id="fig_calc1_pic286">
+          <image source="images/calc1_pic286" />
+          <caption>Graphing g(x) over the interval <m>[-2,2]</m></caption>
+        </figure>
+
+					<p>
+One of the roots is between <m>-2</m> and <m>-1</m>, 
+<aside>
+            <p>Finding the root between <m>-2</m> and <m>-1</m>
+            </p>
+          </aside>
+ one is between 0 and 1, and the third is between 1 and 2. To find the first, we apply Newton’s method with <m>x_{0} = -2</m>. Then we get <md>
+            <mrow>x_{0} \amp= -2.000000000</mrow>
+            <mrow>x_{1} \amp= -1.675324675 \ldots</mrow>
+            <mrow>x_{2} \amp= -1.478238029 \ldots</mrow>
+            <mrow>x_{3} \amp= -1.400445373 \ldots</mrow>
+            <mrow>x_{4} \amp= -1.389019863 \ldots</mrow>
+            <mrow>x_{5} \amp= -1.388792073 \ldots</mrow>
+            <mrow>x_{6} \amp= -1.38879198 4\ldots</mrow>
+            <mrow>x_{7} \amp= -1.388791984 \ldots</mrow>
+          </md> This took a few more steps than the other examples, but not a lot. Notice again that once there are any decimals fixed at all, the number of decimals fixed roughly doubles in the next approximation. In the exercises you will be asked to compute the other two roots.
+					</p>
+</example>
+				<example xml:id="ch5-ex4">
+        <title>Example 4</title>
+        <p>
+Let’s use Newton’s method to find the obvious solution <m>r = 0</m> of <m>x^{3} - 5x = 0</m>. If we choose <m>x_{0}</m> sufficiently close to 0, Newton’s method should work just fine. But what does <q>sufficiently close</q> mean? Suppose we try <m>x_{0} = 1</m>. Then we get <md>
+            <mrow>x_{0} \amp= \hphantom{-}1</mrow>
+            <mrow>x_{1} \amp= -1</mrow>
+            <mrow>x_{2} \amp= \hphantom{-}1</mrow>
+            <mrow>x_{3} \amp= -1</mrow>
+            <mrow>x_{4} \amp= \hphantom{-}1</mrow>
+            <mrow>\amp\ \vdots</mrow>
+          </md> The <m>x_{n}</m>’s oscillate endlessly, never getting close to 0. 
+<aside>
+            <p>Newton’s method can fail</p>
+          </aside>
+ Going back to the geometric interpretation of Newton’s method, this oscillation can be explained by the graph below.
+					</p>
+
+					<figure xml:id="fig_calc1_pic287">
+          <image source="images/calc1_pic287" />
+          <caption>Oscillating solutions to y=0</caption>
+        </figure>
+
+					<p>
+Using more advanced methods, it is possible to get precise estimates for how close <m>x_{0}</m> needs to be to <m>r</m> in order for Newton’s method to succeed. For now, we’ll just have to rely on common sense and trial and error.
+					</p>
+
+					<p>
+One important thing to note is the relation between algebra and Newton’s method. Although we can now solve many more equations than we could earlier, this doesn’t mean that we can abandon algebra. In fact, given a new equation, you should first try to solve it algebraically, for exact solutions are often better. Only when this fails should you look for approximate solutions using Newton’s method. So don’t forget algebra—you’ll still need it!
+					</p>
+      </example>
+    </subsection>
+
+			<exercises xml:id="ch5-subsec-exercises-5">
+      <title>Exercises</title>
+      <exercise>
+        <statement>
+          <p>
+            <term>The Babylonian algorithm.</term> Show that the Babylonian algorithm of <xref ref="ch2-chap-successive-approximations" /> is the same as Newton’s method applied to the equation <m>x^2-a=0</m>.
+			</p>
+        </statement>
+      </exercise><exercise>
+        <statement>
+          <p>
+				When Newton introduced his method, he did so with the example <m>x^3 - 2x - 5 = 0</m>. Show that this equation has only one root, and find it.
+			</p>
+					
+			
+<aside>
+            <p>This example appeared in 1669 in an unpublished manuscript of Newton’s (a published version came later, in 1711). The interesting fact is that Newton’s method <em>differs</em> from the one presented here: his scheme was more complicated, requiring a different formula to get each approximation. In 1690, Joseph Raphson transformed Newton’s scheme into the one used above. Thus, <q>Newton’s method</q> is more properly called the <q>Newton–Raphson method</q>, and many modern texts use this more accurate name.</p>
+          </aside>
+        </statement>
+      </exercise><exercise>
+        <statement>
+          <p>
+				Use Newton’s method to find a solution of <m>x^3 + 2x^2 + 10x = 20</m> near the point <m>x=1</m>.
+			</p>
+					
+			
+<aside>
+            <p>The approximate solution 1;22,7,42,33,4,40 of this equation appears in a book written in 1228 by Leonardo of Pisa (also known as Fibonacci). This number looks odd because it’s written in sexagesimal notation: it translates into <md>1+\frac{22}{60} +\frac{7}{60^2}+\frac{42}{60^3}+\frac{33}{60^4}+\frac{4}{60^5}+\frac{40}{60^6}.</md> This solution is accurate to 10 decimal places, which is not bad for 750 years ago. In the Middle Ages, there was a lot of interest in solving equations. There were even contests, with a prize going to the person who could solve the most. The quadratic formula, which expresses algebraically the roots of any second degree equation, had been known for thousands of years, but there were no general methods for finding roots of higher degree equations in the 13th century. We don’t know how Leonardo found his solution—why give away your secrets to your competitors!</p>
+          </aside>
+        </statement>
+      </exercise><exercise>
+        <statement>
+          <p>
+				Use Newton’s method to find a solution of <m>x^3+3x^2=5</m>.
+			</p>
+					
+			
+<aside>
+            <p>In 1530, Nicolo Tartaglia was challenged to solve this equation algebraically. Five years later, in 1535, he found the solution <md>x = \sqrt[3]{\frac{3+\sqrt{5}}{2}}+\sqrt[3]{\frac{3-\sqrt{5}}{2}}-1 \, .</md> Initially, Tartaglia could solve only certain types of cubic equations, but this was enough to let him win some famous contests with other mathematicians of the time. By 1541, he knew the general solution, but he made the mistake of telling Geronimo Cardano. Cardano published the solution in 1545 and the resulting formulas are called <q>Cardan’s Formulas</q>.</p>
+          </aside>
+
+					
+			<p>
+				The above solution of <m>x^3+3x^2=5</m> is called a <term>solution by radicals</term> because it is obtained by extracting various roots or radicals. Similarly, some time before 1545, Luigi Ferrari showed that any fourth degree equation can be solved by radicals. This led to an intense interest in the fifth degree equation. To see what happens in this case, read the next problem.
+			</p>
+        </statement>
+      </exercise><exercise>
+        <statement>
+          <p>
+				In [[EX:3]], we saw that one root of <m>x^5-3x+1</m> was –1.39887919…. Use Newton’s method to find the other two roots.
+			</p>
+					
+			
+<aside>
+            <p>In 1826, Niels Henrik Abel proved that the general polynomial of degree 5 or greater cannot be solved by radicals. Using the work of Evariste Galois (done around 1830, but not understood until many years later), it can be shown that the roots of the equation <m>x^5-3x+1=0</m> cannot be expressed by any combination of radicals. Thus algebra can’t solve this equation—some kind of successive approximation technique is unavoidable!</p>
+          </aside>
+        </statement>
+      </exercise><exercise>
+        <introduction>
+          <p>
+				One of the more surprising applications of Newton’s method is to compute reciprocals. To make things more concrete, we will compute 1/3.4567 . Note that this number is the root of the equation <m>1/x =
+					3.4567</m>.
+			</p>
+        </introduction><task>
+          <p>
+			Show that the formula of Newton’s method gives us <md>x_{n+1} = 2 x_n-3.4567 x_n^2.</md>
+          </p>
+        </task><task>
+          <p>
+			Using <m>x_0=.5</m> and the formula from (a), compute 1/3.4567 to a high degree of accuracy.
+		</p>
+        </task><task>
+          <p>
+			Try starting with <m>x_0=1</m>. What happens? Explain graphically what goes wrong.
+		</p>
+				
+		<p>
+			This method for computing reciprocals is important because it involves only <em>multiplication</em> and <em>subtraction</em>. Since <m>a/b=a\cdot (1/b)</m>, this implies that division can likewise be built from multiplication and subtraction. Thus, when designing a computer, the division routine doesn’t need to be built from scratch—the designer can use the method illustrated here. There are some computers that do division this way.
+		</p>
+        </task>
+      </exercise><exercise>
+        <introduction>
+          <p>
+				In this problem we will determine the maximum value of the function <md>f(x) = \dfrac{x+1}{x^4+1}.</md>
+          </p>
+        </introduction><task>
+          <p>
+			Graph <m>f(x)</m> and convince yourself that the maximum value occurs somewhere around <m>x=.5</m>. Of course, the exact location is where the slope of the graph is zero, i.e., where <m>f'(x)=0</m>. So we need to solve this equation.
+		</p>
+        </task><task>
+          <p>
+			Compute <m>f'(x)</m>.
+		</p>
+        </task><task>
+          <p>
+			Since the answer to (b) is a fraction, it vanishes when its numerator does. Setting the numerator equal to 0 gives a fourth degree equation. Use Newton’s method to find a solution near <m>x=.5 \,
+				.</m>
+          </p>
+        </task><task>
+          <p>
+			Compute the maximum value of <m>f(x)</m>.
+		</p>
+        </task>
+      </exercise><exercise>
+        <introduction>
+          <p>
+				Consider the hyperbola <m>y=1/x</m> and the circle <m>x^2-4x+y^2+3=0</m>.
+			</p>
+        </introduction><task>
+          <p>
+			By graphing the circle and the hyperbola, convince yourself that there are two points of intersection.
+		</p>
+        </task><task>
+          <p>
+			By substituting <m>y=1/x</m> into the equation of the circle, obtain a fourth degree equation satisfied by the <m>x</m>–coordinate of the points of intersection.
+		</p>
+        </task><task>
+          <p>
+			Solve the equation from (b) by Newton’s method, and then determine the points of intersection.
+		</p>
+        </task>
+      </exercise><exercise>
+        <introduction>
+          <p>
+				Sometimes Newton’s method doesn’t work so nicely. For example, consider the equation <m>\sin x = 0</m>.
+			</p>
+        </introduction><task>
+          <p>
+			Compute <m>x_1</m> using Newton’s method for each of the four starting values <m>x_0=1.55,1.56,1.57 \mbox{ and } 1.58</m>.
+		</p>
+        </task><task>
+          <p>
+			The answers you get are wildly different. Using the basic formula <md>x_{n+1}=x_n-\frac{g(x_n)}{g'(x_n)}</md> explain why.
+		</p>
+        </task>
+      </exercise><exercisegroup xml:id="ch5-subsubsec-the-epidemic-runs-its-course">
+        <title>The epidemic runs its course</title>
+        <introduction>
+          <p>
+We return to the epidemiology example we have studied since <xref ref="ch1-chap-a-context-for-calculus" />. Recall that our <m>S</m>-<m>I</m>-<m>R</m> model keeps track of three subgroups of the population: the susceptible, the infected, and the recovered. One of the interesting features of the model is that the larger the initial susceptible population, the more rapidly the epidemic runs its course. We observe this by choosing fixed values of <m>R_0 = R(0)</m> and <m>I_0 = I(0)</m> and looking at graphs of <m>S(t)</m> versus <m>t</m> for various values of <m>S_0 = S(0)</m>.
+					</p>
+
+					<figure xml:id="fig_calc1_pic291">
+            <image source="images/calc1_pic291" />
+            <caption>image</caption>
+          </figure>
+
+					<p>
+We see in each case that for sufficiently large <m>t</m> the graph of <m>S</m> levels off, approaching a value we’ll call <m>S_\infty</m>: <md>S_\infty = \lim_{t \rightarrow \infty} S(t).</md>
+          </p>
+
+					<p>
+What we mean by the epidemic <q>running its course</q> is that <m>S(t)</m> reaches this limit value. We can see from the graphs that the value of <m>S_0</m> affects the number <m>S_\infty</m> of individuals who escape the disease entirely. It turns out that we can actually find the value of <m>S_\infty</m> if we know the values of <m>S_0, I_0,</m> and the parameters <m>a</m> and <m>b</m>.
+					</p>
+
+					<p>
+Recall that <m>a</m> is the <em>transmission coefficient</em>, and <m>b</m> is the <em>recovery coefficient</em> for the disease. The differential equations of the <m>S</m>-<m>I</m>-<m>R</m> model are <md>
+              <mrow>S' \amp= -aSI,</mrow>
+              <mrow>I' \amp= aSI - bI,</mrow>
+              <mrow>R' \amp= bI.</mrow>
+            </md>
+          </p>
+        </introduction><exercise>
+          <statement>
+            <p>
+Use the differentiation rules together with these differential equations to show that <md>(I+S-(b/a)\cdot \ln S)'=0.</md>
+            </p>
+          </statement>
+        </exercise><exercise>
+          <statement>
+            <p>
+Explain why the result of problem 10 means that <m>I+S-(b/a)\cdot
+\ln S</m> has the same value—call it <m>C</m>—for every value of <m>t</m>.
+					</p>
+          </statement>
+        </exercise><exercise>
+          <statement>
+            <p>
+Look at the graphs of the solutions <m>I(t)</m> for various values of <m>S(0)</m> below.
+					</p>
+
+					<figure xml:id="fig_calc1_pic292">
+              <image source="images/calc1_pic292" />
+              <caption>image</caption>
+            </figure>
+
+					<p>
+Write <m>\lim_{t \rightarrow \infty} I(t) = I_\infty</m> . What is the value of <m>I_\infty</m> for all values of <m>S(0)</m>?
+					</p>
+          </statement>
+        </exercise><exercise>
+          <statement>
+            <p>
+Use the results of problems 11 and 12 to explain why <md>S_\infty-\frac{b}{a}\ln (S_\infty)=I_0+S_0-\frac{b}{a}\ln (S_0).</md> This equation determines <m>S_\infty</m> implicitly as a function of <m>I_0</m> and <m>S_0</m>. For particular values of <m>I_0</m> and <m>S_0</m> (and of the parameters), you can use Newton’s method to find <m>S_\infty</m>.
+					</p>
+          </statement>
+        </exercise><exercise>
+          <statement>
+            <p>
+Use the values <md>
+                <mrow>a \amp=  0.00001 \mbox{ (person-days)}^{-1}</mrow>
+                <mrow>b \amp= 0.08 \mbox{ day}^{-1}</mrow>
+                <mrow>I_0 \amp=  100 \mbox{ persons}</mrow>
+                <mrow>S_0 \amp=  35,000 \mbox{ persons}</mrow>
+              </md> Writing <m>x</m> instead of <m>S_\infty</m> gives <md>x-8000\ln (x) = -48,605.</md> Apply Newton’s method to find <m>x = S_\infty</m>. Judging from the graph for <m>S_0=35000</m>, it looks like a reasonable first estimate for <m>S_\infty</m> might be 100.
+					</p>
+          </statement>
+        </exercise><exercise>
+          <introduction>
+            <p>
+Using the same values of <m>a</m>, <m>b</m>, and <m>I_0</m> as in problem 14, determine the value of <m>S_\infty</m> for each of the following initial population sizes:
+					</p>
+          </introduction><task>
+            <p>
+              <m>S_0=45,000</m>.
+					</p>
+          </task><task>
+            <p>
+              <m>S_0=25,000</m>.
+					</p>
+          </task><task>
+            <p>
+              <m>S_0=5,000</m>.
+					</p>
+          </task>
+        </exercise>
+      </exercisegroup>
+    </exercises>
+  </section>
+
+		<section xml:id="ch5-sec-chapter-summary">
+    <title>Chapter Summary</title>
+    <subsection xml:id="ch5-subsec-the-main-ideas">
+      <title>The Main Ideas</title>
+      <p>
+        <ul>
+          <li>
+            <p>
+              <term>Formulas</term> for <term>derivatives</term> can be calculated for functions given by formulas using the definition of the derivative as the limit of difference quotients <md>\lim_{\Delta x \rightarrow 0} \frac{f(x+\Delta x)-f(x)}{\Delta x}.</md>
+            </p>
+          </li>
+
+					<li>
+            <p>
+				Each particular difference quotient is an <term>approximation</term> to the derivative. Successive approximations, for smaller and smaller <m>\Delta x</m>, approach the derivative as a limit. The formula for the derivative gives its <em>exact</em> value.
+			</p>
+          </li>
+
+					<li>
+            <p>
+				Formulas for <term>partial derivatives</term> are obtained using the formulas for derivatives of functions of a single variable by simply treating all variables other than the one of interest as if they were constants.
+			</p>
+          </li>
+
+					<li>
+            <p>
+              <term>Optimization</term> problems occur in many different contexts. For instance, we seek to maximize benefits, minimize energy, and minimize error.
+			</p>
+          </li>
+
+					<li>
+            <p>
+				The <term>sign</term> of the derivative indicates where a graph rises and where it falls.
+			</p>
+          </li>
+
+					<li>
+            <p>
+				Functions which are <term>continuous</term> on a <term>finite closed interval</term> have <term>global extremes</term>.
+			</p>
+          </li>
+
+					<li>
+            <p>
+				For a function continuous on an interval, its <term>local extremes</term> occur at <term>critical points</term>—points where the derivative equals zero or fails to exist—or at endpoints.
+			</p>
+          </li>
+
+					<li>
+            <p>
+				Local linearity permits us to replace the graph of a function <m>y=g(x)</m> by its <term>tangent line</term> at a point near a root of <m>g(x)=0</m>, and then the <m>x</m>-intercept of the tangent line is a better approximation to the root. Successive approximations, obtained by iterating this procedure, yield <term>Newton’s method</term> for solving the equation <m>g(x)=0</m>.
+			</p>
+          </li>
+        </ul>
+      </p>
+    </subsection>
+
+			<subsection xml:id="ch5-subsec-expectations">
+      <title>Expectations</title>
+      <p>
+        <ul>
+          <li>
+            <p>
+				You should be able to <term>differentiate</term> a function given by a formula.
+			</p>
+          </li>
+
+					<li>
+            <p>
+				You should be able to use differentiation formulas to  <term>calculate</term> partial derivatives.
+			</p>
+          </li>
+
+					<li>
+            <p>
+				In most cases, you should be able to determine from a graph of a function on an interval whether that function is <term>continuous</term> and/or <term>differentiable</term> on that interval.
+			</p>
+          </li>
+
+					<li>
+            <p>
+				You should be able to find <term>critical points</term> for a function of one or several variables given by a formula.
+			</p>
+          </li>
+
+					<li>
+            <p>
+				You should be able to use the formula for the derivative of a function of a single variable to find <term>local and global extremes</term>.
+			</p>
+          </li>
+
+					<li>
+            <p>
+				You should be able to use <term>Newton’s method</term> to solve an equation of the form <m>g(x)=0</m>.
+			</p>
+          </li>
+        </ul>
+      </p>
+    </subsection>
+
+			<subsection xml:id="ch5-subsec-chapter-exercises">
+      <title>Chapter Exercises</title>
+      <paragraphs xml:id="ch5-subsubsec-prices-demand-and-profit">
+        <title>Prices, demand and profit</title>
+        <p>
+Suppose the demand <m>D</m> (in units sold) for a particular product is determined by its price <m>p</m> (in dollars), <m>D=f(p)</m>. It is reasonable to assume that when the price is low, the demand will be high, but as the price rises, the demand will fall. In other words, we assume that the slope of the demand function is negative. If the manufacturing cost for each unit of the product is <m>c</m> dollars, then the profit per unit at price <m>p</m> is <m>p-c</m>. Finally the total profit <m>T</m> gained at the unit price <m>p</m> will be the number of units sold at the price <m>p</m> (that is, the demand <m>D(p)</m>) multiplied by the profit per unit <m>p-c</m>. <md>T = g(p) = D(p)\, \mbox{units} \times (p-c) \, 
+        \frac{\mbox{dollars}}{\mbox{unit}}</md> In this series of problems we will determine the effect of the demand function and of the unit manufacturing cost on the maximum total profit.
+					</p>
+
+					<p>
+          <ol>
+            <li>
+              <p>
+Suppose the demand function is linear <md>D = f(p) = 1000 - 500p \  \mbox{units},</md> and the unit manufacturing cost is 0.20, so the total profit is <md>T = g(p) = (1000 - 500p)(p-0.20) \  \mbox{dollars}.</md> Find the “best" price – that is, find the price that yields the maximum total profit.
+					</p>
+            </li>
+
+<li>
+              <p>
+Suppose the demand function is the same as in problem 1, but the unit manufacturing cost rises to 0.30. What is the “best" price now? How much of the rise in the unit manufacturing cost is passed on to the consumer if the manufacturer charges this best price?
+					</p>
+            </li>
+
+<li>
+              <p>
+Suppose the demand function for a particular product is <m>D(p)=
+2000-500p</m>, and that the unit manufacturing cost is 0.30. What price should the manufacturer charge to maximize her profit? Suppose the unit manufacturing cost rises to 0.50. What price should she charge to maximize her profit now? How much of the rise in the unit manufacturing cost should she pass on to the consumer?
+					</p>
+            </li>
+
+<li>
+              <p>
+If the demand function for a product is <m>D(p)=1500-100p</m>, compare the “best" price for unit manufacturing costs of 0.30 and 0.50. How much of the rise in cost should the manufacturer pass on to the consumer?
+					</p>
+            </li>
+
+<li>
+              <p>
+As you may have noticed, problems 2–4 illustrate an interesting phenomenon. In each case, exactly half of the rise in the unit manufacturing cost should be passed on to the consumer. Is this a coincidence?
+					</p>
+              <p>
+                <ol>
+                  <li>
+                    <p>
+Consider the most general case of a linear demand function <md>D=f(p) = a-mp.</md> and unit cost <m>c</m>. What is the “best" price? Is exactly half the unit manufacturing cost passed on to the consumer? Explain your answer.
+					</p>
+                  </li>
+
+<li>
+                    <p>
+Now consider a non-linear demand function <md>D = f(p) = \frac{1000}{1+p^2}.</md> Find the “best" price for unit costs
+					</p>
+
+					<p>
+i) 0.50 dollar per unit;
+					</p>
+                    <p>
+ii) 1.00 dollar per unit;
+					</p>
+                    <p>
+iii) 1.50 dollars per unit.
+					</p>
+                    <p>
+How much of the price increase is passed on to the consumer in cases (ii) and (iii)?
+					</p>
+                  </li>
+                </ol>
+              </p>
+            </li>
+          </ol>
+        </p>
+      </paragraphs>
+    </subsection>
+  </section>
+</chapter>

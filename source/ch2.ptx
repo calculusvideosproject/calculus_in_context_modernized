@@ -1,0 +1,2196 @@
+<chapter xml:id="ch2-chap-successive-approximations">
+  <title>Successive Approximations</title>
+  <introduction>
+    <p>
+			In this chapter we continue exploring the mathematical implications of the <m>S</m>-<m>I</m>-<m>R</m> model. In previous chapters we calculated future values of <m>S</m>, <m>I</m>, and <m>R</m> by assuming that the rates <m>S'</m>, <m>I'</m>, and <m>R'</m> stayed fixed for a whole day. Since the rates are <em>not</em> fixed—they change with <m>S</m>, <m>I</m>, and <m>R</m>—the values of <m>S</m>, <m>I</m>, and <m>R</m> we obtained have to be considered as estimates only. In this chapter we will see how to build a succession of better and better estimates that get us as close as we wish to the true values implied by the model.
+		</p>
+
+		<p>
+			This method of <term>successive approximation</term> is a basic tool of calculus. It is the one fundamentally new process you will encounter, the ingredient that sets calculus apart from the mathematics you have already studied. With it you will be able to solve a vast array of problems that other methods can’t handle.
+		</p>
+  </introduction><section xml:id="ch2-sec-making-approximations">
+    <title>Making Approximations</title>
+    <introduction>
+      <p>
+				In <xref ref="ch1-chap-a-context-for-calculus" /> we looked at the specific <m>S</m>-<m>I</m>-<m>R</m> model: <md>
+          <mrow>S' \amp= -0.00001 \, SI,</mrow>
+          <mrow>I' \amp= 0.00001 \, SI - \dfrac{I}{14},</mrow>
+          <mrow>R' \amp= I/14,</mrow>
+        </md> with initial values at time <m>t = 0</m>: <md>S = 45400,  \quad I = 2100, \quad R = 2500.</md>
+      </p>
+
+			<p>
+				We originally developed this model as a <em>description</em> of the relations among the different components of an epidemic. Almost immediately, though, we began using the rate equations in the model as a <em>recipe</em> for predicting what happens over the course of the epidemic: If we know at some time <m>t</m> the values of <m>S(t), I(t),
+\mbox{ and } R(t)</m>), 
+<aside>
+          <p>Rate equations tell us where to go next</p>
+        </aside>
+ then the equations tell us how to estimate values of the functions at other times. We used this approach in the last chapter to move backwards and forwards in time, calculating the values of <m>S</m>, <m>I</m>, and <m>R</m> as we went.
+			</p>
+
+			<p>
+				While we got numbers, there were some questions about how accurate these numbers were—that is, how exactly they represented the values implied by the model. In the process we called <q>there and back again</q> we used current values of <m>S</m>, <m>I</m>, and <m>R</m> to find the rates, used these rates to go forward one day, recalculate the rates, and come back to the present—and we got different values from the ones we started with! Resolving this discrepancy will be an important feature of the technique developed in this section.
+			</p>
+    </introduction><subsection xml:id="ch2-subsec-the-longest-march-begins-with-a-single-step">
+      <title>The Longest March Begins with a Single Step</title>
+      <p>
+So far, in generating numbers from the <m>S</m>-<m>I</m>-<m>R</m> rate equations, we have assumed that the rates remained constant over an entire day, or longer. Since the rates aren’t constant—they depend on the values of <m>S</m>, <m>I</m>, and <m>R</m>, which are always changing—the values we calculated for the variables at times other than the given initial time are, at best, estimates. These estimates, while incorrect, are not useless. Let’s see how they behave in the <q>there and back again</q> process of <xml ref="ch1-there-and-back-again" /> as we recalculate the rates more and more frequently, producing a sequence of approximations to the values we are looking for.
+				</p>
+
+
+				<paragraphs xml:id="ch2-subsubsec-there-and-back-again-again">
+        <title>There and Back Again Again</title>
+        <p>
+In <xref ref="ch1-there-and-back-again" /> we used the rate equations to go forward a day and come back again. We started with the initial values <md>S(0)=45400, \quad I(0) = 2100, \quad R(0) = 2500,</md> calculated the rates, went forward a day to <m>t=1</m>, recalculated the rates, and came back a day to <m>t=0</m>. We ended up with the estimates <md>S(0)=45737.1, \quad I(0) = 1820.3, \quad R(0) = 2442.6</md> —which are rather far from the values of <m>S(0)</m>, <m>I(0)</m>, and <m>R(0)</m> we started with.
+</p>
+
+<p>
+A clue to the resolution of this discrepancy appeared in <xref ref="ch1-there-and-back-again-exercise" />. There you were asked to go forward two days and come back again in two different ways, using <m>\Delta t=2</m> (a total of 2 steps) in the first case and <m>\Delta t=1</m> (a total of 4 steps) in the second. Here are the resulting values calculated for <m>S(0)</m> in each case and the discrepancy between this value and the original value <m>S(0)=45400</m>:
+</p>
+
+
+        <table>
+          <title />
+          <tabular>
+            <row header="yes">
+              <cell halign="center">step size</cell>
+              <cell halign="center">new <m>S(0)</m>
+              </cell>
+	<cell halign="center">discrepancy</cell>
+            </row>
+<row class="odd">
+              <cell halign="center">
+                <m>\Delta t=2</m>
+              </cell>
+	<cell halign="center">46717.6</cell>
+              <cell halign="center">1317.6</cell>
+            </row>
+<row class="even">
+              <cell halign="center">
+                <m>\Delta t=1</m>
+              </cell>
+	<cell halign="center">46021.3</cell>
+              <cell halign="center">621.3</cell>
+            </row>
+          </tabular>
+        </table>
+        <p>
+While the discrepancy is fairly large in either case, <m>\Delta t=1</m> clearly does better than <m>\Delta t=2</m>. But if smaller 
+<aside>
+            <p>Smaller steps generate a smaller discrepancy</p>
+          </aside>
+ is better, why stop at <m>\Delta t=1</m>? What happens if we take even smaller time steps, get the corresponding new values of <m>S</m>, <m>I</m>, and <m>R</m>, and use these values to recalculate the rates each time?
+</p>
+
+<p>
+Recall that the rate <m>S'</m> (or <m>I'</m> or <m>R'</m>) is simply the multiplier which gives <m>\Delta S</m>—the (estimated) change in <m>S</m>—for a given change <m>\Delta t</m> in <m>t</m>
+          <md>\Delta S = S'\cdot \Delta t\, .</md> This relation holds for any value of <m>\Delta t</m>, integer or not. Once we have this value for <m>\Delta S</m>, we can then calculate <md>\mbox{new (estimated) } S = \mbox{current (estimated) } S + \Delta S</md> in the usual way. Note that we have written <q>(estimated)</q> throughout to emphasize the fact that if <m>S'</m> is not constant over the entire time <m>\Delta t</m>, then the value we get for <m>\Delta S</m> will typically be only an approximation to the real change in <m>S</m>.
+</p>
+
+<p>
+Let’s try going forward one day and coming back, using different values for <m>\Delta t</m>. As we reduce <m>\Delta t</m> the number of calculations will increase. The program SIR we used in previous chapters can still be used to do the tedious calculations. Thus if we decide to use 10 steps of size <m>\Delta t=0.1</m>, we would just change two lines in that program:<!-- linebreak -->If we now run SIR with these modifications we can verify the following sequence of values (The values have been rounded off, and the <c> PRINT</c> statement has been modified to show the new values of the rates at each step as well):
+</p>
+
+
+        <p>
+Estimated values of <m>S, I, \mbox{ and } R</m>
+          <!-- linebreak -->for step sizes <m>\Delta t = 0.1</m>
+        </p>
+
+<table>
+          <title />
+          <tabular>
+            <row header="yes">
+              <cell halign="center">
+                <m>t</m>
+              </cell>
+	<cell halign="center">
+                <m>S(t)</m>
+              </cell>
+	<cell halign="center">
+                <m>I(t)</m>
+              </cell>
+	<cell halign="center">
+                <m>R(t)</m>
+              </cell>
+	<cell halign="center">
+                <m>S'(t)</m>
+              </cell>
+	<cell halign="center">
+                <m>I'(t)</m>
+              </cell>
+	<cell halign="center">
+                <m>R'(t)</m>
+              </cell>
+            </row>
+<row>
+              <cell halign="left">0.0</cell>
+              <cell halign="right">45 400.0</cell>
+              <cell halign="right">2100.0</cell>
+              <cell halign="right">2500.0</cell>
+              <cell halign="right">–953.4</cell>
+              <cell halign="right">803.4</cell>
+              <cell halign="right">150.0</cell>
+            </row><row>
+              <cell halign="left">0.1</cell>
+              <cell halign="right">45 304.7</cell>
+              <cell halign="right">2180.3</cell>
+              <cell halign="right">2515.0</cell>
+              <cell halign="right">–987.8</cell>
+              <cell halign="right">832.1</cell>
+              <cell halign="right">155.7</cell>
+            </row><row>
+              <cell halign="left">0.2</cell>
+              <cell halign="right">45 205.9</cell>
+              <cell halign="right">2263.6</cell>
+              <cell halign="right">2530.6</cell>
+              <cell halign="right">–1023.3</cell>
+              <cell halign="right">861.6</cell>
+              <cell halign="right">161.7</cell>
+            </row><row>
+              <cell halign="left">0.3</cell>
+              <cell halign="right">45 103.6</cell>
+              <cell halign="right">2349.7</cell>
+              <cell halign="right">2546.7</cell>
+              <cell halign="right">–1059.8</cell>
+              <cell halign="right">892.0</cell>
+              <cell halign="right">167.8</cell>
+            </row><row>
+              <cell halign="left">⋮</cell>
+              <cell halign="right">⋮</cell>
+              <cell halign="right">⋮</cell>
+              <cell halign="right">⋮</cell>
+              <cell halign="right">⋮</cell>
+              <cell halign="right">⋮</cell>
+              <cell halign="right">⋮</cell>
+            </row><row>
+              <cell halign="left">1.0</cell>
+              <cell halign="right">44 278.7</cell>
+              <cell halign="right">3042.9</cell>
+              <cell halign="right">2678.4</cell>
+              <cell halign="right">–1347.7</cell>
+              <cell halign="right">1130.0</cell>
+              <cell halign="right">217.4</cell>
+            </row>
+          </tabular>
+        </table>
+        <p>
+Having arrived at <m>t=1</m>, we can now use SIR to turn around and go back to <m>t=0</m>. Here’s how:
+</p>
+
+<p>
+          <ul>
+            <li>
+              <p>
+Change the initial line of the program to <c>t = 1</c> to reflect our new starting time.
+</p>
+            </li>
+
+<li>
+              <p>
+Change the next three lines to use the values we just calculated for <m>S(1)</m>, <m>I(1)</m>, and <m>R(1)</m> as our <em>starting</em> values in 
+<aside>
+                  <p>The <em>sign</em> of <c>deltat</c> determines whether we move forward or backward in time</p>
+                </aside>
+ SIR.
+</p>
+            </li>
+
+<li>
+              <p>
+Change the value of <c>deltat</c> to be <c>-0.1</c> (so each time the program executes the command <c>t = t + deltat</c> it reduces the value of <c>t</c> by 0.1).
+</p>
+            </li>
+          </ul>
+        </p>
+
+<p>
+With these changes SIR will yield the desired estimates for <m>S(0)</m>, <m>I(0)</m>, and <m>R(0)</m>, and we get <md>S(0)=45433.5, \quad I(0) = 2072.3, \quad R(0) = 2494.3.</md> This is clearly a considerable improvement over the values obtained with <m>\Delta t=1</m>.
+</p>
+
+<p>
+With this promising result, the obvious thing to do is to try even smaller values of <m>\Delta t</m>, perhaps <m>\Delta t = 0.01</m>. We could continue using SIR, making the needed modifications each time. Instead, though, let’s rewrite SIR slightly to make it better suited to our current needs. Look at the program SIRVALUE below and compare it with SIR.
+</p>
+
+<listing xml:id="listing-sirvalue">
+  <title>SIRVALUE</title>
+
+  <program>
+    <code>
+tinitial = 0
+tfinal = 1
+
+t = tinitial
+
+S = 45400
+I = 2100
+R = 2500
+
+numberofsteps = 10
+
+deltat = (tfinal - tinitial)/numberofsteps
+
+FOR k = 1 TO numberofsteps
+
+    Sprime = -0.00001 * S * I
+    Iprime = 0.00001 * S * I - I / 14
+    Rprime = I / 14
+
+    deltaS = Sprime * deltat
+    deltaI = Iprime * deltat
+    deltaR = Rprime * deltat
+
+    t = t + deltat
+
+    S = S + deltaS
+    I = I + deltaI
+    R = R + deltaR
+
+NEXT k
+
+PRINT t, S, I, R
+    </code>
+  </program>
+</listing>
+
+
+<listing xml:id="listing-sir">
+  <title>SIR</title>
+
+  <program>
+    <code>
+t = 0
+
+S = 45400
+I = 2100
+R = 2500
+
+deltat = 0.1
+
+FOR k = 1 TO 10
+
+    Sprime = -0.00001 * S * I
+    Iprime = 0.00001 * S * I - I / 14
+    Rprime = I / 14
+
+    deltaS = Sprime * deltat
+    deltaI = Iprime * deltat
+    deltaR = Rprime * deltat
+
+    t = t + deltat
+
+    S = S + deltaS
+    I = I + deltaI
+    R = R + deltaR
+
+    PRINT t, S, I, R
+
+NEXT k
+    </code>
+  </program>
+</listing>
+
+
+        <p>
+You will see that the major change is to place the <c>PRINT</c> statement outside the loop, so only the final values of <m>S</m>, <m>I</m>, and <m>R</m> get printed. This speeds up the work, since otherwise, with <m>\Delta t = 0.001</m>, for instance, we would be asking the computer to print out 1000 lines—about 30 screens of text! Another change is that the value of <c>deltat</c> no longer needs to be specified—it is automatically determined by the values of <c>tinitial</c>, <c> tfinal</c>, and <c>numberofsteps</c>.
+</p>
+
+<p>
+As written above, SIR and SIRVALUE both run for 10 steps of size <m>0.1\, .</m> By changing the value of <c>numberofsteps</c> in the program we can quickly get estimates 
+<aside>
+            <p>With a computer we can generate lots of data and look for patterns</p>
+          </aside>
+ for <m>S(1)</m>, <m>I(1)</m>, and <m>R(1)</m> for a wide range of values for <m>\Delta
+t \, .</m> Moreover, once we have these estimates we can use SIRVALUE again to go backwards in time to <m>t=0</m>, by making changes similar to those we made in SIR earlier. First, we need to change the value of <c>tinitial</c> to 1 and the value of <c>tfinal</c> to 0. Notice that this automatically will make <c>deltat</c> a negative quantity, so that each time we run through the loop we step back in time. Second, we need to set the starting values of <c>S, I,</c> and <c>R</c> to the values we just obtained for <m>S(1)</m>, <m>I(1)</m>, and <m>R(1)</m>. With these changes, SIRVALUE will give us the corresponding estimated values for <m>S(0)</m>, <m>I(0)</m>, and <m>R(0)</m>.
+</p>
+
+<p>
+If we use SIRVALUE with <m>\Delta t</m> ranging from 1 to 0.00001 (which means letting <c>numberofsteps</c> range from 1 to 100,000) we get the table below. This table lists the computed values of <m>S(1)</m>, <m>I(1)</m>, and <m>R(1)</m> for each <m>\Delta t</m>, followed by the estimated value of <m>S(0)</m> obtained by running SIRVALUE backward in time from these new values, and, finally, the discrepancy between this estimated value of <m>S(0)</m> and the original value <m>S(0) = 45400.</m>
+        </p>
+
+
+        <p>
+Estimated values of <m>S, I, \mbox{ and } R</m> when <m>t = 1</m>,<!-- linebreak -->for step sizes <m>\Delta t = 10^{-N}</m>, <m>N = 0, \ldots 5</m>,<!-- linebreak -->together with the corresponding backwards estimate for <m>S(0)</m>.
+</p>
+
+<!--<table>
+          <title />
+          <tabular>
+            <row header="yes">
+              <cell halign="center">
+                <m>\Delta t</m>
+              </cell>
+	<cell halign="center">
+                <m>S(1)</m>
+              </cell>
+	<cell halign="center">
+                <m>I(1)</m>
+              </cell>
+	<cell halign="center">
+                <m>R(1)</m>
+              </cell>
+	<cell halign="center">new <m>S(0)</m>
+              </cell>
+	<cell halign="center">discrepancy</cell>
+            </row>
+<row>
+              <cell halign="left">1.0</cell>
+              <cell halign="left">44 446.6</cell>
+              <cell halign="left">2903.4</cell>
+              <cell halign="left">2650.0</cell>
+              <cell halign="left">45 737.0626</cell>
+              <cell halign="right">337.0626</cell>
+            </row><row>
+              <cell halign="left">0.1</cell>
+              <cell halign="left">44 278.6648</cell>
+              <cell halign="left">3042.9241</cell>
+              <cell halign="left">2678.4111</cell>
+              <cell halign="left">45 433.4741</cell>
+              <cell halign="right">33.4741</cell>
+            </row><row>
+              <cell halign="left">0.01</cell>
+              <cell halign="left">44 257.8301</cell>
+              <cell halign="left">3060.1948</cell>
+              <cell halign="left">2681.9751</cell>
+              <cell halign="left">45 403.3615</cell>
+              <cell halign="right">3.3615</cell>
+            </row><row>
+              <cell halign="left">0.001</cell>
+              <cell halign="left">44 255.6960</cell>
+              <cell halign="left">3061.9633</cell>
+              <cell halign="left">2682.3406</cell>
+              <cell halign="left">45 400.3363</cell>
+              <cell halign="right">.3363</cell>
+            </row><row>
+              <cell halign="left">0.000 1</cell>
+              <cell halign="left">44 255.4821</cell>
+              <cell halign="left">3062.1406</cell>
+              <cell halign="left">2682.3773</cell>
+              <cell halign="left">45 400.0336</cell>
+              <cell halign="right">.0336</cell>
+            </row><row>
+              <cell halign="left">0.000 01</cell>
+              <cell halign="left">44 255.4607</cell>
+              <cell halign="left">3062.1584</cell>
+              <cell halign="left">2682.3809</cell>
+              <cell halign="left">45 400.0034</cell>
+              <cell halign="right">.0034</cell>
+            </row>
+          </tabular>
+        </table> -->
+        
+<table xml:id="table-estimating-sir">
+          <title />
+          <tabular>
+            <row header="yes">
+              <cell halign="center">
+                <m>\Delta t</m>
+              </cell>
+	<cell halign="center">
+                <m>S(1)</m>
+              </cell>
+	<cell halign="center">new <m>S(0)</m>
+              </cell>
+	<cell halign="center">discrepancy</cell>
+            </row>
+<row>
+              <cell halign="left">1.0</cell>
+              <cell halign="left">44 446.6</cell>
+              <cell halign="left">45 737.0626</cell>
+              <cell halign="right">337.0626</cell>
+            </row><row>
+              <cell halign="left">0.1</cell>
+              <cell halign="left">44 278.6648</cell>
+              <cell halign="left">45 433.4741</cell>
+              <cell halign="right">33.4741</cell>
+            </row><row>
+              <cell halign="left">0.01</cell>
+              <cell halign="left">44 257.8301</cell>
+              <cell halign="left">45 403.3615</cell>
+              <cell halign="right">3.3615</cell>
+            </row><row>
+              <cell halign="left">0.001</cell>
+              <cell halign="left">44 255.6960</cell>
+              <cell halign="left">45 400.3363</cell>
+              <cell halign="right">.3363</cell>
+            </row><row>
+              <cell halign="left">0.000 1</cell>
+              <cell halign="left">44 255.4821</cell>
+              <cell halign="left">45 400.0336</cell>
+              <cell halign="right">.0336</cell>
+            </row><row>
+              <cell halign="left">0.000 01</cell>
+              <cell halign="left">44 255.4607</cell>
+              <cell halign="left">45 400.0034</cell>
+              <cell halign="right">0.0034</cell>
+            </row>
+          </tabular>
+        </table>        
+
+        <p>
+There are several striking features of this table. The first is that if we go forward one day and come back again, we can get back as close as 
+<aside>
+            <p>Smaller steps generate a discrepancy which can be made as small as we like</p>
+          </aside>
+ we want to our initial value of <m>S(0)</m>
+          <em>provided we recalculate the rates frequently enough</em>. After 200,000 rounds of calculations (<m>\Delta t = 0.00001</m>) we ended up only 0.0034 away from our starting value. In fact, there is a clear pattern to the values of the errors as we decrease the step size. In the exercises it is left for you to explore this pattern and show that similar results hold for <m>I</m> and for <m>R</m>.
+</p>
+
+<p>
+A second feature is that as we read down the column under <m>S(1)</m>, we find each digit <term>stabilizes</term>—that is, after changing for a while, it eventually becomes fixed at a particular value. The initial digits 44 are the first to stabilize, and that happens by the time <m>\Delta t = 0.1</m>. Then the third digit 2 stabilizes, when <m>\Delta t = 0.01</m>. Roughly speaking, one more digit stabilizes at each successive level. The table is revealing to us, digit by digit, the true value of <m>S(1)</m>. By the fifth stage we learn that the integer part of <m>S(1)</m> is 44255. By the sixth stage we can say that the true value of <m>S(1)</m> is <m>44255.4\ldots</m> .
+</p>
+
+<p xml:id="ch2-three-dot-notation">
+When we write <m>S(1) = 44255.4\ldots</m>
+          <aside>
+            <p>Approximations lead to exact values</p>
+          </aside>
+ we are expressing <m>S(1)</m> to <term>one decimal place accuracy</term>. This says, first, that the decimal expansion of <m>S(1)</m> begins with exactly the six digits shown and, second, that there are further digits after the 4 (represented by the three dots <q>…</q>). In this case, we can identify further digits simply by continuing the table. Since our step sizes have the form <m>\Delta t = 10^{-N}</m>, we just need to increase <m>N</m>. For example, to express <m>S(1)</m> accurately to six decimal places, we need to stabilize the first eleven digits in our estimates of <m>S(1)</m>. The table suggests that <m>\Delta t</m> should probably be about <m>10^{-10}</m>—i.e., <m>N = 10</m>.
+</p>
+
+<p>
+The true value of <m>S(1)</m> emerges through a process that generates a sequence of successive approximations. We say <m>S(1) = 44255.4</m>…is the <term>limit</term> of this sequence as <m>\Delta t</m> is made smaller and smaller or, equivalently, as <m>N</m> is made larger and larger. We also say that the sequence of successive approximations <term>converges</term> to the limit <m>S(1)</m>. Here is a mathematical notation that expresses these statements more compactly: <md>
+            <mrow>S(1) \amp= \lim_{\Delta t \to 0}
+   \{\mbox{the estimate of $S(1)$}\} \qquad \mbox{or, equivalently,}</mrow>
+            <mrow>\amp= \lim_{N \to \infty}
+        \{\mbox{the estimate of $S(1)$ 
+        with $\Delta t = 10^{-N}$}\}.</mrow>
+          </md> The symbol <m>\infty</m> stands for <q>infinity,</q> and the expression <m>N \to
+\infty</m> is often pronounced <q>as <m>N</m> goes to infinity.</q> However, it is often more instructive to say <q>as <m>N</m> gets larger and larger, without bound.</q>
+        </p>
+
+<p>
+You should check that similar patterns are occurring in the <m>I(1)</m> and <m>R(1)</m> columns as well.
+</p>
+
+
+<aside>
+          <p>The limit concept lies at the heart of calculus. Later on we’ll give a precise definition, but you should first see limits at work in a number of contexts and begin to develop some intuitions about what they are. This approach mirrors the historical development of calculus—mathematicians freely used limits for well over a century before a careful, rigorous definition was developed.</p>
+        </aside>
+      </paragraphs>
+    </subsection>
+
+			<subsection xml:id="ch2-subsec-one-picture-is-worth-a-hundred-tables">
+      <title>One Picture Is Worth a Hundred Tables</title>
+      <p>
+As we noted, the program SIRVALUE prints out only the final values of <m>S</m>, <m>I</m>, and <m>R</m> because it would typically take too much space to print out the intermediate values. However, if instead of printing these values we plot them graphically, we can convey all this intermediate information in a compact and comprehensible form.
+				</p>
+
+				<p>
+Suppose, for instance, that we wanted to record the calculations leading up to <m>S(3)</m> by plotting all the points. The graphs below plot all the pairs of values <m>(t, S)</m> that are calculated along the way for the cases <m>\Delta t =1</m> (4 points), <m>\Delta t =0.1</m> (31 points), and <m>\Delta t =0.01</m> (301 points).
+				</p>
+
+				<figure xml:id="fig_calc1_picture3">
+        <image source="images/calc1_picture3" />
+        <caption>Plots of values for three values of <m>\Delta t</m></caption>
+      </figure>
+
+				<p>
+By the time we get to steps of size 0.01, the resulting graph begins to look like a continuous curve. This suggests that instead of simply plotting the points we might want to draw lines connecting the points as they’re calculated.
+				</p>
+      <p>
+We can easily modify SIRVALUE to do this—the only changes will be to replace the <c>PRINT</c> command with a command to draw a line and to move this command inside the loop (so that it is executed every time new values are computed). We will also need to add a line or two at the beginning to tell the computer to set up the screen to plot points. This usually involves opening a —i.e., specifying the horizontal and vertical ranges the screen should depict. Since programming languages vary slightly in the way this is done, we use italicized text <q>
+          <em>Set up GRAPHICS</em>
+        </q> to make clear that this statement is <term>not</term> part of the program—you will have to express this in the form your programming language specifies. Similarly, the command
+				</p>
+
+				<blockquote>
+        <!-- Horizontal Rule Not Implimented -->
+        <p>
+          <em>Plot the line from <c>(t, S)</c> to <c>(t + deltat, S + deltaS)</c>
+          </em>
+        </p>
+      </blockquote>
+
+				<p>
+will have to be stated in the correct format for your language. The computational core of SIRVALUE is unchanged. Here is what the new program looks like if we want to use <m>\Delta t = 0.1</m> and connect the points with straight lines:
+				</p>
+
+<listing xml:id="listing-sirplot">
+  <title>SIRPLOT</title>
+
+  <program>
+    <code>
+' Set up GRAPHICS
+
+tinitial = 0
+tfinal = 3
+
+t = tinitial
+
+S = 45400
+I = 2100
+R = 2500
+
+numberofsteps = 30
+
+deltat = (tfinal - tinitial)/numberofsteps
+
+FOR k = 1 TO numberofsteps
+
+    Sprime = -0.00001 * S * I
+    Iprime = 0.00001 * S * I - I / 14
+    Rprime = I / 14
+
+    deltaS = Sprime * deltat
+    deltaI = Iprime * deltat
+    deltaR = Rprime * deltat
+
+    ' Plot the line from
+    ' (t,S) to
+    ' (t+deltat,S+deltaS)
+
+    t = t + deltat
+
+    S = S + deltaS
+    I = I + deltaI
+    R = R + deltaR
+
+NEXT k
+    </code>
+  </program>
+</listing>
+
+      <p>
+If we had wanted just to plot the points, we could have used a command of the form <em>Plot the point</em>
+        <c>(t, S)</c> in place of the command to plot the line, moving this command down two lines so it came after we had computed the new values of <c>t</c> and <c>S</c>. We would also need to place that command before the loop so that the initial point corresponding to <m>t = 0</m> gets plotted.
+				</p>
+
+				<p>
+When we <q>connect the dots</q> like this we emphasize graphically the underlying assumption we have been making in all our estimates: that the function <m>S(t)</m> is linear (i.e., it is changing at a constant rate) over each interval <m>\Delta t</m>. Let’s see what the graphs look like when we do this for the three values of <m>\Delta t</m> we used above. To compare the results more readily we’ll plot the graphs on the same set of axes. (We will look at a program for doing this in the next section.) We get the following picture:
+				</p>
+
+				<figure xml:id="fig_calc1_picture2">
+        <image source="images/calc1_picture2" />
+        <caption>image</caption>
+      </figure>
+
+				<p>
+The graphs become indistinguishable from each other and increasingly look like smooth 
+<aside>
+          <p>Graphs made up of line segments look like smooth curves if the segments are short enough</p>
+        </aside>
+ curves as the number of segments increases. If we plotted the 3000-step graph as well, it would be indistinguishable from the 300-step graph at this scale. If we now shift our focus from the end value <m>S(3)</m> and look at all the intermediate values as well, we find that each graph gives an approximate value for <m>S(t)</m> for <em>every</em> value of <m>t</m> between 0 and 3. We are seeing the entire function <m>S(t)</m> over this interval.
+				</p>
+
+				<p>
+Just as we wrote <md>S(3) = \lim_{N \to \infty}\{\mbox{the estimate of $S(3)$ 
+        with $\Delta t = 10^{-N}$}\}.</md> We can also write <md>\mbox{graph of } S(t) =\lim_{N \to \infty}
+        \{\mbox{line-segment approximations with $\Delta t = 
+        10^{-N}$}\}.</md> The way we see the graph of <m>S(t)</m> emerging from successive approximations is our first example of a fundamental result. It has wide-ranging implications which will occupy much of our attention for the rest of the course.
+				</p>
+    </subsection>
+
+			<subsection xml:id="ch2-subsec-piecewise-linear-functions">
+      <title>Piecewise Linear Functions</title>
+      <p>
+Let’s examine the implications of this approach more closely by considering the “one-step" (<m>\Delta t=3</m>) approximation to <m>S(t)</m> and the “three-step" (<m>\Delta t=1</m>) approximation over the time interval <m>0\leq t\leq 3</m>. In the first case we are making the simplifying assumption that <m>S</m> decreases at the rate <m>S' = -953.4</m> persons per day for the entire three days. In the second case we use three shorter steps of length <m>\Delta t=1</m>, with the slopes of the corresponding segments given by <xref ref="table-first-three-day-estimates" />, summarized below (note that since <m>\Delta t = 1</m> day we have that the magnitude of <m>\Delta S = S'\cdot\Delta t</m> is the same as the magnitude of <m>S'</m>):
+				</p>
+
+
+      <table>
+        <title />
+        <tabular>
+          <row header="yes">
+            <cell halign="center">
+              <m>t</m>
+            </cell>
+<cell halign="center">
+              <m>S</m>
+            </cell>
+<cell halign="center">
+              <m>S'</m>
+            </cell>
+          </row>
+<row>
+            <cell halign="right">0</cell>
+            <cell halign="right">
+              <m>45\,400.0</m>
+            </cell>
+                  <cell halign="right">
+              <m>-953.4</m>
+            </cell>
+          </row><row>
+            <cell halign="right">1</cell>
+            <cell halign="right">
+              <m>44\,446.6</m>
+            </cell>
+                  <cell halign="right">
+              <m>-1\,290.5</m>
+            </cell>
+          </row><row>
+            <cell halign="right">2</cell>
+            <cell halign="right">
+              <m>43\,156.1</m>
+            </cell>
+                  <cell halign="right">
+              <m>-1\,720.4</m>
+            </cell>
+          </row><row>
+            <cell halign="right">3</cell>
+            <cell halign="right">
+              <m>41\,435.7</m>
+            </cell>
+                  <cell halign="right" />
+          </row>
+        </tabular>
+      </table>
+      <p>
+Here are the corresponding graphs we get:
+				</p>
+      <figure xml:id="ch2-pic001">
+        <image source="images/ch2_pic001" />
+        <caption />
+      </figure>
+      <p>
+        <term>The <q>one-step</q> estimate</term>. Assuming that <m>S</m> decreases at the rate <m>S' = -953.4</m> persons per day for the entire three days is equivalent to assuming that <m>S</m> follows the upper graph—a straight line with slope –953.4 persons/day. In other words, the one-step approach approximates <m>S</m> by a <term>linear function</term> of <m>t</m>. If we use the notation <m>S_{1}(t)</m> to denote this (one-step) linear approximation we have
+				</p>
+
+				<blockquote>
+        <p>
+One-step estimate: <m>S(t) \approx S_{1}(t)=
+ 45400 - 953.4 \, t \, .</m>
+        </p>
+      </blockquote>
+
+				<p>
+Because the one-step estimate is actually a function we can find the value of <m>S_{1}(t)</m> for <em>all</em>
+        <m>t</m> in the interval <m>0 \leq t
+ \leq 3</m>, not just <m>t=3</m>, and thereby get corresponding estimates for <m>S(t)</m> as well. For example, <md>
+          <mrow>S_{1}(2) \amp= 45400 - 953.4 \times 2 = 43493.2</mrow>
+          <mrow>S_{1}(1.7) \amp= 45400 - 953.4 \times 1.7 = 43779.22 \, .</mrow>
+        </md>
+      </p>
+
+				<p>
+        <term>The <q>three-step</q> estimate</term>. With three smaller steps of size <m>\Delta t = 1</m>, we get a function whose graph is composed of three line segments, each starting at the <m>(t, S)</m> point at the 
+<aside>
+          <p>A single function may not be specified by a single equation</p>
+        </aside>
+ beginning of each day and with a slope equal to the corresponding rate of new infections at the beginning of the day. Let’s call this function <m>S_{3}(t)</m>. The three-step estimate <m>S_{3}(t)</m> is hence not a linear function, strictly speaking. However, since its graph is made up of several straight pieces, it is called a <term>piecewise linear function</term>. Recalling that the equation of a line through the point <m>(x_0, y_0)</m> with slope <m>m</m> can be written in the form <m>y=m(x-x_0)+y_0</m>, we can use the values for <m>S</m> (which correspond to the <m>y</m>-values) and <m>S'</m> (which give us the slopes of the segments) at times <m>t=0</m>, <m>t=1</m>, and <m>t=2</m> calculated above to get an explicit formula for <m>S_{3}(t)</m>: <md>S_3(t)=\left\{\begin{array}{ll}
+            y = -953.4(t-0)+45400 &amp; \mbox{ if $0\leq t\leq 1$} \\
+            y=-1290.5(t-1)+44446.6&amp;\mbox{ if $1\leq t\leq 2$} \\
+            y=-1720.4(t-2)+43156.1&amp;\mbox{ if $2\leq t\leq 3$}
+        \end{array}
+    \right.</md>
+      </p>
+
+				<p>
+Note that we have used <m>\leq</m> in the defining formulas since at the values <m>t=1</m> and <m>t=2</m> it doesn’t matter which equation we use. This is equivalent to saying that the straight line segments are connected to each other. Since the slopes of the three segments of <m>S_{3}(t)</m> are progressively more negative, the piecewise linear graph gets progressively steeper as <m>t</m> increases. This explains why the value <m>S_{3}(3)</m> is <em>lower</em> than the value of <m>S_{1}(3)</m>. While it is rare that we would actually need to write down an explicit formula like this for the piecewise-linear approximation—it is easier, and usually more informative, just to define <m>S_{3}(t)</m> by its graph—it is nevertheless important to realize that there really is an approximating function defined for all values of <m>t</m> in the interval <m>[0, 3]</m>, not just at the finite set of <m>t</m> values where we make the recalculations.
+				</p>
+
+				<p>
+By the time we are dealing with the 300-step function <m>S_{300}(t)</m> we can’t even tell by its graph that it is piecewise linear unless we zoom in very close. In principle, though, we could still write down a simple linear formula for each of its segments (see the exercises).
+				</p>
+
+				<p>
+        <term>An appraisal</term>. The graph of <m>S_{1}(t)</m> gives us a rough idea of what is happening to the true function <m>S(t)</m> during the first three days. It starts off at the same rate as <m>S'</m>, but subsequently the rates move apart. The value of <m>S_{1}'</m> never changes, while <m>S'</m> changes with the (ever-changing) values of <m>S</m> and <m>I</m>.
+				</p>
+
+				<p>
+The graph of <m>S_{3}(t)</m> is a distinct improvement because it changes its direction twice, modifying its slope at the beginning of each day to come back into agreement with the rate equation. But since the three-step graph is still piecewise linear, it continues to suffer from the same shortcoming as the one-step: once we restrict our attention to a single straight segment (for example, where <m>1 \leq t
+ \leq 2</m>), then the three-step graph <em>also</em> has a constant slope, while <m>S'</m> is always changing. Nevertheless, <m>S_{3}(t)</m> does satisfy the rate equation in our original model three times—at the beginning of each segment—and isn’t too far off at other times. When we get to <m>S_{300}(t)</m> we have a function which satisfies the rate equation at 300 times and is very close in between.
+				</p>
+
+				<p>
+Each of these graphs gives us an idea of the behavior of the true function <m>S(t)</m> during the time interval <m>0 \leq t \leq 3</m>. None is strictly correct, but none is hopelessly wrong, either. All are  <term>approximations</term> to the truth. Moreover, <m>S_{3}(t)</m> is a <term>better</term> approximation than <m>S_{1}(t)</m>—because it reflects at least some of the variability in <m>S'</m>—and <m>S_{300}(t)</m> is better still. Thus, even before we have a clear picture of the shape of the true function <m>S(t)</m>, we would expect it to be closer to <m>S_{300}(t)</m> than to <m>S_{3}(t)</m>. As we saw above, when we take piecewise linear approximations with smaller and smaller step sizes, it is reasonable to think that they will approach the true function <m>S</m> in the limit. Expressing this in the notation we have used before, <md>\mbox{the function } S(t) =\lim_{N \to \infty} 
+   \{\mbox{the chain of linear functions with $\Delta t = 10^{-N}$}\}.</md>
+      </p>
+    </subsection>
+
+			<subsection xml:id="ch2-subsec-approximate-versus-exact">
+      <title>Approximate versus Exact</title>
+      <p>
+You may find it unsettling that our efforts give us only a sequence of approximations to <m>S(3)</m>, and not the exact value, or only a sequence of piecewise-linear approximations to <m>S(t)</m>, not the <q>real</q> function itself. In what sense can we say we <q>know</q> the number <m>S(3)</m> or the function <m>S(t)</m>? The answer is: in 
+<aside>
+          <p>What does it mean to "know" a number like <m>\pi</m>?</p>
+        </aside>
+ the same sense that we <q>know</q> a number like <m>\sqrt{2}</m> or <m>\pi</m>. There are two distinct aspects to the way we know a number. On the one hand, we can <term>characterize</term> a number precisely and completely:
+				</p>
+
+				<table>
+        <title />
+        <tabular>
+          <row class="odd">
+            <cell halign="right">
+              <m>\pi</m>:</cell>
+<cell halign="left">the ratio of the circumference of a circle to its diameter;</cell>
+          </row>
+<row class="even">
+            <cell halign="right">
+              <m>\sqrt{2}</m>:</cell>
+<cell halign="left">the positive number whose square is 2;</cell>
+          </row>
+        </tabular>
+      </table>
+
+				<p>
+On the other hand, when we try to <term>construct</term> the decimal expansion of a number, we usually get only approximate and incomplete results. For example, when we do calculations by hand we might use the rough estimates <m>\sqrt{2} \approx 1.414</m> and <m>\pi \approx
+ 3.1416</m>. With a desk-top computer we might have <m>\sqrt{2} \approx
+ 1.414\,213\,562\,373\,095</m> and <m>\pi \approx
+ 3.141\,592\,653\,589\,793</m>, but these are still approximations, and we are really saying <md>\begin{array}{rcl}
+    \sqrt{2} &amp;=&amp; 1.414\,213\,562\,373\,09 \ldots \\
+    \pi &amp;=&amp; 3.141\,592\,653\,589\,79 \ldots \ .
+    \end{array}</md> The <em>complete</em> decimal expansions for <m>\sqrt{2}</m> and <m>\pi</m> are unknown! The exact values exist as limits of approximations that involve successively longer strings of digits, but we never see the limits—only approximations. In the final section of this chapter we will see ways of generating these approximations for <m>\sqrt{2}</m> and for <m>\pi</m>.
+				</p>
+
+				<p>
+What we say about <m>\pi</m> and <m>\sqrt{2}</m> is true for <m>S(3)</m> in exactly the same way. We can <em>characterize</em> it quite precisely, and we can <em>construct</em> approximations to its numerical value to any desired degree of accuracy. Here, for example, is a characterization of <m>S(3)</m>:
+				</p>
+
+				<blockquote>
+        <p>
+The <m>S</m>-<m>I</m>-<m>R</m> problem for which <m>a = 0.00001</m> and <m>b = 1/14</m> and for which <m>S = 45400</m>, <m>I = 2100</m>, <m>R = 2500</m> when <m>t = 0</m> determines three functions <m>S(t)</m>, <m>I(t)</m>, and <m>R(t)</m>. The number <m>S(3)</m> is the value that the function <m>S(t)</m> has when <m>t = 3</m>.
+				</p>
+      </blockquote>
+
+				<p>
+You should try to extend this argument to describe the sense in which we <q>know</q> the function <m>S(t)</m> by knowing its piecewise-linear approximations. Try to convince yourself that this is operationally no different from the way we <q>know</q> functions like <m>f(x)=\sqrt{x}</m>. In each instance we can <term>characterize</term> the function completely, but we can only <term>construct</term> an approximation to most values of the function or to its graph.
+				</p>
+
+				<p>
+All this discussion of approximations may strike you as an unfortunate departure from the accuracy and precision you may have been led to expect 
+<aside>
+          <p>Being able to approximate a number to 12 decimal places is usually as good as knowing its value precisely</p>
+        </aside>
+ in mathematics up until now. In fact, it is precisely this ability to make quick and accurate approximations to problems that is one of the most powerful features of mathematics. This is what goes on every time you use your calculator to evaluate <m>\log 3</m> or <m>\sin 37</m>. Your calculator doesn’t really know what these numbers are—but it does know how to approximate them quickly to 12 decimal places. Similar kinds of approximations are also at the heart of how bridges are built and spaceships are sent to the moon.
+				</p>
+
+
+				<paragraphs xml:id="ch2-a-caution">
+        <title>A Caution:</title>
+        <p>
+The fact that computers and calculators are really only dealing with approximations 
+<aside>
+            <p>However …</p>
+          </aside>
+ when we think they are being exact occasionally leads to problems, the most common of which involves <term>roundoff errors</term>. You can probably generate a relatively harmless manifestation of this on your computer with the SIRVALUE program. Modify the <c> PRINT</c> line so it prints out the final value of <c>t</c> to 10 or 12 digits, and try running it with a high value for <c>numberofsteps</c>, say 1 million or 10 million. You would expect the final value of <c>t</c> to be exactly 1 in every case, since you are adding <c> deltat = 1/numberofsteps</c> to itself <c>numberofsteps</c> times. The catch is that the computer doesn’t store the exact value <c> 1/numberofsteps</c> unless <c>numberofsteps</c> is a power of 2. In all other cases it will only be using an approximation, and if you add up enough quantities that are slightly off, their cumulative error will begin to show. We will encounter a somewhat less benign manifestation of roundoff error in subsequent chapters.
+</p>
+      </paragraphs>
+    </subsection>
+
+			<exercises xml:id="ch2-subsec-exercises">
+      <title>Exercises</title>
+      <exercisegroup xml:id="ch2-there-and-back-again">
+        <title>There and back again</title>
+        <exercise>
+          <introduction>
+            <p>
+Look at <xref ref="table-estimating-sir" />. What is your best guess of the <em>exact</em> value of <m>I(1)</m>? (Use the <q>…</q> notation introduced in <xref ref="ch2-subsec-the-longest-march-begins-with-a-single-step" />.)
+</p>
+          </introduction><task>
+            <p>
+What is the exact value of <m>R(1)</m>?
+</p>
+          </task>
+        </exercise><exercise>
+          <introduction>
+            <p>
+We noted that the discrepancy (the difference between the new estimate for <m>S(0)</m> and the original value) seemed to decrease as <m>\Delta t</m> decreased.
+</p>
+          </introduction><task>
+            <p>
+What is your best estimate (using only the information in the table) for the value of <m>\Delta t</m> needed to produce a discrepancy of 0.001 ?
+</p>
+          </task><task>
+            <p>
+More generally, express as precisely as you can the apparent relation between the size of the discrepancy and the size of <m>\Delta t</m>.
+</p>
+          </task>
+        </exercise><exercise>
+          <introduction>
+            <p>
+Suppose you wanted to try going three days forward and then coming back, using <m>\Delta t=0.01</m>. What changes would you have to make in SIRVALUE to do this?
+</p>
+          </introduction><task>
+            <p>
+Make a table similar to <xref ref="table-estimating-sir" /> for going three days forward and coming back for <m>\Delta t=1</m>, 0.1, 0.01, and 0.001.
+</p>
+          </task><task>
+            <p>
+In this new table how does the size of the discrepancy for a given value of <m>\Delta t</m> compare with the value in the original table?
+</p>
+          </task><task>
+            <p>
+What value of <m>\Delta t</m> do you think you would need to determine the integer parts of <m>S(3)</m> and <m>R(3)</m> exactly?
+</p>
+          </task>
+        </exercise>
+      </exercisegroup><exercisegroup xml:id="ch2-piecewise-linear-functions">
+        <title>Piecewise linear functions</title>
+        <exercise>
+          <statement>
+            <p>
+Using this three-step approximation, what is <m>S_{3}(1.7)</m>? What is <m>S_{3}(2.5)</m>?
+</p>
+          </statement>
+        </exercise><exercise>
+          <statement>
+            <p>
+How would you modify SIRVALUE to get <m>S_{3000}(3)</m> ? Do it; what do you get?
+</p>
+          </statement>
+        </exercise><exercise>
+          <statement>
+            <p>
+What additional changes would you make to get the values of <m>t</m>, <m>S</m>, and <m>S'</m> at the beginning of the 193rd segment of <m>S_{300}(t)</m> ? [HINT: You only need to alter the <c>FOR k = 1 TO numberofsteps</c> line (since you don’t want to go all the way to the end) and the <c> PRINT</c> line. (Note that after running the loop for, say, 20 times, the values of <c>t</c> and <c>S</c> are the values for the beginning of the 21st segment, while the value of <c>Sprime</c> will still be the slope of the 20th segment.)]
+</p>
+          </statement>
+        </exercise><exercise>
+          <introduction>
+            <p>
+Suppose we wanted to determine the value of <m>S_{300}(2.84135)</m>.
+</p>
+          </introduction><task>
+            <p>
+In which of the 300 segments of the graph of <m>S_{300}(t)</m> would we look to find this information?
+</p>
+          </task><task>
+            <p>
+What are the values of <m>t</m>, <m>S</m>, and <m>S'</m> at the beginning of this segment?
+</p>
+          </task><task>
+            <p>
+What is the equation of this segment?
+</p>
+          </task><task>
+            <p>
+What is <m>S_{300}(2.84135)</m> ?
+</p>
+          </task>
+        </exercise><exercise>
+          <statement>
+            <p>
+How would you modify SIRVALUE to calculate estimates for <m>S</m>, <m>I</m>, and <m>R</m> when <m>t = -6</m>, using <m>\Delta t=0.05</m> ? Do it; what do you get?
+</p>
+          </statement>
+        </exercise><exercise>
+          <introduction>
+            <p>
+We want to use SIRPLOT to look at the graph of <m>S(t)</m> over the first 20 days, using <m>\Delta t=0.01</m>.
+</p>
+          </introduction><task>
+            <p>
+What changes would we have to make in the program?
+</p>
+          </task><task>
+            <p>
+Sketch the graph you get when you make these changes.
+</p>
+          </task><task>
+            <p>
+If you wanted to plot the graph of <m>I(t)</m> over this same time interval, what additional modifications to SIRPLOT would be needed? Make them, and sketch the result. When does the infection appear to hit its peak?
+</p>
+          </task><task>
+            <p>
+Modify SIRPLOT to sketch on the same graph all three functions over the first 70 days. Sketch the result.
+</p>
+          </task>
+        </exercise>
+      </exercisegroup><exercisegroup xml:id="ch2-the-dowhile-loop">
+        <title>The DO–WHILE loop</title>
+        <introduction>
+          <p>
+
+</p>
+          <p>
+A difficulty in giving a precise answer to the last question was that we had to get all the values for 20 days, then go back to estimate by eye when the peak occurred. It would be helpful if we could write a program that ran until it reached the point we were looking for, and then stopped. To do this, we need a different kind of loop—a  <em>conditional</em> loop that keeps looping only while some specified condition is true. A DO–WHILE loop is one useful way to do this. Here’s how the modified SIRPLOT program would look:
+</p>
+
+<listing xml:id="listing-peakinfection">
+  <title>Peak Infection Time</title>
+
+  <program>
+    <code>
+' Set up GRAPHICS
+
+tinitial = 0
+
+t = tinitial
+
+S = 45400
+I = 2100
+R = 2500
+
+Iprime = 0.00001 * S * I - I / 14
+
+deltat = 0.01
+
+DO WHILE Iprime > 0
+
+    Sprime = -0.00001 * S * I
+    Iprime = 0.00001 * S * I - I / 14
+    Rprime = I / 14
+
+    deltaS = Sprime * deltat
+    deltaI = Iprime * deltat
+    deltaR = Rprime * deltat
+
+    ' Plot the line from
+    ' (t,S) to
+    ' (t+deltat,S+deltaS)
+
+    t = t + deltat
+
+    S = S + deltaS
+    I = I + deltaI
+    R = R + deltaR
+
+LOOP
+
+PRINT t - deltat
+    </code>
+  </program>
+</listing>
+
+
+          <p>
+The changes we have made are:
+</p>
+          <p>
+            <ul>
+              <li>
+                <p>
+Since we don’t know what the final time will be, eliminate the <c>tfinal = 20</c> and the <c>numberofsteps = 2000</c> commands.
+</p>
+              </li>
+
+<li>
+                <p>
+Since the condition in our loop is keyed to the value of <m>I'</m>, we have to calculate the initial value of <m>I'</m> before the loop starts.
+</p>
+              </li>
+
+<li>
+                <p>
+Instead of <c>deltat = (tfinal - tinitial)/numberofsteps</c> use the statement <c>deltat = 0.01</c>.
+</p>
+              </li>
+
+<li>
+                <p>
+The key change is to replace the <c>FOR k = 1 TO numberofsteps</c> line by the line <c>DO WHILE Iprime &gt; 0</c>.
+</p>
+              </li>
+
+<li>
+                <p>
+To denote the end of the loop we replace the <c>NEXT k</c> command with the command <c>LOOP</c>.
+</p>
+              </li>
+
+<li>
+                <p>
+After the <c>LOOP</c> command add the line <c>PRINT t - deltat</c>. (The reason we had to back up one step at the end is because due to the way the program was written, the computer takes one final step with a negative value for <c>Iprime</c> before it stops.)
+</p>
+              </li>
+            </ul>
+          </p>
+
+<p>
+The net effect of all this is that the program will continue working as before, calculating values and plotting points <c>(t, S)</c>, but <em>only as long as the condition in the <c>DO WHILE</c> statement is true.</em> The condition we used here was that <m>I'</m> had to be positive—this is the condition that ensures that values of <m>I</m> are still getting bigger. While this condition is true, we can always get a larger value for <m>I</m> by going forward another increment <m>\Delta t</m>. As soon as the condition is false—i.e., as soon as <m>I'</m> is negative—the values for <m>I</m> will be decreasing, which means we have passed the peak and so want to stop.
+</p>
+        </introduction><exercise>
+          <statement>
+            <p>
+Make these modifications; what value for <m>t</m> do you get?
+</p>
+          </statement>
+        </exercise><exercise>
+          <introduction>
+            <p>
+You could modify the <c>PRINT t</c> command to also print out other quantities.
+</p>
+          </introduction><task>
+            <p>
+What is the value of <m>I</m> at its peak?
+</p>
+          </task><task>
+            <p>
+What is the value of <m>S</m> when <m>I</m> is at its peak? Does this agree with the threshold value we predicted in <xref ref="ch1-analysis-without-a-computer" />?
+</p>
+          </task>
+        </exercise><exercise>
+          <statement>
+            <p>
+Suppose you change the initial value of <m>S</m> to be 5400 and run the previous program. Now what happens? Why?
+</p>
+          </statement>
+        </exercise><exercise>
+          <introduction>
+            <p>
+Suppose we wanted to know how long the epidemic lasts. We could use DO–WHILE and keep stepping forward using, say <m>\Delta t = 0.1</m>, so long as <m>I \geq 1</m>. As soon as <m>I</m> was less than 1 we would want to stop and see what the value of <m>t</m> was.
+</p>
+          </introduction><task>
+            <p>
+What modifications would you make in SIRVALUE to get this information?
+</p>
+          </task><task>
+            <p>
+Run your modified program. What value do you get for <m>t</m>?
+</p>
+          </task><task>
+            <p>
+Run the program using <m>\Delta t = 0.01</m>. Now what is your estimate for the duration of the epidemic? What can you say about the actual time required for <m>I</m> to drop below 1?
+</p>
+          </task>
+        </exercise><exercise>
+          <introduction>
+            <p>
+If we think the epidemic started with a single individual, we can go backwards in time until <m>I</m> is no longer greater than 1, and see what the corresponding time is. Do this for <m>\Delta t = -1, -0.1,
+\mbox{ and } -0.01</m>. What is your best estimate for the time that the infection arrived?
+</p>
+          </introduction><task>
+            <p>
+How many Recovereds were there at the start of the epidemic? This would be the people who had presumably been infected in a previous epidemic and now had immunity.
+</p>
+          </task>
+        </exercise>
+      </exercisegroup>
+    </exercises>
+  </section>
+
+		<section xml:id="ch2-sec-the-mathematical-implications-eulers-method">
+    <title>The Mathematical Implications—<!-- linebreak -->Euler’s Method</title>
+
+
+			<subsection xml:id="ch2-subsec-approximate-solutions">
+      <title>Approximate Solutions</title>
+      <p>
+In the last section we approximated the function <m>S(t)</m> by piecewise-linear approximations using steps of size <m>\Delta t =1</m>, 0.1, and 0.01. This process can clearly be extended to produce approximations with an <em>arbitrary</em> number of steps. For any given step size <m>\Delta t</m>, the result is a piecewise linear graph whose segments are <m>\Delta t</m> days wide. This graph then provides us with an estimate for <m>S(t)</m> for every value of <m>t</m> in the interval <m>0
+\leq t \leq 3</m>. We call this process of obtaining a function by constructing a sequence of increasingly better approximations  <term>Euler’s method</term>, after the Swiss mathematician Leonhard Euler (1707–1783). Euler was interested in the general problem of finding the functions determined by a set of rate equations, and in 1768 he proposed this method to approximate them. The method is conceptually simple and can indeed be used to get solutions for an enormous range of rate equations. For this reason we will make it a basic tool.
+				</p>
+
+				<p>
+To begin to get a sense of the general utility of Euler’s method, let’s use it in a new setting. Here is a simple problem that involves just a single variable <m>y</m> that depends on <m>t</m>. <md>
+          <mrow>\mbox{rate equation:}\quad y' \amp= 
+    {\displaystyle 0.1\,y \left( 1-\frac{y}{1000} \right)},</mrow>
+          <mrow>\mbox{initial condition:}\quad  y \amp= 100</mrow>
+          <mrow>\mbox{when} \ t = 0.</mrow>
+        </md> To solve the problem we must find the function <m>y(t)</m> determined by this rate equation and initial condition. We’ll work without a context, in order to emphasize the purely mathematical nature of Euler’s method. However, this rate equation is one member of a family called <term>logistic equations</term> frequently used in population models. We will explore this context in the exercises.
+				</p>
+
+				<p>
+Let’s now construct the function that approximates <m>y(t)</m> on the interval <m>0 \leq t \leq 75</m>, using <m>\Delta t = 0.5</m> . We can make the suitable modifications in SIRPLOT or SIRVALUE to get this approximation. Suppose we want to view the approximation graphically. Here’s what the modified SIRPLOT would look like:
+				</p>
+
+<listing xml:id="listing-modified-sirplot">
+  <title>modified SIRPLOT</title>
+
+  <program>
+    <code>
+' Set up GRAPHICS
+
+tinitial = 0
+tfinal = 75
+
+t = tinitial
+y = 100
+
+numberofsteps = 150
+
+deltat = (tfinal - tinitial)/numberofsteps
+
+FOR k = 1 TO numberofsteps
+
+    yprime = 0.1 * y * (1 - y / 1000)
+
+    deltay = yprime * deltat
+
+    ' Plot the line from
+    ' (t,y) to
+    ' (t+deltat,y+deltay)
+
+    t = t + deltat
+
+    y = y + deltay
+
+NEXT k
+    </code>
+  </program>
+</listing>
+
+      <p>
+As before, words in italics, like “<em>Plot the line from…to</em>" need to be translated into the specific formulation required by the computer language you are using.
+				</p>
+
+				<p>
+When we run this program, we get the following graph (axes and scales have been added):
+				</p>
+
+      
+            				<figure xml:id="fig_calc1_picture4">
+        <image source="images/calc1_picture4" />
+        <caption>Graph of the modified SIRPLOT</caption>
+      </figure>
+
+
+				<p>
+As before, what we see here is only an approximation to the true solution <m>y(t)</m>. How can we get some idea of how good this approximation is?
+				</p>
+    </subsection>
+
+			<subsection xml:id="ch2-subsec-exact-solutions">
+      <title>Exact Solutions</title>
+      <p>
+For any chosen step size, we can produce an <em>approximate</em> solution to a rate equation problem. We will call such an approximation an <term>Euler approximation</term>. In the last section we saw that we can improve the accuracy of the approximation by making the steps smaller and using more of them.
+				</p>
+
+				<p>
+For example, we have already found an approximate solution to the problem <md>y' = {\displaystyle 0.1y \left( 1-\frac{y}{1000} \right)} \, ; 
+    \qquad y(0) = 100</md> on the interval <m>0 \leq t \leq 75</m>, using 150 steps of size <m>\Delta t
+= 1/2</m>. Consider a <term>sequence</term> of Euler approximations to this problem that are obtained by increasing the number of steps from one stage to the next. To be systematic, let the first approximation have 1 step, the next 2, the next 4, and so on. (The important feature is that the number of steps increases from one approximation to the next, not necessarily that they double—going up by powers of 10 would be just as good. A slight advantage in using powers of 2 is to maximize computer accuracy.) The number of steps thus has the form <m>2^{j-1}</m>, where <m>j =</m> 1, 2, 3, …. If we use <m>y_j(t)</m> to denote the approximating function with <m>2^{j-1}</m> steps, then we have an unending list: 
+<md>
+\begin{array}{cl}
+y_1(t): &amp; \text{Euler's approximation with 1 step}\\
+y_2(t): &amp; \text{Euler's approximation with 2 steps}\\
+y_3(t): &amp; \text{Euler's approximation with 4 steps}\\
+\vdots &amp; \vdots\\
+y_j(t): &amp; \text{Euler's approximation with } 2^{j-1}\text{ steps}\\
+\vdots &amp; \vdots
+\end{array}
+</md>
+
+Here are the graphs of <m>y_{j}(t)</m> for <m>j=1,2,\ldots ,7</m> plus the graph of <m>y_{11}(t)</m>:
+				</p>
+
+      
+      				<figure xml:id="fig_calc1_picture5">
+        <image source="images/calc1_picture5" />
+        <caption>Successive approximations</caption>
+      </figure>
+
+
+				<p>
+These functions form a sequence of <term>successive approximations</term> to the true solution <m>y(t)</m>, which is obtained by taking the  <term>limit</term>, as we did in the last section: <md>y(t) = \lim_{j \to \infty} y_j(t).</md> Earlier we noticed how the digits in the estimates for <m>S(3)</m> stabilized. If we 
+<aside>
+          <p>Functions and graphs can be limits, too</p>
+        </aside>
+ plot the approximations <m>y_j(t)</m> together we’ll find that they stabilize, too. Each graph in the sequence is different from the preceding one, but the differences diminish the larger <m>j</m> becomes. Eventually, when <m>j</m> is large enough, the graph of <m>y_{j+1}</m> does not differ noticeably from the graph of <m>y_j</m>. That is, the position of the graph <term>stabilizes</term> in the coordinate plane. In this example, at the scale in the graph above, this happens around <m>j=11</m>. If we had drawn the graph of <m>y_{15}</m> or <m>y_{20}</m>, it would not have been distinguishable 
+<aside>
+          <p>Euler’s method is the process of finding solutions through a sequence of successive approximations</p>
+        </aside>
+ from the graph of <m>y_{11}</m>. It is this entire process of calculating a sequence of successive approximations using increasingly many steps as far as is needed to get the desired level of stabilization that is meant when we talk about Euler’s method.
+				</p>
+
+				<p>
+The program SEQUENCE shown below plots 14 Euler approximations to <m>y(t)</m>, increasing the number of steps by a factor of 2 each time. It demonstrates how the graphs of <m>y_j(t)</m> stabilize to define <m>y(t)</m> as their limit.
+				</p>
+<listing xml:id="listing-sequence">
+  <title>SEQUENCE</title>
+
+  <caption>
+    A sequence of graphs for
+    <m>y'=0.1y(1-y/1000)</m>,
+    <m>y(0)=100</m>.
+  </caption>
+
+  <program>
+    <code>
+FOR j = 1 TO 14
+
+    tinitial = 0
+    tfinal = 75
+
+    t = tinitial
+    y = 100
+
+    numberofsteps = 2^(j-1)
+
+    deltat = (tfinal - tinitial)/numberofsteps
+
+    FOR k = 1 TO numberofsteps
+
+        yprime = 0.1*y*(1-y/1000)
+
+        deltay = yprime*deltat
+
+        Plot the line from (t,y)
+        to (t+deltat,y+deltay)
+
+        Color the line with color j
+
+        t = t + deltat
+        y = y + deltay
+
+    NEXT k
+
+NEXT j
+    </code>
+  </program>
+</listing>
+
+
+
+      <p>
+Notice that SEQUENCE contains the program SIRPLOT embedded in a loop that executes SIRPLOT 14 times. In this way SEQUENCE plots 14 different graphs. The only new element that has been added to SIRPLOT is “<em>Color the line with color <c>j</c>
+        </em>". When you express this in your programming language it instructs the computer to draw the <m>j</m>-th graph using color number <m>j</m> in the computer’s <q>palette.</q> In the exercises you are asked to use the program SEQUENCE to explore the solutions to a number of rate equation problems.
+				</p>
+
+
+				<paragraphs xml:id="ch2-subsubsec-bf-approximate-solutions-versus-exact">
+        <title>
+          <term>Approximate solutions versus exact</term>
+        </title>
+
+<p>
+By constructing successive approximations to the solution of a rate equation problem, using a sequence of step sizes <c>deltat</c> = <m>\Delta t</m> that shrink to 0, we obtain the <em>exact</em> solution in the limit.
+</p>
+
+<p>
+In practice, though, all we can ever get are particular approximations. However, we can control the level of precision in our approximations by adjusting the step size. If we are dealing with a model of some real process, then this is typically all we need. For example, when it comes to interpreting the <m>S</m>-<m>I</m>-<m>R</m> model, we might be satisfied to predict that there will be about 40500 susceptibles remaining in the population after three days. <xref ref="table-estimating-sir" /> indicates we would get that level of precision using a step size of about <m>\Delta t = 10^{-2}</m>. Greater precision than this may be pointless, because the modelling process—which converts reality to mathematics—is itself only an approximation.
+</p>
+
+<p>
+The question we asked in the last section—In what sense do we know a number?—applies equally to the functions we obtain using Euler’s method. That is, even if we can characterize a function quite precisely as the solution of a particular rate equation, we may be able to evaluate it only approximately.
+</p>
+      </paragraphs>
+    </subsection>
+
+			<subsection xml:id="ch2-subsec-a-caution">
+      <title>A Caution</title>
+      <p>
+We have now seen how to take a set of rate equations and find approximations to the solution of these equations to any degree of accuracy desired. It is important to remember that all these mathematical manipulations are only drawing inferences about the model. We are essentially saying that <em>if</em> the original equations capture the internal dynamics of the situation being modelled, <em>then</em> here is what we would expect to see. It is still essential at some point to go back to the reality being modeled and check these predictions to see whether our original assumptions were in fact reasonable, or need to be modified. As Alfred North Whitehead has said:
+				</p>
+
+				<blockquote>
+        <p>
+There is no more common error than to assume that, because prolonged and accurate mathematical calculations have been made, the application of the result to some fact of nature is absolutely certain.
+				</p>
+      </blockquote>
+    </subsection>
+
+			<exercises xml:id="ch2-subsec-exercises-2">
+      <title>Exercises</title>
+      <exercisegroup xml:id="ch2-subsubsec-approximate-solutions">
+        <title>Approximate solutions</title>
+        <exercise>
+          <introduction>
+            <p>
+Modify SIRVALUE and SIRPLOT to analyze the population of Poland (see <xref ref="ch1-poland-exercise" />). We assume the population <m>P(t)</m> satisfies the conditions <md>P' = 0.009 \, P \quad \mbox{and} \quad 
+        P(0) = \mbox{37,500,000},</md> where <m>t</m> is years since 1985. We want to know <m>P</m> 100 years into the future; you can assume that <m>P</m> does not exceed 100,000,000.
+</p>
+          </introduction><task>
+            <p>
+Estimate the population in 2085.
+</p>
+          </task><task>
+            <p>
+Sketch the graph that describes this population growth.
+</p>
+          </task>
+        </exercise>
+      </exercisegroup><exercisegroup xml:id="ch2-subsubsec-the-logistic-equation">
+        <title>The Logistic Equation</title>
+        <introduction>
+          <p>
+Suppose we were studying a population of rabbits. If we turn 100 rabbits loose in a field and let <m>y(t)</m> be the number of rabbits at time <m>t</m> measured in months, we would like to know how this function behaves. The next several exercises are designed to explore the behavior of the rate equation <md>y' = {\displaystyle 0.1y \left( 1-\frac{y}{1000} \right)} \, ; 
+    \qquad y(0) = 100</md> and see why it might be a reasonable model for this system.
+</p>
+        </introduction><exercise>
+          <statement>
+            <p>
+By modifying SIRVALUE in the way we modified SIRPLOT to get SEQUENCE, obtain a sequence of estimates for <m>y(37)</m> that allows you to specify the exact value of <m>y(37)</m> to two decimal places accuracy.
+</p>
+          </statement>
+        </exercise><exercise>
+          <introduction>
+            <p>
+Referring to the graph of <m>y(t)</m> obtained in the in <xref ref="fig_calc1_picture5" />, what can you say about the behavior of <m>y</m> as <m>t</m> gets large?
+</p>
+          </introduction><task>
+            <p>
+Suppose we had started with <m>y(0)=1000</m>. How would the population have changed over time? Why?
+</p>
+          </task><task>
+            <p>
+Suppose we had started with <m>y(0)=1500</m>. How would the population have changed over time? Why?
+</p>
+          </task><task>
+            <p>
+Suppose we had started with <m>y(0)=0</m>. How would the population have changed over time? Why?
+</p>
+          </task><task>
+            <p>
+The number 1000 in the denominator of the rate equation is called the <term>carrying capacity</term> of the system. Can you give a physical interpretation for this number?
+</p>
+          </task>
+        </exercise><exercise>
+          <statement>
+            <p>
+Obtain graphical solutions for the rate equation for different values of the carrying capacity. What seems to be happening as the carrying capacity is increased? (Don’t restrict yourself to <m>t = 37</m> here.) In this problem and the next you should sketch the different solutions on the same set of axes.
+</p>
+          </statement>
+        </exercise><exercise>
+          <statement>
+            <p>
+Keep everything in the original problem unchanged except for the constant 0.1 out front. Obtain graphical solutions with the value of this constant = 0.05, 0.2, 0.3, and 0.6. How does the behavior of the solution change as this constant changes?
+</p>
+          </statement>
+        </exercise><exercise>
+          <statement>
+            <p>
+Returning to the original logistic equation, modify SIRVALUE or DO–WHILE to find the value for <m>t</m> such that <m>y(t)=900</m>.
+</p>
+          </statement>
+        </exercise><exercise>
+          <statement>
+            <p>
+Suppose we wanted to fit a logistic rate equation to a population, starting with <m>y(0)=100</m>. Suppose further that we were comfortable with the 1000 in the denominator of the equation, but weren’t sure about the 0.1 out front. If we knew that <m>y(20)=900</m>, what should the value for this constant be? 
+</p>
+          </statement>
+        </exercise>
+      </exercisegroup><exercisegroup xml:id="ch2-subsubsec-using-sequence">
+        <title>Using SEQUENCE</title>
+        <exercise>
+          <statement>
+            <p>
+Each Euler approximation is made up of a certain number of straight line segments. What instruction in the program SEQUENCE determines the number of segments in a particular approximation? The first graph drawn has only a single segment. How many does the fifth have? How many does the fourteenth have?
+</p>
+          </statement>
+        </exercise><exercise>
+          <statement>
+            <p>
+What is the slope of the first graph? What are the slopes of the two parts of the second graph? [You should be able to answer these questions without resorting to a computer.]
+</p>
+          </statement>
+        </exercise><exercise>
+          <statement>
+            <p>
+Modify the line in the program SEQUENCE which determines the number of steps by having it read <c>numberofsteps = j</c>, and run the modified program. Again, we are getting a sequence of approximations, with the number of steps increasing each time, but the approximations don’t seem to be getting all that close to anything. Explain why this modified program isn’t as effective for our purposes as the original.
+</p>
+          </statement>
+        </exercise><exercise>
+          <introduction>
+            <p>
+Modify SEQUENCE to produce a sequence of Euler approximations to the function <m>y(t)</m> that satisfies the conditions <md>y' = 0.2\, y(5 - y) \quad \mbox{and} \quad y(0) = 1.</md> on the interval <m>0 \leq t \leq 10</m>. [You need to change the final <m>t</m> value in the program, and you also need to ensure that the graphs will fit on your screen.]
+</p>
+          </introduction><task>
+            <p>
+What is <m>y(10)</m>? [If you add the line <c>PRINT j, y</c> just before the line <c>NEXT j</c>, a sequence of 14 estimates for <m>y(10)</m> will appear on the screen with the graphs.]
+</p>
+          </task><task>
+            <p>
+Make a rough sketch of the graph that is the limit of these approximations. The right half of the limit graph has a distinctive feature; what is it?
+</p>
+          </task><task>
+            <p>
+Without doing any calculations, can you estimate the value of <m>y(50)</m>? How did you arrive at this value?
+</p>
+          </task><task>
+            <p>
+Change the <term>initial condition</term> from <m>y(0) = 1</m> to <m>y(0) = 9</m>. Construct the sequence of Euler approximations beginning with <c> numberofsteps</c> being 1, and make a rough sketch of the limit graph. What is <m>y(10)</m> now? Explain why the first several approximations look so strange.
+</p>
+          </task>
+        </exercise><exercise>
+          <statement>
+            <p>
+Modify SEQUENCE to construct a sequence of Euler approximations for population of Poland (from exercise 1, above). Sketch the limit graph <m>P(t)</m>, and mark the values of <m>P(0)</m> and <m>P(100)</m> at the two ends.
+</p>
+          </statement>
+        </exercise><exercise>
+          <statement>
+            <p>
+Construct a sequence of Euler approximations to the function <m>y(t)</m> that satisfies the conditions <md>y' = 2 \, t \quad \mbox{and} \quad y(0) = 0</md> over the interval <m>0 \leq t \leq 2</m>. Note that this time the rate <m>y'</m> is given in terms of <m>t</m>, not <m>y</m>. Euler’s method works equally well. Using your sequence of approximations, estimate <m>y(2)</m>. How accurate is your estimate?
+</p>
+          </statement>
+        </exercise><exercise>
+          <statement>
+            <p>
+Construct a sequence of Euler approximations to the function <m>y(t)</m> that satisfies the conditions <md>y' = \dfrac{4}{1+t^2} \quad \mbox{and} \quad y(0) = 0</md> over the interval <m>0 \leq t \leq 1</m>. Estimate <m>y(1)</m>. How accurate is your estimate? [Note: the exact value of <m>y(1)</m> is <m>\pi</m>, which your estimates may have led you to expect. By using special methods we shall develop much later we can prove that <m>y(1) = \pi</m>.]
+</p>
+          </statement>
+        </exercise>
+      </exercisegroup>
+    </exercises>
+  </section>
+
+		<section xml:id="ch2-sec-approximate-solutions">
+    <title>Approximate Solutions</title>
+    <introduction>
+      <p>
+				Our efforts to find the functions that were determined by the rate equations for the <m>S</m>-<m>I</m>-<m>R</m> model have brought to light several important issues:
+			</p>
+
+			<p>
+        <ul>
+          <li>
+            <p>
+		We often have to deal with a question that does not have a simple, straightforward answer; perhaps we are trying to determine a quantity (like the square root of 2, or <m>S(3)</m> in the <m>S</m>-<m>I</m>-<m>R</m> model), to find some function (like <m>S(t)</m>), or to understand a process (like an epidemic, or buying and selling in a market). An <term>approximation</term> can get us started.
+	</p>
+          </li>
+
+				<li>
+            <p>
+		In many instances, we can make repeated improvements in the approximation. If these <term>successive approximations</term> get arbitrarily close to the unknown, and they do it quickly enough, that may answer the question for all practical purposes. In many cases, there is no alternative.
+	</p>
+          </li>
+
+				<li>
+            <p>
+		The information that successive approximations give us is conveyed in the form of a <term>limit</term>.
+	</p>
+          </li>
+
+				<li>
+            <p>
+		The method of successive approximations can be used to evaluate many kinds of mathematical objects, including numbers, graphs, and functions.
+	</p>
+          </li>
+
+				<li>
+            <p>
+              <term>Limit processes</term> give us a valuable tool to probe difficult questions. They lie at the heart of calculus.
+	</p>
+          </li>
+        </ul>
+      </p>
+
+			
+<aside>
+        <p>Even the process of building a mathematical model for a physical system can be seen as an instance of successive approximations. We typically start with a simple model (such as the <m>S</m>-<m>I</m>-<m>R</m> model) and then add more and more features to it (e.g., in the case of the <m>S</m>-<m>I</m>-<m>R</m> model we might divide the population into different subgroups, have the parameters in the model depend on the season of the year, make immunity of limited duration, etc.). Is it always possible, at least in theory, to get a sequence of approximating mathematical models that approaches reality in the limit?</p>
+      </aside>
+
+
+			<p>
+				In the following chapters we will apply the process of successive approximation to many different kinds of problems. For example, in <xref ref="ch3-chap-the-derivative" /> the problem will be to get a better understanding of the notion of a rate of change of one quantity with respect to another. Then, in <xref ref="ch4-chap-differential-equations" />, we will return to the task of solving rate equations using Euler’s method. <xref ref="ch6-chap-the-integral" /> introduces the integral, defining it through a sequence of successive approximations. As you study each chapter, pause to identify the places where the method of successive approximations is being used. This can give you insight into the special role that calculus plays within the broader subject of mathematics.
+			</p>
+      <p>
+				To illustrate the general utility of the method, we end this chapter by returning to the problem raised in <xref ref="ch2-sec-making-approximations" /> of constructing the values of <m>\sqrt{2}</m> and <m>\pi</m> to an arbitrary number of decimal places.
+			</p>
+    </introduction><subsection xml:id="ch2-subsec-calculating-pi-the-length-of-a-curve">
+      <title>Calculating <m>\pi</m>—The Length of a Curve</title>
+
+				<p>
+
+				</p>
+      <p>
+Humans were grappling with the problem of calculating <m>\pi</m> at least 3000 years ago. In his work <em>Measurement of the Circle</em>, Archimedes (287–212 b.c.) used the method of successive approximations to calculate <m>\pi = 3.14 \ldots \, .</m> He did this by starting with a circle of diameter 1, constructing an inscribed and a circumscribed hexagon, and calculating the lengths of their perimeters. The perimeter of the circumscribed hexagon was clearly an overestimate for <m>\pi</m>, while the perimeter of the inscribed hexagon was an underestimate. He then improved these estimates by going from hexagons to inscribed and circumscribed 12-sided polygons and again calculating the perimeters. He repeated this process of doubling the number of sides until he had inscribed and circumscribed polygons with 96 sides. These left him with his final estimate <md>3.1409\ldots = 
+        3\frac{284\frac{1}{4}}{2017\frac{1}{4}} &lt; \pi 
+        &lt; 3\frac{667\frac{1}{2}}{4673\frac{1}{2}} =
+        3.1428\ldots</md>
+      </p>
+
+				<p>
+In grade school we learned a nice simple formula for the length of a circle, but that was about it. We were never taught formulas for the lengths of other simple curves like elliptic or parabolic arcs, for a very good reason—there are no such formulas. There are various physical approaches we might take. For example, we could get a rough approximation by laying a piece of string along the curve, then picking up the string and measuring it with a ruler. Instead of a physical solution, we can use the essence of Archimedes’ insight of approximating a circle by an inscribed <q>polygon</q>—what we have earlier called a piecewise linear graph—to determine the length of any curve. The basic idea is reminiscent of the way we made successive approximations to the functions <m>S(t)</m>, <m>I(t)</m>, and <m>R(t)</m> in <xref ref="ch2-sec-making-approximations" />. Here is how we will approach the problem:
+				</p>
+
+				<p>
+        <ul>
+          <li>
+            <p>
+				approximate the curve by a chain of straight line segments;
+			</p>
+          </li>
+
+<li>
+            <p>
+				measure the lengths of the segments;
+			</p>
+          </li>
+
+<li>
+            <p>
+				use the sum of the lengths as an approximation to the true length of the curve.
+			</p>
+          </li>
+        </ul>
+      </p>
+
+				<p>
+Repeat this process over and over, each time using a chain that has shorter segments (and therefore more of them) than the last one. The length of the curve emerges as the limit of the sums of the lengths of the successive chains.
+				</p>
+      <assemblage xml:id="ch2-assemblage-distance-formula">
+        <title>Distance Formula</title>
+        <p>
+    If we are given two points <m>P_1(x_1,y_1)</m> and
+    <m>P_2(x_2,y_2)</m> in the plane, then the distance between them is
+    <md>d=\sqrt{(\Delta x)^2+(\Delta y)^2}</md>, equivalently
+    <md>d=\sqrt{(x_2-x_1)^2+(y_2-y_1)^2}</md>.
+  </p>
+
+  <p>
+    This follows directly from the Pythagorean theorem, as shown in the figure below.
+  </p>
+        <figure xml:id="ch2-fig-distance-formula">
+          <image source="images/ch2_pic002" width="65%"/>
+        </figure>
+      </assemblage>
+
+				<p>
+We’ll demonstrate how this process works on a parabola. Specifically, consider the graph of <m>y = x^2</m> on the interval <m>0
+ \leq x \leq 1</m>. At the right we have sketched the graph and our initial approximation. It is a piecewise linear approximation with two segments whose end points have equally spaced <m>x</m>-coordinates.
+				</p>
+
+<figure xml:id="ch2-pic002">
+        <image source="images/ch2_pic002" width="65%"/>
+        <caption />
+      </figure>
+      <p>
+We can use the distance formula to find the lengths of the two segments. <md>
+          <mrow>\mbox{first segment}: \amp 
+        \sqrt{(0.5 - 0)^2 + (.25 - 0)^2} = 0.559016994</mrow>
+          <mrow>\mbox{second segment}: \amp 
+        \sqrt{(1 - 0.5)^2 + (1 - 0.25)^2} = 0.901387819</mrow>
+        </md> Their total length is the sum <md>.559016994 + 0.901387819 = 1.460404813  .</md>
+      </p>
+
+				<p>
+The following program prints out the lengths of the two <term>segments</term> and their <term>total</term> length.
+				</p>
+   
+   
+<listing xml:id="listing-length">
+  <title>LENGTH</title>
+
+  <caption>
+    Estimating the length of
+    <m>y=x^2</m>
+    over
+    <m>0\le x\le 1</m>.
+  </caption>
+
+  <program>
+    <code>
+DEF fnf(x) = x^2
+
+xinitial = 0
+xfinal = 1
+
+numberofsteps = 2
+
+deltax = (xfinal - xinitial) / numberofsteps
+
+total = 0
+
+FOR k = 1 TO numberofsteps
+
+    xl = xinitial + (k - 1) * deltax
+    xr = xinitial + k * deltax
+
+    yl = fnf(xl)
+    yr = fnf(xr)
+
+    segment =
+        SQR((xr - xl)^2 + (yr - yl)^2)
+
+    total = total + segment
+
+    PRINT k, segment
+
+NEXT k
+
+PRINT numberofsteps, total
+    </code>
+  </program>
+</listing>
+
+      <p>
+
+				</p>
+    </subsection>
+
+			<subsection xml:id="ch2-subsec-finding-roots-with-a-computer">
+      <title>Finding Roots with a Computer</title>
+      <p>
+When we casually turn to our calculator 
+<aside>
+          <p>Calculators and computers really work by making approximations</p>
+        </aside>
+ and ask it for the value of <m>\sqrt{2}</m>, what does it really do? Like us, the calculator can only add, subtract, multiply, and divide. Anything else we ask it to do must be reducible to these operations. In particular, the calculator doesn’t really <q>know</q> the value of <m>\sqrt{2}</m>. What it does know is how to approximate <m>\sqrt{2}</m> to, say, 12 significant figures using only elementary arithmetic. In this section we will look at two ways we might do this. Apart from the fact that both approaches use successive approximations, they are remarkably different in flavor. One works graphically, using a computer graphing package, and the other is a numerical algorithm that is about 4000 years old.
+				</p>
+
+
+				<paragraphs xml:id="ch2-subsubsec-a-geometric-approach">
+        <title>A geometric approach</title>
+        <p>
+<xref ref="ch1-x-intercept-exercise" /> considered the problem of finding the roots of <m>f(x) = 1 - 2x^2</m>. A bit of algebra confirms that <m>\sqrt{2}/2</m> is a root—i.e., <m>f(\sqrt{2}/2) = 0</m>. The question is: what is the <em>numerical value</em> of <m>\sqrt{2}/2</m>?
+</p>
+
+<p>
+We’ll answer this question by constructing a sequence of approximations that add digits, one at a time, to an estimate for <m>\sqrt{2}/2</m>. Since the root lies at the point where the graph of <m>f</m> crosses the <m>x</m>-axis, we just magnify the graph at this point over and over again, <q>trapping</q> the point between <m>x</m> values that can be made arbitrarily close together.
+</p>
+
+<figure xml:id="ch2-pic003">
+          <image source="images/ch2_pic003" width="65%"/>
+          <caption />
+        </figure>
+        <p>
+If we make each stage a ten-fold magnification over the previous one, then, as we zoom in on the next smaller interval that contains the root, one more digit in our estimate will be stabilized. The first six stages are described in the table below. They tell us <m>\sqrt{2}/2 = 0.707106\ldots</m> to six decimal places accuracy.
+</p>
+
+<p>
+Since this method of finding roots requires only that we be able to plot successive magnifications of the graph of <m>f</m> on a computer screen, the method can be applied to any function that can be entered into a computer.
+</p>
+
+
+        <p>
+The positive root of <m>1 - 2x^2</m>
+        </p>
+
+<table xml:id="table-root-approx">
+  <title>
+    The positive root of <m>1-2x^2</m>
+  </title>
+
+  <tabular>
+
+    <row header="yes">
+      <cell colspan="2" halign="center">
+        when the root lies between:
+      </cell>
+
+      <cell halign="center">
+        the decimal expansion of the root begins with
+      </cell>
+    </row>
+
+    <row>
+      <cell halign="center">lower value</cell>
+      <cell halign="center">upper value</cell>
+      <cell halign="center"> </cell>
+    </row>
+
+    <row>
+      <cell halign="left">0.70</cell>
+      <cell halign="left">0.80</cell>
+      <cell halign="left">0.7</cell>
+    </row>
+
+    <row>
+      <cell halign="left">0.700</cell>
+      <cell halign="left">0.710</cell>
+      <cell halign="left">0.70</cell>
+    </row>
+
+    <row>
+      <cell halign="left">0.7070</cell>
+      <cell halign="left">0.7080</cell>
+      <cell halign="left">0.707</cell>
+    </row>
+
+    <row>
+      <cell halign="left">0.70710</cell>
+      <cell halign="left">0.70720</cell>
+      <cell halign="left">0.7071</cell>
+    </row>
+
+    <row>
+      <cell halign="center">0.707100</cell>
+      <cell halign="center">0.707110</cell>
+      <cell halign="center">0.70710</cell>
+    </row>
+
+    <row>
+      <cell halign="center">0.7071060</cell>
+      <cell halign="center">0.7071070</cell>
+      <cell halign="center">0.707106</cell>
+    </row>
+
+    <row>
+      <cell halign="center"><m>\vdots</m></cell>
+      <cell halign="center"><m>\vdots</m></cell>
+      <cell halign="center"><m>\vdots</m></cell>
+    </row>
+
+  </tabular>
+</table>
+
+      </paragraphs>
+
+				<paragraphs xml:id="ch2-subsubsec-an-algebraic-approach-the-babylonian-algorithm">
+        <title>An algebraic approach – the Babylonian algorithm</title>
+        <p>
+About 4000 years ago Babylonian builders had a method for constructing the square root of a number from a sequence of successive approximations. To demonstrate the method, we’ll construct <m>\sqrt{5}</m>. We want to find <m>x</m> so that <md>x^2 = 5 \qquad \mbox{or} \qquad x = \dfrac{5}{x}.</md> The second expression may seem a peculiar way to characterize <m>x</m>, but it is at least equivalent to the first. The advantage of the second expression is that it gives us <em>two</em> numbers to consider: <m>x</m> and 5/<m>x</m>.
+</p>
+
+<p>
+For example, suppose we guess that <m>x = 2</m>. Of course this is incorrect, because <m>2^2 = 4</m>, not 5. The two numbers we get from the second expression are 2 and 5/2 = 2.5. One is smaller than <m>\sqrt{5}</m>, the other is larger (because <m>2.5^2 = 6.25</m>). Perhaps their <em>average</em> is a better estimate. The average is 2.25, and <m>2.25^2 = 5.0625</m>.
+</p>
+
+<p>
+Although 2.25 is not <m>\sqrt{5}</m>, it is a better estimate than either 2.5 or 2. If we change <m>x</m> to 2.25, then <md>x = 2.25 \, , \quad \dfrac{5}{x} = 2.222 \, , \quad
+    \mbox{and their average is } \  2.236 \, .</md> Is 2.236 a better estimate than 2.5 or 2.222? Indeed it is: <m>2.236^2
+ = 4.999696</m>. If we now change <m>x</m> to 2.236, a remarkable thing happens: <md>x = 2.236 \, , \quad \dfrac{5}{x} = 2.236 \, , \quad
+    \mbox{and their average is } \  2.236 \, !</md> In other words, if we want accuracy to three decimal places, we have already found <m>\sqrt{5}</m>. All the digits have stabilized.
+</p>
+
+<p>
+Suppose we want <em>greater</em> accuracy? Our routine readily obliges. If we set <m>x</m> = 2.236000, then <md>x = 2.236000 \, , \quad \dfrac{5}{x} = 2.236136 \, ,
+     \quad \mbox{and their average is } \  2.236068\, .</md> In fact, <m>\sqrt{5} = 2.236068\ldots</m> is accurate to six decimal places.
+</p>
+
+<p>
+Here is a summary of the argument we have just developed, expressed in terms of <m>\sqrt{a}</m> for an arbitrary positive number <m>a</m>.
+</p>
+
+<!-- div attr= class="observation"-->
+<observation>
+        <p>
+          If <m>x</m> is an estimate for <m>\sqrt{a}</m>,
+            then the average of <m>x</m> and <m>a/x</m>
+              is a better estimate.
+        </p>
+        </observation>
+        <!--</div attr= class="observation">-->
+        <p>
+Once we choose an <em>initial</em> estimate, this argument constructs a sequence of successive approximations to <m>\sqrt{a}</m>. The process of constructing the sequence is called the <term>Babylonian algorithm</term> for square roots.
+</p>
+
+<p>
+A procedure that tells us how to carry out a sequence of steps, one at a time, to reach a specific goal is called an  <term>algorithm</term>. Many algebraic processes are algorithms. The word is a Latinization of the name of the Persian astronomer Muhammad al-Khw<m>\overline{\mbox{a}}</m>rizm<m>\overline{\mbox{\i}}</m> (c.780  a.d.–c.850 a.d.), who lived and worked in Baghdad. The title of his seminal book <em>His</em>
+          <m>\overline{\mbox{{\em a}}}</m>
+          <em>b al-jabr wal-muq</em>
+          <m>\overline{\mbox{{\em a}}}</m>
+          <em>bala</em> (830  a.d.)—usually referred to simply as <em>al-Jabr</em>—has a Latin form that is even more familiar to mathematics students.
+</p>
+
+<p>
+The Babylonian algorithm takes the current estimate <m>x</m> for <m>\sqrt{a}</m> that we have at each stage and says <q>replace <m>x</m> by the average of <m>x</m> and <m>a/x</m>.</q> This kind of instruction is ideally suited to a computer, because <c>A = B</c> in a computer program means <q>replace the current value of <c>A</c> by the current value of <c>B</c>.</q> In the program BABYLON printed below, the algorithm is realized by a <c>FOR - NEXT</c> loop with a single line that reads <q>
+            <c>x = (x + a / x) / 2</c>
+          </q>.
+</p>
+
+<p>
+The three-step procedure that we used in <xref ref="ch1-chap-a-context-for-calculus" /> to obtain values of <m>S</m>, <m>I</m>, and <m>R</m> in the epidemic problem is also an algorithm, and for that reason it was a straightforward matter to express it as the computer program SIRVALUE.
+</p>
+
+
+<!--        <p>
+            <term>An algorithm to find <m>\sqrt{a}</m>
+            </term>
+          </term>
+        </p>
+        <pre>a = 5
+x = 2
+n = 6
+FOR k = 1 TO n
+      x = (x + a / x) / 2
+      PRINT x
+NEXT k</pre>-->
+
+
+<listing xml:id="listing-babylon">
+  <title>BABYLON</title>
+
+  <caption>
+    An algorithm to find
+    <m>\sqrt{a}</m>.
+  </caption>
+
+  <program>
+    <code>
+a = 5
+
+x = 2
+
+n = 6
+
+FOR k = 1 TO n
+
+    x = (x + a / x) / 2
+
+    PRINT x
+
+NEXT k
+    </code>
+  </program>
+</listing>
+
+        <p>
+Output:
+</p>
+        <pre>2.25
+2.236111
+2.236068
+2.236068
+2.236068
+2.236068</pre>
+
+      </paragraphs>
+    </subsection>
+
+			<exercises xml:id="ch2-subsec-exercises-3">
+      <title>Exercises</title>
+      <introduction>
+        <p>
+In many of the questions below you are asked to do things like divide an arc into 2,000,000 segments or find a certain number to 8 decimal places. This assumes you have fast computers 
+<aside>
+            <p>Use common sense in deciding how close an approximation to make</p>
+          </aside>
+ available. If you are using slower machines or programmable calculators, you should certainly feel free to scale back what is called for—perhaps to 200,000 segments or 6 decimal places. Use your own common sense; there’s no value in sitting in front of a screen for an hour waiting for an answer to emerge. To approximate a length by 200,000 segments will take 10 times as long as to approximate it by 20,000 segments, which in turn will take 10 times as long as the 2,000 segment approximation. If you start with the cruder approximations, you should be able to get a good sense of what is reasonable to attempt with the facilities you have available, and modify what the problems call for accordingly.
+				</p>
+      </introduction><exercise>
+        <statement>
+          <p>
+				By using a computer to graph <m>y = x^2 -
+ 2^x</m>, find the solutions of the equation <m>x^2 = 2^x</m> to four decimal place accuracy.
+			</p>
+        </statement>
+      </exercise><exercisegroup xml:id="ch2-subsubsec-the-program-length">
+        <title>The program LENGTH</title>
+        <exercise>
+          <statement>
+            <p>
+Run the program LENGTH to verify that it gives the lengths of the individual segments and their total length.
+</p>
+          </statement>
+        </exercise><exercise>
+          <statement>
+            <p>
+What line in the program gives the instruction to work with the function <m>f(x) = x^2</m>? What line indicates the number of segments to be measured?
+</p>
+          </statement>
+        </exercise><exercise>
+          <statement>
+            <p>
+Each segment has a left and a right endpoint. What lines in the program designate the <m>x</m>- and <m>y</m>-coordinates of the left endpoint; the right endpoint?
+</p>
+          </statement>
+        </exercise><exercise>
+          <statement>
+            <p>
+Where in the program is the length of the <m>k</m>-th segment calculated? The segment is treated as the hypotenuse of a triangle whose length is measured by the Pythagorean theorem. How is the base of that triangle denoted in the program? How is the altitude of that triangle denoted?
+</p>
+          </statement>
+        </exercise><exercise>
+          <statement>
+            <p>
+Modify the program so that it uses 20 segments to estimate the length of the parabola. What is the estimated value?
+</p>
+          </statement>
+        </exercise><exercise>
+          <statement>
+            <p>
+Modify the program so that it estimates the length of the parabola using <m>200,\; 2,000,\; 20,000,\; 200,000,\; \mbox{ and }
+2,000,000</m> segments. Compare your results with those tabulated below. [To speed the process up, you will certainly want to delete the <c> PRINT k, segment</c> statement that appears inside the loop. Do you see why?]
+</p>
+
+
+            <table>
+              <title />
+              <tabular>
+                <row class="odd">
+                  <cell halign="center">Number</cell>
+                  <cell halign="center">Sum</cell>
+                </row>
+<row class="even">
+                  <cell halign="center">of line segments</cell>
+                  <cell halign="center">of their lengths</cell>
+                </row>
+<row>
+                  <cell halign="right">2</cell>
+                  <cell halign="left">1.460 404 813</cell>
+                </row><row>
+                  <cell halign="right">20</cell>
+                  <cell halign="left">1.478 756 512</cell>
+                </row><row>
+                  <cell halign="right">200</cell>
+                  <cell halign="left">1.478 940 994</cell>
+                </row><row>
+                  <cell halign="right">2 000</cell>
+                  <cell halign="left">1.478 942 839</cell>
+                </row><row>
+                  <cell halign="right">20 000</cell>
+                  <cell halign="left">1.478 942 857</cell>
+                </row><row>
+                  <cell halign="right">200 000</cell>
+                  <cell halign="left">1.478 942 857</cell>
+                </row><row>
+                  <cell halign="right">2 000 000</cell>
+                  <cell halign="left">1.478 942 857</cell>
+                </row>
+              </tabular>
+            </table>
+          </statement>
+        </exercise><exercise>
+          <statement>
+            <p>
+What is the length of the parabola <m>y = x^2</m> over the interval <m>0
+ \leq x \leq 1</m>, correct to 8 decimal places? What is the length, correct to 12 decimal places?
+</p>
+          </statement>
+        </exercise><exercise>
+          <statement>
+            <p>
+Starting at the origin, and moving along the parabola <m>y=x^2</m>, where are you when you’ve gone a total distance of 10?
+</p>
+          </statement>
+        </exercise><exercise>
+          <statement>
+            <p>
+Modify the program to find the length of the curve <m>y = x^3</m> over the interval <m>0 \leq x \leq 1</m>. Find a value that is correct to 8 decimal places.
+</p>
+          </statement>
+        </exercise><exercise>
+          <introduction>
+            <p>
+              <term>Back to the circle.</term> Consider the unit circle centered at the origin. Pythagoras’ Theorem shows that a point <m>(x, y)</m> is on the circle if and only if <m>x^2 + y^2 = 1</m>. If we solve this for <m>y</m> in terms of <m>x</m>, we get <m>y=\pm \sqrt{1 - x^2}</m>, where the plus sign gives us the upper half of the circle and the minus sign gives the lower half. This suggests that we look at the function <m>g(x) =
+ \sqrt{1 - x^2}</m>. The arclength of <m>g(x)</m> over the interval <m>-1 \leq
+ x \leq 1</m> should then be exactly <m>\pi</m>.
+</p>
+          </introduction><task>
+            <p>
+Divide the interval into 100 pieces—what is the corresponding length?
+</p>
+          </task><task>
+            <p>
+How many pieces do you have to divide the interval into to get an accuracy equal to that of Archimedes?
+</p>
+          </task><task>
+            <p>
+Find the length of the curve <m>y = g(x)</m> over the interval <m>-1
+ \leq x \leq 1</m>, correct to eight decimal places accuracy.
+</p>
+          </task>
+        </exercise><exercise>
+          <introduction>
+            <p>
+This question concerns the function <m>h(x) = \dfrac{4}{1 + x^2}</m>.
+</p>
+          </introduction><task>
+            <p>
+Sketch the graph of <m>y = h(x)</m> over the interval <m>-2 \leq x \leq
+ 2</m>.
+</p>
+          </task><task>
+            <p>
+Find the length of the curve <m>y = h(x)</m> over the interval <m>-2
+ \leq x \leq 2</m>.
+</p>
+          </task>
+        </exercise><exercise>
+          <statement>
+            <p>
+Find the length of the curve <m>y=\sin x</m> over the interval <m>0 \leq
+ x \leq \pi</m>.
+</p>
+          </statement>
+        </exercise>
+      </exercisegroup><exercisegroup xml:id="ch2-subsubsec-the-program-babylon">
+        <title>The program BABYLON</title>
+        <exercise>
+          <statement>
+            <p>
+Run the program BABYLON on a computer to verify the tabulated estimates for <m>\sqrt{5}</m>.
+</p>
+          </statement>
+        </exercise><exercise>
+          <statement>
+            <p>
+In whatever computer language you are using, it should be possible to tell the computer to print out more decimals. Your teacher can tell you how this is handled on your computers. Modify BABYLON to run with at least 14-digit precision in this and the following problems. Also modify the program so it prints out the square of the estimate each time as well. What is the estimated value of <m>\sqrt{5}</m> in this circumstance? How many steps were needed to get this value? Use the square of this estimate as a measure of its accuracy. What is the square?
+</p>
+          </statement>
+        </exercise><exercise>
+          <introduction>
+            <p>
+Use the Babylonian algorithm to find <m>\sqrt{80}</m>.
+</p>
+          </introduction><task>
+            <p>
+First use 2 as your initial estimate. How many steps are needed for the calculations to stabilize—that is, to reach a value that doesn’t change from one step to the next?
+</p>
+          </task><task>
+            <p>
+Since <m>9^2 = 81</m>, a good first estimate for <m>\sqrt{80}</m> is 9. How many steps are needed this time for the calculations to stabilize? Are the final values in (a) and (b) the same?
+</p>
+          </task>
+        </exercise><exercise>
+          <statement>
+            <p>
+Use the Babylonian algorithm to find <m>\sqrt{250}</m> and <m>\sqrt{1990}</m>. If you use 2 as the initial estimate in each case, how many steps are needed for the calculations to stabilize? If you use the integer nearest to the final answer as your initial estimate, then how many steps are needed? Square your answers to measure their accuracy.
+</p>
+          </statement>
+        </exercise><exercise>
+          <statement>
+            <p>
+The Babylonian algorithm is considered to be <term>very fast</term>, in the sense that each stage roughly doubles the number of digits that stabilize. Does your work on the preceding exercises confirm this observation? By comparison, is the routine that got the estimates for <m>S(3)</m> (computed with the program SIRVALUE) faster or slower than the Babylonian algorithm?
+</p>
+          </statement>
+        </exercise>
+      </exercisegroup>
+    </exercises>
+  </section>
+
+		<section xml:id="ch2-sec-chapter-summary">
+    <title>Chapter Summary</title>
+    <subsection xml:id="ch2-subsec-the-main-ideas">
+      <title>The Main Ideas</title>
+      <p>
+        <ul>
+          <li>
+            <p>
+				The exact numerical value of a quantity may not be known; the value is often given by an <term>approximation</term>.
+			</p>
+          </li>
+
+<li>
+            <p>
+				A numerical quantity is often given as the <term>limit</term> of a sequence of <term>successive approximations</term>.
+			</p>
+          </li>
+
+<li>
+            <p>
+				When a particular digit in a sequence of successive approximations <term>stabilizes</term>, that digit is assumed to appear in the limit.
+			</p>
+          </li>
+
+<li>
+            <p>
+              <term>Euler’s method</term> is a procedure to construct a sequence of increasingly better <term>approximations</term> of a function defined by a set of rate equations and initial conditions. Each approximation is a piecewise linear function.
+			</p>
+          </li>
+
+<li>
+            <p>
+				The exact function defined by a set of rate equations and initial conditions can be expressed as the <term>limit</term> of a sequence of <term>successive Euler approximations</term> with smaller and smaller step sizes.
+			</p>
+          </li>
+        </ul>
+      </p>
+    </subsection>
+
+			<subsection xml:id="ch2-subsec-expectations">
+      <title>Expectations</title>
+      <p>
+        <ul>
+          <li>
+            <p>
+				You should be able to use a program to <term>construct a sequence</term> of estimates for <m>S</m>, <m>I</m>, and <m>R</m>, given a specific <m>S</m>-<m>I</m>-<m>R</m> model with initial conditions.
+			</p>
+          </li>
+
+<li>
+            <p>
+				You should be able to <term>modify</term> the SIRVALUE and SIRPLOT programs to construct a sequence of estimates for the values of functions defined by other rate equations and initial conditions.
+			</p>
+          </li>
+
+<li>
+            <p>
+				You should be able to use programs that construct a sequence of <term>Euler approximations</term> for the function defined by a rate equation with an initial condition. The programs should provide both tabular and graphical output.
+			</p>
+          </li>
+
+<li>
+            <p>
+				You should be able to estimate the values of the roots of an equation <m>f(x) = 0</m> using a <term>computer graphing package</term>.
+			</p>
+          </li>
+
+<li>
+            <p>
+				You should be able to find a square root using the  <term>Babylonian algorithm</term>.
+			</p>
+          </li>
+
+<li>
+            <p>
+				You should be able to find the length of any piece of any curve.
+			</p>
+          </li>
+        </ul>
+      </p>
+    </subsection>
+
+			<subsection xml:id="ch2-subsec-chapter-exercises">
+      <title>Chapter Exercises</title>
+      <p>
+        <ol>
+          <li>
+            <p>
+				We have considered the logistic equation <md>y' = {\displaystyle 0.1y \left( 1-\frac{y}{1000} \right)}</md>. In <xref ref="fig_calc1_picture4" /> we looked at the resulting graph of <m>y</m> vs. <m>t</m>, using the starting value <m>y(0)=100</m>. There is another graphical interpretation, though, that is also instructive. Note that the logistic equation specifies <m>y'</m> as a function of <m>y</m>. Sketch the graph of this function. That is, plot <m>y</m> values on the horizontal axis and <m>y'</m> values on the vertical axis; points on the graph will thus be of the form <m>(y, y')</m>, where the <m>y'</m>-coordinate is the value given by the logistic equation for the given <m>y</m> value. What shape does the graph have?
+			</p>
+
+			<p>
+              <ol>
+                <li>
+                  <p>
+			For what value of <m>y</m> does this graph take on its largest value? Where does this <m>y</m> value appear in the graph of <m>y(t)</m> versus <m>t</m>?
+		</p>
+                </li>
+
+				<li>
+                  <p>
+			For what values of <m>y</m> does the graph of <m>y'</m> versus <m>y</m> cross the <m>y</m>-axis? Where do these <m>y</m> values appear in the graph of <m>y(t)</m> versus <m>t</m>?
+		</p>
+                </li>
+              </ol>
+            </p>
+          </li>
+        </ol>
+      </p>
+
+
+				<paragraphs xml:id="ch2-subsubsec-grids-on-graphs">
+        <title>Grids on Graphs</title>
+<p>
+When writing a graphing program it is often useful to have the
+computer draw a grid on the screen. This makes it easier to estimate
+numerical values, for instance.
+
+We can use a simple <c>FOR–NEXT</c> loop inside a program to do this.
+Suppose the screen window covers values from
+<m>0</m> to <m>100</m> horizontally and from
+<m>0</m> to <m>50\,000</m> vertically.
+
+To draw 21 vertical lines (including both ends), spaced
+5 units apart, we could use:
+</p>
+
+<program>
+  <code>
+FOR k = 0 TO 20
+
+    ' Plot the line from
+    ' (5*k, 0)
+    ' to
+    ' (5*k, 50000)
+
+NEXT k
+  </code>
+</program>
+
+<p>
+Similarly, to draw 11 horizontal lines, spaced
+<m>5000</m> units apart, we could use:
+</p>
+
+<program>
+  <code>
+FOR k = 0 TO 10
+
+    ' Plot the line from
+    ' (0, 5000*k)
+    ' to
+    ' (100, 5000*k)
+
+NEXT k
+  </code>
+</program>
+
+<p>
+You should make sure you see how these loops work and that you can
+modify them as needed.
+</p>
+        <p>
+          <ol>
+            <li>
+              <p>
+If the screen window runs from <m>-20</m> to 120 horizontally, and 250 to 750 vertically, how would you modify the loops above to create a vertical grid spaced 10 units apart and a horizontal grid spaced 25 units apart?
+</p>
+            </li>
+
+<li>
+              <p>
+Go back to our basic <m>S</m>-<m>I</m>-<m>R</m> model. Modify SIRPLOT to calculate and plot on the same graph the values of <m>S(t)</m>, <m>I(t)</m>, and <m>R(t)</m> for <m>t</m> going from 0 to 120, using a stepsize of <m>\Delta t
+ = 0.1</m>. Include a grid with a horizontal spacing of 5 days, and a vertical spacing of 2000 people. You should get something that looks like this:
+</p>
+            </li>
+          </ol>
+        </p>
+      </paragraphs>
+    </subsection>
+  </section>
+</chapter>

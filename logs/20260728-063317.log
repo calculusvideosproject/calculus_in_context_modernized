@@ -1,0 +1,46 @@
+INFO    : Building target web
+INFO    : XSL conversion of /Volumes/Sonnet_SSD/DocumentsS/GitHub/calculus_in_context/source/main.ptx by /Users/aaronweinberg/.ptx/2.45.0/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : successful application of /Users/aaronweinberg/.ptx/2.45.0/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : Generating any needed assets.
+INFO    : Finished generating assets.
+
+INFO    : Preparing to build into /Volumes/Sonnet_SSD/DocumentsS/GitHub/calculus_in_context/output/web.
+INFO    : discovering source file's directory name: /Volumes/Sonnet_SSD/DocumentsS/GitHub/calculus_in_context/source
+INFO    : verifying and expanding input directory: /Volumes/Sonnet_SSD/DocumentsS/GitHub/calculus_in_context/source/../generated-assets
+INFO    : input directory expanded to absolute path: /Volumes/Sonnet_SSD/DocumentsS/GitHub/calculus_in_context/generated-assets
+INFO    : verifying and expanding input directory: /Volumes/Sonnet_SSD/DocumentsS/GitHub/calculus_in_context/source/../assets
+INFO    : input directory expanded to absolute path: /Volumes/Sonnet_SSD/DocumentsS/GitHub/calculus_in_context/assets
+INFO    : discovering source file's directory name: /Volumes/Sonnet_SSD/DocumentsS/GitHub/calculus_in_context/source
+INFO    : XSL conversion of /Volumes/Sonnet_SSD/DocumentsS/GitHub/calculus_in_context/source/main.ptx by /Users/aaronweinberg/.ptx/2.45.0/core/xsl/utilities/report-publisher-variables.xsl
+INFO    : successful application of /Users/aaronweinberg/.ptx/2.45.0/core/xsl/utilities/report-publisher-variables.xsl
+INFO    : Downloading rs services file from https://runestone.academy/cdn/runestone/latest/webpack_static_imports.xml.
+INFO    : Runestone Services via online CDN query: version 8.1.16
+INFO    : Downloading Runestone Services, version 8.1.16
+INFO    : Extracting Runestone Services from archive file
+INFO    : Building custom css theme: theme-default-modern
+INFO    : converting /Volumes/Sonnet_SSD/DocumentsS/GitHub/calculus_in_context/source/main.ptx to HTML in /var/folders/gs/h69vjsl512b8200d29lxpgrc0000gn/T/ptx-qw7f3kph
+INFO    : XSL conversion of /Volumes/Sonnet_SSD/DocumentsS/GitHub/calculus_in_context/source/main.ptx by /Users/aaronweinberg/.ptx/2.45.0/core/xsl/pretext-html.xsl
+INFO    : messages from the log for XSL processing (prefaced with a *):
+WARNING : * PTX:WARNING:   a <tabular> has at least one paragraph (<p>) inside a <cell>, yet there are no <col> elements with a @width attribute.  Default widths will be supplied.
+INFO    : *              located at: pretext/book/chapter/section/exercises/exercisegroup/exercise/statement/table/tabular
+INFO    : *              located within: "" (title)
+WARNING : * PTX:WARNING:   a <tabular> has at least one paragraph (<p>) inside a <cell>, yet there are no <col> elements with a @width attribute.  Default widths will be supplied.
+INFO    : *              located at: pretext/book/chapter/section/exercises/exercisegroup/exercise/statement/table/tabular
+INFO    : *              located within: "" (title)
+WARNING : * PTX:WARNING:   a <tabular> has at least one paragraph (<p>) inside a <cell>, yet there are no <col> elements with a @width attribute.  Default widths will be supplied.
+INFO    : *              located at: pretext/book/chapter/section/exercises/exercise/statement/table/tabular
+INFO    : *              located within: "" (title)
+WARNING : * PTX:WARNING:   a <tabular> has at least one paragraph (<p>) inside a <cell>, yet there are no <col> elements with a @width attribute.  Default widths will be supplied.
+INFO    : *              located at: pretext/book/chapter/section/subsection/table/tabular
+INFO    : *              located within: "" (title)
+INFO    : * PTX:INFO:   checking all deprecated elements.
+INFO    : successful application of /Users/aaronweinberg/.ptx/2.45.0/core/xsl/pretext-html.xsl
+INFO    : Removing temporary directory /var/folders/gs/h69vjsl512b8200d29lxpgrc0000gn/T/ptx-qw7f3kph
+INFO    : Removing temporary directory /var/folders/gs/h69vjsl512b8200d29lxpgrc0000gn/T/ptx-wv5zoai3
+INFO    : 
+Finished build for target web. Run `pretext view web` to see the results.
+
+INFO    : 
+Success!  Built requested target(s) without errors.
+
+INFO    : 

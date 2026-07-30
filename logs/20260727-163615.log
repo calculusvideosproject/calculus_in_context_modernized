@@ -1,0 +1,17 @@
+WARNING : Using CLI version 2.45.0 but project's `requirements.txt`
+WARNING : is configured to use 2.44.0. Consider either installing
+WARNING : CLI version 2.44.0 or running `pretext update-project`
+WARNING : to update `requirements.txt` and other managed files to match 2.45.0.
+INFO    : Building target web
+INFO    : XSL conversion of /Volumes/Sonnet_SSD/DocumentsS/GitHub/calculus_in_context/source/main.ptx by /Users/aaronweinberg/.ptx/2.45.0/core/xsl/utilities/pretext-enhanced-source.xsl
+ERROR   : Error loading /Volumes/Sonnet_SSD/DocumentsS/GitHub/calculus_in_context/source/ch3.ptx: Opening and ending tag mismatch: p line 2301 and paragraphs, line 2437, column 20 (ch3.ptx, line 2437)
+ERROR   : Error assembling source file: Opening and ending tag mismatch: p line 2301 and paragraphs, line 2437, column 20 (ch3.ptx, line 2437)
+FATAL   : XML syntax for source file is invalid
+INFO    : ------------------------
+FATAL   : Failed to build without errors.  Exiting...
+INFO    : 
+----------------------------------------------------
+INFO    : While running pretext, the following errors occurred:
+
+INFO    : (see log messages above or in the 'logs' folder for more information)
+INFO    : ----------------------------------------------------

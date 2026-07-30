@@ -1,0 +1,593 @@
+source_path,dest_pdf,dest_svg,action,notes
+extracted_svgs_svg_and_pdf/ch10_pic001.pdf,assets/images/ch10_pic001.pdf,,copied_extracted,
+extracted_svgs_svg_and_pdf/ch10_pic001.svg,,assets/images/ch10_pic001.svg,copied_extracted,
+extracted_svgs_svg_and_pdf/ch10_pic002.pdf,assets/images/ch10_pic002.pdf,,copied_extracted,
+extracted_svgs_svg_and_pdf/ch10_pic002.svg,,assets/images/ch10_pic002.svg,copied_extracted,
+extracted_svgs_svg_and_pdf/ch11_pic001.pdf,assets/images/ch11_pic001.pdf,,copied_extracted,
+extracted_svgs_svg_and_pdf/ch11_pic001.svg,,assets/images/ch11_pic001.svg,copied_extracted,
+extracted_svgs_svg_and_pdf/ch11_pic002.pdf,assets/images/ch11_pic002.pdf,,copied_extracted,
+extracted_svgs_svg_and_pdf/ch11_pic002.svg,,assets/images/ch11_pic002.svg,copied_extracted,
+extracted_svgs_svg_and_pdf/ch11_pic004.pdf,assets/images/ch11_pic004.pdf,,copied_extracted,
+extracted_svgs_svg_and_pdf/ch11_pic004.svg,,assets/images/ch11_pic004.svg,copied_extracted,
+extracted_svgs_svg_and_pdf/ch11_pic005.pdf,assets/images/ch11_pic005.pdf,,copied_extracted,
+extracted_svgs_svg_and_pdf/ch11_pic005.svg,,assets/images/ch11_pic005.svg,copied_extracted,
+extracted_svgs_svg_and_pdf/ch11_pic006.pdf,assets/images/ch11_pic006.pdf,,copied_extracted,
+extracted_svgs_svg_and_pdf/ch11_pic006.svg,,assets/images/ch11_pic006.svg,copied_extracted,
+extracted_svgs_svg_and_pdf/ch11_pic008.pdf,assets/images/ch11_pic008.pdf,,copied_extracted,
+extracted_svgs_svg_and_pdf/ch11_pic008.svg,,assets/images/ch11_pic008.svg,copied_extracted,
+extracted_svgs_svg_and_pdf/ch11_pic009.pdf,assets/images/ch11_pic009.pdf,,copied_extracted,
+extracted_svgs_svg_and_pdf/ch11_pic009.svg,,assets/images/ch11_pic009.svg,copied_extracted,
+extracted_svgs_svg_and_pdf/ch11_pic010.pdf,assets/images/ch11_pic010.pdf,,copied_extracted,
+extracted_svgs_svg_and_pdf/ch11_pic010.svg,,assets/images/ch11_pic010.svg,copied_extracted,
+extracted_svgs_svg_and_pdf/ch11_pic011.pdf,assets/images/ch11_pic011.pdf,,copied_extracted,
+extracted_svgs_svg_and_pdf/ch11_pic011.svg,,assets/images/ch11_pic011.svg,copied_extracted,
+extracted_svgs_svg_and_pdf/ch11_pic017.pdf,assets/images/ch11_pic017.pdf,,copied_extracted,
+extracted_svgs_svg_and_pdf/ch11_pic017.svg,,assets/images/ch11_pic017.svg,copied_extracted,
+extracted_svgs_svg_and_pdf/ch11_pic019.pdf,assets/images/ch11_pic019.pdf,,copied_extracted,
+extracted_svgs_svg_and_pdf/ch11_pic019.svg,,assets/images/ch11_pic019.svg,copied_extracted,
+extracted_svgs_svg_and_pdf/ch12_pic003.pdf,assets/images/ch12_pic003.pdf,,copied_extracted,
+extracted_svgs_svg_and_pdf/ch12_pic003.svg,,assets/images/ch12_pic003.svg,copied_extracted,
+extracted_svgs_svg_and_pdf/ch1_pic001.pdf,assets/images/ch1_pic001.pdf,,copied_extracted,
+extracted_svgs_svg_and_pdf/ch1_pic001.svg,,assets/images/ch1_pic001.svg,copied_extracted,
+extracted_svgs_svg_and_pdf/ch1_pic002.pdf,assets/images/ch1_pic002.pdf,,copied_extracted,
+extracted_svgs_svg_and_pdf/ch1_pic002.svg,,assets/images/ch1_pic002.svg,copied_extracted,
+extracted_svgs_svg_and_pdf/ch1_pic003.pdf,assets/images/ch1_pic003.pdf,,copied_extracted,
+extracted_svgs_svg_and_pdf/ch1_pic003.svg,,assets/images/ch1_pic003.svg,copied_extracted,
+extracted_svgs_svg_and_pdf/ch1_pic004.pdf,assets/images/ch1_pic004.pdf,,copied_extracted,
+extracted_svgs_svg_and_pdf/ch1_pic004.svg,,assets/images/ch1_pic004.svg,copied_extracted,
+extracted_svgs_svg_and_pdf/ch1_pic005.pdf,assets/images/ch1_pic005.pdf,,copied_extracted,
+extracted_svgs_svg_and_pdf/ch1_pic005.svg,,assets/images/ch1_pic005.svg,copied_extracted,
+extracted_svgs_svg_and_pdf/ch1_pic006.pdf,assets/images/ch1_pic006.pdf,,copied_extracted,
+extracted_svgs_svg_and_pdf/ch1_pic006.svg,,assets/images/ch1_pic006.svg,copied_extracted,
+extracted_svgs_svg_and_pdf/ch1_pic007.pdf,assets/images/ch1_pic007.pdf,,copied_extracted,
+extracted_svgs_svg_and_pdf/ch1_pic007.svg,,assets/images/ch1_pic007.svg,copied_extracted,
+extracted_svgs_svg_and_pdf/ch1_pic008.pdf,assets/images/ch1_pic008.pdf,,copied_extracted,
+extracted_svgs_svg_and_pdf/ch1_pic008.svg,,assets/images/ch1_pic008.svg,copied_extracted,
+extracted_svgs_svg_and_pdf/ch1_pic009.pdf,assets/images/ch1_pic009.pdf,,copied_extracted,
+extracted_svgs_svg_and_pdf/ch1_pic009.svg,,assets/images/ch1_pic009.svg,copied_extracted,
+extracted_svgs_svg_and_pdf/ch1_pic010.pdf,assets/images/ch1_pic010.pdf,,copied_extracted,
+extracted_svgs_svg_and_pdf/ch1_pic010.svg,,assets/images/ch1_pic010.svg,copied_extracted,
+extracted_svgs_svg_and_pdf/ch1_pic011.pdf,assets/images/ch1_pic011.pdf,,copied_extracted,
+extracted_svgs_svg_and_pdf/ch1_pic011.svg,,assets/images/ch1_pic011.svg,copied_extracted,
+extracted_svgs_svg_and_pdf/ch1_pic012.pdf,assets/images/ch1_pic012.pdf,,copied_extracted,
+extracted_svgs_svg_and_pdf/ch1_pic012.svg,,assets/images/ch1_pic012.svg,copied_extracted,
+extracted_svgs_svg_and_pdf/ch1_pic013.pdf,assets/images/ch1_pic013.pdf,,copied_extracted,
+extracted_svgs_svg_and_pdf/ch1_pic013.svg,,assets/images/ch1_pic013.svg,copied_extracted,
+extracted_svgs_svg_and_pdf/ch1_pic014.pdf,assets/images/ch1_pic014.pdf,,copied_extracted,
+extracted_svgs_svg_and_pdf/ch1_pic014.svg,,assets/images/ch1_pic014.svg,copied_extracted,
+extracted_svgs_svg_and_pdf/ch1_pic015.pdf,assets/images/ch1_pic015.pdf,,copied_extracted,
+extracted_svgs_svg_and_pdf/ch1_pic015.svg,,assets/images/ch1_pic015.svg,copied_extracted,
+extracted_svgs_svg_and_pdf/ch1_pic016.pdf,assets/images/ch1_pic016.pdf,,copied_extracted,
+extracted_svgs_svg_and_pdf/ch1_pic016.svg,,assets/images/ch1_pic016.svg,copied_extracted,
+extracted_svgs_svg_and_pdf/ch1_pic017.pdf,assets/images/ch1_pic017.pdf,,copied_extracted,
+extracted_svgs_svg_and_pdf/ch1_pic017.svg,,assets/images/ch1_pic017.svg,copied_extracted,
+extracted_svgs_svg_and_pdf/ch1_pic018.pdf,assets/images/ch1_pic018.pdf,,copied_extracted,
+extracted_svgs_svg_and_pdf/ch1_pic018.svg,,assets/images/ch1_pic018.svg,copied_extracted,
+extracted_svgs_svg_and_pdf/ch2_pic001.pdf,assets/images/ch2_pic001.pdf,,copied_extracted,
+extracted_svgs_svg_and_pdf/ch2_pic001.svg,,assets/images/ch2_pic001.svg,copied_extracted,
+extracted_svgs_svg_and_pdf/ch2_pic002.pdf,assets/images/ch2_pic002.pdf,,copied_extracted,
+extracted_svgs_svg_and_pdf/ch2_pic002.svg,,assets/images/ch2_pic002.svg,copied_extracted,
+extracted_svgs_svg_and_pdf/ch2_pic003.pdf,assets/images/ch2_pic003.pdf,,copied_extracted,
+extracted_svgs_svg_and_pdf/ch2_pic003.svg,,assets/images/ch2_pic003.svg,copied_extracted,
+extracted_svgs_svg_and_pdf/ch2_pic004.pdf,assets/images/ch2_pic004.pdf,,copied_extracted,
+extracted_svgs_svg_and_pdf/ch2_pic004.svg,,assets/images/ch2_pic004.svg,copied_extracted,
+extracted_svgs_svg_and_pdf/ch3_pic001.pdf,assets/images/ch3_pic001.pdf,,copied_extracted,
+extracted_svgs_svg_and_pdf/ch3_pic001.svg,,assets/images/ch3_pic001.svg,copied_extracted,
+extracted_svgs_svg_and_pdf/ch3_pic002.pdf,assets/images/ch3_pic002.pdf,,copied_extracted,
+extracted_svgs_svg_and_pdf/ch3_pic002.svg,,assets/images/ch3_pic002.svg,copied_extracted,
+extracted_svgs_svg_and_pdf/ch3_pic006.pdf,assets/images/ch3_pic006.pdf,,copied_extracted,
+extracted_svgs_svg_and_pdf/ch3_pic006.svg,,assets/images/ch3_pic006.svg,copied_extracted,
+extracted_svgs_svg_and_pdf/ch3_pic007.pdf,assets/images/ch3_pic007.pdf,,copied_extracted,
+extracted_svgs_svg_and_pdf/ch3_pic007.svg,,assets/images/ch3_pic007.svg,copied_extracted,
+extracted_svgs_svg_and_pdf/ch3_pic008.pdf,assets/images/ch3_pic008.pdf,,copied_extracted,
+extracted_svgs_svg_and_pdf/ch3_pic008.svg,,assets/images/ch3_pic008.svg,copied_extracted,
+extracted_svgs_svg_and_pdf/ch3_pic009.pdf,assets/images/ch3_pic009.pdf,,copied_extracted,
+extracted_svgs_svg_and_pdf/ch3_pic009.svg,,assets/images/ch3_pic009.svg,copied_extracted,
+extracted_svgs_svg_and_pdf/ch3_pic010.pdf,assets/images/ch3_pic010.pdf,,copied_extracted,
+extracted_svgs_svg_and_pdf/ch3_pic010.svg,,assets/images/ch3_pic010.svg,copied_extracted,
+extracted_svgs_svg_and_pdf/ch3_pic011.pdf,assets/images/ch3_pic011.pdf,,copied_extracted,
+extracted_svgs_svg_and_pdf/ch3_pic011.svg,,assets/images/ch3_pic011.svg,copied_extracted,
+extracted_svgs_svg_and_pdf/ch3_pic012.pdf,assets/images/ch3_pic012.pdf,,copied_extracted,
+extracted_svgs_svg_and_pdf/ch3_pic012.svg,,assets/images/ch3_pic012.svg,copied_extracted,
+extracted_svgs_svg_and_pdf/ch3_pic013.pdf,assets/images/ch3_pic013.pdf,,copied_extracted,
+extracted_svgs_svg_and_pdf/ch3_pic013.svg,,assets/images/ch3_pic013.svg,copied_extracted,
+extracted_svgs_svg_and_pdf/ch3_pic014.pdf,assets/images/ch3_pic014.pdf,,copied_extracted,
+extracted_svgs_svg_and_pdf/ch3_pic014.svg,,assets/images/ch3_pic014.svg,copied_extracted,
+extracted_svgs_svg_and_pdf/ch3_pic015.pdf,assets/images/ch3_pic015.pdf,,copied_extracted,
+extracted_svgs_svg_and_pdf/ch3_pic015.svg,,assets/images/ch3_pic015.svg,copied_extracted,
+extracted_svgs_svg_and_pdf/ch3_pic016.pdf,assets/images/ch3_pic016.pdf,,copied_extracted,
+extracted_svgs_svg_and_pdf/ch3_pic016.svg,,assets/images/ch3_pic016.svg,copied_extracted,
+extracted_svgs_svg_and_pdf/ch4_pic001.pdf,assets/images/ch4_pic001.pdf,,copied_extracted,
+extracted_svgs_svg_and_pdf/ch4_pic001.svg,,assets/images/ch4_pic001.svg,copied_extracted,
+extracted_svgs_svg_and_pdf/ch4_pic002.pdf,assets/images/ch4_pic002.pdf,,copied_extracted,
+extracted_svgs_svg_and_pdf/ch4_pic002.svg,,assets/images/ch4_pic002.svg,copied_extracted,
+extracted_svgs_svg_and_pdf/ch4_pic003.pdf,assets/images/ch4_pic003.pdf,,copied_extracted,
+extracted_svgs_svg_and_pdf/ch4_pic003.svg,,assets/images/ch4_pic003.svg,copied_extracted,
+extracted_svgs_svg_and_pdf/ch4_pic004.pdf,assets/images/ch4_pic004.pdf,,copied_extracted,
+extracted_svgs_svg_and_pdf/ch4_pic004.svg,,assets/images/ch4_pic004.svg,copied_extracted,
+extracted_svgs_svg_and_pdf/ch4_pic005.pdf,assets/images/ch4_pic005.pdf,,copied_extracted,
+extracted_svgs_svg_and_pdf/ch4_pic005.svg,,assets/images/ch4_pic005.svg,copied_extracted,
+extracted_svgs_svg_and_pdf/ch5_pic001.pdf,assets/images/ch5_pic001.pdf,,copied_extracted,
+extracted_svgs_svg_and_pdf/ch5_pic001.svg,,assets/images/ch5_pic001.svg,copied_extracted,
+extracted_svgs_svg_and_pdf/ch5_pic002.pdf,assets/images/ch5_pic002.pdf,,copied_extracted,
+extracted_svgs_svg_and_pdf/ch5_pic002.svg,,assets/images/ch5_pic002.svg,copied_extracted,
+extracted_svgs_svg_and_pdf/ch6_pic001.pdf,assets/images/ch6_pic001.pdf,,copied_extracted,
+extracted_svgs_svg_and_pdf/ch6_pic001.svg,,assets/images/ch6_pic001.svg,copied_extracted,
+extracted_svgs_svg_and_pdf/ch6_pic002.pdf,assets/images/ch6_pic002.pdf,,copied_extracted,
+extracted_svgs_svg_and_pdf/ch6_pic002.svg,,assets/images/ch6_pic002.svg,copied_extracted,
+extracted_svgs_svg_and_pdf/ch6_pic003.pdf,assets/images/ch6_pic003.pdf,,copied_extracted,
+extracted_svgs_svg_and_pdf/ch6_pic003.svg,,assets/images/ch6_pic003.svg,copied_extracted,
+extracted_svgs_svg_and_pdf/ch6_pic004.pdf,assets/images/ch6_pic004.pdf,,copied_extracted,
+extracted_svgs_svg_and_pdf/ch6_pic004.svg,,assets/images/ch6_pic004.svg,copied_extracted,
+extracted_svgs_svg_and_pdf/ch6_pic005.pdf,assets/images/ch6_pic005.pdf,,copied_extracted,
+extracted_svgs_svg_and_pdf/ch6_pic005.svg,,assets/images/ch6_pic005.svg,copied_extracted,
+extracted_svgs_svg_and_pdf/ch6_pic006.pdf,assets/images/ch6_pic006.pdf,,copied_extracted,
+extracted_svgs_svg_and_pdf/ch6_pic006.svg,,assets/images/ch6_pic006.svg,copied_extracted,
+extracted_svgs_svg_and_pdf/ch6_pic007.pdf,assets/images/ch6_pic007.pdf,,copied_extracted,
+extracted_svgs_svg_and_pdf/ch6_pic007.svg,,assets/images/ch6_pic007.svg,copied_extracted,
+extracted_svgs_svg_and_pdf/ch6_pic008.pdf,assets/images/ch6_pic008.pdf,,copied_extracted,
+extracted_svgs_svg_and_pdf/ch6_pic008.svg,,assets/images/ch6_pic008.svg,copied_extracted,
+extracted_svgs_svg_and_pdf/ch6_pic009.pdf,assets/images/ch6_pic009.pdf,,copied_extracted,
+extracted_svgs_svg_and_pdf/ch6_pic009.svg,,assets/images/ch6_pic009.svg,copied_extracted,
+extracted_svgs_svg_and_pdf/ch6_pic010.pdf,assets/images/ch6_pic010.pdf,,copied_extracted,
+extracted_svgs_svg_and_pdf/ch6_pic010.svg,,assets/images/ch6_pic010.svg,copied_extracted,
+extracted_svgs_svg_and_pdf/ch6_pic011.pdf,assets/images/ch6_pic011.pdf,,copied_extracted,
+extracted_svgs_svg_and_pdf/ch6_pic011.svg,,assets/images/ch6_pic011.svg,copied_extracted,
+extracted_svgs_svg_and_pdf/ch6_pic012.pdf,assets/images/ch6_pic012.pdf,,copied_extracted,
+extracted_svgs_svg_and_pdf/ch6_pic012.svg,,assets/images/ch6_pic012.svg,copied_extracted,
+extracted_svgs_svg_and_pdf/ch6_pic013.pdf,assets/images/ch6_pic013.pdf,,copied_extracted,
+extracted_svgs_svg_and_pdf/ch6_pic013.svg,,assets/images/ch6_pic013.svg,copied_extracted,
+extracted_svgs_svg_and_pdf/ch6_pic014.pdf,assets/images/ch6_pic014.pdf,,copied_extracted,
+extracted_svgs_svg_and_pdf/ch6_pic014.svg,,assets/images/ch6_pic014.svg,copied_extracted,
+extracted_svgs_svg_and_pdf/ch6_pic015.pdf,assets/images/ch6_pic015.pdf,,copied_extracted,
+extracted_svgs_svg_and_pdf/ch6_pic015.svg,,assets/images/ch6_pic015.svg,copied_extracted,
+extracted_svgs_svg_and_pdf/ch6_pic016.pdf,assets/images/ch6_pic016.pdf,,copied_extracted,
+extracted_svgs_svg_and_pdf/ch6_pic016.svg,,assets/images/ch6_pic016.svg,copied_extracted,
+extracted_svgs_svg_and_pdf/ch6_pic017.pdf,assets/images/ch6_pic017.pdf,,copied_extracted,
+extracted_svgs_svg_and_pdf/ch6_pic017.svg,,assets/images/ch6_pic017.svg,copied_extracted,
+extracted_svgs_svg_and_pdf/ch6_pic018.pdf,assets/images/ch6_pic018.pdf,,copied_extracted,
+extracted_svgs_svg_and_pdf/ch6_pic018.svg,,assets/images/ch6_pic018.svg,copied_extracted,
+extracted_svgs_svg_and_pdf/ch7_pic001.pdf,assets/images/ch7_pic001.pdf,,copied_extracted,
+extracted_svgs_svg_and_pdf/ch7_pic001.svg,,assets/images/ch7_pic001.svg,copied_extracted,
+extracted_svgs_svg_and_pdf/ch7_pic002.pdf,assets/images/ch7_pic002.pdf,,copied_extracted,
+extracted_svgs_svg_and_pdf/ch7_pic002.svg,,assets/images/ch7_pic002.svg,copied_extracted,
+extracted_svgs_svg_and_pdf/ch7_pic003.pdf,assets/images/ch7_pic003.pdf,,copied_extracted,
+extracted_svgs_svg_and_pdf/ch7_pic003.svg,,assets/images/ch7_pic003.svg,copied_extracted,
+extracted_svgs_svg_and_pdf/ch9_pic001.pdf,assets/images/ch9_pic001.pdf,,copied_extracted,
+extracted_svgs_svg_and_pdf/ch9_pic001.svg,,assets/images/ch9_pic001.svg,copied_extracted,
+extracted_svgs_svg_and_pdf/ch9_pic002.pdf,assets/images/ch9_pic002.pdf,,copied_extracted,
+extracted_svgs_svg_and_pdf/ch9_pic002.svg,,assets/images/ch9_pic002.svg,copied_extracted,
+extracted_svgs_svg_and_pdf/ch9_pic003.pdf,assets/images/ch9_pic003.pdf,,copied_extracted,
+extracted_svgs_svg_and_pdf/ch9_pic003.svg,,assets/images/ch9_pic003.svg,copied_extracted,
+extracted_svgs_svg_and_pdf/ch9_pic004.pdf,assets/images/ch9_pic004.pdf,,copied_extracted,
+extracted_svgs_svg_and_pdf/ch9_pic004.svg,,assets/images/ch9_pic004.svg,copied_extracted,
+extracted_svgs_svg_and_pdf/ch9_pic005.pdf,assets/images/ch9_pic005.pdf,,copied_extracted,
+extracted_svgs_svg_and_pdf/ch9_pic005.svg,,assets/images/ch9_pic005.svg,copied_extracted,
+extracted_svgs_svg_and_pdf/ch9_pic006.pdf,assets/images/ch9_pic006.pdf,,copied_extracted,
+extracted_svgs_svg_and_pdf/ch9_pic006.svg,,assets/images/ch9_pic006.svg,copied_extracted,
+extracted_svgs_svg_and_pdf/ch9_pic007.pdf,assets/images/ch9_pic007.pdf,,copied_extracted,
+extracted_svgs_svg_and_pdf/ch9_pic007.svg,,assets/images/ch9_pic007.svg,copied_extracted,
+extracted_svgs_svg_and_pdf/ch9_pic008.pdf,assets/images/ch9_pic008.pdf,,copied_extracted,
+extracted_svgs_svg_and_pdf/ch9_pic008.svg,,assets/images/ch9_pic008.svg,copied_extracted,
+extracted_svgs_svg_and_pdf/ch9_pic009.pdf,assets/images/ch9_pic009.pdf,,copied_extracted,
+extracted_svgs_svg_and_pdf/ch9_pic009.svg,,assets/images/ch9_pic009.svg,copied_extracted,
+fixed_pdfs/911/CUBIC1.pdf,assets/images/ch9_911_CUBIC1.pdf,assets/images/ch9_911_CUBIC1.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/911/CUBIC2.pdf,assets/images/ch9_911_CUBIC2.pdf,assets/images/ch9_911_CUBIC2.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/911/CUBIC3.pdf,assets/images/ch9_911_CUBIC3.pdf,assets/images/ch9_911_CUBIC3.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/911/CUBIC4.pdf,assets/images/ch9_911_CUBIC4.pdf,assets/images/ch9_911_CUBIC4.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/911/CUBIC5.pdf,assets/images/ch9_911_CUBIC5.pdf,assets/images/ch9_911_CUBIC5.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/911/MAX2.pdf,assets/images/ch9_911_MAX2.pdf,assets/images/ch9_911_MAX2.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/911/MIN2.pdf,assets/images/ch9_911_MIN2.pdf,assets/images/ch9_911_MIN2.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/911/MINMAX1.pdf,assets/images/ch9_911_MINMAX1.pdf,assets/images/ch9_911_MINMAX1.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/911/PENDEN1.pdf,assets/images/ch9_911_PENDEN1.pdf,assets/images/ch9_911_PENDEN1.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/911/PENDEN2.pdf,assets/images/ch9_911_PENDEN2.pdf,assets/images/ch9_911_PENDEN2.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/911/SADDLE1.pdf,assets/images/ch9_911_SADDLE1.pdf,assets/images/ch9_911_SADDLE1.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/911/SADDLE2-3-4.pdf,assets/images/ch9_911_SADDLE2-3-4.pdf,assets/images/ch9_911_SADDLE2-3-4.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/911/SADDLE2-3-4_uncropped.pdf,assets/images/ch9_911_SADDLE2-3-4_uncropped.pdf,assets/images/ch9_911_SADDLE2-3-4_uncropped.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/911/SADDLE2.pdf,assets/images/ch9_911_SADDLE2.pdf,assets/images/ch9_911_SADDLE2.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/911/SADDLE3.pdf,assets/images/ch9_911_SADDLE3.pdf,assets/images/ch9_911_SADDLE3.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/911/SADDLE4.pdf,assets/images/ch9_911_SADDLE4.pdf,assets/images/ch9_911_SADDLE4.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/911/WEATHER1.pdf,assets/images/ch9_911_WEATHER1.pdf,assets/images/ch9_911_WEATHER1.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/911/WEATHER2.pdf,assets/images/ch9_911_WEATHER2.pdf,assets/images/ch9_911_WEATHER2.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/911/WEATHER3.pdf,assets/images/ch9_911_WEATHER3.pdf,assets/images/ch9_911_WEATHER3.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/911/WEATHER5.pdf,assets/images/ch9_911_WEATHER5.pdf,assets/images/ch9_911_WEATHER5.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/911/WEATHER6.pdf,assets/images/ch9_911_WEATHER6.pdf,assets/images/ch9_911_WEATHER6.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/912/DENISTY3_with_labels.pdf,assets/images/ch9_912_DENISTY3_with_labels.pdf,assets/images/ch9_912_DENISTY3_with_labels.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/912/DENSITY1-2.pdf,assets/images/ch9_912_DENSITY1-2.pdf,assets/images/ch9_912_DENSITY1-2.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/912/DENSITY1.pdf,assets/images/ch9_912_DENSITY1.pdf,assets/images/ch9_912_DENSITY1.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/912/DENSITY2.pdf,assets/images/ch9_912_DENSITY2.pdf,assets/images/ch9_912_DENSITY2.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/912/DENSITY3.pdf,assets/images/ch9_912_DENSITY3.pdf,assets/images/ch9_912_DENSITY3.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/912/DENSITY4-5.pdf,assets/images/ch9_912_DENSITY4-5.pdf,assets/images/ch9_912_DENSITY4-5.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/912/DENSITY4.pdf,assets/images/ch9_912_DENSITY4.pdf,assets/images/ch9_912_DENSITY4.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/912/density5.pdf,assets/images/ch9_912_density5.pdf,assets/images/ch9_912_density5.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/913/CONSURF1.pdf,assets/images/ch9_913_CONSURF1.pdf,assets/images/ch9_913_CONSURF1.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/913/CONSURF2.pdf,assets/images/ch9_913_CONSURF2.pdf,assets/images/ch9_913_CONSURF2.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/913/CONTOUR1.pdf,assets/images/ch9_913_CONTOUR1.pdf,assets/images/ch9_913_CONTOUR1.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/913/CONTOUR2.pdf,assets/images/ch9_913_CONTOUR2.pdf,assets/images/ch9_913_CONTOUR2.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/913/CONTOUR2_labeled.pdf,assets/images/ch9_913_CONTOUR2_labeled.pdf,assets/images/ch9_913_CONTOUR2_labeled.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/913/CONTOUR3-4_labeled.pdf,assets/images/ch9_913_CONTOUR3-4_labeled.pdf,assets/images/ch9_913_CONTOUR3-4_labeled.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/913/CONTOUR3.pdf,assets/images/ch9_913_CONTOUR3.pdf,assets/images/ch9_913_CONTOUR3.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/913/CONTOUR4.pdf,assets/images/ch9_913_CONTOUR4.pdf,assets/images/ch9_913_CONTOUR4.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/913/contour5.pdf,assets/images/ch9_913_contour5.pdf,assets/images/ch9_913_contour5.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/913/contour6.pdf,assets/images/ch9_913_contour6.pdf,assets/images/ch9_913_contour6.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/914/SUMCON2.pdf,assets/images/ch9_914_SUMCON2.pdf,assets/images/ch9_914_SUMCON2.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/914/SUMDENSE.pdf,assets/images/ch9_914_SUMDENSE.pdf,assets/images/ch9_914_SUMDENSE.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/914/SUMGRAPH.pdf,assets/images/ch9_914_SUMGRAPH.pdf,assets/images/ch9_914_SUMGRAPH.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/914/sumcon4.pdf,assets/images/ch9_914_sumcon4.pdf,assets/images/ch9_914_sumcon4.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/915/SHELLS1.pdf,assets/images/ch9_915_SHELLS1.pdf,assets/images/ch9_915_SHELLS1.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/915/SHELLS2-3.pdf,assets/images/ch9_915_SHELLS2-3.pdf,assets/images/ch9_915_SHELLS2-3.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/915/SHELLS2.pdf,assets/images/ch9_915_SHELLS2.pdf,assets/images/ch9_915_SHELLS2.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/915/SHELLS3.pdf,assets/images/ch9_915_SHELLS3.pdf,assets/images/ch9_915_SHELLS3.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/915/XYZ1.pdf,assets/images/ch9_915_XYZ1.pdf,assets/images/ch9_915_XYZ1.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/921/MICRO2.pdf,assets/images/ch9_921_MICRO2.pdf,assets/images/ch9_921_MICRO2.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/921/MICRO3.pdf,assets/images/ch9_921_MICRO3.pdf,assets/images/ch9_921_MICRO3.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/921/MICRO5-6.pdf,assets/images/ch9_921_MICRO5-6.pdf,assets/images/ch9_921_MICRO5-6.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/921/MICRO5.pdf,assets/images/ch9_921_MICRO5.pdf,assets/images/ch9_921_MICRO5.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/921/MICRO6.pdf,assets/images/ch9_921_MICRO6.pdf,assets/images/ch9_921_MICRO6.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/921/micro1-2-3.pdf,assets/images/ch9_921_micro1-2-3.pdf,assets/images/ch9_921_micro1-2-3.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/921/micro1.pdf,assets/images/ch9_921_micro1.pdf,assets/images/ch9_921_micro1.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/921/micro4.pdf,assets/images/ch9_921_micro4.pdf,assets/images/ch9_921_micro4.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/921/micro8.pdf,assets/images/ch9_921_micro8.pdf,assets/images/ch9_921_micro8.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/922/MIC.pdf,assets/images/ch9_922_MIC.pdf,assets/images/ch9_922_MIC.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/922/linear1.pdf,assets/images/ch9_922_linear1.pdf,assets/images/ch9_922_linear1.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/922/linear10.pdf,assets/images/ch9_922_linear10.pdf,assets/images/ch9_922_linear10.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/922/linear11.pdf,assets/images/ch9_922_linear11.pdf,assets/images/ch9_922_linear11.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/922/linear12.pdf,assets/images/ch9_922_linear12.pdf,assets/images/ch9_922_linear12.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/922/linear13.pdf,assets/images/ch9_922_linear13.pdf,assets/images/ch9_922_linear13.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/922/linear13_labeled.pdf,assets/images/ch9_922_linear13_labeled.pdf,assets/images/ch9_922_linear13_labeled.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/922/linear14.pdf,assets/images/ch9_922_linear14.pdf,assets/images/ch9_922_linear14.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/922/linear14_labeled.pdf,assets/images/ch9_922_linear14_labeled.pdf,assets/images/ch9_922_linear14_labeled.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/922/linear15.pdf,assets/images/ch9_922_linear15.pdf,assets/images/ch9_922_linear15.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/922/linear15_labeled.pdf,assets/images/ch9_922_linear15_labeled.pdf,assets/images/ch9_922_linear15_labeled.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/922/linear16.pdf,assets/images/ch9_922_linear16.pdf,assets/images/ch9_922_linear16.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/922/linear17.pdf,assets/images/ch9_922_linear17.pdf,assets/images/ch9_922_linear17.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/922/linear17_labeled.pdf,assets/images/ch9_922_linear17_labeled.pdf,assets/images/ch9_922_linear17_labeled.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/922/linear18.pdf,assets/images/ch9_922_linear18.pdf,assets/images/ch9_922_linear18.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/922/linear18_labeled.pdf,assets/images/ch9_922_linear18_labeled.pdf,assets/images/ch9_922_linear18_labeled.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/922/linear1_labeled.pdf,assets/images/ch9_922_linear1_labeled.pdf,assets/images/ch9_922_linear1_labeled.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/922/linear2.pdf,assets/images/ch9_922_linear2.pdf,assets/images/ch9_922_linear2.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/922/linear2_labeled.pdf,assets/images/ch9_922_linear2_labeled.pdf,assets/images/ch9_922_linear2_labeled.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/922/linear3.pdf,assets/images/ch9_922_linear3.pdf,assets/images/ch9_922_linear3.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/922/linear4.pdf,assets/images/ch9_922_linear4.pdf,assets/images/ch9_922_linear4.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/922/linear4_labeled.pdf,assets/images/ch9_922_linear4_labeled.pdf,assets/images/ch9_922_linear4_labeled.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/922/linear5.pdf,assets/images/ch9_922_linear5.pdf,assets/images/ch9_922_linear5.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/922/linear5_labeled.pdf,assets/images/ch9_922_linear5_labeled.pdf,assets/images/ch9_922_linear5_labeled.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/922/linear6.pdf,assets/images/ch9_922_linear6.pdf,assets/images/ch9_922_linear6.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/922/linear6_labeled.pdf,assets/images/ch9_922_linear6_labeled.pdf,assets/images/ch9_922_linear6_labeled.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/922/linear7.pdf,assets/images/ch9_922_linear7.pdf,assets/images/ch9_922_linear7.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/922/linear7_labeled.pdf,assets/images/ch9_922_linear7_labeled.pdf,assets/images/ch9_922_linear7_labeled.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/922/linear8.pdf,assets/images/ch9_922_linear8.pdf,assets/images/ch9_922_linear8.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/922/linear8_labeled.pdf,assets/images/ch9_922_linear8_labeled.pdf,assets/images/ch9_922_linear8_labeled.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/922/linear9.pdf,assets/images/ch9_922_linear9.pdf,assets/images/ch9_922_linear9.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/922/linear9_labeled.pdf,assets/images/ch9_922_linear9_labeled.pdf,assets/images/ch9_922_linear9_labeled.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/922/micro7.pdf,assets/images/ch9_922_micro7.pdf,assets/images/ch9_922_micro7.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/923/micro10.pdf,assets/images/ch9_923_micro10.pdf,assets/images/ch9_923_micro10.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/923/micro11.pdf,assets/images/ch9_923_micro11.pdf,assets/images/ch9_923_micro11.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/923/micro12.pdf,assets/images/ch9_923_micro12.pdf,assets/images/ch9_923_micro12.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/923/micro13.pdf,assets/images/ch9_923_micro13.pdf,assets/images/ch9_923_micro13.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/923/micro9.pdf,assets/images/ch9_923_micro9.pdf,assets/images/ch9_923_micro9.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/924/GRAD2.pdf,assets/images/ch9_924_GRAD2.pdf,assets/images/ch9_924_GRAD2.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/924/GRAD5.pdf,assets/images/ch9_924_GRAD5.pdf,assets/images/ch9_924_GRAD5.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/924/GRAD6.pdf,assets/images/ch9_924_GRAD6.pdf,assets/images/ch9_924_GRAD6.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/924/grad1-2.pdf,assets/images/ch9_924_grad1-2.pdf,assets/images/ch9_924_grad1-2.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/924/grad1.pdf,assets/images/ch9_924_grad1.pdf,assets/images/ch9_924_grad1.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/924/grad3.pdf,assets/images/ch9_924_grad3.pdf,assets/images/ch9_924_grad3.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/924/grad4.pdf,assets/images/ch9_924_grad4.pdf,assets/images/ch9_924_grad4.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/924/grad4_labeled.pdf,assets/images/ch9_924_grad4_labeled.pdf,assets/images/ch9_924_grad4_labeled.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/924/grad7.pdf,assets/images/ch9_924_grad7.pdf,assets/images/ch9_924_grad7.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/925/bowl.pdf,assets/images/ch9_925_bowl.pdf,assets/images/ch9_925_bowl.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/925/cone.pdf,assets/images/ch9_925_cone.pdf,assets/images/ch9_925_cone.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/925/contour1.pdf,assets/images/ch9_925_contour1.pdf,assets/images/ch9_925_contour1.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/925/contour2.pdf,assets/images/ch9_925_contour2.pdf,assets/images/ch9_925_contour2.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/925/gradient.pdf,assets/images/ch9_925_gradient.pdf,assets/images/ch9_925_gradient.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/925/graph1.pdf,assets/images/ch9_925_graph1.pdf,assets/images/ch9_925_graph1.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/925/graph2.pdf,assets/images/ch9_925_graph2.pdf,assets/images/ch9_925_graph2.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/925/linear1.pdf,assets/images/ch9_925_linear1.pdf,assets/images/ch9_925_linear1.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/925/linear2.pdf,assets/images/ch9_925_linear2.pdf,assets/images/ch9_925_linear2.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/925/shells4.pdf,assets/images/ch9_925_shells4.pdf,assets/images/ch9_925_shells4.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/925/shells4_labeled.pdf,assets/images/ch9_925_shells4_labeled.pdf,assets/images/ch9_925_shells4_labeled.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/931/OPT1.pdf,assets/images/ch9_931_OPT1.pdf,assets/images/ch9_931_OPT1.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/931/OPT10.pdf,assets/images/ch9_931_OPT10.pdf,assets/images/ch9_931_OPT10.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/931/OPT11.pdf,assets/images/ch9_931_OPT11.pdf,assets/images/ch9_931_OPT11.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/931/OPT12.pdf,assets/images/ch9_931_OPT12.pdf,assets/images/ch9_931_OPT12.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/931/OPT13.pdf,assets/images/ch9_931_OPT13.pdf,assets/images/ch9_931_OPT13.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/931/OPT14.pdf,assets/images/ch9_931_OPT14.pdf,assets/images/ch9_931_OPT14.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/931/OPT15.pdf,assets/images/ch9_931_OPT15.pdf,assets/images/ch9_931_OPT15.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/931/OPT15_overlap.pdf,assets/images/ch9_931_OPT15_overlap.pdf,assets/images/ch9_931_OPT15_overlap.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/931/OPT15_uncropped.pdf,assets/images/ch9_931_OPT15_uncropped.pdf,assets/images/ch9_931_OPT15_uncropped.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/931/OPT16.pdf,assets/images/ch9_931_OPT16.pdf,assets/images/ch9_931_OPT16.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/931/OPT17.pdf,assets/images/ch9_931_OPT17.pdf,assets/images/ch9_931_OPT17.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/931/OPT2.pdf,assets/images/ch9_931_OPT2.pdf,assets/images/ch9_931_OPT2.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/931/OPT3.pdf,assets/images/ch9_931_OPT3.pdf,assets/images/ch9_931_OPT3.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/931/OPT4.pdf,assets/images/ch9_931_OPT4.pdf,assets/images/ch9_931_OPT4.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/931/OPT5.pdf,assets/images/ch9_931_OPT5.pdf,assets/images/ch9_931_OPT5.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/931/OPT6.pdf,assets/images/ch9_931_OPT6.pdf,assets/images/ch9_931_OPT6.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/931/OPT7.pdf,assets/images/ch9_931_OPT7.pdf,assets/images/ch9_931_OPT7.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/931/OPT8.pdf,assets/images/ch9_931_OPT8.pdf,assets/images/ch9_931_OPT8.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/931/OPT9.pdf,assets/images/ch9_931_OPT9.pdf,assets/images/ch9_931_OPT9.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/932/OPT19.pdf,assets/images/ch9_932_OPT19.pdf,assets/images/ch9_932_OPT19.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/932/OPT22.pdf,assets/images/ch9_932_OPT22.pdf,assets/images/ch9_932_OPT22.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/932/constr1.pdf,assets/images/ch9_932_constr1.pdf,assets/images/ch9_932_constr1.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/932/constr2.pdf,assets/images/ch9_932_constr2.pdf,assets/images/ch9_932_constr2.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/932/constr3.pdf,assets/images/ch9_932_constr3.pdf,assets/images/ch9_932_constr3.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/932/constr4.pdf,assets/images/ch9_932_constr4.pdf,assets/images/ch9_932_constr4.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/932/constr5.pdf,assets/images/ch9_932_constr5.pdf,assets/images/ch9_932_constr5.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/932/opt18.pdf,assets/images/ch9_932_opt18.pdf,assets/images/ch9_932_opt18.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/932/opt18_uncropped.pdf,assets/images/ch9_932_opt18_uncropped.pdf,assets/images/ch9_932_opt18_uncropped.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/932/opt20.pdf,assets/images/ch9_932_opt20.pdf,assets/images/ch9_932_opt20.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/932/opt21.pdf,assets/images/ch9_932_opt21.pdf,assets/images/ch9_932_opt21.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/933/WRAP10.pdf,assets/images/ch9_933_WRAP10.pdf,assets/images/ch9_933_WRAP10.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/933/locus1.pdf,assets/images/ch9_933_locus1.pdf,assets/images/ch9_933_locus1.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/933/sample.pdf,assets/images/ch9_933_sample.pdf,assets/images/ch9_933_sample.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/933/wrap1.pdf,assets/images/ch9_933_wrap1.pdf,assets/images/ch9_933_wrap1.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/933/wrap11.pdf,assets/images/ch9_933_wrap11.pdf,assets/images/ch9_933_wrap11.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/933/wrap2-3-5-6-7.pdf,assets/images/ch9_933_wrap2-3-5-6-7.pdf,assets/images/ch9_933_wrap2-3-5-6-7.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/933/wrap2.pdf,assets/images/ch9_933_wrap2.pdf,assets/images/ch9_933_wrap2.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/933/wrap3.pdf,assets/images/ch9_933_wrap3.pdf,assets/images/ch9_933_wrap3.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/933/wrap5.pdf,assets/images/ch9_933_wrap5.pdf,assets/images/ch9_933_wrap5.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/933/wrap6.pdf,assets/images/ch9_933_wrap6.pdf,assets/images/ch9_933_wrap6.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/933/wrap7.pdf,assets/images/ch9_933_wrap7.pdf,assets/images/ch9_933_wrap7.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/933/wrap9-10-11.pdf,assets/images/ch9_933_wrap9-10-11.pdf,assets/images/ch9_933_wrap9-10-11.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/933/wrap9.pdf,assets/images/ch9_933_wrap9.pdf,assets/images/ch9_933_wrap9.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/934/CONTOUR7.pdf,assets/images/ch9_934_CONTOUR7.pdf,assets/images/ch9_934_CONTOUR7.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/934/ascent1.pdf,assets/images/ch9_934_ascent1.pdf,assets/images/ch9_934_ascent1.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/934/contour1.pdf,assets/images/ch9_934_contour1.pdf,assets/images/ch9_934_contour1.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/934/contour2.pdf,assets/images/ch9_934_contour2.pdf,assets/images/ch9_934_contour2.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/934/contour3.pdf,assets/images/ch9_934_contour3.pdf,assets/images/ch9_934_contour3.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/934/contour4.pdf,assets/images/ch9_934_contour4.pdf,assets/images/ch9_934_contour4.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/934/contour5-6-7.pdf,assets/images/ch9_934_contour5-6-7.pdf,assets/images/ch9_934_contour5-6-7.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/934/contour5.pdf,assets/images/ch9_934_contour5.pdf,assets/images/ch9_934_contour5.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/934/contour6.pdf,assets/images/ch9_934_contour6.pdf,assets/images/ch9_934_contour6.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/934/data1.pdf,assets/images/ch9_934_data1.pdf,assets/images/ch9_934_data1.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/934/data2.pdf,assets/images/ch9_934_data2.pdf,assets/images/ch9_934_data2.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/934/descent1.pdf,assets/images/ch9_934_descent1.pdf,assets/images/ch9_934_descent1.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/934/distrib1.pdf,assets/images/ch9_934_distrib1.pdf,assets/images/ch9_934_distrib1.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/934/distrib2.pdf,assets/images/ch9_934_distrib2.pdf,assets/images/ch9_934_distrib2.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/934/lagr1.pdf,assets/images/ch9_934_lagr1.pdf,assets/images/ch9_934_lagr1.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/calc1/180.pdf,assets/images/calc1_180.pdf,assets/images/calc1_180.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/calc1/area10.pdf,assets/images/calc1_area10.pdf,assets/images/calc1_area10.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/calc1/area11.pdf,assets/images/calc1_area11.pdf,assets/images/calc1_area11.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/calc1/area2.pdf,assets/images/calc1_area2.pdf,assets/images/calc1_area2.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/calc1/area3.pdf,assets/images/calc1_area3.pdf,assets/images/calc1_area3.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/calc1/area5a.pdf,assets/images/calc1_area5a.pdf,assets/images/calc1_area5a.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/calc1/area6.pdf,assets/images/calc1_area6.pdf,assets/images/calc1_area6.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/calc1/area7.pdf,assets/images/calc1_area7.pdf,assets/images/calc1_area7.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/calc1/area8.pdf,assets/images/calc1_area8.pdf,assets/images/calc1_area8.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/calc1/area9.pdf,assets/images/calc1_area9.pdf,assets/images/calc1_area9.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/calc1/average1.pdf,assets/images/calc1_average1.pdf,assets/images/calc1_average1.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/calc1/cusp1.pdf,assets/images/calc1_cusp1.pdf,assets/images/calc1_cusp1.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/calc1/cusp2.pdf,assets/images/calc1_cusp2.pdf,assets/images/calc1_cusp2.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/calc1/cusp3.pdf,assets/images/calc1_cusp3.pdf,assets/images/calc1_cusp3.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/calc1/error1.pdf,assets/images/calc1_error1.pdf,assets/images/calc1_error1.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/calc1/error2.pdf,assets/images/calc1_error2.pdf,assets/images/calc1_error2.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/calc1/error3.pdf,assets/images/calc1_error3.pdf,assets/images/calc1_error3.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/calc1/error4.pdf,assets/images/calc1_error4.pdf,assets/images/calc1_error4.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/calc1/error6.pdf,assets/images/calc1_error6.pdf,assets/images/calc1_error6.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/calc1/exp1.pdf,assets/images/calc1_exp1.pdf,assets/images/calc1_exp1.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/calc1/funny.pdf,assets/images/calc1_funny.pdf,assets/images/calc1_funny.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/calc1/funny3.pdf,assets/images/calc1_funny3.pdf,assets/images/calc1_funny3.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/calc1/funnyslope.pdf,assets/images/calc1_funnyslope.pdf,assets/images/calc1_funnyslope.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/calc1/hare1.pdf,assets/images/calc1_hare1.pdf,assets/images/calc1_hare1.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/calc1/iiprime.pdf,assets/images/calc1_iiprime.pdf,assets/images/calc1_iiprime.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/calc1/int1.pdf,assets/images/calc1_int1.pdf,assets/images/calc1_int1.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/calc1/int2.pdf,assets/images/calc1_int2.pdf,assets/images/calc1_int2.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/calc1/int5.pdf,assets/images/calc1_int5.pdf,assets/images/calc1_int5.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/calc1/int6.pdf,assets/images/calc1_int6.pdf,assets/images/calc1_int6.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/calc1/kcircle2.pdf,assets/images/calc1_kcircle2.pdf,assets/images/calc1_kcircle2.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/calc1/kcircle3.pdf,assets/images/calc1_kcircle3.pdf,assets/images/calc1_kcircle3.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/calc1/lake.pdf,assets/images/calc1_lake.pdf,assets/images/calc1_lake.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/calc1/length3.pdf,assets/images/calc1_length3.pdf,assets/images/calc1_length3.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/calc1/log1.pdf,assets/images/calc1_log1.pdf,assets/images/calc1_log1.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/calc1/log2.pdf,assets/images/calc1_log2.pdf,assets/images/calc1_log2.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/calc1/log3.pdf,assets/images/calc1_log3.pdf,assets/images/calc1_log3.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/calc1/log4.pdf,assets/images/calc1_log4.pdf,assets/images/calc1_log4.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/calc1/mag1.pdf,assets/images/calc1_mag1.pdf,assets/images/calc1_mag1.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/calc1/mag2.pdf,assets/images/calc1_mag2.pdf,assets/images/calc1_mag2.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/calc1/mag3.pdf,assets/images/calc1_mag3.pdf,assets/images/calc1_mag3.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/calc1/mag4.pdf,assets/images/calc1_mag4.pdf,assets/images/calc1_mag4.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/calc1/mag5.pdf,assets/images/calc1_mag5.pdf,assets/images/calc1_mag5.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/calc1/mag6.pdf,assets/images/calc1_mag6.pdf,assets/images/calc1_mag6.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/calc1/micro1.pdf,assets/images/calc1_micro1.pdf,assets/images/calc1_micro1.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/calc1/origpicture2.pdf,assets/images/calc1_origpicture2.pdf,assets/images/calc1_origpicture2.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/calc1/origpicture3.pdf,assets/images/calc1_origpicture3.pdf,assets/images/calc1_origpicture3.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/calc1/p41.pdf,assets/images/calc1_p41.pdf,assets/images/calc1_p41.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/calc1/pend10.pdf,assets/images/calc1_pend10.pdf,assets/images/calc1_pend10.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/calc1/pend9.pdf,assets/images/calc1_pend9.pdf,assets/images/calc1_pend9.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/calc1/pic178.pdf,assets/images/calc1_pic178.pdf,assets/images/calc1_pic178.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/calc1/pic180.pdf,assets/images/calc1_pic180.pdf,assets/images/calc1_pic180.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/calc1/pic181.pdf,assets/images/calc1_pic181.pdf,assets/images/calc1_pic181.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/calc1/pic200a.pdf,assets/images/calc1_pic200a.pdf,assets/images/calc1_pic200a.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/calc1/pic200b.pdf,assets/images/calc1_pic200b.pdf,assets/images/calc1_pic200b.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/calc1/pic204a.pdf,assets/images/calc1_pic204a.pdf,assets/images/calc1_pic204a.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/calc1/pic204b.pdf,assets/images/calc1_pic204b.pdf,assets/images/calc1_pic204b.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/calc1/pic207.pdf,assets/images/calc1_pic207.pdf,assets/images/calc1_pic207.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/calc1/pic244a.pdf,assets/images/calc1_pic244a.pdf,assets/images/calc1_pic244a.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/calc1/pic244b.pdf,assets/images/calc1_pic244b.pdf,assets/images/calc1_pic244b.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/calc1/pic245.pdf,assets/images/calc1_pic245.pdf,assets/images/calc1_pic245.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/calc1/pic246.pdf,assets/images/calc1_pic246.pdf,assets/images/calc1_pic246.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/calc1/pic247a.pdf,assets/images/calc1_pic247a.pdf,assets/images/calc1_pic247a.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/calc1/pic247b.pdf,assets/images/calc1_pic247b.pdf,assets/images/calc1_pic247b.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/calc1/pic248a.pdf,assets/images/calc1_pic248a.pdf,assets/images/calc1_pic248a.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/calc1/pic248b.pdf,assets/images/calc1_pic248b.pdf,assets/images/calc1_pic248b.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/calc1/pic249.pdf,assets/images/calc1_pic249.pdf,assets/images/calc1_pic249.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/calc1/pic252a.pdf,assets/images/calc1_pic252a.pdf,assets/images/calc1_pic252a.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/calc1/pic252b.pdf,assets/images/calc1_pic252b.pdf,assets/images/calc1_pic252b.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/calc1/pic252c.pdf,assets/images/calc1_pic252c.pdf,assets/images/calc1_pic252c.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/calc1/pic252d.pdf,assets/images/calc1_pic252d.pdf,assets/images/calc1_pic252d.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/calc1/pic253a.pdf,assets/images/calc1_pic253a.pdf,assets/images/calc1_pic253a.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/calc1/pic253b.pdf,assets/images/calc1_pic253b.pdf,assets/images/calc1_pic253b.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/calc1/pic253c.pdf,assets/images/calc1_pic253c.pdf,assets/images/calc1_pic253c.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/calc1/pic254a.pdf,assets/images/calc1_pic254a.pdf,assets/images/calc1_pic254a.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/calc1/pic254b.pdf,assets/images/calc1_pic254b.pdf,assets/images/calc1_pic254b.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/calc1/pic254c.pdf,assets/images/calc1_pic254c.pdf,assets/images/calc1_pic254c.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/calc1/pic257a.pdf,assets/images/calc1_pic257a.pdf,assets/images/calc1_pic257a.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/calc1/pic257b.pdf,assets/images/calc1_pic257b.pdf,assets/images/calc1_pic257b.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/calc1/pic259.pdf,assets/images/calc1_pic259.pdf,assets/images/calc1_pic259.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/calc1/pic260.pdf,assets/images/calc1_pic260.pdf,assets/images/calc1_pic260.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/calc1/pic280a.pdf,assets/images/calc1_pic280a.pdf,assets/images/calc1_pic280a.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/calc1/pic280b.pdf,assets/images/calc1_pic280b.pdf,assets/images/calc1_pic280b.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/calc1/pic281.pdf,assets/images/calc1_pic281.pdf,assets/images/calc1_pic281.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/calc1/pic282a.pdf,assets/images/calc1_pic282a.pdf,assets/images/calc1_pic282a.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/calc1/pic285.pdf,assets/images/calc1_pic285.pdf,assets/images/calc1_pic285.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/calc1/pic286.pdf,assets/images/calc1_pic286.pdf,assets/images/calc1_pic286.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/calc1/pic287.pdf,assets/images/calc1_pic287.pdf,assets/images/calc1_pic287.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/calc1/pic291.pdf,assets/images/calc1_pic291.pdf,assets/images/calc1_pic291.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/calc1/pic292.pdf,assets/images/calc1_pic292.pdf,assets/images/calc1_pic292.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/calc1/picture2.pdf,assets/images/calc1_picture2.pdf,assets/images/calc1_picture2.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/calc1/picture3.pdf,assets/images/calc1_picture3.pdf,assets/images/calc1_picture3.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/calc1/picture4.pdf,assets/images/calc1_picture4.pdf,assets/images/calc1_picture4.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/calc1/picture5.pdf,assets/images/calc1_picture5.pdf,assets/images/calc1_picture5.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/calc1/power1.pdf,assets/images/calc1_power1.pdf,assets/images/calc1_power1.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/calc1/power2.pdf,assets/images/calc1_power2.pdf,assets/images/calc1_power2.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/calc1/power3.pdf,assets/images/calc1_power3.pdf,assets/images/calc1_power3.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/calc1/power4.pdf,assets/images/calc1_power4.pdf,assets/images/calc1_power4.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/calc1/power5.pdf,assets/images/calc1_power5.pdf,assets/images/calc1_power5.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/calc1/prob114.pdf,assets/images/calc1_prob114.pdf,assets/images/calc1_prob114.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/calc1/prob115.pdf,assets/images/calc1_prob115.pdf,assets/images/calc1_prob115.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/calc1/profile.pdf,assets/images/calc1_profile.pdf,assets/images/calc1_profile.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/calc1/qualsketch.pdf,assets/images/calc1_qualsketch.pdf,assets/images/calc1_qualsketch.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/calc1/region1.pdf,assets/images/calc1_region1.pdf,assets/images/calc1_region1.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/calc1/region2.pdf,assets/images/calc1_region2.pdf,assets/images/calc1_region2.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/calc1/region2a.pdf,assets/images/calc1_region2a.pdf,assets/images/calc1_region2a.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/calc1/region3.pdf,assets/images/calc1_region3.pdf,assets/images/calc1_region3.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/calc1/rf1.pdf,assets/images/calc1_rf1.pdf,assets/images/calc1_rf1.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/calc1/rf2.pdf,assets/images/calc1_rf2.pdf,assets/images/calc1_rf2.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/calc1/semicir1.pdf,assets/images/calc1_semicir1.pdf,assets/images/calc1_semicir1.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/calc1/shaded.pdf,assets/images/calc1_shaded.pdf,assets/images/calc1_shaded.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/calc1/sinprob.pdf,assets/images/calc1_sinprob.pdf,assets/images/calc1_sinprob.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/calc1/sir.pdf,assets/images/calc1_sir.pdf,assets/images/calc1_sir.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/calc1/solid1.pdf,assets/images/calc1_solid1.pdf,assets/images/calc1_solid1.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/calc1/solid2.pdf,assets/images/calc1_solid2.pdf,assets/images/calc1_solid2.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/calc1/spring9.pdf,assets/images/calc1_spring9.pdf,assets/images/calc1_spring9.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/calc1/sunrise1.pdf,assets/images/calc1_sunrise1.pdf,assets/images/calc1_sunrise1.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/calc1/sunrise2a.pdf,assets/images/calc1_sunrise2a.pdf,assets/images/calc1_sunrise2a.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/calc1/title.pdf,assets/images/calc1_title.pdf,assets/images/calc1_title.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/calc1/title2.pdf,assets/images/calc1_title2.pdf,assets/images/calc1_title2.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/calc1/trig1.pdf,assets/images/calc1_trig1.pdf,assets/images/calc1_trig1.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/calc1/trig1_full.pdf,assets/images/calc1_trig1_full.pdf,assets/images/calc1_trig1_full.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/calc1/trig1a.pdf,assets/images/calc1_trig1a.pdf,assets/images/calc1_trig1a.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/calc1/trig2.pdf,assets/images/calc1_trig2.pdf,assets/images/calc1_trig2.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/calc2/BMay2.pdf,assets/images/calc2_BMay2.pdf,assets/images/calc2_BMay2.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/calc2/Bessel.pdf,assets/images/calc2_Bessel.pdf,assets/images/calc2_Bessel.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/calc2/Bmay.pdf,assets/images/calc2_Bmay.pdf,assets/images/calc2_Bmay.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/calc2/Darct.pdf,assets/images/calc2_Darct.pdf,assets/images/calc2_Darct.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/calc2/altseries.pdf,assets/images/calc2_altseries.pdf,assets/images/calc2_altseries.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/calc2/ampli.pdf,assets/images/calc2_ampli.pdf,assets/images/calc2_ampli.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/calc2/andmay1.pdf,assets/images/calc2_andmay1.pdf,assets/images/calc2_andmay1.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/calc2/andmay3.pdf,assets/images/calc2_andmay3.pdf,assets/images/calc2_andmay3.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/calc2/cards.pdf,assets/images/calc2_cards.pdf,assets/images/calc2_cards.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/calc2/ch11-1.pdf,assets/images/calc2_ch11-1.pdf,assets/images/calc2_ch11-1.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/calc2/ch11-2a.pdf,assets/images/calc2_ch11-2a.pdf,assets/images/calc2_ch11-2a.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/calc2/ch11-2b.pdf,assets/images/calc2_ch11-2b.pdf,assets/images/calc2_ch11-2b.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/calc2/ch11-3a.pdf,assets/images/calc2_ch11-3a.pdf,assets/images/calc2_ch11-3a.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/calc2/ch11-3b.pdf,assets/images/calc2_ch11-3b.pdf,assets/images/calc2_ch11-3b.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/calc2/ch121-1.pdf,assets/images/calc2_ch121-1.pdf,assets/images/calc2_ch121-1.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/calc2/ch121-2.pdf,assets/images/calc2_ch121-2.pdf,assets/images/calc2_ch121-2.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/calc2/circle.pdf,assets/images/calc2_circle.pdf,assets/images/calc2_circle.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/calc2/circle2.pdf,assets/images/calc2_circle2.pdf,assets/images/calc2_circle2.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/calc2/classeq1.pdf,assets/images/calc2_classeq1.pdf,assets/images/calc2_classeq1.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/calc2/classeq2.pdf,assets/images/calc2_classeq2.pdf,assets/images/calc2_classeq2.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/calc2/classeq3.pdf,assets/images/calc2_classeq3.pdf,assets/images/calc2_classeq3.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/calc2/classeq4.pdf,assets/images/calc2_classeq4.pdf,assets/images/calc2_classeq4.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/calc2/classeq5.pdf,assets/images/calc2_classeq5.pdf,assets/images/calc2_classeq5.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/calc2/cos10pit.pdf,assets/images/calc2_cos10pit.pdf,assets/images/calc2_cos10pit.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/calc2/cricle2.pdf,assets/images/calc2_cricle2.pdf,assets/images/calc2_cricle2.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/calc2/ctr.pdf,assets/images/calc2_ctr.pdf,assets/images/calc2_ctr.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/calc2/cycle.pdf,assets/images/calc2_cycle.pdf,assets/images/calc2_cycle.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/calc2/detect1.pdf,assets/images/calc2_detect1.pdf,assets/images/calc2_detect1.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/calc2/detect10.pdf,assets/images/calc2_detect10.pdf,assets/images/calc2_detect10.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/calc2/detect11.pdf,assets/images/calc2_detect11.pdf,assets/images/calc2_detect11.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/calc2/detect2.pdf,assets/images/calc2_detect2.pdf,assets/images/calc2_detect2.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/calc2/detect3.pdf,assets/images/calc2_detect3.pdf,assets/images/calc2_detect3.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/calc2/detect4.pdf,assets/images/calc2_detect4.pdf,assets/images/calc2_detect4.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/calc2/detect5.pdf,assets/images/calc2_detect5.pdf,assets/images/calc2_detect5.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/calc2/detect6.pdf,assets/images/calc2_detect6.pdf,assets/images/calc2_detect6.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/calc2/detect7.pdf,assets/images/calc2_detect7.pdf,assets/images/calc2_detect7.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/calc2/detect8.pdf,assets/images/calc2_detect8.pdf,assets/images/calc2_detect8.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/calc2/detect9.pdf,assets/images/calc2_detect9.pdf,assets/images/calc2_detect9.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/calc2/eqpoints.pdf,assets/images/calc2_eqpoints.pdf,assets/images/calc2_eqpoints.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/calc2/harmonic.pdf,assets/images/calc2_harmonic.pdf,assets/images/calc2_harmonic.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/calc2/inverse1.pdf,assets/images/calc2_inverse1.pdf,assets/images/calc2_inverse1.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/calc2/inverse2.pdf,assets/images/calc2_inverse2.pdf,assets/images/calc2_inverse2.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/calc2/j101.pdf,assets/images/calc2_j101.pdf,assets/images/calc2_j101.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/calc2/j102.pdf,assets/images/calc2_j102.pdf,assets/images/calc2_j102.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/calc2/j102_full.pdf,assets/images/calc2_j102_full.pdf,assets/images/calc2_j102_full.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/calc2/j102_j103.pdf,assets/images/calc2_j102_j103.pdf,assets/images/calc2_j102_j103.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/calc2/j102_j103_full.pdf,assets/images/calc2_j102_j103_full.pdf,assets/images/calc2_j102_j103_full.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/calc2/j103.pdf,assets/images/calc2_j103.pdf,assets/images/calc2_j103.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/calc2/j103_full.pdf,assets/images/calc2_j103_full.pdf,assets/images/calc2_j103_full.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/calc2/j104.pdf,assets/images/calc2_j104.pdf,assets/images/calc2_j104.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/calc2/j105.pdf,assets/images/calc2_j105.pdf,assets/images/calc2_j105.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/calc2/leastsq1.pdf,assets/images/calc2_leastsq1.pdf,assets/images/calc2_leastsq1.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/calc2/leastsq2.pdf,assets/images/calc2_leastsq2.pdf,assets/images/calc2_leastsq2.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/calc2/limcyc.pdf,assets/images/calc2_limcyc.pdf,assets/images/calc2_limcyc.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/calc2/locbeha1.pdf,assets/images/calc2_locbeha1.pdf,assets/images/calc2_locbeha1.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/calc2/locbeha2.pdf,assets/images/calc2_locbeha2.pdf,assets/images/calc2_locbeha2.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/calc2/locbeha3.pdf,assets/images/calc2_locbeha3.pdf,assets/images/calc2_locbeha3.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/calc2/lor.pdf,assets/images/calc2_lor.pdf,assets/images/calc2_lor.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/calc2/lynx1.pdf,assets/images/calc2_lynx1.pdf,assets/images/calc2_lynx1.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/calc2/lynx2.pdf,assets/images/calc2_lynx2.pdf,assets/images/calc2_lynx2.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/calc2/may1.pdf,assets/images/calc2_may1.pdf,assets/images/calc2_may1.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/calc2/may2.pdf,assets/images/calc2_may2.pdf,assets/images/calc2_may2.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/calc2/micro1.pdf,assets/images/calc2_micro1.pdf,assets/images/calc2_micro1.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/calc2/noise2.pdf,assets/images/calc2_noise2.pdf,assets/images/calc2_noise2.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/calc2/noise3.pdf,assets/images/calc2_noise3.pdf,assets/images/calc2_noise3.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/calc2/noise4.pdf,assets/images/calc2_noise4.pdf,assets/images/calc2_noise4.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/calc2/pend1.pdf,assets/images/calc2_pend1.pdf,assets/images/calc2_pend1.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/calc2/pend10.pdf,assets/images/calc2_pend10.pdf,assets/images/calc2_pend10.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/calc2/pend1a.pdf,assets/images/calc2_pend1a.pdf,assets/images/calc2_pend1a.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/calc2/pend2.pdf,assets/images/calc2_pend2.pdf,assets/images/calc2_pend2.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/calc2/pend3.pdf,assets/images/calc2_pend3.pdf,assets/images/calc2_pend3.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/calc2/pend4.pdf,assets/images/calc2_pend4.pdf,assets/images/calc2_pend4.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/calc2/pend5.pdf,assets/images/calc2_pend5.pdf,assets/images/calc2_pend5.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/calc2/pend6.pdf,assets/images/calc2_pend6.pdf,assets/images/calc2_pend6.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/calc2/pend7.pdf,assets/images/calc2_pend7.pdf,assets/images/calc2_pend7.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/calc2/pend8.pdf,assets/images/calc2_pend8.pdf,assets/images/calc2_pend8.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/calc2/pend9.pdf,assets/images/calc2_pend9.pdf,assets/images/calc2_pend9.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/calc2/pendpha.pdf,assets/images/calc2_pendpha.pdf,assets/images/calc2_pendpha.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/calc2/pendpha2.pdf,assets/images/calc2_pendpha2.pdf,assets/images/calc2_pendpha2.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/calc2/pendvf.pdf,assets/images/calc2_pendvf.pdf,assets/images/calc2_pendvf.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/calc2/period1.pdf,assets/images/calc2_period1.pdf,assets/images/calc2_period1.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/calc2/period2.pdf,assets/images/calc2_period2.pdf,assets/images/calc2_period2.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/calc2/period3.pdf,assets/images/calc2_period3.pdf,assets/images/calc2_period3.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/calc2/period4.pdf,assets/images/calc2_period4.pdf,assets/images/calc2_period4.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/calc2/phase1.pdf,assets/images/calc2_phase1.pdf,assets/images/calc2_phase1.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/calc2/phase2.pdf,assets/images/calc2_phase2.pdf,assets/images/calc2_phase2.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/calc2/phasepor.pdf,assets/images/calc2_phasepor.pdf,assets/images/calc2_phasepor.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/calc2/pred1.pdf,assets/images/calc2_pred1.pdf,assets/images/calc2_pred1.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/calc2/pred2.pdf,assets/images/calc2_pred2.pdf,assets/images/calc2_pred2.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/calc2/pred3.pdf,assets/images/calc2_pred3.pdf,assets/images/calc2_pred3.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/calc2/predtime.pdf,assets/images/calc2_predtime.pdf,assets/images/calc2_predtime.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/calc2/sawtoo1.pdf,assets/images/calc2_sawtoo1.pdf,assets/images/calc2_sawtoo1.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/calc2/sawtoo2.pdf,assets/images/calc2_sawtoo2.pdf,assets/images/calc2_sawtoo2.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/calc2/sawtoo3.pdf,assets/images/calc2_sawtoo3.pdf,assets/images/calc2_sawtoo3.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/calc2/sin1.pdf,assets/images/calc2_sin1.pdf,assets/images/calc2_sin1.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/calc2/sin2.pdf,assets/images/calc2_sin2.pdf,assets/images/calc2_sin2.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/calc2/sin3.pdf,assets/images/calc2_sin3.pdf,assets/images/calc2_sin3.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/calc2/sin4t.pdf,assets/images/calc2_sin4t.pdf,assets/images/calc2_sin4t.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/calc2/sincos.pdf,assets/images/calc2_sincos.pdf,assets/images/calc2_sincos.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/calc2/sintest1.pdf,assets/images/calc2_sintest1.pdf,assets/images/calc2_sintest1.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/calc2/sintest2.pdf,assets/images/calc2_sintest2.pdf,assets/images/calc2_sintest2.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/calc2/sintest3.pdf,assets/images/calc2_sintest3.pdf,assets/images/calc2_sintest3.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/calc2/sintest5.pdf,assets/images/calc2_sintest5.pdf,assets/images/calc2_sintest5.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/calc2/sintest6.pdf,assets/images/calc2_sintest6.pdf,assets/images/calc2_sintest6.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/calc2/sircalc.pdf,assets/images/calc2_sircalc.pdf,assets/images/calc2_sircalc.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/calc2/sircalc2.pdf,assets/images/calc2_sircalc2.pdf,assets/images/calc2_sircalc2.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/calc2/sireuler.pdf,assets/images/calc2_sireuler.pdf,assets/images/calc2_sireuler.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/calc2/spring1.pdf,assets/images/calc2_spring1.pdf,assets/images/calc2_spring1.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/calc2/spring2.pdf,assets/images/calc2_spring2.pdf,assets/images/calc2_spring2.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/calc2/spring3.pdf,assets/images/calc2_spring3.pdf,assets/images/calc2_spring3.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/calc2/spring4.pdf,assets/images/calc2_spring4.pdf,assets/images/calc2_spring4.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/calc2/spring5.pdf,assets/images/calc2_spring5.pdf,assets/images/calc2_spring5.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/calc2/spring6.pdf,assets/images/calc2_spring6.pdf,assets/images/calc2_spring6.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/calc2/spring7.pdf,assets/images/calc2_spring7.pdf,assets/images/calc2_spring7.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/calc2/spring8.pdf,assets/images/calc2_spring8.pdf,assets/images/calc2_spring8.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/calc2/stirlng1.pdf,assets/images/calc2_stirlng1.pdf,assets/images/calc2_stirlng1.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/calc2/stirlng2.pdf,assets/images/calc2_stirlng2.pdf,assets/images/calc2_stirlng2.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/calc2/sunspot.pdf,assets/images/calc2_sunspot.pdf,assets/images/calc2_sunspot.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/calc2/torus.pdf,assets/images/calc2_torus.pdf,assets/images/calc2_torus.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/calc2/trap1.pdf,assets/images/calc2_trap1.pdf,assets/images/calc2_trap1.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/calc2/trap2.pdf,assets/images/calc2_trap2.pdf,assets/images/calc2_trap2.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/calc2/trap3.pdf,assets/images/calc2_trap3.pdf,assets/images/calc2_trap3.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/calc2/vecf1.pdf,assets/images/calc2_vecf1.pdf,assets/images/calc2_vecf1.svg,copied_cropped_converted,converted with inkscape
+fixed_pdfs/calc2/vecf2.pdf,assets/images/calc2_vecf2.pdf,assets/images/calc2_vecf2.svg,copied_cropped_converted,converted with inkscape

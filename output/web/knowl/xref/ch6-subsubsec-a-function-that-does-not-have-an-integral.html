@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<section class="paragraphs"><h2 class="heading"><span class="title">A function that does not have an integral.</span></h2>
+<div class="para logical">
+<div class="para">Riemann sums converge to a single number for many functions—but not all. For example, Riemann sums for</div>
+<div class="displaymath process-math">
+\begin{equation*}
+J(x) = \left\{
+\begin{array}{ll}
+0 &amp; \mbox{if $x$ rational} \\
+1 &amp; \mbox{if $x$ is irrational}
+\end{array}
+\right.
+\end{equation*}
+</div>
+<div class="para">do not converge. Let’s see why.</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-subsubsec-a-function-that-does-not-have-an-integral-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details class="aside aside-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Aside</span></h3></summary>
+<aside class="aside aside-like knowl__content">
+<div class="para">A rational number is the quotient <span class="process-math">\(p/q\)</span> of one integer <span class="process-math">\(p\)</span> by another <span class="process-math">\(q\text{.}\)</span> An irrational number is one that is <em class="emphasis">not</em> such a quotient; for example, <span class="process-math">\(\sqrt{2}\)</span> is irrational. The values of <span class="process-math">\(J\)</span> are continually jumping between 0 and 1.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-subsubsec-a-function-that-does-not-have-an-integral-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</aside></details>
+<div class="para logical">
+<div class="para">Suppose we construct a Riemann sum for <span class="process-math">\(J\)</span> 
+<details class="aside aside-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Aside</span></h3></summary>
+<aside class="aside aside-like knowl__content">
+<div class="para">Why Riemann sums for <span class="process-math">\(J(x)\)</span> do not converge<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-subsubsec-a-function-that-does-not-have-an-integral-4-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</aside></details> on the interval <span class="process-math">\([0, 1]\)</span> using the subintervals <span class="process-math">\(\Delta x_1\text{,}\)</span> <span class="process-math">\(\Delta x_2\text{,}\)</span> …, <span class="process-math">\(\Delta x_n\text{.}\)</span> Every subinterval contains both rational and irrational numbers. Thus, we could choose all the sampling points to be rational numbers <span class="process-math">\(r_1\text{,}\)</span> <span class="process-math">\(r_2\text{,}\)</span> …, <span class="process-math">\(r_n\text{.}\)</span> In that case,</div>
+<div class="displaymath process-math">
+\begin{equation*}
+J(r_1) = J(r_2) = \cdots = J(r_n) = 0,
+\end{equation*}
+</div>
+<div class="para">so the Riemann sum has the value</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\sum_{k = 1}^n J(r_k)\,\Delta x_k =
+\sum_{k = 1}^n \, 0 \cdot \Delta x_k = 0.
+\end{equation*}
+</div>
+<div class="para">But we could also choose all the sampling points to be irrational numbers <span class="process-math">\(s_1\text{,}\)</span> <span class="process-math">\(s_2\text{,}\)</span> …, <span class="process-math">\(s_n\text{.}\)</span> In that case,</div>
+<div class="displaymath process-math">
+\begin{equation*}
+J(s_1) = J(s_2) = \cdots = J(s_n) = 1,
+\end{equation*}
+</div>
+<div class="para">and the Riemann sum would have the value</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\sum_{k = 1}^n J(s_k)\,\Delta x_k =
+\sum_{k = 1}^n \, 1 \cdot \Delta x_k = 
+\sum_{k = 1}^n \Delta x_k = 1.
+\end{equation*}
+</div>
+<div class="para">(For any subdivision <span class="process-math">\(\Delta x_k\text{,}\)</span> <span class="process-math">\(\Delta x_1 + \Delta x_2 + \cdots + \Delta x_n = 1\)</span> because the subintervals together form the interval <span class="process-math">\([0, 1]\text{.}\)</span>) If some sampling points are rational and others irrational, the value of the Riemann sum will lie somewhere between 0 and 1. Thus, the Riemann sums range from 0 to 1, <em class="emphasis">no matter how small the subintervals <span class="process-math">\(\Delta x_k\)</span> are chosen</em>. They cannot converge to any single number.</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-subsubsec-a-function-that-does-not-have-an-integral-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">The function <span class="process-math">\(J\)</span> shows us that not every function has an integral. The definition of the integral (<a href="ch6-sec-the-integral.html#ch6-subsec-definition-2" class="internal" title="Subsection 6.3.2: Definition">Subsection 6.3.2</a>) takes this into account. It doesn’t guarantee that an arbitrary function will have an integral. It simply says that <em class="emphasis">if</em> the Riemann sums converge to a single number, then we can give that number a name—the integral.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-subsubsec-a-function-that-does-not-have-an-integral-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details class="aside aside-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Aside</span></h3></summary>
+<aside class="aside aside-like knowl__content">
+<div class="para">Can you imagine what the graph of <span class="process-math">\(y = J(x)\)</span> would look like? It would consist of two horizontal lines with gaps; in the upper line, the gaps would be at all the rational points, in the lower at the irrational points. This is impossible to draw! Roughly speaking, any graph you can draw you can integrate.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-subsubsec-a-function-that-does-not-have-an-integral-6-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</aside></details><div class="autopermalink" aria-hidden="true" data-description="Paragraphs: A function that does not have an integral"><a tabindex="-1" href="#ch6-subsubsec-a-function-that-does-not-have-an-integral" title="Copy heading and permalink for Paragraphs: A function that does not have an integral" aria-label="Copy heading and permalink for Paragraphs: A function that does not have an integral">🔗</a></div>
+</section><span class="incontext"><a class="internal" href="ch6-sec-the-integral.html#ch6-subsubsec-a-function-that-does-not-have-an-integral">In Context</a></span>
+</body>
+</html>
